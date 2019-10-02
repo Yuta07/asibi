@@ -1,10 +1,24 @@
-import { NextPage } from 'next';
+import React from 'react';
+import styled from 'styled-components';
+// import components
+import Layout from '../components/Layout';
 
-const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => <h1>Hello world! - user agent: {userAgent}</h1>;
+const Title = styled.h1`
+  font-size: 50px;
+  color: skyblue;
+`;
 
-Home.getInitialProps = async ({ req }) => {
-  const userAgent = req ? req.headers['user-agent'] || '' : navigator.userAgent;
-  return { userAgent };
+const Index = () => {
+  return (
+    <Layout>
+      <Title>My page</Title>
+      <ul>
+        <li>asdf</li>
+        <li>asdf</li>
+        <li>asdf</li>
+      </ul>
+    </Layout>
+  );
 };
 
-export default Home;
+export default Index;
