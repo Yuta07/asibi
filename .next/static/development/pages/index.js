@@ -1,5 +1,303 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
+/***/ "./components/AppNav.tsx":
+/*!*******************************!*\
+  !*** ./components/AppNav.tsx ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+var _jsxFileName = "/Users/yuta/Yutazon.me/components/AppNav.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+var AppNav = function AppNav() {
+  var router = Object(next_router__WEBPACK_IMPORTED_MODULE_2__["useRouter"])();
+  var path = router.pathname;
+  return __jsx(AppNavCoreWrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, __jsx(AppNavLinkWrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, __jsx(AppNavLink, {
+    route: path === '/',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, __jsx(AppNavLinkImage, {
+    src: "/static/nav/moon.svg",
+    alt: "my bio",
+    route: path === '/',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }), __jsx(AppNavLinkText, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, "Bio"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/works",
+    as: "works",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, __jsx(AppNavLink, {
+    route: path === '/works',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, __jsx(AppNavLinkImage, {
+    src: "/static/nav/layout.svg",
+    alt: "my works",
+    route: path === '/works',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }), __jsx(AppNavLinkText, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, "Works"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/links",
+    as: "links",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, __jsx(AppNavLink, {
+    route: path === '/links',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, __jsx(AppNavLinkImage, {
+    src: "/static/nav/share.svg",
+    alt: "link",
+    route: path === '/links',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }), __jsx(AppNavLinkText, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, "Links")))));
+}; // AppNav style
+
+
+var AppNavCoreWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].nav.withConfig({
+  displayName: "AppNav__AppNavCoreWrapper",
+  componentId: "sc-1i90se4-0"
+})(["max-width:480px;margin:0 auto;padding:0 1.4rem;color:#fefefe;border-top:1px solid #e0e7ef;border-bottom:1px solid #e0e7ef;@media (max-width:559px){padding:0;}"]);
+var AppNavLinkWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
+  displayName: "AppNav__AppNavLinkWrapper",
+  componentId: "sc-1i90se4-1"
+})(["width:100%;height:100%;display:flex;align-items:center;justify-content:space-between;flex-direction:row;flex-wrap:nowrap;"]);
+var AppNavLink = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].button.withConfig({
+  displayName: "AppNav__AppNavLink",
+  componentId: "sc-1i90se4-2"
+})(["color:", ";background-color:#fefefe;position:relative;width:30%;padding:0.5rem 0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;text-decoration:none;outline:0;border:none;appearance:none;cursor:pointer;transition:all 0.3s ease-in-out;border-bottom:", ";&:hover{border-bottom:3px solid #e68123;}@media (max-width:559px){width:33%;}"], function (props) {
+  return props.route ? '#e68123' : '#c9cfd3';
+}, function (props) {
+  return props.route ? '3px solid #e68123' : '3px solid transparent';
+});
+var AppNavLinkImage = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].img.withConfig({
+  displayName: "AppNav__AppNavLinkImage",
+  componentId: "sc-1i90se4-3"
+})(["width:32px;height:32px;opacity:", ";filter:", ";"], function (props) {
+  return props.route ? '1' : '0.4';
+}, function (props) {
+  return props.route ? 'none' : 'saturate(10%)';
+});
+var AppNavLinkText = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].p.withConfig({
+  displayName: "AppNav__AppNavLinkText",
+  componentId: "sc-1i90se4-4"
+})(["padding-top:0.4rem;font-size:0.9rem;"]);
+/* harmony default export */ __webpack_exports__["default"] = (AppNav); // animation: ${props => (props.route ? `${NavAnimation} 0.5s linear 0s 1 normal none running` : null)};
+
+/***/ }),
+
+/***/ "./components/Header.tsx":
+/*!*******************************!*\
+  !*** ./components/Header.tsx ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+var _jsxFileName = "/Users/yuta/Yutazon.me/components/Header.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+var Header = function Header() {
+  return __jsx(CoreHeaderWrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, __jsx(HeaderTitleWrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx(HeaderWrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, __jsx(AppTitle, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, "Yutazon.me"))), __jsx(AppBioGraphy, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, __jsx(BiographyWrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, __jsx(BioImage, {
+    src: "/static/bio.png",
+    alt: "bio-img",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }), __jsx(BioDiscription, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, __jsx(ExternalLink, {
+    href: "https://github.com/Yuta07",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, "Yutaka Miyazaki."), __jsx(EasyProfile, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, "Web Developer \uD83C\uDF89"), __jsx(EasyProfile, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, "\u6771\u4EAC\u3067SaaS\u306E\u958B\u767A\u3092\u3057\u3066\u3044\u308B\u3088")))));
+}; // Header style
+
+
+var CoreHeaderWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].header.withConfig({
+  displayName: "Header__CoreHeaderWrapper",
+  componentId: "sc-10eaj7s-0"
+})(["width:100%;"]);
+var HeaderTitleWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Header__HeaderTitleWrapper",
+  componentId: "sc-10eaj7s-1"
+})(["width:100%;background-color:#282a31;margin-bottom:1.5rem;padding:0.5rem 0;"]);
+var HeaderWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Header__HeaderWrapper",
+  componentId: "sc-10eaj7s-2"
+})(["width:100%;max-width:480px;margin:0 auto;padding:0 1.4rem;"]);
+var AppTitle = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h1.withConfig({
+  displayName: "Header__AppTitle",
+  componentId: "sc-10eaj7s-3"
+})(["color:#fefefe;font-size:1.7rem;"]);
+var AppBioGraphy = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].aside.withConfig({
+  displayName: "Header__AppBioGraphy",
+  componentId: "sc-10eaj7s-4"
+})(["width:100%;max-width:480px;margin:0 auto;"]);
+var BiographyWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Header__BiographyWrapper",
+  componentId: "sc-10eaj7s-5"
+})(["display:flex;align-items:center;justify-content:flex-start;margin-bottom:1.6rem;padding:0 1.4rem;"]);
+var BioImage = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img.withConfig({
+  displayName: "Header__BioImage",
+  componentId: "sc-10eaj7s-6"
+})(["width:64px;height:64px;margin-right:1.5rem;border-radius:50%;object-fit:contain;"]);
+var BioDiscription = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Header__BioDiscription",
+  componentId: "sc-10eaj7s-7"
+})(["max-width:320px;"]);
+var ExternalLink = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a.withConfig({
+  displayName: "Header__ExternalLink",
+  componentId: "sc-10eaj7s-8"
+})(["color:#e68123;text-decoration:underline;margin-right:6px;&:hover{text-decoration:none;}"]);
+var EasyProfile = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p.withConfig({
+  displayName: "Header__EasyProfile",
+  componentId: "sc-10eaj7s-9"
+})(["font-size:1rem;line-height:1.8;"]);
+/* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
 /***/ "./components/Layout.tsx":
 /*!*******************************!*\
   !*** ./components/Layout.tsx ***!
@@ -11,111 +309,65 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/dynamic */ "./node_modules/next/dist/next-server/lib/dynamic.js");
-/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header */ "./components/Header.tsx");
+/* harmony import */ var _AppNav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AppNav */ "./components/AppNav.tsx");
 var _jsxFileName = "/Users/yuta/Yutazon.me/components/Layout.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
+ // import dynamic from 'next/dynamic';
 
  // import components
+// const DynamicHeaderWithCustomLoading = dynamic(() => import('./Header'), { loading: () => <p>...</p> });
 
-var DynamicHeaderWithCustomLoading = next_dynamic__WEBPACK_IMPORTED_MODULE_2___default()(function () {
-  return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./Header */ "./components/Header.tsx"));
-}, {
-  loading: function loading() {
-    return __jsx("p", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 6
-      },
-      __self: this
-    }, "...");
-  },
-  loadableGenerated: {
-    webpack: function webpack() {
-      return [/*require.resolve*/(/*! ./Header */ "./components/Header.tsx")];
-    },
-    modules: ['./Header']
-  }
-});
-var CoreLayoutWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
-  displayName: "Layout__CoreLayoutWrapper",
-  componentId: "sc-19evpux-0"
-})(["width:100%;padding:2rem 0;"]);
-var LayoutWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
-  displayName: "Layout__LayoutWrapper",
-  componentId: "sc-19evpux-1"
-})(["width:95%;max-width:600px;margin:0 auto;padding:0 1.4rem;"]);
-var LinkStyle = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].span.withConfig({
-  displayName: "Layout__LinkStyle",
-  componentId: "sc-19evpux-2"
-})([""]);
+
+
 
 var Layout = function Layout(props) {
   return __jsx(CoreLayoutWrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 15
     },
     __self: this
-  }, __jsx(DynamicHeaderWithCustomLoading, {
+  }, __jsx(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 16
+    },
+    __self: this
+  }), __jsx(_AppNav__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
     },
     __self: this
   }), __jsx(LayoutWrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 18
     },
     __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/me",
+  }, __jsx(CoreContentsWrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 19
     },
     __self: this
-  }, __jsx(LinkStyle, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, "Bio")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/product",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, __jsx(LinkStyle, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, "Product")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, __jsx(LinkStyle, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }, "Link")), props.children));
+  }, props.children)));
 };
 
+var CoreLayoutWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Layout__CoreLayoutWrapper",
+  componentId: "sc-19evpux-0"
+})(["width:100%;margin:0 auto;padding-bottom:2rem;"]);
+var LayoutWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Layout__LayoutWrapper",
+  componentId: "sc-19evpux-1"
+})(["max-width:480px;margin:0 auto;"]);
+var CoreContentsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "Layout__CoreContentsWrapper",
+  componentId: "sc-19evpux-2"
+})(["margin-top:2.5rem;padding:0 1.4rem;"]);
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
 
 /***/ }),
@@ -5680,598 +5932,6 @@ function withRouter(ComposedComponent) {
 
   return WithRouteWrapper;
 }
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/dynamic.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/dynamic.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Object$keys = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
-
-var _Object$assign = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
-
-var _Promise = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
-};
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var loadable_1 = __importDefault(__webpack_require__(/*! ./loadable */ "./node_modules/next/dist/next-server/lib/loadable.js"));
-
-var isServerSide = false;
-
-function noSSR(LoadableInitializer, loadableOptions) {
-  // Removing webpack and modules means react-loadable won't try preloading
-  delete loadableOptions.webpack;
-  delete loadableOptions.modules; // This check is neccesary to prevent react-loadable from initializing on the server
-
-  if (!isServerSide) {
-    return LoadableInitializer(loadableOptions);
-  }
-
-  var Loading = loadableOptions.loading; // This will only be rendered on the server side
-
-  return function () {
-    return react_1["default"].createElement(Loading, {
-      error: null,
-      isLoading: true,
-      pastDelay: false,
-      timedOut: false
-    });
-  };
-}
-
-exports.noSSR = noSSR; // function dynamic<P = {}, O extends DynamicOptions>(options: O):
-
-function dynamic(dynamicOptions, options) {
-  var loadableFn = loadable_1["default"];
-  var loadableOptions = {
-    // A loading component is not required, so we default it
-    loading: function loading(_ref) {
-      var error = _ref.error,
-          isLoading = _ref.isLoading,
-          pastDelay = _ref.pastDelay;
-      if (!pastDelay) return null;
-
-      if (true) {
-        if (isLoading) {
-          return null;
-        }
-
-        if (error) {
-          return react_1["default"].createElement("p", null, error.message, react_1["default"].createElement("br", null), error.stack);
-        }
-      }
-
-      return null;
-    }
-  }; // Support for direct import(), eg: dynamic(import('../hello-world'))
-  // Note that this is only kept for the edge case where someone is passing in a promise as first argument
-  // The react-loadable babel plugin will turn dynamic(import('../hello-world')) into dynamic(() => import('../hello-world'))
-  // To make sure we don't execute the import without rendering first
-
-  if (dynamicOptions instanceof _Promise) {
-    loadableOptions.loader = function () {
-      return dynamicOptions;
-    }; // Support for having import as a function, eg: dynamic(() => import('../hello-world'))
-
-  } else if (typeof dynamicOptions === 'function') {
-    loadableOptions.loader = dynamicOptions; // Support for having first argument being options, eg: dynamic({loader: import('../hello-world')})
-  } else if (typeof dynamicOptions === 'object') {
-    loadableOptions = _Object$assign({}, loadableOptions, dynamicOptions);
-  } // Support for passing options, eg: dynamic(import('../hello-world'), {loading: () => <p>Loading something</p>})
-
-
-  loadableOptions = _Object$assign({}, loadableOptions, options);
-
-  if (typeof dynamicOptions === 'object' && !(dynamicOptions instanceof _Promise)) {
-    // show deprecation warning for `modules` key in development
-    if (true) {
-      if (dynamicOptions.modules) {
-        console.warn('The modules option for next/dynamic has been deprecated. See here for more info https://err.sh/zeit/next.js/next-dynamic-modules');
-      }
-    } // Support for `render` when using a mapping, eg: `dynamic({ modules: () => {return {HelloWorld: import('../hello-world')}, render(props, loaded) {} } })
-
-
-    if (dynamicOptions.render) {
-      loadableOptions.render = function (loaded, props) {
-        return dynamicOptions.render(props, loaded);
-      };
-    } // Support for `modules` when using a mapping, eg: `dynamic({ modules: () => {return {HelloWorld: import('../hello-world')}, render(props, loaded) {} } })
-
-
-    if (dynamicOptions.modules) {
-      loadableFn = loadable_1["default"].Map;
-      var loadModules = {};
-      var modules = dynamicOptions.modules();
-
-      _Object$keys(modules).forEach(function (key) {
-        var value = modules[key];
-
-        if (typeof value.then === 'function') {
-          loadModules[key] = function () {
-            return value.then(function (mod) {
-              return mod["default"] || mod;
-            });
-          };
-
-          return;
-        }
-
-        loadModules[key] = value;
-      });
-
-      loadableOptions.loader = loadModules;
-    }
-  } // coming from build/babel/plugins/react-loadable-plugin.js
-
-
-  if (loadableOptions.loadableGenerated) {
-    loadableOptions = _Object$assign({}, loadableOptions, loadableOptions.loadableGenerated);
-    delete loadableOptions.loadableGenerated;
-  } // support for disabling server side rendering, eg: dynamic(import('../hello-world'), {ssr: false})
-
-
-  if (typeof loadableOptions.ssr === 'boolean') {
-    if (!loadableOptions.ssr) {
-      delete loadableOptions.ssr;
-      return noSSR(loadableFn, loadableOptions);
-    }
-
-    delete loadableOptions.ssr;
-  }
-
-  return loadableFn(loadableOptions);
-}
-
-exports["default"] = dynamic;
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/loadable-context.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/loadable-context.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-var __importStar = this && this.__importStar || function (mod) {
-  if (mod && mod.__esModule) return mod;
-  var result = {};
-  if (mod != null) for (var k in mod) {
-    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-  }
-  result["default"] = mod;
-  return result;
-};
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js")); // @ts-ignore for some reason the React types don't like this, but it's correct.
-
-
-exports.LoadableContext = React.createContext(null);
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/next-server/lib/loadable.js":
-/*!************************************************************!*\
-  !*** ./node_modules/next/dist/next-server/lib/loadable.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/**
-@copyright (c) 2017-present James Kyle <me@thejameskyle.com>
- MIT License
- Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
- The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
-*/
-// https://github.com/jamiebuilds/react-loadable/blob/v5.5.0/src/index.js
-// Modified to be compatible with webpack 4 / Next.js
-
-var _Array$isArray = __webpack_require__(/*! @babel/runtime-corejs2/core-js/array/is-array */ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js");
-
-var _classCallCheck = __webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js");
-
-var _createClass = __webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/createClass.js");
-
-var _possibleConstructorReturn = __webpack_require__(/*! @babel/runtime-corejs2/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/possibleConstructorReturn.js");
-
-var _getPrototypeOf = __webpack_require__(/*! @babel/runtime-corejs2/helpers/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js");
-
-var _inherits = __webpack_require__(/*! @babel/runtime-corejs2/helpers/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/inherits.js");
-
-var _getIterator = __webpack_require__(/*! @babel/runtime-corejs2/core-js/get-iterator */ "./node_modules/@babel/runtime-corejs2/core-js/get-iterator.js");
-
-var _Object$assign = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
-
-var _Promise = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
-
-var _Object$keys = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
-};
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var loadable_context_1 = __webpack_require__(/*! ./loadable-context */ "./node_modules/next/dist/next-server/lib/loadable-context.js");
-
-var ALL_INITIALIZERS = [];
-var READY_INITIALIZERS = [];
-var initialized = false;
-
-function load(loader) {
-  var promise = loader();
-  var state = {
-    loading: true,
-    loaded: null,
-    error: null
-  };
-  state.promise = promise.then(function (loaded) {
-    state.loading = false;
-    state.loaded = loaded;
-    return loaded;
-  })["catch"](function (err) {
-    state.loading = false;
-    state.error = err;
-    throw err;
-  });
-  return state;
-}
-
-function loadMap(obj) {
-  var state = {
-    loading: false,
-    loaded: {},
-    error: null
-  };
-  var promises = [];
-
-  try {
-    _Object$keys(obj).forEach(function (key) {
-      var result = load(obj[key]);
-
-      if (!result.loading) {
-        state.loaded[key] = result.loaded;
-        state.error = result.error;
-      } else {
-        state.loading = true;
-      }
-
-      promises.push(result.promise);
-      result.promise.then(function (res) {
-        state.loaded[key] = res;
-      })["catch"](function (err) {
-        state.error = err;
-      });
-    });
-  } catch (err) {
-    state.error = err;
-  }
-
-  state.promise = _Promise.all(promises).then(function (res) {
-    state.loading = false;
-    return res;
-  })["catch"](function (err) {
-    state.loading = false;
-    throw err;
-  });
-  return state;
-}
-
-function resolve(obj) {
-  return obj && obj.__esModule ? obj["default"] : obj;
-}
-
-function render(loaded, props) {
-  return react_1["default"].createElement(resolve(loaded), props);
-}
-
-function createLoadableComponent(loadFn, options) {
-  var _a;
-
-  var opts = _Object$assign({
-    loader: null,
-    loading: null,
-    delay: 200,
-    timeout: null,
-    render: render,
-    webpack: null,
-    modules: null
-  }, options);
-
-  var res = null;
-
-  function init() {
-    if (!res) {
-      res = loadFn(opts.loader);
-    }
-
-    return res.promise;
-  } // Server only
-
-
-  if (false) {} // Client only
-
-
-  if (!initialized && true && typeof opts.webpack === 'function') {
-    var moduleIds = opts.webpack();
-    READY_INITIALIZERS.push(function (ids) {
-      var _iteratorNormalCompletion = true;
-      var _didIteratorError = false;
-      var _iteratorError = undefined;
-
-      try {
-        for (var _iterator = _getIterator(moduleIds), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-          var moduleId = _step.value;
-
-          if (ids.indexOf(moduleId) !== -1) {
-            return init();
-          }
-        }
-      } catch (err) {
-        _didIteratorError = true;
-        _iteratorError = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-            _iterator["return"]();
-          }
-        } finally {
-          if (_didIteratorError) {
-            throw _iteratorError;
-          }
-        }
-      }
-    });
-  }
-
-  return _a =
-  /*#__PURE__*/
-  function (_react_1$default$Comp) {
-    _inherits(LoadableComponent, _react_1$default$Comp);
-
-    function LoadableComponent(props) {
-      var _this;
-
-      _classCallCheck(this, LoadableComponent);
-
-      _this = _possibleConstructorReturn(this, _getPrototypeOf(LoadableComponent).call(this, props));
-
-      _this.retry = function () {
-        _this.setState({
-          error: null,
-          loading: true,
-          timedOut: false
-        });
-
-        res = loadFn(opts.loader);
-
-        _this._loadModule();
-      };
-
-      init();
-      _this.state = {
-        error: res.error,
-        pastDelay: false,
-        timedOut: false,
-        loading: res.loading,
-        loaded: res.loaded
-      };
-      return _this;
-    }
-
-    _createClass(LoadableComponent, [{
-      key: "UNSAFE_componentWillMount",
-      // TODO: change it before next major React release
-      // eslint-disable-next-line
-      value: function UNSAFE_componentWillMount() {
-        this._mounted = true;
-
-        this._loadModule();
-      }
-    }, {
-      key: "_loadModule",
-      value: function _loadModule() {
-        var _this2 = this;
-
-        if (this.context && _Array$isArray(opts.modules)) {
-          opts.modules.forEach(function (moduleName) {
-            _this2.context(moduleName);
-          });
-        }
-
-        if (!res.loading) {
-          return;
-        }
-
-        if (typeof opts.delay === 'number') {
-          if (opts.delay === 0) {
-            this.setState({
-              pastDelay: true
-            });
-          } else {
-            this._delay = setTimeout(function () {
-              _this2.setState({
-                pastDelay: true
-              });
-            }, opts.delay);
-          }
-        }
-
-        if (typeof opts.timeout === 'number') {
-          this._timeout = setTimeout(function () {
-            _this2.setState({
-              timedOut: true
-            });
-          }, opts.timeout);
-        }
-
-        var update = function update() {
-          if (!_this2._mounted) {
-            return;
-          }
-
-          _this2.setState({
-            error: res.error,
-            loaded: res.loaded,
-            loading: res.loading
-          });
-
-          _this2._clearTimeouts();
-        };
-
-        res.promise.then(function () {
-          update();
-        }) // eslint-disable-next-line handle-callback-err
-        ["catch"](function (err) {
-          update();
-        });
-      }
-    }, {
-      key: "componentWillUnmount",
-      value: function componentWillUnmount() {
-        this._mounted = false;
-
-        this._clearTimeouts();
-      }
-    }, {
-      key: "_clearTimeouts",
-      value: function _clearTimeouts() {
-        clearTimeout(this._delay);
-        clearTimeout(this._timeout);
-      }
-    }, {
-      key: "render",
-      value: function render() {
-        if (this.state.loading || this.state.error) {
-          return react_1["default"].createElement(opts.loading, {
-            isLoading: this.state.loading,
-            pastDelay: this.state.pastDelay,
-            timedOut: this.state.timedOut,
-            error: this.state.error,
-            retry: this.retry
-          });
-        } else if (this.state.loaded) {
-          return opts.render(this.state.loaded, this.props);
-        } else {
-          return null;
-        }
-      }
-    }], [{
-      key: "preload",
-      value: function preload() {
-        return init();
-      }
-    }]);
-
-    return LoadableComponent;
-  }(react_1["default"].Component), _a.contextType = loadable_context_1.LoadableContext, _a;
-}
-
-function Loadable(opts) {
-  return createLoadableComponent(load, opts);
-}
-
-function LoadableMap(opts) {
-  if (typeof opts.render !== 'function') {
-    throw new Error('LoadableMap requires a `render(loaded, props)` function');
-  }
-
-  return createLoadableComponent(loadMap, opts);
-}
-
-Loadable.Map = LoadableMap;
-
-function flushInitializers(initializers, ids) {
-  var promises = [];
-
-  while (initializers.length) {
-    var init = initializers.pop();
-    promises.push(init(ids));
-  }
-
-  return _Promise.all(promises).then(function () {
-    if (initializers.length) {
-      return flushInitializers(initializers, ids);
-    }
-  });
-}
-
-Loadable.preloadAll = function () {
-  return new _Promise(function (resolve, reject) {
-    flushInitializers(ALL_INITIALIZERS).then(resolve, reject);
-  });
-};
-
-Loadable.preloadReady = function () {
-  var ids = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  return new _Promise(function (resolve) {
-    var res = function res() {
-      initialized = true;
-      return resolve();
-    }; // We always will resolve, errors should be handled within loading UIs.
-
-
-    flushInitializers(READY_INITIALIZERS, ids).then(res, res);
-  });
-};
-
-if (true) {
-  window.__NEXT_PRELOADREADY = Loadable.preloadReady;
-}
-
-exports["default"] = Loadable;
 
 /***/ }),
 
@@ -14273,60 +13933,85 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.tsx");
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.tsx");
 var _jsxFileName = "/Users/yuta/Yutazon.me/pages/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+ // import styled from 'styled-components';
+// import components
 
- // import components
 
 
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h1.withConfig({
-  displayName: "pages__Title",
-  componentId: "sc-7jz26d-0"
-})(["font-size:50px;color:skyblue;"]);
-
-var Index = function Index() {
-  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+var Bio = function Bio() {
+  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, "asdf"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, "asdf"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, "asdf"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, "asdf"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: this
-  }, __jsx(Title, {
+  }, "asdf"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: this
-  }, "My page"), __jsx("ul", {
+  }, "asdf"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
     },
     __self: this
-  }, __jsx("li", {
+  }, "asdf"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
     },
     __self: this
-  }, "asdf"), __jsx("li", {
+  }, "asdf"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     },
     __self: this
-  }, "asdf"), __jsx("li", {
+  }, "asdf"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
     },
     __self: this
-  }, "asdf")));
+  }, "asdf"));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Index);
+/* harmony default export */ __webpack_exports__["default"] = (Bio);
 
 /***/ }),
 

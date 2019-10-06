@@ -1,23 +1,10 @@
 import React, { ReactNode } from 'react';
-import Link from 'next/link';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import styled from 'styled-components';
 // import components
-const DynamicHeaderWithCustomLoading = dynamic(() => import('./Header'), { loading: () => <p>...</p> });
-
-const CoreLayoutWrapper = styled.div`
-  width: 100%;
-  padding: 2rem 0;
-`;
-
-const LayoutWrapper = styled.div`
-  width: 95%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 1.4rem;
-`;
-
-const LinkStyle = styled.span``;
+// const DynamicHeaderWithCustomLoading = dynamic(() => import('./Header'), { loading: () => <p>...</p> });
+import Header from './Header';
+import AppNav from './AppNav';
 
 type LayoutProps = {
   children: ReactNode;
@@ -26,21 +13,29 @@ type LayoutProps = {
 const Layout = (props: LayoutProps) => {
   return (
     <CoreLayoutWrapper>
-      <DynamicHeaderWithCustomLoading />
+      <Header />
+      <AppNav />
       <LayoutWrapper>
-        <Link href="/me">
-          <LinkStyle>Bio</LinkStyle>
-        </Link>
-        <Link href="/product">
-          <LinkStyle>Product</LinkStyle>
-        </Link>
-        <Link href="/link">
-          <LinkStyle>Link</LinkStyle>
-        </Link>
-        {props.children}
+        <CoreContentsWrapper>{props.children}</CoreContentsWrapper>
       </LayoutWrapper>
     </CoreLayoutWrapper>
   );
 };
+
+const CoreLayoutWrapper = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+`;
+
+const LayoutWrapper = styled.div`
+  max-width: 480px;
+  margin: 0 auto;
+`;
+
+const CoreContentsWrapper = styled.div`
+  margin-top: 2.5rem;
+  padding: 0 1.4rem;
+`;
 
 export default Layout;

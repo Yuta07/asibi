@@ -19,6 +19,14 @@
     "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
+    ],
+    "/links": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/works": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }

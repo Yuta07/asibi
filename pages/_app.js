@@ -1,7 +1,18 @@
 import React, { Fragment } from 'react';
 import App from 'next/app';
-import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components';
+
+export default class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props;
+    return (
+      <Fragment>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </Fragment>
+    );
+  }
+}
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -15,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.4;
     word-wrap: break-word;
     font-kerning: normal;
-    color: #2f2e2e;
+    color: #282a31;
     background-color: #fefefe;
     min-height: 100vh;
   }
@@ -26,15 +37,3 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 `;
-
-export default class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props;
-    return (
-      <Fragment>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </Fragment>
-    );
-  }
-}

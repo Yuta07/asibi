@@ -3,12 +3,6 @@ module.exports =
 /******/ 	// The module cache
 /******/ 	var installedModules = require('../../../ssr-module-cache.js');
 /******/
-/******/ 	// object to store loaded chunks
-/******/ 	// "0" means "already loaded"
-/******/ 	var installedChunks = {
-/******/ 		"static/development/pages/index.js": 0
-/******/ 	};
-/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/
@@ -39,26 +33,6 @@ module.exports =
 /******/ 		return module.exports;
 /******/ 	}
 /******/
-/******/ 	// This file contains only the entry chunk.
-/******/ 	// The chunk loading function for additional chunks
-/******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
-/******/ 		var promises = [];
-/******/
-/******/
-/******/ 		// require() chunk loading for javascript
-/******/
-/******/ 		// "0" is the signal for "already loaded"
-/******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("../../../" + ({}[chunkId]||chunkId) + ".js");
-/******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
-/******/ 			for(var moduleId in moreModules) {
-/******/ 				modules[moduleId] = moreModules[moduleId];
-/******/ 			}
-/******/ 			for(var i = 0; i < chunkIds.length; i++)
-/******/ 				installedChunks[chunkIds[i]] = 0;
-/******/ 		}
-/******/ 		return Promise.all(promises);
-/******/ 	};
 /******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
@@ -112,19 +86,302 @@ module.exports =
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
-/******/ 	// uncaught error handler for webpack runtime
-/******/ 	__webpack_require__.oe = function(err) {
-/******/ 		process.nextTick(function() {
-/******/ 			throw err; // catch this error by using import().catch()
-/******/ 		});
-/******/ 	};
-/******/
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./components/AppNav.tsx":
+/*!*******************************!*\
+  !*** ./components/AppNav.tsx ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/yuta/Yutazon.me/components/AppNav.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+const AppNav = () => {
+  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_2__["useRouter"])();
+  const path = router.pathname;
+  return __jsx(AppNavCoreWrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, __jsx(AppNavLinkWrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, __jsx(AppNavLink, {
+    route: path === '/',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, __jsx(AppNavLinkImage, {
+    src: "/static/nav/moon.svg",
+    alt: "my bio",
+    route: path === '/',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }), __jsx(AppNavLinkText, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, "Bio"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/works",
+    as: "works",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }, __jsx(AppNavLink, {
+    route: path === '/works',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
+  }, __jsx(AppNavLinkImage, {
+    src: "/static/nav/layout.svg",
+    alt: "my works",
+    route: path === '/works',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: undefined
+  }), __jsx(AppNavLinkText, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: undefined
+  }, "Works"))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/links",
+    as: "links",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: undefined
+  }, __jsx(AppNavLink, {
+    route: path === '/links',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: undefined
+  }, __jsx(AppNavLinkImage, {
+    src: "/static/nav/share.svg",
+    alt: "link",
+    route: path === '/links',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: undefined
+  }), __jsx(AppNavLinkText, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: undefined
+  }, "Links")))));
+}; // AppNav style
+
+
+const AppNavCoreWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.nav.withConfig({
+  displayName: "AppNav__AppNavCoreWrapper",
+  componentId: "sc-1i90se4-0"
+})(["max-width:480px;margin:0 auto;padding:0 1.4rem;color:#fefefe;border-top:1px solid #e0e7ef;border-bottom:1px solid #e0e7ef;@media (max-width:559px){padding:0;}"]);
+const AppNavLinkWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
+  displayName: "AppNav__AppNavLinkWrapper",
+  componentId: "sc-1i90se4-1"
+})(["width:100%;height:100%;display:flex;align-items:center;justify-content:space-between;flex-direction:row;flex-wrap:nowrap;"]);
+const AppNavLink = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.button.withConfig({
+  displayName: "AppNav__AppNavLink",
+  componentId: "sc-1i90se4-2"
+})(["color:", ";background-color:#fefefe;position:relative;width:30%;padding:0.5rem 0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;text-decoration:none;outline:0;border:none;appearance:none;cursor:pointer;transition:all 0.3s ease-in-out;border-bottom:", ";&:hover{border-bottom:3px solid #e68123;}@media (max-width:559px){width:33%;}"], props => props.route ? '#e68123' : '#c9cfd3', props => props.route ? '3px solid #e68123' : '3px solid transparent');
+const AppNavLinkImage = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.img.withConfig({
+  displayName: "AppNav__AppNavLinkImage",
+  componentId: "sc-1i90se4-3"
+})(["width:32px;height:32px;opacity:", ";filter:", ";"], props => props.route ? '1' : '0.4', props => props.route ? 'none' : 'saturate(10%)');
+const AppNavLinkText = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.p.withConfig({
+  displayName: "AppNav__AppNavLinkText",
+  componentId: "sc-1i90se4-4"
+})(["padding-top:0.4rem;font-size:0.9rem;"]);
+/* harmony default export */ __webpack_exports__["default"] = (AppNav); // animation: ${props => (props.route ? `${NavAnimation} 0.5s linear 0s 1 normal none running` : null)};
+
+/***/ }),
+
+/***/ "./components/Header.tsx":
+/*!*******************************!*\
+  !*** ./components/Header.tsx ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/yuta/Yutazon.me/components/Header.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const Header = () => __jsx(CoreHeaderWrapper, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 5
+  },
+  __self: undefined
+}, __jsx(HeaderTitleWrapper, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 6
+  },
+  __self: undefined
+}, __jsx(HeaderWrapper, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7
+  },
+  __self: undefined
+}, __jsx(AppTitle, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8
+  },
+  __self: undefined
+}, "Yutazon.me"))), __jsx(AppBioGraphy, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11
+  },
+  __self: undefined
+}, __jsx(BiographyWrapper, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 12
+  },
+  __self: undefined
+}, __jsx(BioImage, {
+  src: "/static/bio.png",
+  alt: "bio-img",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+}), __jsx(BioDiscription, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 14
+  },
+  __self: undefined
+}, __jsx(ExternalLink, {
+  href: "https://github.com/Yuta07",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 15
+  },
+  __self: undefined
+}, "Yutaka Miyazaki."), __jsx(EasyProfile, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 16
+  },
+  __self: undefined
+}, "Web Developer \uD83C\uDF89"), __jsx(EasyProfile, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 17
+  },
+  __self: undefined
+}, "\u6771\u4EAC\u3067SaaS\u306E\u958B\u767A\u3092\u3057\u3066\u3044\u308B\u3088"))))); // Header style
+
+
+const CoreHeaderWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.header.withConfig({
+  displayName: "Header__CoreHeaderWrapper",
+  componentId: "sc-10eaj7s-0"
+})(["width:100%;"]);
+const HeaderTitleWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Header__HeaderTitleWrapper",
+  componentId: "sc-10eaj7s-1"
+})(["width:100%;background-color:#282a31;margin-bottom:1.5rem;padding:0.5rem 0;"]);
+const HeaderWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Header__HeaderWrapper",
+  componentId: "sc-10eaj7s-2"
+})(["width:100%;max-width:480px;margin:0 auto;padding:0 1.4rem;"]);
+const AppTitle = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h1.withConfig({
+  displayName: "Header__AppTitle",
+  componentId: "sc-10eaj7s-3"
+})(["color:#fefefe;font-size:1.7rem;"]);
+const AppBioGraphy = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.aside.withConfig({
+  displayName: "Header__AppBioGraphy",
+  componentId: "sc-10eaj7s-4"
+})(["width:100%;max-width:480px;margin:0 auto;"]);
+const BiographyWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Header__BiographyWrapper",
+  componentId: "sc-10eaj7s-5"
+})(["display:flex;align-items:center;justify-content:flex-start;margin-bottom:1.6rem;padding:0 1.4rem;"]);
+const BioImage = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.img.withConfig({
+  displayName: "Header__BioImage",
+  componentId: "sc-10eaj7s-6"
+})(["width:64px;height:64px;margin-right:1.5rem;border-radius:50%;object-fit:contain;"]);
+const BioDiscription = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Header__BioDiscription",
+  componentId: "sc-10eaj7s-7"
+})(["max-width:320px;"]);
+const ExternalLink = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.a.withConfig({
+  displayName: "Header__ExternalLink",
+  componentId: "sc-10eaj7s-8"
+})(["color:#e68123;text-decoration:underline;margin-right:6px;&:hover{text-decoration:none;}"]);
+const EasyProfile = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.p.withConfig({
+  displayName: "Header__EasyProfile",
+  componentId: "sc-10eaj7s-9"
+})(["font-size:1rem;line-height:1.8;"]);
+/* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
 
 /***/ "./components/Layout.tsx":
 /*!*******************************!*\
@@ -137,106 +394,66 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/dynamic */ "next/dynamic");
-/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header */ "./components/Header.tsx");
+/* harmony import */ var _AppNav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AppNav */ "./components/AppNav.tsx");
 var _jsxFileName = "/Users/yuta/Yutazon.me/components/Layout.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
+ // import dynamic from 'next/dynamic';
 
  // import components
+// const DynamicHeaderWithCustomLoading = dynamic(() => import('./Header'), { loading: () => <p>...</p> });
 
-const DynamicHeaderWithCustomLoading = next_dynamic__WEBPACK_IMPORTED_MODULE_2___default()(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./Header */ "./components/Header.tsx")), {
-  loading: () => __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: undefined
-  }, "..."),
-  loadableGenerated: {
-    webpack: () => [/*require.resolve*/(/*! ./Header */ "./components/Header.tsx")],
-    modules: ['./Header']
-  }
-});
-const CoreLayoutWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
-  displayName: "Layout__CoreLayoutWrapper",
-  componentId: "sc-19evpux-0"
-})(["width:100%;padding:2rem 0;"]);
-const LayoutWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
-  displayName: "Layout__LayoutWrapper",
-  componentId: "sc-19evpux-1"
-})(["width:95%;max-width:600px;margin:0 auto;padding:0 1.4rem;"]);
-const LinkStyle = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.span.withConfig({
-  displayName: "Layout__LinkStyle",
-  componentId: "sc-19evpux-2"
-})([""]);
+
+
 
 const Layout = props => {
   return __jsx(CoreLayoutWrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 15
     },
     __self: undefined
-  }, __jsx(DynamicHeaderWithCustomLoading, {
+  }, __jsx(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 16
+    },
+    __self: undefined
+  }), __jsx(_AppNav__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
     },
     __self: undefined
   }), __jsx(LayoutWrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 18
     },
     __self: undefined
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/me",
+  }, __jsx(CoreContentsWrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 19
     },
     __self: undefined
-  }, __jsx(LinkStyle, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: undefined
-  }, "Bio")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/product",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: undefined
-  }, __jsx(LinkStyle, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: undefined
-  }, "Product")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: undefined
-  }, __jsx(LinkStyle, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: undefined
-  }, "Link")), props.children));
+  }, props.children)));
 };
 
+const CoreLayoutWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Layout__CoreLayoutWrapper",
+  componentId: "sc-19evpux-0"
+})(["width:100%;margin:0 auto;padding-bottom:2rem;"]);
+const LayoutWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Layout__LayoutWrapper",
+  componentId: "sc-19evpux-1"
+})(["max-width:480px;margin:0 auto;"]);
+const CoreContentsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
+  displayName: "Layout__CoreContentsWrapper",
+  componentId: "sc-19evpux-2"
+})(["margin-top:2.5rem;padding:0 1.4rem;"]);
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
 
 /***/ }),
@@ -2196,61 +2413,85 @@ if (false) {} else {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.tsx");
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.tsx");
 var _jsxFileName = "/Users/yuta/Yutazon.me/pages/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+ // import styled from 'styled-components';
+// import components
 
- // import components
 
 
-const Title = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h1.withConfig({
-  displayName: "pages__Title",
-  componentId: "sc-7jz26d-0"
-})(["font-size:50px;color:skyblue;"]);
-
-const Index = () => {
-  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+const Bio = () => {
+  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, "asdf"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, "asdf"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, "asdf"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, "asdf"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: undefined
-  }, __jsx(Title, {
+  }, "asdf"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: undefined
-  }, "My page"), __jsx("ul", {
+  }, "asdf"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
     },
     __self: undefined
-  }, __jsx("li", {
+  }, "asdf"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
     },
     __self: undefined
-  }, "asdf"), __jsx("li", {
+  }, "asdf"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     },
     __self: undefined
-  }, "asdf"), __jsx("li", {
+  }, "asdf"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
     },
     __self: undefined
-  }, "asdf")));
+  }, "asdf"));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Index);
+/* harmony default export */ __webpack_exports__["default"] = (Bio);
 
 /***/ }),
 
@@ -2343,14 +2584,14 @@ module.exports = require("core-js/library/fn/promise");
 
 /***/ }),
 
-/***/ "next/dynamic":
-/*!*******************************!*\
-  !*** external "next/dynamic" ***!
-  \*******************************/
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("next/dynamic");
+module.exports = require("next/router");
 
 /***/ }),
 
