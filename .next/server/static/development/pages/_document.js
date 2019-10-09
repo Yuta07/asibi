@@ -1391,7 +1391,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_3___default.a {
         lineNumber: 25
       },
       __self: this
-    }), __jsx("title", {
+    }, __jsx("title", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 26
@@ -1428,22 +1428,30 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_3___default.a {
         lineNumber: 30
       },
       __self: this
-    }), __jsx("body", {
+    }), __jsx("link", {
+      rel: "shortcut icon",
+      href: "/static/favicon.ico",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 31
       },
       __self: this
+    })), __jsx("body", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_3__["Main"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 34
       },
       __self: this
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_3__["NextScript"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 35
       },
       __self: this
     })));

@@ -12576,7 +12576,7 @@ var _jsxFileName = "/Users/yuta/Yutazon.me/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  html {\n    overflow-y: scroll;\n  }\n\n  body {\n    font-family: \"open sans\", \"helvetica neue\", Helvetica, Arial, sans-serif;\n    font-size: 16px;\n    font-weight: 400;\n    line-height: 1.4;\n    word-wrap: break-word;\n    font-kerning: normal;\n    color: #282a31;\n    background-color: #fefefe;\n    min-height: 100vh;\n  }\n\n  * {\n    padding: 0;\n    margin: 0;\n    box-sizing: border-box;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  html {\n    overflow-y: scroll;\n  }\n\n  body {\n    font-family: \"open sans\", \"helvetica neue\", Helvetica, Arial, sans-serif;\n    font-size: 16px;\n    font-weight: 400;\n    line-height: 1.4;\n    word-wrap: break-word;\n    font-kerning: normal;\n    color: #323335;\n    background-color: #fefefe;\n    min-height: 100vh;\n  }\n\n  * {\n    padding: 0;\n    margin: 0;\n    box-sizing: border-box;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

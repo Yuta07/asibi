@@ -24,13 +24,13 @@ const Header = () => (
 // Header style
 const CoreHeaderWrapper = styled.header`
   width: 100%;
+  background-color: #fefefe;
 `;
 
 const HeaderTitleWrapper = styled.div`
   width: 100%;
   background-color: #282a31;
-  margin-bottom: 1.5rem;
-  padding: 0.5rem 0;
+  padding: 0.7rem 0;
 `;
 
 const HeaderWrapper = styled.div`
@@ -55,8 +55,8 @@ const BiographyWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 1.6rem;
-  padding: 0 1.4rem;
+  margin: 1.8rem 0 0;
+  padding: 0 1.4rem 1.4rem;
 `;
 
 const BioImage = styled.img`

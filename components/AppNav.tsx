@@ -12,20 +12,20 @@ const AppNav = () => {
       <AppNavLinkWrapper>
         <Link href="/">
           <AppNavLink route={path === '/'}>
-            <AppNavLinkImage src="/static/nav/moon.svg" alt="my bio" route={path === '/'} />
-            <AppNavLinkText>Bio</AppNavLinkText>
+            <AppNavLinkImage src="/static/nav/file-text.svg" alt="resume" route={path === '/'} />
+            <AppNavLinkText>Resume</AppNavLinkText>
+          </AppNavLink>
+        </Link>
+        <Link href="/skills" as="skills">
+          <AppNavLink route={path === '/skills'}>
+            <AppNavLinkImage src="/static/nav/moon.svg" alt="my skills" route={path === '/skills'} />
+            <AppNavLinkText>Skills</AppNavLinkText>
           </AppNavLink>
         </Link>
         <Link href="/works" as="works">
           <AppNavLink route={path === '/works'}>
             <AppNavLinkImage src="/static/nav/layout.svg" alt="my works" route={path === '/works'} />
             <AppNavLinkText>Works</AppNavLinkText>
-          </AppNavLink>
-        </Link>
-        <Link href="/links" as="links">
-          <AppNavLink route={path === '/links'}>
-            <AppNavLinkImage src="/static/nav/share.svg" alt="link" route={path === '/links'} />
-            <AppNavLinkText>Links</AppNavLinkText>
           </AppNavLink>
         </Link>
       </AppNavLinkWrapper>
@@ -35,61 +35,50 @@ const AppNav = () => {
 
 // AppNav style
 const AppNavCoreWrapper = styled.nav`
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 0 1.4rem;
+  width: 100%;
+  padding-bottom: 0.6rem;
   color: #fefefe;
-  border-top: 1px solid #e0e7ef;
   border-bottom: 1px solid #e0e7ef;
-
-  @media (max-width: 559px) {
-    padding: 0;
-  }
+  background-color: #fefefe;
 `;
 
 const AppNavLinkWrapper = styled.div`
-  width: 100%;
+  max-width: 480px;
   height: 100%;
+  margin: 0 auto;
+  padding: 0 1.4rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
-  flex-wrap: nowrap;
 `;
 
 const AppNavLink = styled.button<{ route: boolean }>`
   color: ${props => (props.route ? '#e68123' : '#c9cfd3')};
   background-color: #fefefe;
   position: relative;
-  width: 30%;
+  width: 25%;
   padding: 0.5rem 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   text-decoration: none;
-  outline: 0;
   border: none;
+  outline: 0;
   appearance: none;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  border-bottom: ${props => (props.route ? '3px solid #e68123' : '3px solid transparent')};
-
-  &:hover {
-    border-bottom: 3px solid #e68123;
-  }
-
-  @media (max-width: 559px) {
-    width: 33%;
-  }
 `;
 
 const AppNavLinkImage = styled.img<{ route: boolean }>`
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
   opacity: ${props => (props.route ? '1' : '0.4')};
   filter: ${props => (props.route ? 'none' : 'saturate(10%)')};
+  border: ${props => (props.route ? '1px solid #e68123' : '1px solid #c9cfd3')};
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
 `;
 
 const AppNavLinkText = styled.p`
@@ -98,4 +87,3 @@ const AppNavLinkText = styled.p`
 `;
 
 export default AppNav;
-// animation: ${props => (props.route ? `${NavAnimation} 0.5s linear 0s 1 normal none running` : null)};

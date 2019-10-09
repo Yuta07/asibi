@@ -1,13 +1,15 @@
 import React from 'react';
+// import types
+import { StarProps } from '../types/type';
 
-const Star = ({ size = 20, color = '#ef8f37' }) => (
+const Star = (props: StarProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
+    width="16"
+    height="16"
     viewBox="0 0 24 24"
-    fill="none"
-    stroke={color}
+    fill={props.fill}
+    stroke={props.color}
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"

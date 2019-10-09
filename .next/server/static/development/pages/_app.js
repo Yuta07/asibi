@@ -2022,7 +2022,7 @@ const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_3__["createGlobal
     line-height: 1.4;
     word-wrap: break-word;
     font-kerning: normal;
-    color: #282a31;
+    color: #323335;
     background-color: #fefefe;
     min-height: 100vh;
   }

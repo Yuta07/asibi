@@ -22,12 +22,14 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
-        <title>Yutazon.me</title>
-        <meta charSet="UTF-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="yutaka.miyazaki" content="Yutazon.me" />
+        <Head>
+          <title>Yutazon.me</title>
+          <meta charSet="UTF-8" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta name="yutaka.miyazaki" content="Yutazon.me" />
+          <link rel="shortcut icon" href="/static/favicon.ico" />
+        </Head>
         <body>
           <Main />
           <NextScript />

@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.4;
     word-wrap: break-word;
     font-kerning: normal;
-    color: #282a31;
+    color: #323335;
     background-color: #fefefe;
     min-height: 100vh;
   }
