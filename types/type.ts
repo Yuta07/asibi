@@ -9,6 +9,13 @@ export type StarProps = {
   fill: string;
 };
 
+// experinence
+export type Experience = {
+  period: string;
+  role: string;
+  description: string;
+};
+
 // skill
 export type Skill = {
   language: string;
@@ -17,9 +24,18 @@ export type Skill = {
   description: string;
 };
 
-// experinence
-export type Experience = {
-  period: string;
-  role: string;
+// works
+export type Work = {
+  img: string;
+  title: string;
   description: string;
+  period: string;
+  link: string;
+};
+
+// links
+export type Link = {
+  img: string;
+  link: string;
+  name: string;
 };

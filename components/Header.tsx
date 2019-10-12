@@ -14,7 +14,7 @@ const Header = () => (
         <BioDiscription>
           <ExternalLink href="https://github.com/Yuta07">Yutaka Miyazaki.</ExternalLink>
           <EasyProfile>Web Developer 🎉</EasyProfile>
-          <EasyProfile>東京でSaaSの開発をしているよ</EasyProfile>
+          <EasyProfile>SaaSの開発をしたり、Web管理画面の開発をしています。</EasyProfile>
         </BioDiscription>
       </BiographyWrapper>
     </AppBioGraphy>
@@ -56,7 +56,7 @@ const BiographyWrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
   margin: 1.8rem 0 0;
-  padding: 0 1.4rem 1.4rem;
+  padding: 0 1.4rem 1rem;
 `;
 
 const BioImage = styled.img`
@@ -82,8 +82,8 @@ const ExternalLink = styled.a`
 `;
 
 const EasyProfile = styled.p`
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 0.9rem;
+  line-height: 1.6;
 `;
 
 export default Header;

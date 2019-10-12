@@ -13,7 +13,7 @@ const AppNav = () => {
         <Link href="/">
           <AppNavLink route={path === '/'}>
             <AppNavLinkImage src="/static/nav/file-text.svg" alt="resume" route={path === '/'} />
-            <AppNavLinkText>Resume</AppNavLinkText>
+            <AppNavLinkText>Me</AppNavLinkText>
           </AppNavLink>
         </Link>
         <Link href="/skills" as="skills">

@@ -43,7 +43,7 @@ const CoreContentsWrapper = styled.main`
   justify-content: space-between;
   width: 100%;
   min-height: calc(100vh - 20rem);
-  padding: 1rem 1.4rem 0;
+  padding: 1rem 1.4rem 2rem;
 
   @media (max-width: 559px) {
     background-color: #f7f6ed;

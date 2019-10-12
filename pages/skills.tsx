@@ -6,6 +6,8 @@ import Title from '../components/Title';
 import Star from '../components/StarIcon';
 // import data
 import { SkillData } from '../data/skill';
+// import style
+import * as Style from '../styles/style';
 
 let initialHoverState: boolean[] = [];
 for (let i = 0; i < SkillData.length; i++) {
@@ -63,32 +65,17 @@ const Skills = () => {
 
   return (
     <Layout>
-      <CoreSkillWrapper>
-        <SkillTitleContainer>
+      <Style.CorePageWrapper>
+        <Style.PageTitleContainer>
           <Title title="Skils" />
-        </SkillTitleContainer>
+        </Style.PageTitleContainer>
         <SkillWrapper>{renderSkill}</SkillWrapper>
-      </CoreSkillWrapper>
+      </Style.CorePageWrapper>
     </Layout>
   );
 };
 
 // skill style
-const CoreSkillWrapper = styled.section`
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid #e0e7ef;
-
-  &:first-child {
-    padding-top: 0;
-    border-top: none;
-  }
-`;
-
-const SkillTitleContainer = styled.div`
-  text-align: center;
-`;
-
 const SkillWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -128,7 +115,7 @@ const SkillImg = styled.img`
 
 const SkillLevel = styled.div`
   width: 100%;
-  margin-top: 1.2rem;
+  margin-top: 0.8rem;
   text-align: center;
 `;
 
@@ -138,9 +125,7 @@ const SkillDescriptionWrapper = styled.div`
 `;
 
 const SkillName = styled.p`
-  margin-top: 0.5rem;
   padding: 0.5rem;
-  border-top: 1px solid #e0e7ef;
 `;
 
 const SkillDescription = styled.p<{ show: boolean }>`
