@@ -2,9 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
+import LazyLoad from 'react-lazyload';
 // import components
 import Layout from '../components/Layout';
-import Title from '../components/Title';
+// import atom
+import Spinner from '../atom/Spinner';
+import Title from '../atom/Title';
 // import data
 import { WorkData } from '../data/work';
 // import style
@@ -19,7 +22,9 @@ const Works = () => {
     return (
       <EveryWorkWrapper key={index}>
         <WorkImgWrapper>
-          <WorkImg src={work.img} alt={work.title} />
+          <LazyLoad height={140} placeholder={<Spinner margin="60" />} debounce={500}>
+            <WorkImg src={work.img} alt={work.title} />
+          </LazyLoad>
         </WorkImgWrapper>
         <WorkDescriptionWrapper>
           {work.link === '' ? (
@@ -79,6 +84,7 @@ const WorkImgWrapper = styled.div`
 
 const WorkImg = styled.img`
   width: 75%;
+  max-height: 160px;
   object-fit: cover;
 `;
 

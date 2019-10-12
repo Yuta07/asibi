@@ -1,9 +1,12 @@
 import React, { useState, useCallback } from 'react';
 import styled from 'styled-components';
+import LazyLoad from 'react-lazyload';
 // import components
 import Layout from '../components/Layout';
-import Title from '../components/Title';
-import Star from '../components/StarIcon';
+// import atom
+import Spinner from '../atom/Spinner';
+import Star from '../atom/StarIcon';
+import Title from '../atom/Title';
 // import data
 import { SkillData } from '../data/skill';
 // import style
@@ -49,7 +52,9 @@ const Skills = () => {
     return (
       <EverySkillWrapper key={index} onClick={event => handleClickDescriptionShow(event, index)}>
         <SkillImgWrapper>
-          <SkillImg src={skill.img} alt={skill.language} />
+          <LazyLoad height={50} placeholder={<Spinner margin="10" />} debounce={500}>
+            <SkillImg src={skill.img} alt={skill.language} />
+          </LazyLoad>
           <SkillLevel>
             {renderFillStarIcon(skill.star)}
             {renderNonStarIcon(starCount)}

@@ -61,7 +61,7 @@ const BiographyWrapper = styled.div`
 
 const BioImage = styled.img`
   width: 64px;
-  height: 64px;
+  max-height: 64px;
   margin-right: 1.5rem;
   border-radius: 50%;
   object-fit: contain;

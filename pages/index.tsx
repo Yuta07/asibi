@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 // import components
 import Layout from '../components/Layout';
-import Title from '../components/Title';
+// import atom
+import Title from '../atom/Title';
 // import data
 import { ExperienceData } from '../data/experience';
 import { LinkData } from '../data/links';
@@ -48,7 +49,7 @@ const Resume = () => {
             プログラミング言語は特にこだわっていませんが、Reactが好きです。
             <br />
             閉鎖的な空間よりもオープンな空間を好みます。また、ツールもある程度自由に使える環境だと嬉しいです。
-            toCよりかはtoBのサービスを好みます。toC向けのサービス開発も好きですが、ゲームや広告系は避けています。
+            toCよりかはtoBのサービスを好みます。toC向けのサービス開発も好きで、副業先ではWeb管理画面を作ることが多いです。
             <br />
             エンジニアとしてコードを書く中で、世の中を少しでもよくしていけたらと思います。
           </BioText>
@@ -155,7 +156,7 @@ const LinkRedirect = styled.span`
 `;
 
 const EmailText = styled.p`
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
   padding: 0.5rem;
   font-size: 1.1rem;
   color: #fefefe;
