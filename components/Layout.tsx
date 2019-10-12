@@ -24,7 +24,6 @@ const Layout = (props: LayoutProps) => {
 const CoreLayoutWrapper = styled.div`
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 2rem;
 
   @media (min-width: 560px) {
     background-color: #f7f6ed;
@@ -42,7 +41,7 @@ const CoreContentsWrapper = styled.main`
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  min-height: calc(100vh - 20rem);
+  min-height: calc(100vh - 16rem);
   padding: 1rem 1.4rem 2rem;
 
   @media (max-width: 559px) {

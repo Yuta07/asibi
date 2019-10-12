@@ -95,7 +95,7 @@ const CoreExperienceWrapper = styled.div`
 const ExperienceWrapper = styled.div`
   width: 75%;
   margin-right: 1rem;
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
   display: inline-flex;
   flex-direction: column;
   position: relative;

@@ -52,7 +52,7 @@ const Skills = () => {
     return (
       <EverySkillWrapper key={index} onClick={event => handleClickDescriptionShow(event, index)}>
         <SkillImgWrapper>
-          <LazyLoad height={50} placeholder={<Spinner margin="10" />} debounce={500}>
+          <LazyLoad height="100%" placeholder={<Spinner margin="10" />} debounce={500}>
             <SkillImg src={skill.img} alt={skill.language} />
           </LazyLoad>
           <SkillLevel>

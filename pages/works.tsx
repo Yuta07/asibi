@@ -22,7 +22,7 @@ const Works = () => {
     return (
       <EveryWorkWrapper key={index}>
         <WorkImgWrapper>
-          <LazyLoad height={140} placeholder={<Spinner margin="60" />} debounce={500}>
+          <LazyLoad height="100%" placeholder={<Spinner margin="60" />} debounce={500}>
             <WorkImg src={work.img} alt={work.title} />
           </LazyLoad>
         </WorkImgWrapper>

@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import App from 'next/app';
+import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components';
 
 export default class MyApp extends App {
@@ -7,6 +8,9 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <Fragment>
+        <Head>
+          <title>Yutazon.me</title>
+        </Head>
         <GlobalStyle />
         <Component {...pageProps} />
       </Fragment>
