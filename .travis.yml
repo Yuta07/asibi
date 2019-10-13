@@ -17,5 +17,7 @@ script:
   - npm run build
   - now --prod
 
-on:
-  branch: master
+# safelist
+branches:
+  only:
+    - master
