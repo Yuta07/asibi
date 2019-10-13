@@ -2,7 +2,7 @@ import { Experience } from '../types/type';
 
 export const ExperienceData: Experience[] = [
   {
-    period: '2015/04 - 2019/03',
+    period: '2015/04 ~ 2019/03',
     role: '大学生 -> 専門学生',
     description: '大学卒業後、エンジニアの道を目指すため、専門学校でプログラミングを学びました。',
   },
