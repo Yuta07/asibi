@@ -10,7 +10,7 @@ export const ExperienceData: Experience[] = [
     period: '2018/06 ~',
     role: 'フロントエンドエンジニア',
     description:
-      'インターンを通して、アプリ開発を経験しました。React/Reduxを用いたWeb管理画面からFirebaseを用いたサーバサイドまで担当しました。現在はTypeScriptとReactによる新アプちのWeb管理画面の開発を行っています。',
+      'インターンを通して、アプリ開発を経験しました。React/Reduxを用いたWeb管理画面からFirebaseを用いたサーバサイドまで担当しました。現在はTypeScriptとReactによる新アプリのWeb管理画面の開発を行っています。',
   },
   {
     period: '2019/04 ~',
