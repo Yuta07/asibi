@@ -15,7 +15,6 @@ node_js:
 script:
   - yarn
   - npm run build
-  - now --prod
 
 # safelist
 branches:
