@@ -1,35 +1,24 @@
 {
-  "devFiles": [],
+  "devFiles": [
+    "static/development/dll/dll_d001615c188baf391cd0.js",
+    "static/development/dll/dll_d001615c188baf391cd0.js.map"
+  ],
   "pages": {
     "/": [
-      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
-      "static/chunks/commons.bde8eeb0ff2bd1ed4af5.js",
-      "static/runtime/main-f1abe8236006c125ae86.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/_app": [
-      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
-      "static/chunks/commons.bde8eeb0ff2bd1ed4af5.js",
-      "static/runtime/main-f1abe8236006c125ae86.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/_error": [
-      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
-      "static/chunks/commons.bde8eeb0ff2bd1ed4af5.js",
-      "static/runtime/main-f1abe8236006c125ae86.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/index": [
-      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
-      "static/chunks/commons.bde8eeb0ff2bd1ed4af5.js",
-      "static/runtime/main-f1abe8236006c125ae86.js"
-    ],
-    "/skills": [
-      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
-      "static/chunks/commons.bde8eeb0ff2bd1ed4af5.js",
-      "static/runtime/main-f1abe8236006c125ae86.js"
-    ],
-    "/works": [
-      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
-      "static/chunks/commons.bde8eeb0ff2bd1ed4af5.js",
-      "static/runtime/main-f1abe8236006c125ae86.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }
