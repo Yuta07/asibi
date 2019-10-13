@@ -6,15 +6,11 @@ os:
 
 node_js:
   - "node"
-  - "lts/*"
-  - "11"
   - "10"
 
 script:
   - yarn
-  - yarn test
   - npm run build
-  - now --prod
 
 # safelist
 branches:
