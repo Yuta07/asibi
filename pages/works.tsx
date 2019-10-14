@@ -18,7 +18,6 @@ const Works = () => {
   const path = router.pathname;
 
   const renderWorks = WorkData.map((work, index) => {
-    console.log(work, index);
     return (
       <EveryWorkWrapper key={index}>
         <WorkImgWrapper>

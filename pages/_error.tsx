@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { NextPageContext } from 'next';
+import React, { Fragment } from 'react';
 import Head from 'next/head';
 
 type Props = {
@@ -7,24 +6,20 @@ type Props = {
   errorCode: number;
 };
 
-class Error extends Component<Props> {
-  static async getInitialProps({ res }: NextPageContext): Promise<Props> {
-    return {
-      title: `Error: ${res!.statusCode}`,
-      errorCode: res!.statusCode,
-    };
-  }
+const Error = (props: Props) => {
+  return (
+    <Fragment>
+      <Head>
+        <title>{props.title}</title>
+      </Head>
+      {props.errorCode}
+    </Fragment>
+  );
+};
 
-  render() {
-    return (
-      <>
-        <Head>
-          <title>{this.props.title}</title>
-        </Head>
-        {this.props.errorCode}
-      </>
-    );
-  }
-}
+Error.getInitialProps = (res: any, err: any) => {
+  const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
+  return { statusCode };
+};
 
 export default Error;
