@@ -10,7 +10,7 @@ const Header = () => (
     </HeaderTitleWrapper>
     <AppBioGraphy>
       <BiographyWrapper>
-        <BioImage src="/static/bio.png" alt="bio-img" />
+        <BioImage src="/bio.png" alt="bio-img" />
         <BioDiscription>
           <ExternalLink href="https://github.com/Yuta07">Yutaka Miyazaki.</ExternalLink>
           <EasyProfile>Web Developer 🎉</EasyProfile>

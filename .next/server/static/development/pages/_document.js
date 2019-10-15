@@ -590,7 +590,7 @@ async function loadGetInitialProps(Component, ctx) {
 
   if (true) {
     if (_Object$keys(props).length === 0 && !ctx.ctx) {
-      console.warn(`${getDisplayName(Component)} returned an empty object from \`getInitialProps\`. This de-optimizes and prevents automatic prerendering. https://err.sh/zeit/next.js/empty-object-getInitialProps`);
+      console.warn(`${getDisplayName(Component)} returned an empty object from \`getInitialProps\`. This de-optimizes and prevents automatic static optimization. https://err.sh/zeit/next.js/empty-object-getInitialProps`);
     }
   }
 
@@ -840,17 +840,8 @@ class Head extends _react.Component {
       assetPrefix,
       files
     } = this.context._documentProps;
-
-    if (!files || files.length === 0) {
-      return null;
-    }
-
-    return files.map(file => {
-      // Only render .css files here
-      if (!/\.css$/.test(file)) {
-        return null;
-      }
-
+    const cssFiles = files && files.length ? files.filter(f => /\.css$/.test(f)) : [];
+    return cssFiles.length === 0 ? null : cssFiles.map(file => {
       return _react.default.createElement("link", {
         key: file,
         nonce: this.props.nonce,
@@ -1015,15 +1006,15 @@ class Head extends _react.Component {
     }
 
     return _react.default.createElement("head", this.props, this.context._documentProps.isDevelopment && this.context._documentProps.hasCssMode && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("style", {
-      "data-next-hydrating": true,
+      "data-next-hide-fouc": true,
       dangerouslySetInnerHTML: {
         __html: "body{display:none}"
       }
     }), _react.default.createElement("noscript", {
-      "data-next-hydrating": true
+      "data-next-hide-fouc": true
     }, _react.default.createElement("style", {
       dangerouslySetInnerHTML: {
-        __html: "body{display:unset}"
+        __html: "body{display:block}"
       }
     }))), children, head, _react.default.createElement("meta", {
       name: "next-head-count",
@@ -1424,7 +1415,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_3___default.a {
       __self: this
     }), __jsx("link", {
       rel: "shortcut icon",
-      href: "/static/favicon.ico",
+      href: "/favicon.ico",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 30
