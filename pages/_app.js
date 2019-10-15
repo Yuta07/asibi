@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import App from 'next/app';
 import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components';
+// import component
+import Layout from '../components/Layout';
 
 export default class MyApp extends App {
   render() {
@@ -12,7 +14,9 @@ export default class MyApp extends App {
           <title>Yutazon.me</title>
         </Head>
         <GlobalStyle />
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </Fragment>
     );
   }
