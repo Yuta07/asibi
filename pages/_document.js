@@ -27,7 +27,7 @@ export default class MyDocument extends Document {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <meta name="yutaka.miyazaki" content="Yutazon.me" />
-          <link rel="shortcut icon" href="/static/favicon.ico" />
+          <link rel="shortcut icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />

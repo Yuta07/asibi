@@ -12,19 +12,19 @@ const AppNav = () => {
       <AppNavLinkWrapper>
         <Link href="/">
           <AppNavLink route={path === '/'}>
-            <AppNavLinkImage src="/static/nav/file-text.svg" alt="resume" route={path === '/'} />
+            <AppNavLinkImage src="/nav/file-text.svg" alt="resume" route={path === '/'} />
             <AppNavLinkText>Me</AppNavLinkText>
           </AppNavLink>
         </Link>
         <Link href="/skills" as="skills">
           <AppNavLink route={path === '/skills'}>
-            <AppNavLinkImage src="/static/nav/moon.svg" alt="my skills" route={path === '/skills'} />
+            <AppNavLinkImage src="/nav/moon.svg" alt="my skills" route={path === '/skills'} />
             <AppNavLinkText>Skills</AppNavLinkText>
           </AppNavLink>
         </Link>
         <Link href="/works" as="works">
           <AppNavLink route={path === '/works'}>
-            <AppNavLinkImage src="/static/nav/layout.svg" alt="my works" route={path === '/works'} />
+            <AppNavLinkImage src="/nav/layout.svg" alt="my works" route={path === '/works'} />
             <AppNavLinkText>Works</AppNavLinkText>
           </AppNavLink>
         </Link>
