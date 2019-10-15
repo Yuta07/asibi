@@ -1,8 +1,6 @@
-import React, { useState, useCallback } from 'react';
+import React, { Fragment, useState, useCallback } from 'react';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
-// import components
-import Layout from '../components/Layout';
 // import atom
 import Spinner from '../atom/Spinner';
 import Star from '../atom/StarIcon';
@@ -69,14 +67,14 @@ const Skills = () => {
   });
 
   return (
-    <Layout>
+    <Fragment>
       <Style.CorePageWrapper>
         <Style.PageTitleContainer>
           <Title title="Skils" />
         </Style.PageTitleContainer>
         <SkillWrapper>{renderSkill}</SkillWrapper>
       </Style.CorePageWrapper>
-    </Layout>
+    </Fragment>
   );
 };
 

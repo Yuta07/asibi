@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
-// import components
-import Layout from '../components/Layout';
 // import atom
 import Spinner from '../atom/Spinner';
 import Title from '../atom/Title';
@@ -43,14 +41,14 @@ const Works = () => {
   });
 
   return (
-    <Layout>
+    <Fragment>
       <Style.CorePageWrapper>
         <Style.PageTitleContainer>
           <Title title="Works" />
         </Style.PageTitleContainer>
         <WorksWrapper>{renderWorks}</WorksWrapper>
       </Style.CorePageWrapper>
-    </Layout>
+    </Fragment>
   );
 };
 

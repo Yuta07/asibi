@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
-// import components
-import Layout from '../components/Layout';
 // import atom
 import Title from '../atom/Title';
 // import data
@@ -35,7 +33,7 @@ const Resume = () => {
   });
 
   return (
-    <Layout>
+    <Fragment>
       <Style.CorePageWrapper>
         <Style.PageTitleContainer>
           <Title title="Biography" />
@@ -68,7 +66,7 @@ const Resume = () => {
         <CoreLinkWrapper>{renderLink}</CoreLinkWrapper>
         <EmailText>yutazon.me@gmail.com</EmailText>
       </Style.CorePageWrapper>
-    </Layout>
+    </Fragment>
   );
 };
 
