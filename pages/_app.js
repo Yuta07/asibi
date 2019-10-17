@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components';
 // import component
 import Layout from '../components/Layout';
+import SWRegister from '../public/sw-register';
 
 export default class MyApp extends App {
   render() {
@@ -17,6 +18,7 @@ export default class MyApp extends App {
         <Layout>
           <Component {...pageProps} />
         </Layout>
+        <SWRegister />
       </Fragment>
     );
   }
