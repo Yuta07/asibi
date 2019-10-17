@@ -9,7 +9,7 @@ const nextConfig = {
     runtimeCaching: [
       {
         urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-        handler: 'CacheFirst',
+        handler: 'NetworkFirst',
         options: {
           cacheName: 'images',
           networkTimeoutSeconds: 10,
