@@ -4,9 +4,21 @@ import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components';
 // import component
 import Layout from '../components/Layout';
-import SWRegister from '../public/sw-register';
 
 export default class MyApp extends App {
+  componentDidMount() {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/service-worker.js')
+        .then(registration => {
+          console.log('service worker registration successful: ', registration);
+        })
+        .catch(err => {
+          console.warn('service worker registration failed', err.message);
+        });
+    }
+  }
+
   render() {
     const { Component, pageProps } = this.props;
     return (
@@ -18,7 +30,6 @@ export default class MyApp extends App {
         <Layout>
           <Component {...pageProps} />
         </Layout>
-        <SWRegister />
       </Fragment>
     );
   }
