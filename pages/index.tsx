@@ -46,10 +46,10 @@ const Resume = () => {
             フロントだけではなく、サーバサイド・インフラと広く携わっていきたいと考えています。
             プログラミング言語は特にこだわっていませんが、Reactが好きです。
             <br />
-            閉鎖的な空間よりもオープンな空間を好みます。また、ツールもある程度自由に使える環境だと嬉しいです。
+            閉鎖的な空間よりもオープンな空間を好みます。また、ツールもある程度自由に使える環境だと喜びを感じます。
             toCよりかはtoBのサービスを好みます。toC向けのサービス開発も好きですがゲーム・広告は避けるようにしています。副業先ではWeb管理画面を作ることが多いです。
             <br />
-            エンジニアとしてコードを書く中で、世の中を少しでもよくしていけたらと思います。
+            世界中の幸福度を高めていきたいと思うこの頃。
           </BioText>
         </CoreBioWrapper>
       </Style.CorePageWrapper>
@@ -88,6 +88,7 @@ const CoreExperienceWrapper = styled.div`
   overflow-y: hidden;
   white-space: nowrap;
   margin-top: 2rem;
+  padding-bottom: 0.5rem;
 `;
 
 const ExperienceWrapper = styled.div`

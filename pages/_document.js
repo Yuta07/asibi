@@ -21,14 +21,23 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="ja">
         <Head>
           <meta charSet="UTF-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <meta name="yutaka.miyazaki" content="Yutazon.me" />
-          <link rel="shortcut icon" href="/favicon.ico" />
+          <meta name="description" content="ゆたぞんのポートフォリオ" />
+          <link rel="shortcut icon" href="/public/favicon.ico" />
+          <link rel="apple-touch-icon" sizes="192x192" href="/static/images/icons/apple-touch-icon-192x192.png" />
           <link rel="manifest" href="/static/manifest.json" />
+          <link rel="manifest" href="manifest.webmanifest" />
+          <script
+            async
+            src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js"
+            integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA"
+            crossorigin="anonymous"
+          ></script>
         </Head>
         <body>
           <Main />
