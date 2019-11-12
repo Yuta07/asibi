@@ -29,7 +29,7 @@ export default class MyDocument extends Document {
           <meta name="yutaka.miyazaki" content="Yutazon.me" />
           <meta name="description" content="ゆたぞんのポートフォリオ" />
           <link rel="shortcut icon" href="/public/favicon.ico" />
-          <link rel="apple-touch-icon" sizes="192x192" href="/static/images/icons/apple-touch-icon-192x192.png" />
+          <link rel="apple-touch-icon" sizes="144x144" href="/static/images/icons/apple-touch-icon-144x144.png" />
           <link rel="manifest" href="/static/manifest.json" />
           <link rel="manifest" href="manifest.webmanifest" />
           <script
