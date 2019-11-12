@@ -5,7 +5,7 @@
   "theme_color": "#282a31",
   "background_color": "#f7f6ed",
   "scope": "/",
-  "start_url": "./?homescreen=true",
+  "start_url": "https://yutazon.me",
   "display": "standalone",
   "description": "Introduction by Yutaka Miyazaki",
   "orientation": "portrait",
