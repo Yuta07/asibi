@@ -6,18 +6,19 @@ import { createGlobalStyle } from 'styled-components';
 import Layout from '../components/Layout';
 
 export default class MyApp extends App {
-  componentDidMount() {
+  componentDidMount = () => {
     if ('serviceWorker' in navigator) {
+      console.log('Will the service worker register?');
       navigator.serviceWorker
-        .register('/sw.js')
-        .then(registration => {
-          console.log('service worker registration successful: ', registration);
+        .register('sw.js')
+        .then(function(reg) {
+          console.log('Yes, it did.');
         })
-        .catch(err => {
-          console.warn('service worker registration failed', err.message);
+        .catch(function(err) {
+          console.log("No it didn't. This happened: ", err);
         });
     }
-  }
+  };
 
   render() {
     const { Component, pageProps } = this.props;
