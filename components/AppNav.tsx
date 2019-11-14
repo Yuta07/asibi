@@ -23,7 +23,7 @@ const AppNav = () => {
           </AppNavLink>
         </Link>
         <Link href="/works" as="works">
-          <AppNavLink route={path === '/works'}>
+          <AppNavLink route={path === '/works/works'}>
             <AppNavLinkImage src="/nav/layout.svg" alt="my works" route={path === '/works'} />
             <AppNavLinkText>Works</AppNavLinkText>
           </AppNavLink>

@@ -6,6 +6,6 @@ export const WorkData: Work[] = [
     title: 'Yutazon.me',
     description: 'このサイトのことです。Next.jsで作成されています。',
     period: '2019/10~',
-    link: '',
+    link: '/works/portfolio',
   },
 ];

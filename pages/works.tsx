@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 // import atom
@@ -12,9 +11,6 @@ import { WorkData } from '../data/work';
 import * as Style from '../styles/style';
 
 const Works = () => {
-  const router = useRouter();
-  const path = router.pathname;
-
   const renderWorks = WorkData.map((work, index) => {
     return (
       <EveryWorkWrapper key={index}>
@@ -24,15 +20,9 @@ const Works = () => {
           </LazyLoad>
         </WorkImgWrapper>
         <WorkDescriptionWrapper>
-          {work.link === '' ? (
-            <Link href={path}>
-              <WorkName>{work.title}</WorkName>
-            </Link>
-          ) : (
-            <WorkLink href={work.link}>
-              <WorkName>{work.title}</WorkName>
-            </WorkLink>
-          )}
+          <Link href={work.link}>
+            <WorkName>{work.title}</WorkName>
+          </Link>
           <WorkDescription>{work.description}</WorkDescription>
           <WorkPeriod>{work.period}</WorkPeriod>
         </WorkDescriptionWrapper>
@@ -88,8 +78,6 @@ const WorkImg = styled.img`
 const WorkDescriptionWrapper = styled.div`
   padding: 1rem;
 `;
-
-const WorkLink = styled.a``;
 
 const WorkName = styled.h2`
   color: #323335;
