@@ -4,11 +4,46 @@ export const config = { amp: true };
 
 const Pigmon = () => {
   return (
-    <section className="wrapper">
+    <div className="wrapper">
       <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <script async src="https://cdn.ampproject.org/v0.js"></script>
         <script async custom-element="amp-timeago" src="https://cdn.ampproject.org/v0/amp-timeago-0.1.js"></script>
       </Head>
+      <div className="container">
+        <h2 className="work-hero">Pigmon.io | 個人ブログ</h2>
+        <div className="work-overview">
+          <h3 className="overview-hero">Overview</h3>
+          <p className="overview-intro">技術のことからしょうもないことまでなんでも書いていくブログを作りました。</p>
+          <div className="overview-detail">
+            <span className="overview-created">作成日時：</span>
+            <amp-timeago class="ja" width="160" height="20" datetime="" locale="ja">
+              01 November 2019
+            </amp-timeago>
+          </div>
+        </div>
+        <div className="work-introduction">
+          <h2 className="introduction-hero">Introduce</h2>
+          <p className="introduction-detail">
+            技術的なアウトプットを発信していくためのブログです。まれに謎な記事をあげるかもしれません。
+            <br />
+            Gatsbyで作成しています。ダークモードにも対応させたので、ぜひ読んでみてください。
+            <br />
+            デザインはシわかりやすい構成にして、記事にはマークダウンを使用しているため、読みやすくなっています。
+          </p>
+          <div className="work-image-wrapper">
+            <amp-img src="/works/pigmon-overview.png" width={240} height={300} alt="amp" layout="responsive"></amp-img>
+          </div>
+          <h2 className="tech-hero">Tech Used</h2>
+          <ul className="tech-detail">
+            <li className="tech-detail-list">Gatsby[React]</li>
+            <li className="tech-detail-list">TypeScript</li>
+            <li className="tech-detail-list">styled-components</li>
+            <li className="tech-detail-list">Netlify</li>
+            <li className="tech-detail-list">PWA</li>
+          </ul>
+        </div>
+      </div>
       <style jsx>{`
         .list-overflow {
           width: max-content;
@@ -93,41 +128,7 @@ const Pigmon = () => {
           padding-top: 4px;
         }
       `}</style>
-      <div className="container">
-        <h2 className="work-hero">Pigmon.io | 個人ブログ</h2>
-        <div className="work-overview">
-          <h3 className="overview-hero">Overview</h3>
-          <p className="overview-intro">技術のことからしょうもないことまでなんでも書いていくブログを作りました。</p>
-          <div className="overview-detail">
-            <span className="overview-created">作成日時：</span>
-            <amp-timeago class="ja" width="160" height="20" datetime="" locale="ja">
-              01 November 2019
-            </amp-timeago>
-          </div>
-        </div>
-        <div className="work-introduction">
-          <h2 className="introduction-hero">Introduce</h2>
-          <p className="introduction-detail">
-            技術的なアウトプットを発信していくためのブログです。まれに謎な記事をあげるかもしれません。
-            <br />
-            Gatsbyで作成しています。ダークモードにも対応させたので、ぜひ読んでみてください。
-            <br />
-            デザインはシわかりやすい構成にして、記事にはマークダウンを使用しているため、読みやすくなっています。
-          </p>
-          <div className="work-image-wrapper">
-            <amp-img src="/works/pigmon-overview.png" width={240} height={300} alt="amp" layout="responsive"></amp-img>
-          </div>
-          <h2 className="tech-hero">Tech Used</h2>
-          <ul className="tech-detail">
-            <li className="tech-detail-list">Gatsby[React]</li>
-            <li className="tech-detail-list">TypeScript</li>
-            <li className="tech-detail-list">styled-components</li>
-            <li className="tech-detail-list">Netlify</li>
-            <li className="tech-detail-list">PWA</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    </div>
   );
 };
 
