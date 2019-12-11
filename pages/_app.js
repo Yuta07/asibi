@@ -44,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: "open sans", "helvetica neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.6;
     word-wrap: break-word;
     font-kerning: normal;
     color: #323335;

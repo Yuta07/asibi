@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 export const config = { amp: true };
 
-const Portfolio = () => {
+const Pigmon = () => {
   return (
     <section className="wrapper">
       <Head>
@@ -73,7 +73,7 @@ const Portfolio = () => {
         }
 
         .work-image-wrapper {
-          height: 220px;
+          height: 410px;
           margin-top: 2rem;
           box-shadow: 2px 2px 4px 1px rgba(180, 180, 180, 1);
         }
@@ -89,46 +89,41 @@ const Portfolio = () => {
         }
 
         .tech-detail-list {
+          font-size: 1rem;
           padding-top: 4px;
         }
       `}</style>
       <div className="container">
-        <h2 className="work-hero">Yutazon.me | ポートフォリオ</h2>
+        <h2 className="work-hero">Pigmon.io | 個人ブログ</h2>
         <div className="work-overview">
           <h3 className="overview-hero">Overview</h3>
-          <p className="overview-intro">ポートフォリオサイトです。履歴書のようなものとして活用します。</p>
+          <p className="overview-intro">技術のことからしょうもないことまでなんでも書いていくブログを作りました。</p>
           <div className="overview-detail">
             <span className="overview-created">作成日時：</span>
             <amp-timeago class="ja" width="160" height="20" datetime="" locale="ja">
-              01 October 2019
+              01 November 2019
             </amp-timeago>
           </div>
         </div>
         <div className="work-introduction">
           <h2 className="introduction-hero">Introduce</h2>
           <p className="introduction-detail">
-            今まで作成した作品の紹介をしたり、自己紹介をしたり履歴書のようなものです。
+            技術的なアウトプットを発信していくためのブログです。まれに謎な記事をあげるかもしれません。
             <br />
-            Next.jsで作成されていて、一部AMPに対応させたりと遊んでいます。
+            Gatsbyで作成しています。ダークモードにも対応させたので、ぜひ読んでみてください。
             <br />
-            デザインはシンプルにしつつ、読みやすく簡潔にしてみました。
+            デザインはシわかりやすい構成にして、記事にはマークダウンを使用しているため、読みやすくなっています。
           </p>
           <div className="work-image-wrapper">
-            <amp-img
-              src="/works/portfolio-overview.png"
-              width={240}
-              height={160}
-              alt="amp"
-              layout="responsive"
-            ></amp-img>
+            <amp-img src="/works/pigmon-overview.png" width={240} height={300} alt="amp" layout="responsive"></amp-img>
           </div>
           <h2 className="tech-hero">Tech Used</h2>
           <ul className="tech-detail">
-            <li className="tech-detail-list">Next.js[React]</li>
+            <li className="tech-detail-list">Gatsby[React]</li>
             <li className="tech-detail-list">TypeScript</li>
             <li className="tech-detail-list">styled-components</li>
-            <li className="tech-detail-list">Now</li>
-            <li className="tech-detail-list">AMP</li>
+            <li className="tech-detail-list">Netlify</li>
+            <li className="tech-detail-list">PWA</li>
           </ul>
         </div>
       </div>
@@ -136,4 +131,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Pigmon;

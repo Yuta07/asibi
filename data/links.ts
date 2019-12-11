@@ -8,12 +8,12 @@ export const LinkData: Link[] = [
   },
   {
     img: '/links/twitter.svg',
-    link: 'https://twitter.com/Yuta52407938',
+    link: 'https://twitter.com/yutazon7',
     name: 'twitter',
   },
   {
-    img: '/links/share.svg',
-    link: 'https://qiita.com/Yutazon',
-    name: 'qiita',
+    img: '/links/pigmon.svg',
+    link: 'https://pigmon.io',
+    name: 'Pigmon.io',
   },
 ];

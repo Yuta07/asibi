@@ -14,18 +14,20 @@ const Works = () => {
   const renderWorks = WorkData.map((work, index) => {
     return (
       <EveryWorkWrapper key={index}>
-        <WorkImgWrapper>
-          <LazyLoad height="100%" placeholder={<Spinner margin="60" />} debounce={500}>
-            <WorkImg src={work.img} alt={work.title} />
-          </LazyLoad>
-        </WorkImgWrapper>
-        <WorkDescriptionWrapper>
-          <Link href={work.link}>
-            <WorkName>{work.title}</WorkName>
-          </Link>
-          <WorkDescription>{work.description}</WorkDescription>
-          <WorkPeriod>{work.period}</WorkPeriod>
-        </WorkDescriptionWrapper>
+        <Link href={work.link}>
+          <WorkLinkContainer>
+            <WorkImgWrapper>
+              <LazyLoad height="100%" placeholder={<Spinner margin="60" />} debounce={500}>
+                <WorkImg src={work.img} alt={work.title} />
+              </LazyLoad>
+            </WorkImgWrapper>
+            <WorkDescriptionWrapper>
+              <WorkName>{work.title}</WorkName>
+              <WorkDescription>{work.description}</WorkDescription>
+              <WorkPeriod>{work.period}</WorkPeriod>
+            </WorkDescriptionWrapper>
+          </WorkLinkContainer>
+        </Link>
       </EveryWorkWrapper>
     );
   });
@@ -60,6 +62,8 @@ const EveryWorkWrapper = styled.div`
     margin-top: 0;
   }
 `;
+
+const WorkLinkContainer = styled.div``;
 
 const WorkImgWrapper = styled.div`
   width: 100%;

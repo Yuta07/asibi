@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useAmp } from 'next/amp';
 import styled from 'styled-components';
 
 const AppNav = () => {
@@ -10,25 +11,58 @@ const AppNav = () => {
   return (
     <AppNavCoreWrapper>
       <AppNavLinkWrapper>
-        <Link href="/">
-          <AppNavLink route={path === '/'}>
-            <AppNavLinkImage src="/nav/file-text.svg" alt="resume" route={path === '/'} />
-            <AppNavLinkText>Me</AppNavLinkText>
-          </AppNavLink>
-        </Link>
-        <Link href="/skills" as="skills">
-          <AppNavLink route={path === '/skills'}>
-            <AppNavLinkImage src="/nav/moon.svg" alt="my skills" route={path === '/skills'} />
-            <AppNavLinkText>Skills</AppNavLinkText>
-          </AppNavLink>
-        </Link>
-        <Link href="/works" as="works">
-          <AppNavLink route={path === '/works/works'}>
-            <AppNavLinkImage src="/nav/layout.svg" alt="my works" route={path === '/works'} />
-            <AppNavLinkText>Works</AppNavLinkText>
-          </AppNavLink>
-        </Link>
+        {useAmp() ? (
+          <Fragment>
+            <a href="/" className="ampNavLink">
+              <AppNavLink route={path === '/'}>
+                <AppNavLinkImage src="/nav/file-text.svg" alt="resume" route={path === '/'} />
+                <AppNavLinkText>Me</AppNavLinkText>
+              </AppNavLink>
+            </a>
+            <a href="/skills" className="ampNavLink">
+              <AppNavLink route={path === '/skills'}>
+                <AppNavLinkImage src="/nav/moon.svg" alt="my skills" route={path === '/skills'} />
+                <AppNavLinkText>Skills</AppNavLinkText>
+              </AppNavLink>
+            </a>
+            <a href="/works" className="ampNavLink">
+              <AppNavLink route={path === '/works/works'}>
+                <AppNavLinkImage src="/nav/layout.svg" alt="my works" route={path === '/works/works'} />
+                <AppNavLinkText>Works</AppNavLinkText>
+              </AppNavLink>
+            </a>
+          </Fragment>
+        ) : (
+          <Fragment>
+            <Link href="/">
+              <AppNavLink route={path === '/'}>
+                <AppNavLinkImage src="/nav/file-text.svg" alt="resume" route={path === '/'} />
+                <AppNavLinkText>Me</AppNavLinkText>
+              </AppNavLink>
+            </Link>
+            <Link href="/skills" as="skills">
+              <AppNavLink route={path === '/skills'}>
+                <AppNavLinkImage src="/nav/moon.svg" alt="my skills" route={path === '/skills'} />
+                <AppNavLinkText>Skills</AppNavLinkText>
+              </AppNavLink>
+            </Link>
+            <Link href="/works" as="works">
+              <AppNavLink route={path === '/works/works'}>
+                <AppNavLinkImage src="/nav/layout.svg" alt="my works" route={path === '/works'} />
+                <AppNavLinkText>Works</AppNavLinkText>
+              </AppNavLink>
+            </Link>
+          </Fragment>
+        )}
       </AppNavLinkWrapper>
+      <style>{`
+        a.ampNavLink {
+          text-decoration: none;
+          width: 25%;
+          display: flex;
+          justify-content: center;
+        }
+      `}</style>
     </AppNavCoreWrapper>
   );
 };
