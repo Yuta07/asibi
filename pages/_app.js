@@ -27,7 +27,6 @@ export default class MyApp extends App {
           <title>Yutazon.me</title>
           <link rel="canonical" href="$SOME_URL" />
           <meta charset="utf-8" />
-          <meta name="viewport" content="..."></meta>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <script async src="https://cdn.ampproject.org/v0.js" />
         </Head>
