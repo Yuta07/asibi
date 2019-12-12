@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import App from 'next/app';
-import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components';
 // import component
 import Layout from '../components/Layout';
@@ -23,13 +22,6 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <Fragment>
-        <Head>
-          <title>Yutazon.me</title>
-          <link rel="canonical" href="$SOME_URL" />
-          <meta charset="utf-8" />
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-          <script async src="https://cdn.ampproject.org/v0.js" />
-        </Head>
         <GlobalStyle />
         <Layout>
           <Component {...pageProps} />

@@ -23,6 +23,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
+          <title>Yutazon.me</title>
           <meta charSet="UTF-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="yutaka.miyazaki" content="Yutazon.me" />
@@ -37,6 +38,7 @@ export default class MyDocument extends Document {
             integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA"
             crossorigin="anonymous"
           />
+          <script async src="https://cdn.ampproject.org/v0.js" />
         </Head>
         <body>
           <Main />
