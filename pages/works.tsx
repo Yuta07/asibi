@@ -63,7 +63,9 @@ const EveryWorkWrapper = styled.div`
   }
 `;
 
-const WorkLinkContainer = styled.div``;
+const WorkLinkContainer = styled.div`
+  cursor: pointer;
+`;
 
 const WorkImgWrapper = styled.div`
   width: 100%;
@@ -88,7 +90,6 @@ const WorkName = styled.h2`
   font-size: 1.2rem;
   font-weight: 550;
   display: inline-block;
-  cursor: pointer;
 
   &:hover {
     color: #e68123;

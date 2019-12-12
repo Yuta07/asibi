@@ -25,6 +25,11 @@ export default class MyApp extends App {
       <Fragment>
         <Head>
           <title>Yutazon.me</title>
+          <link rel="canonical" href="$SOME_URL" />
+          <meta charset="utf-8" />
+          <meta name="viewport" content="..."></meta>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <script async src="https://cdn.ampproject.org/v0.js" />
         </Head>
         <GlobalStyle />
         <Layout>
@@ -56,5 +61,12 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+  }
+
+  a.ampNavLink {
+    text-decoration: none;
+    width: 25%;
+    display: flex;
+    justify-content: center;
   }
 `;

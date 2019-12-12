@@ -9,6 +9,7 @@ declare namespace JSX {
   }
 
   interface AmpImg {
+    children?: Element;
     alt?: string;
     src?: string;
     width?: number;

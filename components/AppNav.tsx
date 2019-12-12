@@ -55,14 +55,6 @@ const AppNav = () => {
           </Fragment>
         )}
       </AppNavLinkWrapper>
-      <style>{`
-        a.ampNavLink {
-          text-decoration: none;
-          width: 25%;
-          display: flex;
-          justify-content: center;
-        }
-      `}</style>
     </AppNavCoreWrapper>
   );
 };
