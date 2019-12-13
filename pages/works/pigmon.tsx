@@ -6,9 +6,8 @@ const Pigmon = () => {
   return (
     <div>
       <Head>
-        <link rel="canonical" href="$SOME_URL" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <script async custom-element="amp-timeago" src="https://cdn.ampproject.org/v0/amp-timeago-0.1.js"></script>
+        <script async src="https://cdn.ampproject.org/v0.js" />
+        <script async custom-element="amp-timeago" src="https://cdn.ampproject.org/v0/amp-timeago-0.1.js" />
       </Head>
       <style jsx>{`
         .wrapper {
@@ -26,6 +25,15 @@ const Pigmon = () => {
         h2.introduction-hero,
         h2.tech-hero {
           font-size: 1.4rem;
+        }
+        @media screen and (max-width: 559px) {
+          h2.work-hero {
+            font-size: 20px;
+          }
+          h2.introduction-hero,
+          h2.tech-hero {
+            font-size: 18px;
+          }
         }
 
         h2.work-hero {
@@ -116,8 +124,8 @@ const Pigmon = () => {
             <div className="work-image-wrapper">
               <amp-img
                 src="/works/pigmon-overview.png"
-                width={240}
-                height={300}
+                width="240"
+                height="300"
                 alt="pigmon-overview"
                 layout="responsive"
               >

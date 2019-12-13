@@ -12,8 +12,8 @@ declare namespace JSX {
     children?: Element;
     alt?: string;
     src?: string;
-    width?: number;
-    height?: number;
+    width?: string;
+    height?: string;
     layout?: string;
   }
 
