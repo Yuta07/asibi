@@ -107,7 +107,7 @@ const Pigmon = () => {
             <p className="overview-intro">技術のことからしょうもないことまでなんでも書いていくブログを作りました。</p>
             <div className="overview-detail">
               <span className="overview-created">作成日時：</span>
-              <amp-timeago class="ja" width="160" height="20" datetime="2018-10-01T00:37:33.809Z" locale="ja">
+              <amp-timeago class="ja" width="160" height="20" datetime="2019-11-03T00:37:33.809Z" locale="ja">
                 03 November 2019
               </amp-timeago>
             </div>
@@ -119,7 +119,7 @@ const Pigmon = () => {
               <br />
               Gatsbyで作成しています。ダークモードにも対応させたので、ぜひ読んでみてください。
               <br />
-              デザインはシわかりやすい構成にして、記事にはマークダウンを使用しているため、読みやすくなっています。
+              デザインはわかりやすい構成にして、記事にはマークダウンを使用しているため、読みやすくなっています。
             </p>
             <div className="work-image-wrapper">
               <amp-img
