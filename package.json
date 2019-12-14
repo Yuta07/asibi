@@ -11,6 +11,7 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-lazyload": "^2.6.2",
+    "serialize-javascript": "^2.1.1",
     "styled-components": "^4.4.0"
   },
   "devDependencies": {
