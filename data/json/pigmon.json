@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "language": "Gatsby[React]"
+    },
+    {
+      "language": "TypeScript"
+    },
+    {
+      "language": "styled-components"
+    },
+    {
+      "language": "Netlify"
+    },
+    {
+      "language": "PWA"
+    }
+  ]
+}

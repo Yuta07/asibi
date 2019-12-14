@@ -1,25 +1,42 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { useAmp } from 'next/amp';
 import styled from 'styled-components';
 
-const Header = () => (
-  <CoreHeaderWrapper>
-    <HeaderTitleWrapper>
-      <HeaderWrapper>
-        <AppTitle>Yutazon.me</AppTitle>
-      </HeaderWrapper>
-    </HeaderTitleWrapper>
-    <AppBioGraphy>
-      <BiographyWrapper>
-        <BioImage src="/bio.png" alt="bio-img" />
-        <BioDiscription>
-          <ExternalLink href="https://github.com/Yuta07">Yutaka Miyazaki.</ExternalLink>
-          <EasyProfile>Web Developer 🎉</EasyProfile>
-          <EasyProfile>SaaSの開発をしたり、Web管理画面の開発をしています。</EasyProfile>
-        </BioDiscription>
-      </BiographyWrapper>
-    </AppBioGraphy>
-  </CoreHeaderWrapper>
-);
+export const config = { amp: 'hybrid' };
+
+const Header = () => {
+  return (
+    <CoreHeaderWrapper>
+      <HeaderTitleWrapper>
+        <HeaderWrapper>
+          <AppTitle>Yutazon.me</AppTitle>
+        </HeaderWrapper>
+      </HeaderTitleWrapper>
+      <AppBioGraphy>
+        <BiographyWrapper>
+          {useAmp() ? (
+            <div className="bio-image-wrapper">
+              <amp-img src="/bio.png" width="64" height="52" alt="bio-img" layout="fixed">
+                <noscript>
+                  <img src="/bio.png" width="64px" height="52px" className="bio-image" />
+                </noscript>
+              </amp-img>
+            </div>
+          ) : (
+            <Fragment>
+              <BioImage src="/bio.png" alt="bio-img" />
+            </Fragment>
+          )}
+          <BioDiscription>
+            <ExternalLink href="https://github.com/Yuta07">Yutaka Miyazaki.</ExternalLink>
+            <EasyProfile>Web Developer 🎉</EasyProfile>
+            <EasyProfile>SaaSの開発をしたり、Web管理画面の開発をしています。</EasyProfile>
+          </BioDiscription>
+        </BiographyWrapper>
+      </AppBioGraphy>
+    </CoreHeaderWrapper>
+  );
+};
 
 // Header style
 const CoreHeaderWrapper = styled.header`

@@ -25,6 +25,7 @@ export default class MyApp extends App {
       <Fragment>
         <Head>
           <title>Yutazon.me</title>
+          <link rel="canonical" href="$SOME_URL" />
         </Head>
         <GlobalStyle />
         <Layout>
@@ -44,7 +45,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: "open sans", "helvetica neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.6;
     word-wrap: break-word;
     font-kerning: normal;
     color: #323335;
@@ -56,5 +57,50 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+  }
+
+  a.ampNavLink {
+    text-decoration: none;
+    width: 25%;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .bio-image-wrapper {
+    margin-right: 1.5rem;
+  }
+
+  .bio-image-wrapper {
+    img {
+      max-height: 64px;
+      border-radius: 50%;
+      object-fit: contain;
+    }
+  }
+
+  img.bio-image {
+    width: 64px;
+    max-height: 64px;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+
+  .nav-image-wrapper {
+    max-width: 480px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  .nav-image-wrapper {
+    img {
+      opacity: 0.4;
+      filter: saturate(10%);
+    }
   }
 `;

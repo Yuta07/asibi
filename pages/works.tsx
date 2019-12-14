@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 // import atom
@@ -12,30 +11,23 @@ import { WorkData } from '../data/work';
 import * as Style from '../styles/style';
 
 const Works = () => {
-  const router = useRouter();
-  const path = router.pathname;
-
   const renderWorks = WorkData.map((work, index) => {
     return (
       <EveryWorkWrapper key={index}>
-        <WorkImgWrapper>
-          <LazyLoad height="100%" placeholder={<Spinner margin="60" />} debounce={500}>
-            <WorkImg src={work.img} alt={work.title} />
-          </LazyLoad>
-        </WorkImgWrapper>
-        <WorkDescriptionWrapper>
-          {work.link === '' ? (
-            <Link href={path}>
+        <Link href={work.link}>
+          <WorkLinkContainer>
+            <WorkImgWrapper>
+              <LazyLoad height="100%" placeholder={<Spinner margin="60" />} debounce={500}>
+                <WorkImg src={work.img} alt={work.title} />
+              </LazyLoad>
+            </WorkImgWrapper>
+            <WorkDescriptionWrapper>
               <WorkName>{work.title}</WorkName>
-            </Link>
-          ) : (
-            <WorkLink href={work.link}>
-              <WorkName>{work.title}</WorkName>
-            </WorkLink>
-          )}
-          <WorkDescription>{work.description}</WorkDescription>
-          <WorkPeriod>{work.period}</WorkPeriod>
-        </WorkDescriptionWrapper>
+              <WorkDescription>{work.description}</WorkDescription>
+              <WorkPeriod>{work.period}</WorkPeriod>
+            </WorkDescriptionWrapper>
+          </WorkLinkContainer>
+        </Link>
       </EveryWorkWrapper>
     );
   });
@@ -71,6 +63,10 @@ const EveryWorkWrapper = styled.div`
   }
 `;
 
+const WorkLinkContainer = styled.div`
+  cursor: pointer;
+`;
+
 const WorkImgWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -89,14 +85,11 @@ const WorkDescriptionWrapper = styled.div`
   padding: 1rem;
 `;
 
-const WorkLink = styled.a``;
-
 const WorkName = styled.h2`
   color: #323335;
   font-size: 1.2rem;
   font-weight: 550;
   display: inline-block;
-  cursor: pointer;
 
   &:hover {
     color: #e68123;
