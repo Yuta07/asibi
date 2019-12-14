@@ -4,7 +4,7 @@ export const config = { amp: true };
 
 const Portfolio = () => {
   return (
-    <html>
+    <div>
       <Head>
         <script async src="https://cdn.ampproject.org/v0.js" />
         <script async custom-element="amp-timeago" src="https://cdn.ampproject.org/v0/amp-timeago-0.1.js" />
@@ -99,57 +99,53 @@ const Portfolio = () => {
           padding-top: 4px;
         }
       `}</style>
-      <body>
-        <div className="wrapper">
-          <div className="container">
-            <h2 className="work-hero">Yutazon.me | ポートフォリオ</h2>
-            <div className="work-overview">
-              <h3 className="overview-hero">Overview</h3>
-              <p className="overview-intro">ポートフォリオサイトです。履歴書のようなものとして活用します。</p>
-              <div className="overview-detail">
-                <span className="overview-created">作成日時：</span>
-                <amp-timeago class="ja" width="160" height="20" datetime="2019-10-01T00:37:33.809Z" locale="ja">
-                  01 October 2019
-                </amp-timeago>
-              </div>
-            </div>
-            <div className="work-introduction">
-              <h2 className="introduction-hero">Introduce</h2>
-              <p className="introduction-detail">
-                今まで作成した作品の紹介をしたり、自己紹介をしたり履歴書のようなものです。
-                <br />
-                Next.jsで作成されていて、一部AMPに対応させたりと遊んでみました。
-                <br />
-                デザインはシンプルに、情報量が多くなりすぎないようにしました。
-              </p>
-              <div className="work-image-wrapper">
-                <amp-img
-                  src="/works/portfolio-overview.png"
-                  width="240"
-                  height="160"
-                  alt="portfolio-overview"
-                  layout="responsive"
-                >
-                  <body>
-                    <noscript>
-                      <img src="/works/portfolio-overview.png" width="240px" height="160px" alt="portfolio-overview" />
-                    </noscript>
-                  </body>
-                </amp-img>
-              </div>
-              <h2 className="tech-hero">Tech Used</h2>
-              <ul className="tech-detail">
-                <li className="tech-detail-list">Next.js[React]</li>
-                <li className="tech-detail-list">TypeScript</li>
-                <li className="tech-detail-list">styled-components</li>
-                <li className="tech-detail-list">Now</li>
-                <li className="tech-detail-list">AMP</li>
-              </ul>
+      <div className="wrapper">
+        <div className="container">
+          <h2 className="work-hero">Yutazon.me | ポートフォリオ</h2>
+          <div className="work-overview">
+            <h3 className="overview-hero">Overview</h3>
+            <p className="overview-intro">ポートフォリオサイトです。履歴書のようなものとして活用します。</p>
+            <div className="overview-detail">
+              <span className="overview-created">作成日時：</span>
+              <amp-timeago class="ja" width="160" height="20" datetime="2019-10-01T00:37:33.809Z" locale="ja">
+                01 October 2019
+              </amp-timeago>
             </div>
           </div>
+          <div className="work-introduction">
+            <h2 className="introduction-hero">Introduce</h2>
+            <p className="introduction-detail">
+              今まで作成した作品の紹介をしたり、自己紹介をしたり履歴書のようなものです。
+              <br />
+              Next.jsで作成されていて、一部AMPに対応させたりと遊んでみました。
+              <br />
+              デザインはシンプルに、情報量が多くなりすぎないようにしました。
+            </p>
+            <div className="work-image-wrapper">
+              <amp-img
+                src="/works/portfolio-overview.png"
+                width="240"
+                height="160"
+                alt="portfolio-overview"
+                layout="responsive"
+              >
+                <noscript>
+                  <img src="/works/portfolio-overview.png" width="240px" height="160px" alt="portfolio-overview" />
+                </noscript>
+              </amp-img>
+            </div>
+            <h2 className="tech-hero">Tech Used</h2>
+            <ul className="tech-detail">
+              <li className="tech-detail-list">Next.js[React]</li>
+              <li className="tech-detail-list">TypeScript</li>
+              <li className="tech-detail-list">styled-components</li>
+              <li className="tech-detail-list">Now</li>
+              <li className="tech-detail-list">AMP</li>
+            </ul>
+          </div>
         </div>
-      </body>
-    </html>
+      </div>
+    </div>
   );
 };
 

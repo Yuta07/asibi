@@ -23,7 +23,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="yutaka.miyazaki" content="Yutazon.me" />
           <meta name="description" content="Yutazonのポートフォリオ" />
@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
             async
             src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js"
             integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA"
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
           />
         </Head>
         <body>
