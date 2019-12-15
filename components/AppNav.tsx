@@ -15,7 +15,7 @@ const AppNav = () => {
       {useAmp() ? (
         <div className="nav-image-wrapper">
           <a href="/" className="ampNavLink">
-            <AppNavLink route={path === '/'}>
+            <AppNavLink route={path === '/'} amp={useAmp()}>
               <amp-img src="/nav/file-text.svg" width="32" height="32" alt="resume">
                 <noscript>
                   <img
@@ -30,7 +30,7 @@ const AppNav = () => {
             </AppNavLink>
           </a>
           <a href="/skills" className="ampNavLink">
-            <AppNavLink route={path === '/skills'}>
+            <AppNavLink route={path === '/skills'} amp={useAmp()}>
               <amp-img src="/nav/moon.svg" width="32" height="32" alt="my skills">
                 <noscript>
                   <img
@@ -45,7 +45,7 @@ const AppNav = () => {
             </AppNavLink>
           </a>
           <a href="/works" className="ampNavLink">
-            <AppNavLink route={path === '/works/works'}>
+            <AppNavLink route={path === '/works/works'} amp={useAmp()}>
               <amp-img src="/nav/layout.svg" width="32" height="32" alt="my skills">
                 <noscript>
                   <img
@@ -63,19 +63,19 @@ const AppNav = () => {
       ) : (
         <AppNavLinkWrapper>
           <Link href="/">
-            <AppNavLink route={path === '/'}>
+            <AppNavLink route={path === '/'} amp={useAmp()}>
               <AppNavLinkImage src="/nav/file-text.svg" alt="resume" route={path === '/'} />
               <AppNavLinkText>Me</AppNavLinkText>
             </AppNavLink>
           </Link>
           <Link href="/skills" as="skills">
-            <AppNavLink route={path === '/skills'}>
+            <AppNavLink route={path === '/skills'} amp={useAmp()}>
               <AppNavLinkImage src="/nav/moon.svg" alt="my skills" route={path === '/skills'} />
               <AppNavLinkText>Skills</AppNavLinkText>
             </AppNavLink>
           </Link>
           <Link href="/works" as="works">
-            <AppNavLink route={path === '/works/works'}>
+            <AppNavLink route={path === '/works/works'} amp={useAmp()}>
               <AppNavLinkImage src="/nav/layout.svg" alt="my works" route={path === '/works'} />
               <AppNavLinkText>Works</AppNavLinkText>
             </AppNavLink>
@@ -106,11 +106,11 @@ const AppNavLinkWrapper = styled.div`
   flex-direction: row;
 `;
 
-const AppNavLink = styled.button<{ route: boolean }>`
+const AppNavLink = styled.button<{ route: boolean; amp: boolean }>`
   color: ${props => (props.route ? '#e68123' : '#c9cfd3')};
   background-color: #fefefe;
   position: relative;
-  width: 25%;
+  width: ${props => (props.amp ? '100%' : '25%')};
   padding: 0.5rem 0;
   display: flex;
   flex-direction: column;
