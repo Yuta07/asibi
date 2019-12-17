@@ -123,19 +123,6 @@ const Portfolio = () => {
               <br />
               デザインはシンプルに、情報量が多くなりすぎないようにしました。
             </p>
-            <div className="work-image-wrapper">
-              <amp-img
-                src="/works/portfolio-overview.png"
-                width="240"
-                height="160"
-                alt="portfolio-overview"
-                layout="responsive"
-              >
-                <noscript>
-                  <img src="/works/portfolio-overview.png" width="240px" height="160px" alt="portfolio-overview" />
-                </noscript>
-              </amp-img>
-            </div>
             <h2 className="tech-hero">Tech Used</h2>
             <ul className="tech-detail">
               <li className="tech-detail-list">Next.js[React]</li>

@@ -1,7 +1,7 @@
 {
   "name": "Yutazon.me",
   "version": 2,
-  "alias": "Yutazon.me",
+  "alias": "yutazon.me",
   "routes": [
     {
       "src": "^/service-worker.js$",
