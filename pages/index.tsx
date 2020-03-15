@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 // import atom
 import Title from '../atom/Title';
 // import data
@@ -39,20 +39,23 @@ const Resume = () => {
           <Title title="Biography" />
         </Style.PageTitleContainer>
         <CoreBioWrapper>
+          <Bio>生年月日：1992/03/09(28歳)</Bio>
+          <Bio>出身地：愛知県</Bio>
+          <BioHero border={true}>現在のお仕事</BioHero>
           <BioText>
-            東京のSaaS開発企業で働いています。 業務ではSQLを扱うことが多いですが、個人・副業先では主にReact /
-            Reduxを用いた開発を行っています。バックエンドにも少し触れることがあります。
-            <br />
-            フロントだけではなく、サーバサイド・インフラと広く携わっていきたいと考えています。
-            プログラミング言語は特にこだわっていませんが、Reactは好きです。 副業先ではReact / TypeScript
-            を使用して、Web管理画面を開発をしています。
-            <br />
-            開放的に伸び伸びとできると喜びを感じます。HRTを大切にしている環境が好きです。
-            toCよりかはtoBのサービスを好みます。toC向けのサービス開発も好きですがゲーム・広告はなるべく避けています。
-            <br />
-            いずれ地元名古屋にUターンしたいと思っています。
-            <br />
-            世界中の幸福度を高めていきたいと思うこの頃。平和が一番。
+            2019年新卒として入社した東京の某社にてSaaSの開発をしています。
+            仕事ではSQLを扱うことが多く、主に導入企業ごとのカスタマイズの開発・設定変更を行ったり、ドキュメントの整備をしています。
+            カスタマイズ開発では規模の大きいサービスのASPで構成されたレガシーなコードやサービス内の大部分を占めるSQLの改修を行っています。
+            副業先では主にReact / TypeScriptを用いた開発を行っています。主にWeb管理画面の開発に携わっています。
+          </BioText>
+          <BioHero border={true}>これからについて</BioHero>
+          <BioText>
+            現在はフロントエンドに力を入れていますが、この先はバックエンド・インフラと広くチャレンジしていきたいです。
+            何かしら１つを極めたスペシャリストには憧れますが、残念ながら自分より才能がある人は多くいるので、複数の強みを持つ手札の多い人間を目指しています。
+            最近は自分の英語力の衰えを実感し、エンジニアとしてやっていけるように英語の勉強をしています。
+            toC向けのサービスよりtoB向けのサービスをより好みます。特にSaaSサービスのような社会の仕組みを変える可能性を持ったサービスを好んでいます。
+            もちろんtoC向けのサービス開発も好きです。
+            いつか地元の愛知にUターンして何かしらの形で貢献したいと思っています。
           </BioText>
         </CoreBioWrapper>
       </Style.CorePageWrapper>
@@ -80,9 +83,25 @@ const CoreBioWrapper = styled.div`
   margin-top: 2rem;
 `;
 
+const Bio = styled.p`
+  font-size: 14px;
+  letter-spacing: 0.5px;
+`;
+
+const BioHero = styled.h3<{ border: boolean }>`
+  ${({ border }) => {
+    return css`
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: ${border ? '1px solid #e68123' : null};
+    `;
+  }}
+`;
+
 const BioText = styled.p`
   font-size: 1rem;
   line-height: 1.6;
+  margin-top: 0.5rem;
 `;
 
 // experience

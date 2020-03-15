@@ -109,9 +109,7 @@ const Portfolio = () => {
             <p className="overview-intro">ポートフォリオサイトです。履歴書のようなものとして活用します。</p>
             <div className="overview-detail">
               <span className="overview-created">作成日時：</span>
-              <amp-timeago class="ja" width="160" height="20" datetime="2019-10-01T00:37:33.809Z" locale="ja">
-                01 October 2019
-              </amp-timeago>
+              October 2019
             </div>
           </div>
           <div className="work-introduction">
@@ -119,7 +117,7 @@ const Portfolio = () => {
             <p className="introduction-detail">
               今まで作成した作品の紹介をしたり、自己紹介をしたり履歴書のようなものです。
               <br />
-              Next.jsで作成されていて、一部AMPに対応させたりと遊んでみました。
+              Next.jsで作成されています。
               <br />
               デザインはシンプルに、情報量が多くなりすぎないようにしました。
             </p>
