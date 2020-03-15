@@ -21,7 +21,7 @@ export type Skill = {
   language: string;
   img: string;
   star: number;
-  description: string;
+  description?: string;
 };
 
 // works

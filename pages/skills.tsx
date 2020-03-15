@@ -135,7 +135,6 @@ const SkillDescription = styled.p<{ show: boolean }>`
   position: absolute;
   z-index: 5000;
   top: 35%;
-  width: 90%;
   font-size: 0.7rem;
   color: #fefefe;
   background-color: rgba(82, 81, 81, 0.8);

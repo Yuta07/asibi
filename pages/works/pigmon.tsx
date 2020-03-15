@@ -9,7 +9,6 @@ const Pigmon = () => {
         <title>Works - Personal Blog | Yutazon.me</title>
         <meta name="description" content="Pigmon.ioはYutazonの個人ブログです。" />
         <script async src="https://cdn.ampproject.org/v0.js" />
-        <script async custom-element="amp-timeago" src="https://cdn.ampproject.org/v0/amp-timeago-0.1.js" />
       </Head>
       <style jsx>{`
         .wrapper {
@@ -109,15 +108,13 @@ const Pigmon = () => {
             <p className="overview-intro">技術のことからしょうもないことまでなんでも書いていくブログを作りました。</p>
             <div className="overview-detail">
               <span className="overview-created">作成日時：</span>
-              <amp-timeago class="ja" width="160" height="20" datetime="2019-11-03T00:37:33.809Z" locale="ja">
-                03 November 2019
-              </amp-timeago>
+              November 2019
             </div>
           </div>
           <div className="work-introduction">
             <h2 className="introduction-hero">Introduce</h2>
             <p className="introduction-detail">
-              技術的なアウトプットを発信していくためのブログです。まれに謎な記事をあげるかもしれません。
+              技術的なアウトプットを発信していくために作成しました。
               <br />
               Gatsbyで作成しています。ダークモードにも対応させたので、ぜひ読んでみてください。
               <br />

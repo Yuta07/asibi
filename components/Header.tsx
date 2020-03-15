@@ -30,7 +30,6 @@ const Header = () => {
           <BioDiscription>
             <ExternalLink href="https://github.com/Yuta07">Yutaka Miyazaki.</ExternalLink>
             <EasyProfile>Web Developer 🎉</EasyProfile>
-            <EasyProfile>SaaSの開発をしたり、Web管理画面の開発をしています。</EasyProfile>
           </BioDiscription>
         </BiographyWrapper>
       </AppBioGraphy>

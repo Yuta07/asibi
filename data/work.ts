@@ -11,7 +11,7 @@ export const WorkData: Work[] = [
   {
     img: '/works/pigmon.png',
     title: 'Pigmon.io',
-    description: '個人ブログ。Gatsbyで作成。記事はたまにアップされている模様。',
+    description: '個人ブログ。Gatsbyで作成。記事はたまにアップしています。',
     period: '2019/11~',
     link: '/works/pigmon?amp=1',
   },

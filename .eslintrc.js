@@ -10,7 +10,7 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 2018,
     sourceType: 'module',
     project: './tsconfig.json',
     ecmaFeatures: {
@@ -19,8 +19,8 @@ module.exports = {
     },
   },
   extends: [
-    'react-app',
     'eslint:recommended',
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
     'prettier',

@@ -5,7 +5,7 @@ export const CorePageWrapper = styled.section`
   width: 100%;
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid #e0e7ef;
+  border-top: 1px solid #bec1c5;
 
   &:first-child {
     padding-top: 0;
