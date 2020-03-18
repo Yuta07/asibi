@@ -87,6 +87,11 @@ const SkillWrapper = styled.div`
   margin-top: 2rem;
   position: relative;
   z-index: 3000;
+
+  @media (max-width: 767px) {
+    width: 95%;
+    margin: 2rem auto 0;
+  }
 `;
 
 const EverySkillWrapper = styled.div`
