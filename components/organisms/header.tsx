@@ -6,15 +6,19 @@ import Logo from '../../assets/logo.svg';
 export const Header = () => {
   return (
     <Wrapper>
-      <Logo />
+      <Link href="/">
+        <Anchor>
+          <Logo />
+        </Anchor>
+      </Link>
       <UnOrderedList>
         <List>
-          <Link href="/[slug]" as="/about">
+          <Link href="/about">
             <Span>About</Span>
           </Link>
         </List>
         <List>
-          <Link href="/[slug]" as="/skills">
+          <Link href="/skills">
             <Span>Skills</Span>
           </Link>
         </List>
@@ -24,8 +28,7 @@ export const Header = () => {
 };
 
 const Wrapper = styled.header`
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,4 +52,8 @@ const Span = styled.span`
     transition: 0.3s;
     opacity: 0.8;
   }
+`;
+
+const Anchor = styled.a`
+  cursor: pointer;
 `;

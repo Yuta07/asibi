@@ -3,6 +3,7 @@ import App from 'next/app';
 import Head from 'next/head';
 import styled, { createGlobalStyle } from 'styled-components';
 import { Header } from '../components/organisms/header';
+import { Footer } from '../components/organisms/footer';
 
 export default class MyApp extends App {
   componentDidMount() {
@@ -27,6 +28,7 @@ export default class MyApp extends App {
           <Container>
             <Header />
             <Component {...pageProps} />
+            <Footer />
           </Container>
         </Wrapper>
       </>
@@ -47,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 1.2px;
     word-wrap: break-word;
     font-kerning: normal;
-    color: #222f3e;
+    color: #353b48;
     background-color: #fefefe;
     min-height: 100vh;
   }

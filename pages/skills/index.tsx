@@ -1,9 +1,12 @@
 import React from 'react';
+import { SkillsTemplate } from '../../components/templates/skillsTemplate';
 
-export const Index = () => {
+const Index = () => {
   return (
-    <div>
-      <p>index</p>
-    </div>
+    <>
+      <SkillsTemplate />
+    </>
   );
 };
+
+export default Index;

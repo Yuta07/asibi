@@ -1,39 +1,48 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { Footer } from '../components/organisms/footer';
 
 const Index = () => {
   return (
-    <>
+    <Wrapper>
       <Main>
         <Introduction>Hi, It's Yutaka Miyazaki.</Introduction>
         <Text>I'm a Frontend Engineer from Japan.</Text>
-        <Link href="/[slug]" as="/portfolio">
-          <Portfolio>See Portfolio</Portfolio>
+        <Link href="/portfolio">
+          <Button>
+            <Portfolio>See Portfolio</Portfolio>
+          </Button>
         </Link>
       </Main>
-      <Footer />
-    </>
+    </Wrapper>
   );
 };
 
+const Wrapper = styled.div`
+  width: 100%;
+`;
+
 const Main = styled.div`
-  width: 90%;
-  margin: 0 auto;
+  width: 50%;
+  max-width: 480px;
   line-height: 2;
 `;
 
 const Introduction = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2.3rem;
 `;
 
 const Text = styled.p`
   font-size: 1.3rem;
 `;
 
+const Button = styled.div`
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+`;
+
 const Portfolio = styled.a`
-  display: inline-block;
   font-size: 1.3rem;
   border: 3px solid #222f3e;
   border-radius: 40px;

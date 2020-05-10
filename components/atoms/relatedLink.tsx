@@ -44,6 +44,6 @@ const Link = styled.a`
 `;
 
 const Img = styled.img`
-  width: 32px;
-  height: 32px;
+  width: 20px;
+  height: 20px;
 `;
