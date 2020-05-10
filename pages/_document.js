@@ -24,9 +24,11 @@ export default class MyDocument extends Document {
       <Html lang="ja">
         <Head>
           <meta charSet="utf-8" />
+          <title>Yutaka Miyazaki</title>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="yutaka.miyazaki" content="Yutazon.me" />
-          <meta name="description" content="Yutazonのポートフォリオ" />
+          <meta name="description" content="Yutazon's portfolio" />
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <link rel="apple-touch-icon" sizes="144x144" href="/static/images/icons/apple-touch-icon-144x144.png" />
           <link rel="manifest" href="/static/manifest.json" />

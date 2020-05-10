@@ -1,6 +1,6 @@
 import React from 'react';
 // import types
-import { StarProps } from '../types/type';
+import { StarProps } from '../../types/type';
 
 const Star = (props: StarProps) => (
   <svg

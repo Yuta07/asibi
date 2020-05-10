@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 // import types
-import { TitleProps } from '../types/type';
+import { TitleProps } from '../../types/type';
 
 const title = (props: TitleProps) => {
   return (
-    <Fragment>
+    <>
       <Title>{props.title}</Title>
-    </Fragment>
+    </>
   );
 };
 
