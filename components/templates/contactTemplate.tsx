@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const Portfolio = () => {
+export const ContactTemplate = () => {
   return (
     <div>
-      <p>portfolio</p>
+      <p>contact</p>
     </div>
   );
 };

@@ -64,12 +64,34 @@ const List = styled.li`
 `;
 
 const ListAnchor = styled.a`
-  padding: 20px 8px;
+  padding: 20px 8px 10px;
   display: inline-block;
   cursor: pointer;
+  position: relative;
 
   &:hover {
     transition: 0.3s;
     opacity: 0.8;
+
+    &:before {
+      transform: scale3d(1, 1, 1);
+      transform-origin: 0% 50%;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: calc(50% - -23px);
+    color: #01a3a4;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    pointer-events: none;
+    background: currentColor;
+    transform: scale3d(0, 1, 1);
+    transform-origin: 100% 50%;
+    transition: transform 0.5s;
+    transition-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
   }
 `;

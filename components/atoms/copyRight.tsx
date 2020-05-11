@@ -17,12 +17,13 @@ export const CopyRight = () => {
 
 const CopyRightText = styled.p`
   font-size: 12px;
+  color: #7f8c8d;
 `;
 
 const Link = styled.a`
   margin: 0 10px;
   text-decoration: none;
-  color: #222f3e;
+  color: #7f8c8d;
   font-weight: 550;
 
   &:hover {

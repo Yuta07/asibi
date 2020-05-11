@@ -31,5 +31,5 @@ const UnOrderedList = styled.ul`
 
 const List = styled.li`
   width: 40%;
-  margin: 0 0 40px auto;
+  margin: 0 0 50px auto;
 `;

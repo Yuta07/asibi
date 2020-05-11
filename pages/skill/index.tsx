@@ -1,8 +1,8 @@
 import React from 'react';
-import { SkillsTemplate } from '../../components/templates/skillTemplate';
+import { SkillTemplate } from '../../components/templates/skillTemplate';
 
 const Index = () => {
-  return <SkillsTemplate />;
+  return <SkillTemplate />;
 };
 
 export default Index;

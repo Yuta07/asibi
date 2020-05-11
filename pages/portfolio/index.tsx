@@ -1,9 +1,11 @@
 import React from 'react';
 
-export const Index = () => {
+const Index = () => {
   return (
     <div>
       <p>index</p>
     </div>
   );
 };
+
+export default Index;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Heading } from '../atoms/heading';
 import { SkillList } from '../organisms/skillList';
 
-export const SkillsTemplate = () => {
+export const SkillTemplate = () => {
   return (
     <Wrapper>
       <Hero>
@@ -17,9 +17,9 @@ export const SkillsTemplate = () => {
 };
 
 const Wrapper = styled.div`
-  height: 100%;
-  height: 100%;
-  margin: 20px 0;
+  width: 940px;
+  height: calc(100vh - 230px);
+  margin: 60px auto;
 `;
 
 const Hero = styled.div`
