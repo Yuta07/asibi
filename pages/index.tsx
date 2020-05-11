@@ -6,20 +6,27 @@ const Index = () => {
   return (
     <Wrapper>
       <Main>
-        <Introduction>Hi, It's Yutaka Miyazaki.</Introduction>
-        <Text>I'm a Frontend Engineer from Japan.</Text>
-        <Link href="/portfolio">
-          <Button>
-            <Portfolio>See Portfolio</Portfolio>
-          </Button>
-        </Link>
+        <PhotoContainer>
+          <Photo src="" alt="photo" />
+        </PhotoContainer>
+        <IntroContainer>
+          <Introduction>Hi, It's Yutaka Miyazaki.</Introduction>
+          <Text>I'm a Frontend Engineer from Japan.</Text>
+          <Link href="/portfolio">
+            <Button>
+              <Portfolio>See Portfolio</Portfolio>
+            </Button>
+          </Link>
+        </IntroContainer>
       </Main>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: 940px;
+  height: calc(100vh - 170px);
+  margin: 60px auto 0;
 `;
 
 const Main = styled.div`
@@ -27,6 +34,12 @@ const Main = styled.div`
   max-width: 480px;
   line-height: 2;
 `;
+
+const PhotoContainer = styled.div``;
+
+const Photo = styled.img``;
+
+const IntroContainer = styled.div``;
 
 const Introduction = styled.h1`
   font-size: 2.3rem;

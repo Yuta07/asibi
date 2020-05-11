@@ -1,11 +1,8 @@
 import React from 'react';
+import { AboutTemplate } from '../../components/templates/aboutTemplate';
 
 const Index = () => {
-  return (
-    <div>
-      <p>about</p>
-    </div>
-  );
+  return <AboutTemplate />;
 };
 
 export default Index;

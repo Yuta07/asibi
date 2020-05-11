@@ -25,11 +25,9 @@ export default class MyApp extends App {
       <>
         <GlobalStyle />
         <Wrapper>
-          <Container>
-            <Header />
-            <Component {...pageProps} />
-            <Footer />
-          </Container>
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
         </Wrapper>
       </>
     );
@@ -42,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: "Cera Pro", "helvetica neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
@@ -50,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
     word-wrap: break-word;
     font-kerning: normal;
     color: #353b48;
-    background-color: #fefefe;
+    background-color: #ffffff;
     min-height: 100vh;
   }
 
@@ -63,15 +61,7 @@ const GlobalStyle = createGlobalStyle`
 
 const Wrapper = styled.div`
   width: 100vw;
-  height: 100vh;
-  padding: 40px 50px 0;
-  display: flex;
-  background-image: linear-gradient(90deg, #efefef, #e4d7cb);
-`;
-
-const Container = styled.div`
-  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 `;

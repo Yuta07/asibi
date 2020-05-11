@@ -1,16 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import Avatar from '../../assets/avatar.svg';
 
-export const Profile = () => {
+export const CoverImg = () => {
   return (
     <Wrapper>
       <Background />
       <Container>
         <AvatarWrapper>
-          <Avatar />
+          <Img src="/avatar.svg" alt="avatar" />
         </AvatarWrapper>
-        <Hero>Yutaka Miyazaki</Hero>
       </Container>
     </Wrapper>
   );
@@ -46,7 +44,11 @@ const AvatarWrapper = styled.div`
   border: solid 1px #ffffff;
 `;
 
-const Hero = styled.h1`
-  margin-top: 10px;
-  font-size: 1.5rem;
+const Img = styled.img`
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: solid 2px #ffffff;
 `;

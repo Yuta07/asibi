@@ -1,15 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Heading } from '../atoms/heading';
+import { CoverImg } from '../atoms/coverImg';
 
-export const About = () => {
+export const AboutTemplate = () => {
   return (
     <Wrapper>
-      <Hero>
-        <Heading text="SKILLS" />
-      </Hero>
       <Container>
-        <h1>about</h1>
+        <ImageContainer>
+          <CoverImg />
+        </ImageContainer>
+        <MeContainer>
+          <Heading text="ABOUT" />
+          <Introduce>wev developer</Introduce>
+        </MeContainer>
       </Container>
     </Wrapper>
   );
@@ -21,12 +25,13 @@ const Wrapper = styled.div`
   margin: 20px 0;
 `;
 
-const Hero = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
 const Container = styled.div`
   max-width: 780px;
   margin: 50px auto 0;
 `;
+
+const ImageContainer = styled.div``;
+
+const MeContainer = styled.div``;
+
+const Introduce = styled.div``;

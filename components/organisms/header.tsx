@@ -1,25 +1,29 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
-import Logo from '../../assets/logo.svg';
 
 export const Header = () => {
   return (
     <Wrapper>
       <Link href="/">
         <Anchor>
-          <Logo />
+          <Img src="/logo.svg" alt="logo" />
         </Anchor>
       </Link>
       <UnOrderedList>
         <List>
           <Link href="/about">
-            <Span>About</Span>
+            <ListAnchor>ABOUT</ListAnchor>
           </Link>
         </List>
         <List>
-          <Link href="/skills">
-            <Span>Skills</Span>
+          <Link href="/skill">
+            <ListAnchor>SKILL</ListAnchor>
+          </Link>
+        </List>
+        <List>
+          <Link href="/contact">
+            <ListAnchor>CONTACT</ListAnchor>
           </Link>
         </List>
       </UnOrderedList>
@@ -28,32 +32,44 @@ export const Header = () => {
 };
 
 const Wrapper = styled.header`
-  width: 100%;
+  width: 940px;
+  height: 60px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
+const Anchor = styled.a`
+  cursor: pointer;
+  display: inline-flex;
+`;
+
+const Img = styled.img`
+  width: 28px;
+  height: 28px;
+`;
+
 const UnOrderedList = styled.ul`
   list-style: none;
   display: flex;
-  font-size: 18px;
+  font-size: 12px;
+  font-weight: 550;
+  padding-left: 0;
+  margin: 0;
 `;
 
 const List = styled.li`
   margin: 0 5px;
 `;
 
-const Span = styled.span`
-  padding: 4px 8px;
+const ListAnchor = styled.a`
+  padding: 20px 8px;
+  display: inline-block;
   cursor: pointer;
 
   &:hover {
     transition: 0.3s;
     opacity: 0.8;
   }
-`;
-
-const Anchor = styled.a`
-  cursor: pointer;
 `;
