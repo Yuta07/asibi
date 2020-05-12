@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import { createGlobalStyle } from 'styled-components';
-// import component
-import Layout from '../components/Layout';
+import styled, { createGlobalStyle } from 'styled-components';
+import { Header } from '../components/organisms/header';
+import { Footer } from '../components/organisms/footer';
 
 export default class MyApp extends App {
   componentDidMount() {
@@ -22,16 +22,14 @@ export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <Fragment>
-        <Head>
-          <title>Yutazon.me</title>
-          <link rel="canonical" href="$SOME_URL" />
-        </Head>
+      <>
         <GlobalStyle />
-        <Layout>
+        <Wrapper>
+          <Header />
           <Component {...pageProps} />
-        </Layout>
-      </Fragment>
+          <Footer />
+        </Wrapper>
+      </>
     );
   }
 }
@@ -42,14 +40,15 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: "open sans", "helvetica neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
+    letter-spacing: 1.2px;
     word-wrap: break-word;
     font-kerning: normal;
-    color: #323335;
-    background-color: #fefefe;
+    color: #353b48;
+    background-color: #ffffff;
     min-height: 100vh;
   }
 
@@ -58,49 +57,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
   }
+`;
 
-  a.ampNavLink {
-    text-decoration: none;
-    width: 25%;
-    padding: 8px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .bio-image-wrapper {
-    margin-right: 1.5rem;
-  }
-
-  .bio-image-wrapper {
-    img {
-      max-height: 64px;
-      border-radius: 50%;
-      object-fit: contain;
-    }
-  }
-
-  img.bio-image {
-    width: 64px;
-    max-height: 64px;
-    border-radius: 50%;
-    object-fit: contain;
-  }
-
-  .nav-image-wrapper {
-    max-width: 480px;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0 1.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
-  }
-
-  .nav-image-wrapper {
-    img {
-      opacity: 0.4;
-      filter: saturate(10%);
-    }
-  }
+const Wrapper = styled.div`
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 `;
