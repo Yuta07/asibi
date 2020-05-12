@@ -18,8 +18,8 @@ export const SkillTemplate = () => {
 
 const Wrapper = styled.div`
   width: 940px;
-  height: calc(100vh - 230px);
-  margin: 60px auto;
+  height: calc(100vh - 260px);
+  margin: 60px auto 90px;
 `;
 
 const Hero = styled.div`

@@ -4,6 +4,7 @@ import { Avatar } from '../atoms/avatar';
 import { Heading } from '../atoms/heading';
 import { Paragraph } from '../atoms/paragraph';
 import { RelatedLink } from '../atoms/relatedLink';
+import { ExperienceList } from '../organisms/experienceList';
 
 export const AboutTemplate = () => {
   return (
@@ -31,6 +32,10 @@ export const AboutTemplate = () => {
           <Paragraph text="最近は英語の勉強やUI / UXの勉強に力を入れています。" />
         </MeContainer>
       </Container>
+      <HeadingContainer>
+        <Heading text="EXPERIENCE" />
+      </HeadingContainer>
+      <ExperienceList />
       <RelatedLinkContainer>
         <RelatedLink />
       </RelatedLinkContainer>
@@ -40,7 +45,7 @@ export const AboutTemplate = () => {
 
 const Wrapper = styled.div`
   width: 940px;
-  margin: 60px auto;
+  margin: 60px auto 80px;
 `;
 
 const Container = styled.div`
@@ -55,7 +60,6 @@ const AvatarContainer = styled.div`
 const MeContainer = styled.div``;
 
 const Text = styled.p`
-  color: #7f8c8d;
   font-size: 14px;
   line-height: 1.8;
   text-align: left;
@@ -63,10 +67,15 @@ const Text = styled.p`
   margin-top: 30px;
 `;
 
+const HeadingContainer = styled.div`
+  margin-top: 100px;
+  text-align: center;
+`;
+
 const RelatedLinkContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 80px;
-  padding-top: 60px;
+  margin-top: 100px;
+  padding-top: 80px;
   border-top: 1px solid #bdc3c7;
 `;

@@ -25,8 +25,8 @@ export const HomeTemplate = () => {
 
 const Wrapper = styled.div`
   width: 940px;
-  height: calc(100vh - 230px);
-  margin: 60px auto;
+  height: calc(100vh - 260px);
+  margin: 60px auto 90px;
   display: flex;
   align-items: center;
 `;
@@ -40,7 +40,7 @@ const PhotoContainer = styled.div``;
 
 const Photo = styled.img`
   width: 300px;
-  margin: 0 40px 0 20px;
+  margin: 0 50px 0 30px;
 `;
 
 const IntroContainer = styled.div`

@@ -10,7 +10,6 @@ export const Paragraph = ({ text }: Props) => {
 };
 
 const Txt = styled.p`
-  color: #7f8c8d;
   font-size: 14px;
   line-height: 1.8;
   text-align: left;

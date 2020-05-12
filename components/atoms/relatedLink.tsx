@@ -30,9 +30,12 @@ const UnOrderedList = styled.ul`
 
 const List = styled.li`
   margin: 0 25px;
+  display: inline-flex;
 `;
 
 const Link = styled.a`
+  height: 32px;
+
   &:hover {
     transition: 0.3s;
     opacity: 0.7;

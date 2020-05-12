@@ -1,8 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import styled from 'styled-components';
+import { useRouter } from 'next/router';
+import styled, { css } from 'styled-components';
 
 export const Header = () => {
+  const router = useRouter();
+
   return (
     <Wrapper>
       <Link href="/">
@@ -13,17 +16,17 @@ export const Header = () => {
       <UnOrderedList>
         <List>
           <Link href="/about">
-            <ListAnchor>ABOUT</ListAnchor>
+            <ListAnchor path={router.pathname === '/about'}>ABOUT</ListAnchor>
           </Link>
         </List>
         <List>
           <Link href="/skill">
-            <ListAnchor>SKILL</ListAnchor>
+            <ListAnchor path={router.pathname === '/skill'}>SKILL</ListAnchor>
           </Link>
         </List>
         <List>
           <Link href="/contact">
-            <ListAnchor>CONTACT</ListAnchor>
+            <ListAnchor path={router.pathname === '/contact'}>CONTACT</ListAnchor>
           </Link>
         </List>
       </UnOrderedList>
@@ -60,38 +63,53 @@ const UnOrderedList = styled.ul`
 `;
 
 const List = styled.li`
-  margin: 0 5px;
+  margin: 0 8px;
 `;
 
-const ListAnchor = styled.a`
-  padding: 20px 8px 10px;
-  display: inline-block;
-  cursor: pointer;
-  position: relative;
+const ListAnchor = styled.a<{ path: boolean }>`
+  ${({ path }) => {
+    return css`
+      padding: 20px 8px 8px;
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      color: ${path ? '#01a3a4' : null};
+      cursor: ${path ? 'default' : 'pointer'};
 
-  &:hover {
-    transition: 0.3s;
-    opacity: 0.8;
+      &:hover {
+        transition: 0.3s;
+        color: ${path ? null : '#7f8c8d'};
 
-    &:before {
-      transform: scale3d(1, 1, 1);
-      transform-origin: 0% 50%;
-    }
-  }
+        ${path
+          ? null
+          : `&:before {
+          transform: scale3d(1, 1, 1);
+          transform-origin: 0% 50%;
+        }`};
+      }
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: calc(50% - -23px);
-    color: #01a3a4;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    pointer-events: none;
-    background: currentColor;
-    transform: scale3d(0, 1, 1);
-    transform-origin: 100% 50%;
-    transition: transform 0.5s;
-    transition-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
-  }
+      &:before {
+        content: '';
+        color: #01a3a4;
+        position: absolute;
+        top: calc(50% - -21px);
+        left: 0;
+        width: 100%;
+        height: 2px;
+        pointer-events: none;
+        background: currentColor;
+        transform: scale3d(0, 1, 1);
+        transform-origin: 100% 50%;
+        transition: transform 0.3s;
+        transition-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+
+        ${path
+          ? `
+            transform: scale3d(1, 1, 1);
+            transform-origin: 0% 50%;
+          `
+          : null};
+      }
+    `;
+  }}
 `;

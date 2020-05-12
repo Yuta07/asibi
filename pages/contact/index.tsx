@@ -1,10 +1,11 @@
 import React from 'react';
+import { ContactTemplate } from '../../components/templates/contactTemplate';
 
 const Index = () => {
   return (
-    <div>
-      <p>contact</p>
-    </div>
+    <>
+      <ContactTemplate />
+    </>
   );
 };
 
