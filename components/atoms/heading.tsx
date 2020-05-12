@@ -10,7 +10,7 @@ export const Heading = ({ text }: Props) => {
 };
 
 const Text = styled.h1`
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   display: inline-block;
   padding-bottom: 4px;
   border-bottom: 3px solid #01a3a4;

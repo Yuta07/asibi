@@ -1,9 +1,38 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import styled from 'styled-components';
+import { Heading } from '../atoms/heading';
+import { PortfolioCard } from '../organisms/portfolioCard';
+import { portfolios } from '../../types';
 
-export const Portfolio = () => {
+export const PortfolioTemplate = () => {
   return (
-    <div>
-      <p>portfolio</p>
-    </div>
+    <Wrapper>
+      <Hero>
+        <Heading text="PORTFOLIO" />
+      </Hero>
+      <Container>
+        {portfolios.map(portfolio => (
+          <Fragment key={portfolio.title}>{PortfolioCard(portfolio)}</Fragment>
+        ))}
+      </Container>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  width: 940px;
+  margin: 40px auto 90px;
+`;
+
+const Hero = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 30px 0 60px;
+`;

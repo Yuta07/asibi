@@ -21,7 +21,7 @@ export const ContactTemplate = () => {
 const Wrapper = styled.div`
   width: 940px;
   height: calc(100vh - 260px);
-  margin: 60px auto 90px;
+  margin: 40px auto 90px;
   display: flex;
   flex-direction: column;
   align-items: center;

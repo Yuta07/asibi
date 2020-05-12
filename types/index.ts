@@ -37,3 +37,37 @@ export const experiences: ExperienceType[] = [
     image: '/job/togo.svg',
   },
 ];
+
+export type PortfolioType = {
+  category: string;
+  title: string;
+  overview: string;
+  image: string;
+};
+
+export const portfolios: PortfolioType[] = [
+  {
+    category: 'NPM Package',
+    title: 'frey-dates',
+    overview: 'React Calendar NPM Package',
+    image: '/portfolio/frey-dates.svg',
+  },
+  {
+    category: 'Storybook',
+    title: 'nino-ui',
+    overview: 'React Flat UI storybook',
+    image: '/portfolio/nino.svg',
+  },
+  {
+    category: 'Blog',
+    title: 'Pigmon.io',
+    overview: 'Personal blog by Yutaka Miyazaki',
+    image: '/portfolio/blog.svg',
+  },
+  {
+    category: 'Portfolio',
+    title: 'Yutazon.me',
+    overview: 'Portfolio by Yutaka Miyazaki',
+    image: '/portfolio/portfolio.svg',
+  },
+];

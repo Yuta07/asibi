@@ -32,9 +32,9 @@ export const AboutTemplate = () => {
           <Paragraph text="最近は英語の勉強やUI / UXの勉強に力を入れています。" />
         </MeContainer>
       </Container>
-      <HeadingContainer>
+      <Hero>
         <Heading text="EXPERIENCE" />
-      </HeadingContainer>
+      </Hero>
       <ExperienceList />
       <RelatedLinkContainer>
         <RelatedLink />
@@ -45,7 +45,7 @@ export const AboutTemplate = () => {
 
 const Wrapper = styled.div`
   width: 940px;
-  margin: 60px auto 80px;
+  margin: 40px auto 80px;
 `;
 
 const Container = styled.div`
@@ -67,7 +67,7 @@ const Text = styled.p`
   margin-top: 30px;
 `;
 
-const HeadingContainer = styled.div`
+const Hero = styled.div`
   margin-top: 100px;
   text-align: center;
 `;
