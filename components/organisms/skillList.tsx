@@ -34,7 +34,7 @@ const UnOrderedList = styled.ul`
 `;
 
 const List = styled.li`
-  width: 100%;
+  width: 50%;
   margin: 0 0 50px auto;
 
   @media (max-width: 425px) {
