@@ -46,18 +46,44 @@ export const AboutTemplate = () => {
 const Wrapper = styled.div`
   width: 940px;
   margin: 40px auto 80px;
+
+  @media (max-width: 960px) {
+    width: 700px;
+  }
+
+  @media (max-width: 425px) {
+    width: 360px;
+    margin: 40px auto 60px;
+  }
+
+  @media (max-width: 374px) {
+    width: 300px;
+    margin: 30px auto 60px;
+  }
 `;
 
 const Container = styled.div`
   display: flex;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 
 const AvatarContainer = styled.div`
   padding: 40px 30px 0;
   margin-right: 40px;
+
+  @media (max-width: 425px) {
+    margin: 0 auto;
+  }
 `;
 
-const MeContainer = styled.div``;
+const MeContainer = styled.div`
+  @media (max-width: 425px) {
+    margin-top: 40px;
+  }
+`;
 
 const Text = styled.p`
   font-size: 14px;
@@ -70,6 +96,10 @@ const Text = styled.p`
 const Hero = styled.div`
   margin-top: 100px;
   text-align: center;
+
+  @media (max-width: 425px) {
+    margin-top: 60px;
+  }
 `;
 
 const RelatedLinkContainer = styled.div`
@@ -78,4 +108,8 @@ const RelatedLinkContainer = styled.div`
   margin-top: 100px;
   padding-top: 80px;
   border-top: 1px solid #bdc3c7;
+
+  @media (max-width: 425px) {
+    padding-top: 60px;
+  }
 `;

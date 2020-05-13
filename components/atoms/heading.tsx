@@ -14,4 +14,12 @@ const Text = styled.h1`
   display: inline-block;
   padding-bottom: 4px;
   border-bottom: 3px solid #01a3a4;
+
+  @media (max-width: 960px) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 1.2rem;
+  }
 `;

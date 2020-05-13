@@ -41,6 +41,18 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 960px) {
+    width: 700px;
+  }
+
+  @media (max-width: 425px) {
+    width: 360px;
+  }
+
+  @media (max-width: 374px) {
+    width: 300px;
+  }
 `;
 
 const Anchor = styled.a`
@@ -109,6 +121,10 @@ const ListAnchor = styled.a<{ path: boolean }>`
             transform-origin: 0% 50%;
           `
           : null};
+      }
+
+      @media (max-width: 425px) {
+        padding: 20px 0 8px;
       }
     `;
   }}

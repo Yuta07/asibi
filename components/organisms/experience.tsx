@@ -22,6 +22,10 @@ const Card = styled.div`
   padding: 0 10px 10px;
   margin: 40px 15px 0;
   border-bottom: 2px solid #01a3a4;
+
+  @media (max-width: 425px) {
+    width: calc(100% - 30px);
+  }
 `;
 
 const BackgeoundImg = styled.div<{ path: string }>`
@@ -37,6 +41,16 @@ const BackgeoundImg = styled.div<{ path: string }>`
       position: absolute;
       bottom: 20px;
       right: 2%;
+
+      @media (max-width: 960px) {
+        width: 100px;
+        height: 90px;
+      }
+
+      @media (max-width: 425px) {
+        width: 90px;
+        height: 80px;
+      }
     `;
   }}
 `;
@@ -50,14 +64,22 @@ const TextBold = styled.p`
 `;
 
 const Strong = styled.strong`
-  margin-top: 15px;
+  margin-top: 10px;
   display: inline-block;
+
+  @media (max-width: 425px) {
+    font-size: 14px;
+  }
 `;
 
 const Text = styled.p`
   margin: 20px 0;
   font-size: 14px;
   font-weight: 300;
+
+  @media (max-width: 425px) {
+    margin: 15px 0;
+  }
 `;
 
 const Span = styled.span`
