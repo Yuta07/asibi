@@ -20,11 +20,26 @@ export const ContactTemplate = () => {
 
 const Wrapper = styled.div`
   width: 940px;
-  height: calc(100vh - 260px);
+  height: calc(100vh - 240px);
   margin: 40px auto 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 960px) {
+    width: 700px;
+  }
+
+  @media (max-width: 425px) {
+    width: 360px;
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 374px) {
+    width: 300px;
+    height: calc(100vh - 170px);
+    margin: 30px auto;
+  }
 `;
 
 const PhotoContainer = styled.div`
@@ -37,6 +52,11 @@ const Photo = styled.img`
   margin: 0 auto;
   border-radius: 50%;
   object-fit: cover;
+
+  @media (max-width: 425px) {
+    width: 160px;
+    height: 160px;
+  }
 `;
 
 const MailContainer = styled.div`
@@ -46,6 +66,10 @@ const MailContainer = styled.div`
 
 const Text = styled.p`
   font-size: 18px;
+
+  @media (max-width: 425px) {
+    font-size: 16px;
+  }
 `;
 
 const Span = styled.span`

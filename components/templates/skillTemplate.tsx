@@ -18,8 +18,23 @@ export const SkillTemplate = () => {
 
 const Wrapper = styled.div`
   width: 940px;
-  height: calc(100vh - 260px);
+  height: calc(100vh - 240px);
   margin: 40px auto 90px;
+
+  @media (max-width: 960px) {
+    width: 700px;
+  }
+
+  @media (max-width: 425px) {
+    width: 360px;
+    height: calc(100vh - 170px);
+    margin: 30px auto;
+    justify-content: center;
+  }
+
+  @media (max-width: 374px) {
+    width: 300px;
+  }
 `;
 
 const Hero = styled.div`
@@ -30,4 +45,19 @@ const Hero = styled.div`
 const Container = styled.div`
   max-width: 780px;
   margin: 50px auto 0;
+
+  @media (max-width: 960px) {
+    max-width: 700px;
+    margin: 50px auto 0;
+  }
+
+  @media (max-width: 425px) {
+    max-width: 360px;
+    margin: 30px auto 0;
+  }
+
+  @media (max-width: 374px) {
+    max-width: 300px;
+    margin: 20px auto 0;
+  }
 `;

@@ -18,6 +18,10 @@ export const CopyRight = () => {
 const CopyRightText = styled.p`
   font-size: 12px;
   color: #7f8c8d;
+
+  @media (max-width: 425px) {
+    font-size: 10px;
+  }
 `;
 
 const Link = styled.a`
@@ -29,5 +33,9 @@ const Link = styled.a`
   &:hover {
     transition: 0.3s;
     opacity: 0.8;
+  }
+
+  @media (max-width: 425px) {
+    margin: 0 5px;
   }
 `;

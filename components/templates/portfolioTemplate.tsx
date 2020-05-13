@@ -22,6 +22,19 @@ export const PortfolioTemplate = () => {
 const Wrapper = styled.div`
   width: 940px;
   margin: 40px auto 90px;
+
+  @media (max-width: 960px) {
+    width: 700px;
+  }
+
+  @media (max-width: 425px) {
+    width: 360px;
+    margin: 30px auto 60px;
+  }
+
+  @media (max-width: 374px) {
+    width: 300px;
+  }
 `;
 
 const Hero = styled.div`
@@ -35,4 +48,8 @@ const Container = styled.div`
   flex-wrap: wrap;
   width: 100%;
   margin: 30px 0 60px;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 `;

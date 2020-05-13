@@ -25,15 +25,34 @@ export const HomeTemplate = () => {
 
 const Wrapper = styled.div`
   width: 940px;
-  height: calc(100vh - 260px);
+  height: calc(100vh - 240px);
   margin: 40px auto 90px;
   display: flex;
   align-items: center;
+
+  @media (max-width: 960px) {
+    width: 700px;
+  }
+
+  @media (max-width: 425px) {
+    width: 360px;
+    height: calc(100vh - 170px);
+    margin: 30px auto;
+    justify-content: center;
+  }
+
+  @media (max-width: 374px) {
+    width: 300px;
+  }
 `;
 
 const Main = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 
 const PhotoContainer = styled.div``;
@@ -41,19 +60,47 @@ const PhotoContainer = styled.div``;
 const Photo = styled.img`
   width: 300px;
   margin: 0 50px 0 30px;
+
+  @media (max-width: 960px) {
+    width: 240px;
+  }
+
+  @media (max-width: 425px) {
+    width: 200px;
+  }
+
+  @media (max-width: 374px) {
+    width: 180px;
+  }
 `;
 
 const IntroContainer = styled.div`
   padding: 0 20px;
   line-height: 1.8;
+
+  @media (max-width: 425px) {
+    margin-top: 40px;
+  }
 `;
 
 const Introduction = styled.h1`
   font-size: 28px;
+
+  @media (max-width: 960px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 20px;
+  }
 `;
 
 const Text = styled.p`
   font-size: 16px;
+
+  @media (max-width: 425px) {
+    font-size: 14px;
+  }
 `;
 
 const Button = styled.div`
@@ -74,5 +121,10 @@ const Portfolio = styled.a`
     color: #01a3a4;
     border-color: #01a3a4;
     transition: 0.2s;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 16px;
+    padding: 4px 24px;
   }
 `;

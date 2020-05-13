@@ -15,4 +15,8 @@ const Txt = styled.p`
   text-align: left;
   letter-spacing: 0.2px;
   margin-top: 30px;
+
+  @media (max-width: 425px) {
+    font-size: 12px;
+  }
 `;

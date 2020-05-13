@@ -20,6 +20,14 @@ const Card = styled.div`
   margin-top: 40px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 960px) {
+    width: 50%;
+  }
+
+  @media (max-width: 425px) {
+    width: 100%;
+  }
 `;
 
 const Img = styled.img`
@@ -40,6 +48,10 @@ const Span = styled.span`
 
 const TextBold = styled.h2`
   font-size: 18px;
+
+  @media (max-width: 425px) {
+    font-size: 16px;
+  }
 `;
 
 const Text = styled.p`

@@ -27,9 +27,18 @@ const UnOrderedList = styled.ul`
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 
 const List = styled.li`
-  width: 40%;
+  width: 100%;
   margin: 0 0 50px auto;
+
+  @media (max-width: 425px) {
+    width: 75%;
+    margin: 20px auto;
+  }
 `;
