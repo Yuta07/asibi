@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 
   @media (max-width: 425px) {
     width: 360px;
-    height: calc(100vh - 1200px);
+    height: calc(100vh - 200px);
     margin: 60px auto 30px;
     justify-content: center;
   }
@@ -69,10 +69,6 @@ const Text = styled.p`
   font-size: 14px;
   letter-spacing: 0.2px;
   margin: 20px 0 10px;
-
-  @media (max-width: 425px) {
-    font-size: 12px;
-  }
 `;
 
 const Anchor = styled.a`
