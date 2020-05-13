@@ -81,7 +81,7 @@ const List = styled.li`
 const ListAnchor = styled.a<{ path: boolean }>`
   ${({ path }) => {
     return css`
-      padding: 20px 8px 8px;
+      padding: 18px 8px 8px;
       display: inline-block;
       cursor: pointer;
       position: relative;

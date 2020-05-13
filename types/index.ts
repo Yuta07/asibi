@@ -42,6 +42,7 @@ export type PortfolioType = {
   category: string;
   title: string;
   overview: string;
+  link: string;
   image: string;
 };
 
@@ -50,24 +51,28 @@ export const portfolios: PortfolioType[] = [
     category: 'NPM Package',
     title: 'frey-dates',
     overview: 'React Calendar NPM Package',
+    link: '/portfolio/frey-dates',
     image: '/portfolio/frey-dates.svg',
   },
   {
     category: 'Storybook',
     title: 'nino-ui',
     overview: 'React Flat UI storybook',
+    link: '/portfolio/nino-ui',
     image: '/portfolio/nino.svg',
   },
   {
     category: 'Blog',
     title: 'Pigmon.io',
     overview: 'Personal blog by Yutaka Miyazaki',
+    link: '',
     image: '/portfolio/blog.svg',
   },
   {
     category: 'Portfolio',
     title: 'Yutazon.me',
     overview: 'Portfolio by Yutaka Miyazaki',
+    link: '',
     image: '/portfolio/portfolio.svg',
   },
 ];

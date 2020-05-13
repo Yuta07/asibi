@@ -1,5 +1,5 @@
 import React from 'react';
-import { PortfolioTemplate } from '../../components/templates/portfolioTemplate';
+import { PortfolioTemplate } from '../../components/templates/portfolio/portfolioTemplate';
 
 const Index = () => {
   return (

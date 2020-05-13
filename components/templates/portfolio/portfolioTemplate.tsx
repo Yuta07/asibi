@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import { Heading } from '../atoms/heading';
-import { PortfolioCard } from '../organisms/portfolioCard';
-import { portfolios } from '../../types';
+import { Heading } from '../../atoms/heading';
+import { PortfolioCard } from '../../organisms/portfolioCard';
+import { portfolios } from '../../../types';
 
 export const PortfolioTemplate = () => {
   return (
