@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const HomeTemplate = () => {
   return (
@@ -49,6 +49,7 @@ const Wrapper = styled.div`
 const Main = styled.div`
   display: flex;
   align-items: center;
+  width: 100%;
 
   @media (max-width: 425px) {
     flex-direction: column;
@@ -74,9 +75,29 @@ const Photo = styled.img`
   }
 `;
 
+const Typewriter = keyframes`
+  from {
+    width: 5%;
+  }
+  to {
+    width: 100%;
+  }
+`;
+
+const BlinkTextCursor = keyframes`
+  0% {
+    border-color: transparent;
+  }
+  50% { 
+    border-color: #01a3a4; 
+  }
+  100% {
+    border-color: transparent;
+  }
+`;
+
 const IntroContainer = styled.div`
   padding: 0 20px;
-  line-height: 1.8;
 
   @media (max-width: 425px) {
     margin-top: 40px;
@@ -85,6 +106,15 @@ const IntroContainer = styled.div`
 
 const Introduction = styled.h1`
   font-size: 28px;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  margin: 10px 0;
+  border-right: 4px solid #01a3a4;
+  padding-right: 8px;
+  animation: ${Typewriter} 3.5s steps(40, end), ${BlinkTextCursor} 0.75s step-end infinite;
 
   @media (max-width: 960px) {
     font-size: 24px;

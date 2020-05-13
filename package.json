@@ -2,7 +2,7 @@
   "name": "yutazon.me",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "description": "my introduction",
   "dependencies": {
     "next": "^9.3.6",
