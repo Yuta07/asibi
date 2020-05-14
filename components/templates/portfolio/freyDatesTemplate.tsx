@@ -29,14 +29,10 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 425px) {
-    width: 360px;
+    width: 90%;
     height: calc(100vh - 200px);
     margin: 60px auto 30px;
     justify-content: center;
-  }
-
-  @media (max-width: 374px) {
-    width: 300px;
   }
 `;
 

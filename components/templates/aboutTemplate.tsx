@@ -55,10 +55,6 @@ const Wrapper = styled.div`
     width: 90%;
     margin: 40px auto 60px;
   }
-
-  @media (max-width: 374px) {
-    margin: 30px auto 60px;
-  }
 `;
 
 const Container = styled.div`
