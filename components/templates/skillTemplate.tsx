@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   @media (max-width: 425px) {
     width: 90%;
     height: calc(100vh - 170px);
-    margin: 30px auto;
+    margin: 40px auto;
     justify-content: center;
   }
 `;
