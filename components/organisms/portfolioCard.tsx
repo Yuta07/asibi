@@ -4,16 +4,24 @@ import styled, { css } from 'styled-components';
 import { PortfolioType } from '../../types';
 
 export const PortfolioCard = (portfolio: PortfolioType) => {
+  const renderPortfolioCard = (
+    <Card link={!!portfolio.link}>
+      <Img src={portfolio.image} alt={portfolio.title} />
+      <Span>{portfolio.category}</Span>
+      <TextBold>{portfolio.title}</TextBold>
+      <Text>{portfolio.overview}</Text>
+      {!!portfolio.link ? <LinkImg src="/portfolio/link.svg" alt="link" /> : null}
+    </Card>
+  );
+
   return (
-    <Link href={portfolio.link ? portfolio.link : '/portfolio'}>
-      <Card link={!!portfolio.link}>
-        <Img src={portfolio.image} alt={portfolio.title} />
-        <Span>{portfolio.category}</Span>
-        <TextBold>{portfolio.title}</TextBold>
-        <Text>{portfolio.overview}</Text>
-        {!!portfolio.link ? <LinkImg src="/portfolio/link.svg" alt="link" /> : null}
-      </Card>
-    </Link>
+    <>
+      {portfolio.link ? (
+        <Link href={portfolio.link ? portfolio.link : ''}>{renderPortfolioCard}</Link>
+      ) : (
+        <>{renderPortfolioCard}</>
+      )}
+    </>
   );
 };
 

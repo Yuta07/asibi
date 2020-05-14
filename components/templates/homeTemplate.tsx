@@ -35,14 +35,10 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 425px) {
-    width: 360px;
+    width: 90%;
     height: calc(100vh - 170px);
     margin: 30px auto;
     justify-content: center;
-  }
-
-  @media (max-width: 374px) {
-    width: 300px;
   }
 `;
 
@@ -61,6 +57,8 @@ const PhotoContainer = styled.div``;
 const Photo = styled.img`
   width: 300px;
   margin: 0 50px 0 30px;
+  background: linear-gradient(45deg,#dac67f,#e89642)
+  border-radius: 50%;
 
   @media (max-width: 960px) {
     width: 240px;

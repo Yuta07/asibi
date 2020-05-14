@@ -26,14 +26,10 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 425px) {
-    width: 360px;
+    width: 90%;
     height: calc(100vh - 170px);
     margin: 30px auto;
     justify-content: center;
-  }
-
-  @media (max-width: 374px) {
-    width: 300px;
   }
 `;
 

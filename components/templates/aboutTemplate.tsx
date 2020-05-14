@@ -52,12 +52,11 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 425px) {
-    width: 360px;
+    width: 90%;
     margin: 40px auto 60px;
   }
 
   @media (max-width: 374px) {
-    width: 300px;
     margin: 30px auto 60px;
   }
 `;
