@@ -22,7 +22,7 @@
     "@types/react-dom": "^16.9.1",
     "@types/react-lazyload": "^2.5.0",
     "@types/styled-components": "^5.1.0",
-    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.3.1",
     "babel-plugin-inline-react-svg": "^1.1.1",
     "babel-plugin-styled-components": "^1.10.6",
