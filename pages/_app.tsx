@@ -1,37 +1,33 @@
-import React, { Fragment } from 'react';
-import App from 'next/app';
-import Head from 'next/head';
+import React, { useEffect } from 'react';
+import { AppProps } from 'next/app';
 import styled, { createGlobalStyle } from 'styled-components';
 import { Header } from '../components/organisms/header';
 import { Footer } from '../components/organisms/footer';
 
-export default class MyApp extends App {
-  componentDidMount() {
+function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
         .register('/static/service-worker.js')
         .then(() => {
           console.log('service worker registration successful');
         })
-        .catch(err => {
+        .catch((err) => {
           console.warn('service worker registration failed', err.message);
         });
     }
-  }
+  }, []);
 
-  render() {
-    const { Component, pageProps } = this.props;
-    return (
-      <>
-        <GlobalStyle />
-        <Wrapper>
-          <Header />
-          <Component {...pageProps} />
-          <Footer />
-        </Wrapper>
-      </>
-    );
-  }
+  return (
+    <>
+      <GlobalStyle />
+      <Wrapper>
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </Wrapper>
+    </>
+  );
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -61,7 +57,8 @@ const GlobalStyle = createGlobalStyle`
 
 const Wrapper = styled.div`
   width: 100vw;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 `;
+
+export default MyApp;
