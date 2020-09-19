@@ -1,8 +1,8 @@
 import React from 'react';
-import { HomeTemplate } from '../components/templates/homeTemplate';
+import { Home } from '../components/Home';
 
-const Index = () => {
-  return <HomeTemplate />;
+const Root = () => {
+  return <Home />;
 };
 
-export default Index;
+export default Root;

@@ -1,12 +1,8 @@
 import React from 'react';
-import { PortfolioTemplate } from '../../components/templates/portfolio/portfolioTemplate';
+import { Portfolio } from '../../components/Portfolio';
 
-const Index = () => {
-  return (
-    <>
-      <PortfolioTemplate />
-    </>
-  );
+const PortfolioPage = () => {
+  return <Portfolio />;
 };
 
-export default Index;
+export default PortfolioPage;

@@ -1,12 +1,8 @@
 import React from 'react';
-import { ContactTemplate } from '../../components/templates/contactTemplate';
+import { Contact } from '../../components/Contact';
 
-const Index = () => {
-  return (
-    <>
-      <ContactTemplate />
-    </>
-  );
+const ContactPage = () => {
+  return <Contact />;
 };
 
-export default Index;
+export default ContactPage;

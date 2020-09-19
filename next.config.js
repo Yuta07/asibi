@@ -1,29 +1,11 @@
-const withOffline = require('next-offline');
+const withPWA = require('next-pwa');
 
-const nextConfig = {
-  target: 'serverless',
-  transformManifest: manifest => ['/'].concat(manifest),
-  // generateInDevMode: true,
-  workboxOpts: {
-    swDest: 'static/service-worker.js',
-    runtimeCaching: [
-      {
-        urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-        handler: 'NetworkFirst',
-        options: {
-          cacheName: 'images',
-          networkTimeoutSeconds: 10,
-          expiration: {
-            maxEntries: 150,
-            maxAgeSeconds: 30 * 24 * 60 * 60, // 1 month
-          },
-          cacheableResponse: {
-            statuses: [0, 200],
-          },
-        },
-      },
-    ],
+module.exports = withPWA({
+  pwa: {
+    dest: 'public',
+    disable: process.env.NODE_ENV === 'development',
+    register: true,
+    sw: 'service-worker.js',
+    runtimeCaching: true,
   },
-};
-
-module.exports = withOffline(nextConfig);
+});

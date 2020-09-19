@@ -1,64 +1,35 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { AppProps } from 'next/app';
-import styled, { createGlobalStyle } from 'styled-components';
-import { Header } from '../components/organisms/header';
-import { Footer } from '../components/organisms/footer';
+import Head from 'next/head';
+import { Layout } from '../components/Layout';
+import { GlobalStyle } from '../themes/global';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('/static/service-worker.js')
-        .then(() => {
-          console.log('service worker registration successful');
-        })
-        .catch((err) => {
-          console.warn('service worker registration failed', err.message);
-        });
-    }
-  }, []);
-
   return (
     <>
+      <Head>
+        <title>yutaka's space 🤔</title>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="yutaka's space" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-touch-icon-144x144.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="manifest.webmanifest" />
+        <script
+          async
+          src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js"
+          integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA"
+          crossOrigin="anonymous"
+        />
+      </Head>
       <GlobalStyle />
-      <Wrapper>
-        <Header />
+      <Layout>
         <Component {...pageProps} />
-        <Footer />
-      </Wrapper>
+      </Layout>
     </>
   );
 }
-
-const GlobalStyle = createGlobalStyle`
-  html {
-    overflow-y: scroll;
-  }
-
-  body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.6;
-    letter-spacing: 1.2px;
-    word-wrap: break-word;
-    font-kerning: normal;
-    color: #353b48;
-    background-color: #ffffff;
-    min-height: 100vh;
-  }
-
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-`;
-
-const Wrapper = styled.div`
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-`;
 
 export default MyApp;
