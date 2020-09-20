@@ -4,7 +4,6 @@ updates:
     directory: "/"
     schedule:
       interval: daily
-      time: "3:00"
     allow:
       - dependency-type: "all"
     commit-message:
