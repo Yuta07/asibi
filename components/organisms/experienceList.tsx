@@ -1,30 +1,45 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { Experience } from './experience';
-import { experiences } from '../../types';
+import { Experience } from './Experience';
+import experienceData from '../../content/experience.json';
 
 export const ExperienceList = () => {
-  const renderExList = experiences.map(experience => {
-    return <Fragment key={experience.period}>{Experience(experience)}</Fragment>;
-  });
-
   return (
-    <Wrapper>
-      <Container>{renderExList}</Container>
-    </Wrapper>
+    <Container>
+      <Title>Job Experience</Title>
+      <Content>
+        {experienceData.data.map((data) => {
+          return <Experience key={data.overview} data={data} />;
+        })}
+      </Content>
+    </Container>
   );
 };
 
-const Wrapper = styled.div`
+const Container = styled.div`
   width: 100%;
+  margin: 60px 0 80px;
 `;
 
-const Container = styled.div`
+const Title = styled.h2`
+  font-size: 32px;
+  text-align: center;
+`;
+
+const Content = styled.div`
+  width: 100%;
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 
-  @media (max-width: 425px) {
-    flex-direction: column;
+  .experience-card {
+    &:nth-child(2n - 1) {
+      margin-right: 25px;
+    }
+
+    &:nth-child(n + 3) {
+      margin-top: 25px;
+    }
   }
 `;

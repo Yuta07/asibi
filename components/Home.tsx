@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { Copyright } from './atoms/Copyright';
 import { Greeting } from './atoms/Greeting';
 import { Logo } from './atoms/Logo';
-import { Card } from './organisms/Card';
 import rootData from '../content/root.json';
+import { Card } from './organisms/Card';
 
 export const Home = () => {
   return (
@@ -50,5 +50,6 @@ const Introduction = styled.div`
 
 const Top = styled.div`
   position: absolute;
-  top: 20px;
+  top: 120px;
+  left: 40px;
 `;

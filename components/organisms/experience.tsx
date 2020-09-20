@@ -1,32 +1,49 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { ExperienceType } from '../../types';
 
-export const Experience = (experience: ExperienceType) => {
+type Props = {
+  data: {
+    period: string;
+    role: string;
+    overview: string;
+    language: string;
+    devPeriod: string;
+    company: string;
+    image: string;
+  };
+};
+
+export const Experience = ({ data }: Props) => {
+  const { period, role, overview, language, devPeriod, company, image } = data;
+
+  const overviewArray = overview.split('・');
+  const languageArray = language.split('・');
+
   return (
-    <Card>
-      <BackgeoundImg path={experience.image} />
-      <TextBold>{experience.period}</TextBold>
-      <TextBold>{experience.role}</TextBold>
-      <Strong>{experience.overview}</Strong>
-      <Span>{experience.language}</Span>
-      <Text>{experience.devPeriod}</Text>
-      <Span>{experience.company}</Span>
+    <Card className="experience-card">
+      <BackgeoundImg path={image} />
+      <TextBold>{period}</TextBold>
+      <TextBold>{role}</TextBold>
+      {overviewArray.map((overview) => {
+        return <Strong key={overview}>{overview}</Strong>;
+      })}
+      {languageArray.map((language) => {
+        return <Lang key={language}>{language}</Lang>;
+      })}
+      <Text>{devPeriod}</Text>
+      <Span>{company}</Span>
     </Card>
   );
 };
 
 const Card = styled.div`
   position: relative;
-  width: calc(50% - 30px);
-  padding: 0 10px 10px;
-  margin: 40px 15px 0;
+  width: 410px;
+  background: #ffffff;
+  padding: 10px 15px;
   border-bottom: 2px solid #01a3a4;
-
-  @media (max-width: 425px) {
-    width: 100%;
-    margin: 40px auto 0;
-  }
+  border-radius: 8px 8px 0 0;
+  filter: drop-shadow(0 4px 4px silver);
 `;
 
 const BackgeoundImg = styled.div<{ path: string }>`
@@ -40,17 +57,8 @@ const BackgeoundImg = styled.div<{ path: string }>`
       height: 100px;
       opacity: 0.5;
       position: absolute;
-      bottom: 20px;
-      right: 2%;
-
-      @media (max-width: 960px) {
-        width: 100px;
-        height: 90px;
-      }
-
-      @media (max-width: 425px) {
-        width: 90px;
-        height: 80px;
+      bottom: 10px;
+      right: 0;
       }
     `;
   }}
@@ -61,20 +69,22 @@ const TextBold = styled.p`
   display: block;
   font-weight: 550;
   font-size: 12px;
-  margin: 5px 0;
+  margin: 5px 0 10px;
 `;
 
 const Strong = styled.strong`
-  margin-top: 10px;
   display: inline-block;
+`;
 
-  @media (max-width: 425px) {
-    font-size: 14px;
-  }
+const Lang = styled.span`
+  color: #7f8c8d;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
 `;
 
 const Text = styled.p`
-  margin: 20px 0;
+  margin: 20px 0 30px;
   font-size: 14px;
   font-weight: 300;
 
@@ -88,4 +98,6 @@ const Span = styled.span`
   font-size: 12px;
   margin-top: 5px;
   display: block;
+  position: absolute;
+  bottom: 2px;
 `;

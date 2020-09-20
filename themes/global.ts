@@ -40,6 +40,11 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 14px;
   }
 
+  a {
+    color: #353b48;
+    text-decoration:none;
+  }
+
   small {
     font-size: 12px;
   }

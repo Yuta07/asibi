@@ -18,8 +18,8 @@ export const Header = () => {
             </Link>
           </List>
           <List>
-            <Link href="/portfolio">
-              <Anchor path={router.pathname === '/portfolio'}>Portfolio</Anchor>
+            <Link href="/works">
+              <Anchor path={router.pathname === '/works'}>Works</Anchor>
             </Link>
           </List>
           <List>
@@ -45,7 +45,7 @@ const HeaderOuter = styled.header`
 const Content = styled.div`
   max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,6 +53,7 @@ const Content = styled.div`
 
 const Nav = styled.ul`
   display: flex;
+  height: 40px;
   padding-left: 0;
   margin: 0;
   font-size: 12px;

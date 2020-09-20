@@ -7,16 +7,19 @@ export const RelatedLink = () => {
       <List>
         <Link href="https://github.com/Yuta07" target="_blank">
           <Img src="/links/github-icon.svg" alt="github" />
-        </Link>
-      </List>
-      <List>
-        <Link href="https://pigmon.io" target="_blank">
-          <Img src="/links/pigmon.svg" alt="blog" />
+          <Txt>Github</Txt>
         </Link>
       </List>
       <List>
         <Link href="https://twitter.com/yutazon7" target="_blank">
           <Img src="/links/twitter.svg" alt="twitter" />
+          <Txt>Twitter</Txt>
+        </Link>
+      </List>
+      <List>
+        <Link href="https://www.wantedly.com/users/92241527" target="_blank">
+          <Img src="/links/wantedly_mark.svg" alt="twitter" />
+          <Txt>Wantedly</Txt>
         </Link>
       </List>
     </UnOrderedList>
@@ -25,24 +28,30 @@ export const RelatedLink = () => {
 
 const UnOrderedList = styled.ul`
   display: flex;
+  flex-direction: column;
   list-style: none;
 `;
 
 const List = styled.li`
-  margin: 0 25px;
-  display: inline-flex;
+  margin-bottom: 10px;
 `;
 
 const Link = styled.a`
-  height: 32px;
+  display: inline-flex;
+  align-items: center;
 
   &:hover {
     transition: 0.3s;
-    opacity: 0.7;
+    color: #3fb0ac;
   }
 `;
 
 const Img = styled.img`
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
+`;
+
+const Txt = styled.span`
+  padding-left: 15px;
+  font-weight: 500;
 `;

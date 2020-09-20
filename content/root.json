@@ -8,11 +8,11 @@
       "link": "/resume"
     },
     {
-      "image": "/root/portfolio.svg",
-      "title": "Portfolio",
+      "image": "/root/works.svg",
+      "title": "Works",
       "theme": "#3fb0ac",
       "description": "Personal work.",
-      "link": "/portfolio"
+      "link": "/works"
     },
     {
       "image": "/root/blog.svg",

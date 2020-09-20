@@ -14,10 +14,11 @@ const ImgField = styled.div`
 `;
 
 const Img = styled.img`
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
+  padding: 10px;
   border: solid 5px #ffffff;
   border-radius: 50%;
-  background: #f3e367;
+  background: #3fb0ac;
   object-fit: contain;
 `;
