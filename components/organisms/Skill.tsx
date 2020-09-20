@@ -1,4 +1,3 @@
-import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
 
 type Props = {
@@ -28,7 +27,7 @@ export const Skill = ({ data }: Props) => {
           />
           <path
             className="circle"
-            stroke-dasharray={`${level} 100`}
+            strokeDasharray={`${level} 100`}
             d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import worksData from '../content/works.json';
 import { WorksCard } from './organisms/WorksCard';
@@ -18,7 +17,7 @@ export const Works = () => {
 
 const Content = styled.div`
   max-width: 900px;
-  margin: 0 auto;
+  margin: 30px auto 0;
   padding: 0 20px;
 `;
 

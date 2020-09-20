@@ -1,4 +1,3 @@
-import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Layout } from '../components/Layout';
@@ -8,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>yutaka's space 🤔</title>
+        <title>Yutaka Miyazaki 🤔</title>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="yutaka's space" />

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { Copyright } from './atoms/Copyright';
 import { Greeting } from './atoms/Greeting';

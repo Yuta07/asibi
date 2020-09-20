@@ -1,23 +1,22 @@
-import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 
 type Props = {
   data: {
-    image: string;
+    image: string[];
     title: string;
     description: string;
-    link: string;
+    slug: string;
   };
 };
 
 export const WorksCard = ({ data }: Props) => {
-  const { image, title, description, link } = data;
+  const { image, title, description, slug } = data;
 
   return (
-    <Link href={link}>
+    <Link href={`/works/${slug}`}>
       <Content>
-        <Img src={image} alt={`${title}-image`} />
+        <Img src={image[0]} alt={`${title}-image`} />
         <Bottom className="porfolio-description">
           <Title>{title}</Title>
           <Description>{description}</Description>
@@ -67,9 +66,7 @@ const Bottom = styled.div`
   transition: 0.3s ease-in-out;
 `;
 
-const Title = styled.h2`
-  font-size: 20px;
-`;
+const Title = styled.h2``;
 
 const Description = styled.p`
   font-size: 14px;

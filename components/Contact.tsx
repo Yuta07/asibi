@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { ContactInfo } from './atoms/ContactInfo';
 import { RelatedLink } from './atoms/RelatedLink';

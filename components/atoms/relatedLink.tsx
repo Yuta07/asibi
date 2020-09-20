@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 export const RelatedLink = () => {
@@ -18,7 +17,7 @@ export const RelatedLink = () => {
       </List>
       <List>
         <Link href="https://www.wantedly.com/users/92241527" target="_blank">
-          <Img src="/links/wantedly_mark.svg" alt="twitter" />
+          <Img src="/links/wantedly_mark.svg" alt="wantedly" />
           <Txt>Wantedly</Txt>
         </Link>
       </List>

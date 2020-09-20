@@ -1,16 +1,24 @@
 {
   "data": [
     {
-      "image": "/works/nino.svg",
+      "image": ["/works/nino.svg"],
       "title": "nino-ui",
       "description": "Storybook Project by Flat UI.",
-      "link": "/"
+      "overview": "StorybookでReactコンポーネントをカタログ化しました。アトミックデザインを参考にしています。デザインはFlatUIを意識しました。",
+      "language": ["React", "TypeScript", "Circle CI"],
+      "period": "March 2020",
+      "ref": "https://github.com/Yuta07/frey-dates",
+      "slug": "nino-ui"
     },
     {
-      "image": "/works/frey-dates.svg",
+      "image": ["/works/frey-dates.svg"],
       "title": "frey-dates",
       "description": "React MultiSelect Calendar.",
-      "link": "/"
+      "overview": "Reactによる日付を複数指定できるカレンダーです。npm packageにして公開しています。",
+      "language": ["React", "TypeScript"],
+      "period": "April 2020",
+      "ref": "https://github.com/Yuta07/nino-ui",
+      "slug": "frey-dates"
     }
   ]
 }

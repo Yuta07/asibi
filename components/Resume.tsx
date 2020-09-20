@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { Personal } from './atoms/Personal';
 import { SkillList } from './organisms/SkillList';

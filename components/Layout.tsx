@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import { Header } from './organisms/Header';

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { Experience } from './Experience';
 import experienceData from '../../content/experience.json';

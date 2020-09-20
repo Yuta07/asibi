@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { Skill } from './Skill';
 import skillData from '../../content/skill.json';
