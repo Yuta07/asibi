@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styled, { css } from 'styled-components';
-import { Logo } from '../atoms/Logo';
+import { Logo } from './Logo';
 
 export const Header = () => {
   const router = useRouter();
 
   return (
-    <HeaderOuter>
+    <Outer>
       <Content>
         <Logo />
         <Nav>
@@ -33,11 +33,11 @@ export const Header = () => {
           </List>
         </Nav>
       </Content>
-    </HeaderOuter>
+    </Outer>
   );
 };
 
-const HeaderOuter = styled.header`
+const Outer = styled.header`
   width: 100%;
 `;
 
