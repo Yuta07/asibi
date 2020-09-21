@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "role": "FRONTEND ENGINEER",
+      "overview": "飲食店のデータ分析プラットフォーム・デリバリー事業の売上改善サービス開発",
+      "language": "React / Redux / TypeScript・Next.js / TypeScript / AppSync / Cypress",
+      "devPeriod": "SEPTEMBER 2019 - PRESENT",
+      "company": "Lisa Technologies Inc.",
+      "image": "/job/storesscore.svg"
+    },
+    {
+      "role": "SYSTEM ENGINEER",
+      "overview": "クラウドERPのカスタマイズ開発",
+      "language": "Classic ASP / SQL Server",
+      "devPeriod": "April 2019 - MAY 2020",
+      "company": "oRo Co., Ltd.",
+      "image": "/job/cloud.svg"
+    },
+    {
+      "role": "FRONTEND ENGINEER <Internship>",
+      "overview": "モバイルオーダーペイアプリの開発",
+      "language": "React / Redux / Firebase",
+      "devPeriod": "AUGUST 2018 - MARCH 2019",
+      "company": "Lisa Technologies Inc.",
+      "image": "/job/togo.svg"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "image": "/home/resume.svg",
+      "title": "Resume",
+      "theme": "#f3d770",
+      "description": "About me. experience and skill.",
+      "link": "/resume"
+    },
+    {
+      "image": "/home/works.svg",
+      "title": "Works",
+      "theme": "#3fb0ac",
+      "description": "Personal work.",
+      "link": "/works"
+    },
+    {
+      "image": "/home/blog.svg",
+      "title": "Blog",
+      "theme": "#1a4f52",
+      "description": "Personal blog.",
+      "link": "/blog"
+    },
+    {
+      "image": "/home/contact.svg",
+      "title": "Contact",
+      "theme": "#c4c5bc",
+      "description": "Get in touch.",
+      "link": "/contact"
+    }
+  ]
+}

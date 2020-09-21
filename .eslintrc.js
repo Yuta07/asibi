@@ -1,39 +1,41 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
     es6: true,
+    jest: true,
     node: true,
-  },
-  plugins: ['react'],
-  globals: {
-    graphql: false,
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 7,
     sourceType: 'module',
-    project: './tsconfig.json',
     ecmaFeatures: {
-      experimentalObjectRestSpread: true,
       jsx: true,
+      modules: true,
     },
   },
   extends: [
+    'react-app',
+    'plugin:react-app/recommended',
+    'plugin:react-hooks/recommended',
     'eslint:recommended',
-    'plugin:react/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
     'prettier',
-    'plugin:prettier/recommended',
+    'prettier/@typescript-eslint',
   ],
-  plugins: ['@typescript-eslint', 'prettier', 'react'],
+  plugins: ['@typescript-eslint', 'prettier', 'react', 'react-hooks'],
   rules: {
-    rules: {
-      '@typescript-eslint/no-namespace': 'error',
-      '@typescript-eslint/no-require-imports': 'warn',
-      '@typescript-eslint/no-unused-vars': 'error',
-      '@typescript-eslint/prefer-for-of': 'warn',
-      'react-app/react/react-in-jsx-scope': ['warn'],
+    'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/no-namespace': 'error',
+    '@typescript-eslint/no-require-imports': 'warn',
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/prefer-for-of': 'warn',
+  },
+  settings: {
+    react: {
+      version: 'detect', // detect the version of React to use
     },
   },
 };

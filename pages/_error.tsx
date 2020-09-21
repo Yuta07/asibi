@@ -1,4 +1,3 @@
-import React, { Fragment } from 'react';
 import Head from 'next/head';
 
 type Props = {
@@ -8,12 +7,12 @@ type Props = {
 
 const Error = (props: Props) => {
   return (
-    <Fragment>
+    <>
       <Head>
         <title>{props.title}</title>
       </Head>
       {props.errorCode}
-    </Fragment>
+    </>
   );
 };
 
