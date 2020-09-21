@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-import { Header } from './atoms/Header';
+import { Header } from './organisms/Header';
 
 export const Layout: FC = ({ children }) => {
   const router = useRouter();

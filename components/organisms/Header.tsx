@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styled, { css } from 'styled-components';
-import { Logo } from './Logo';
+import { Logo } from '../atoms/Logo';
 
 export const Header = () => {
   const router = useRouter();
