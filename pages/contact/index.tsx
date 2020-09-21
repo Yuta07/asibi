@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ContactInfo } from '../../components/atoms/ContactInfo';
+import { ContactInfo } from '../../components/ContactInfo';
 import { RelatedLink } from '../../components/atoms/RelatedLink';
 
 export default function ContactPage() {
