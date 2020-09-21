@@ -1,7 +1,7 @@
 ---
-title: 'Two Forms of Pre-rendering'
-spoiler: 'Spoiler. The difference is in when it generates the HTML for a page.'
-date: '2020-01-01'
+title: 'ポートフォリオ'
+spoiler: 'いまご覧になっているサイトについて。 by Yutaka Miyazaki.'
+date: '2020-09-22'
 image: '/blog/first-post.svg'
 ---
 

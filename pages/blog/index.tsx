@@ -102,6 +102,6 @@ const Anchor = styled.a`
 `;
 
 const Spoiler = styled.p`
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 4px;
 `;
