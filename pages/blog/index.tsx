@@ -4,34 +4,39 @@ import styled from 'styled-components';
 import { Date } from '../../components/atoms/Date';
 import { getSortedPostsData } from '../../lib/posts';
 
-type Post = {
+type Props = {
   allPostsData: {
+    excerpt: string;
     date: string;
     title: string;
+    spoiler: string;
+    image: string;
     id: string;
   }[];
 };
 
-export default function Blog({ allPostsData }: Post) {
+export default function Blog({ allPostsData }: Props) {
   return (
-    <div>
-      <section>
-        <h2>Blog</h2>
-        <ul>
-          {allPostsData.map((data) => (
-            <li key={data.id}>
+    <Container>
+      <Content>
+        {allPostsData.map((data) => (
+          <Article key={data.id}>
+            <ImgField>
+              <Image src={data.image} alt={data.title} />
+            </ImgField>
+            <Description>
               <Link href={`/blog/${data.id}`}>
-                <a>{data.title}</a>
+                <Heading>
+                  <Anchor>{data.title}</Anchor>
+                </Heading>
               </Link>
-              <br />
-              <small>
-                <Date dateString={data.date} />
-              </small>
-            </li>
-          ))}
-        </ul>
-      </section>
-    </div>
+              <Date dateString={data.date} />
+              <Spoiler>{data.spoiler}</Spoiler>
+            </Description>
+          </Article>
+        ))}
+      </Content>
+    </Container>
   );
 }
 
@@ -44,3 +49,59 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
+
+const Container = styled.div`
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+`;
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+`;
+
+const Article = styled.article`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  &:not(:first-child) {
+    margin-top: 50px;
+  }
+`;
+
+const ImgField = styled.p`
+  height: 90px;
+  width: 90px;
+  margin-right: 30px;
+  background: #353942;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+`;
+
+const Image = styled.img`
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+`;
+
+const Description = styled.div``;
+
+const Heading = styled.h3`
+  cursor: pointer;
+`;
+
+const Anchor = styled.a`
+  font-size: 24px;
+  font-weight: 700;
+  color: #3fb0ac;
+`;
+
+const Spoiler = styled.p`
+  font-size: 16px;
+  margin-top: 4px;
+`;

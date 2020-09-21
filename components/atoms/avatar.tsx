@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Avatar = () => {
   return (
     <ImgField>
-      <Img src="/root/animoji_me.png" alt="animoji_me" />
+      <Img src="/home/animoji_me.png" alt="animoji_me" />
     </ImgField>
   );
 };

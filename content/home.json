@@ -1,28 +1,28 @@
 {
   "data": [
     {
-      "image": "/root/resume.svg",
+      "image": "/home/resume.svg",
       "title": "Resume",
       "theme": "#f3d770",
       "description": "About me. experience and skill.",
       "link": "/resume"
     },
     {
-      "image": "/root/works.svg",
+      "image": "/home/works.svg",
       "title": "Works",
       "theme": "#3fb0ac",
       "description": "Personal work.",
       "link": "/works"
     },
     {
-      "image": "/root/blog.svg",
+      "image": "/home/blog.svg",
       "title": "Blog",
       "theme": "#1a4f52",
       "description": "Personal blog.",
       "link": "/blog"
     },
     {
-      "image": "/root/contact.svg",
+      "image": "/home/contact.svg",
       "title": "Contact",
       "theme": "#c4c5bc",
       "description": "Get in touch.",

@@ -1,6 +1,8 @@
 ---
 title: 'Two Forms of Pre-rendering'
+spoiler: 'Spoiler. The difference is in when it generates the HTML for a page.'
 date: '2020-01-01'
+image: '/blog/first-post.svg'
 ---
 
 ## First Post

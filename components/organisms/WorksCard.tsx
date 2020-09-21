@@ -78,7 +78,6 @@ const Caveat = styled.div`
 
 const Title = styled.h2`
   font-size: 20px;
-  margin-top: 50px;
 `;
 
 const Description = styled.p`

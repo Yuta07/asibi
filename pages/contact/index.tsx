@@ -29,6 +29,6 @@ const Grid = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 32px;
+  font-size: 24px;
   line-height: 1;
 `;

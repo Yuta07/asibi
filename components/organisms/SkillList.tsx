@@ -21,8 +21,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 32px;
-  text-align: center;
+  font-size: 24px;
 `;
 
 const Content = styled.div`

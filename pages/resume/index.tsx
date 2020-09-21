@@ -17,11 +17,12 @@ export default function Resume() {
 
 const Container = styled.div`
   max-width: 760px;
-  margin: 30px auto 0;
+  margin: 0 auto;
   padding: 0 20px;
 `;
 
 const Content = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
 `;

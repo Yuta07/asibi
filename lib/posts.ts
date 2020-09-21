@@ -6,6 +6,12 @@ import html from 'remark-html';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
+const firstFourLines = (file: any): string => {
+  file.excerpt = file.content.split('\n').slice(0, 4).join(' ');
+
+  return file.excerpt;
+};
+
 export const getSortedPostsData = () => {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
@@ -18,12 +24,13 @@ export const getSortedPostsData = () => {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
+    const matterResult: matter.GrayMatterFile<string> = matter([fileContents].join('\n'), { excerpt: firstFourLines });
 
     // Combine the data with the id
     return {
       id,
-      ...(matterResult.data as { date: string; title: string }),
+      excerpt: matterResult.excerpt,
+      ...(matterResult.data as { date: string; title: string; spoiler: string; image: string }),
     };
   });
 
@@ -63,6 +70,6 @@ export async function getPostData(id: string) {
   return {
     id,
     contentHtml,
-    ...(matterResult.data as { date: string; title: string }),
+    ...(matterResult.data as { date: string; title: string; spoiler: string; image: string }),
   };
 }

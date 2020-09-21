@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const Greeting = () => {
-  return <Name path="/root/intro_back.jpg">Yutaka Miyazaki</Name>;
+  return <Name path="/home/intro_back.jpg">Yutaka Miyazaki</Name>;
 };
 
 const Name = styled.h1<{ path: string }>`

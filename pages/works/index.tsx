@@ -5,7 +5,6 @@ import { WorksCard } from '../../components/organisms/WorksCard';
 export default function WorksPage() {
   return (
     <Content>
-      <Title>Works</Title>
       <Grid>
         {worksData.data.map((data) => {
           return <WorksCard key={data.title} data={data} />;
@@ -17,18 +16,13 @@ export default function WorksPage() {
 
 const Content = styled.div`
   max-width: 760px;
-  margin: 30px auto 0;
+  margin: 0 auto;
   padding: 0 20px;
-`;
-
-const Title = styled.h2`
-  font-size: 32px;
-  text-align: center;
 `;
 
 const Grid = styled.div`
   width: 100%;
-  margin-top: 30px;
+  margin-top: 60px;
   display: grid;
   grid-template-rows: 200px;
   grid-template-columns: 220px 220px 220px;

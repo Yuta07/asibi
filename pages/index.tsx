@@ -3,7 +3,7 @@ import { Copyright } from '../components/atoms/Copyright';
 import { Greeting } from '../components/atoms/Greeting';
 import { Logo } from '../components/atoms/Logo';
 import { Card } from '../components/organisms/Card';
-import rootData from '../content/root.json';
+import homeData from '../content/home.json';
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
           <Copyright />
         </Introduction>
       </IntroContainer>
-      {rootData.data.map((data, i) => {
+      {homeData.data.map((data, i) => {
         return <Card key={data.title} data={data} index={i} />;
       })}
     </Content>

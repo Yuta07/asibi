@@ -11,7 +11,7 @@ type Props = {
   };
 };
 
-const Post = ({ postData }: Props) => {
+export default function Post({ postData }: Props) {
   return (
     <div>
       <Head>
@@ -26,7 +26,7 @@ const Post = ({ postData }: Props) => {
       </article>
     </div>
   );
-};
+}
 
 export const getStaticProps: GetStaticProps = async ({ params }: any) => {
   const postData = await getPostData(params.id as string);
@@ -46,5 +46,3 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false,
   };
 };
-
-export default Post;
