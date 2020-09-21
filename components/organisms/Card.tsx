@@ -12,7 +12,7 @@ type Props = {
   index: number;
 };
 
-export const Card = ({ data, index }: Props) => {
+export const Card = ({ data }: Props) => {
   const { image, title, theme, description, link } = data;
 
   return (
