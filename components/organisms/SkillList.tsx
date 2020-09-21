@@ -29,8 +29,8 @@ const Content = styled.div`
   width: 100%;
   margin-top: 30px;
   display: grid;
-  grid-template-rows: 190px;
-  grid-template-columns: 190px 190px 190px 1fr;
-  grid-row-gap: 33px;
-  grid-column-gap: 33px;
+  grid-template-rows: 165px;
+  grid-template-columns: 165px 165px 165px 165px;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
 `;

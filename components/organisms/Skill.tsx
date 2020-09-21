@@ -46,8 +46,8 @@ const Progress = keyframes`
 `;
 
 const Card = styled.div`
-  width: 190px;
-  height: 190px;
+  width: 100%;
+  height: 100%;
   background: #ffffff;
   padding-top: 20px;
   border-radius: 8px;
@@ -57,8 +57,8 @@ const Card = styled.div`
 const SkillFlame = styled.div<{ color: string }>`
   ${({ color }) => {
     return css`
-      width: 110px;
-      height: 110px;
+      width: 100px;
+      height: 100px;
       margin: 0 auto;
       position: relative;
 
@@ -107,8 +107,8 @@ const BackgeoundImg = styled.div<{ path: string }>`
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       }
     `;
   }}
@@ -117,6 +117,5 @@ const BackgeoundImg = styled.div<{ path: string }>`
 const Name = styled.h3`
   font-weight: 550;
   text-align: center;
-  margin-top: 15px;
-  padding: 10px 10px 15px;
+  padding: 15px 0 10px;
 `;

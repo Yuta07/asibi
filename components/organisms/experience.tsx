@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 
 type Props = {
   data: {
-    period: string;
     role: string;
     overview: string;
     language: string;
@@ -13,7 +12,7 @@ type Props = {
 };
 
 export const Experience = ({ data }: Props) => {
-  const { period, role, overview, language, devPeriod, company, image } = data;
+  const { role, overview, language, devPeriod, company, image } = data;
 
   const overviewArray = overview.split('・');
   const languageArray = language.split('・');
@@ -21,14 +20,15 @@ export const Experience = ({ data }: Props) => {
   return (
     <Card className="experience-card">
       <BackgeoundImg path={image} />
-      <TextBold>{period}</TextBold>
-      <TextBold>{role}</TextBold>
+      <Small>{role}</Small>
       {overviewArray.map((overview) => {
         return <Strong key={overview}>{overview}</Strong>;
       })}
-      {languageArray.map((language) => {
-        return <Lang key={language}>{language}</Lang>;
-      })}
+      <LangField>
+        {languageArray.map((language) => {
+          return <Lang key={language}>{language}</Lang>;
+        })}
+      </LangField>
       <Text>{devPeriod}</Text>
       <Span>{company}</Span>
     </Card>
@@ -37,7 +37,7 @@ export const Experience = ({ data }: Props) => {
 
 const Card = styled.div`
   position: relative;
-  width: 410px;
+  width: 350px;
   background: #ffffff;
   padding: 10px 15px;
   border-bottom: 2px solid #01a3a4;
@@ -52,38 +52,42 @@ const BackgeoundImg = styled.div<{ path: string }>`
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
-      width: 110px;
-      height: 100px;
-      opacity: 0.5;
+      width: 80px;
+      height: 80px;
+      opacity: 0.4;
       position: absolute;
       bottom: 10px;
-      right: 0;
+      right: 10px;
       }
     `;
   }}
 `;
 
-const TextBold = styled.p`
+const Small = styled.small`
   color: #7f8c8d;
-  display: block;
   font-weight: 550;
   font-size: 12px;
+  display: block;
   margin: 5px 0 10px;
 `;
 
-const Strong = styled.strong`
-  display: inline-block;
+const Strong = styled.h3`
+  font-size: 14px;
+`;
+
+const LangField = styled.div`
+  margin-top: 10px;
 `;
 
 const Lang = styled.span`
   color: #7f8c8d;
   font-size: 12px;
-  margin-top: 5px;
+  margin-top: 2px;
   display: block;
 `;
 
 const Text = styled.p`
-  margin: 20px 0 30px;
+  margin: 15px 0 25px;
   font-size: 14px;
   font-weight: 300;
 

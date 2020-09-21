@@ -21,7 +21,7 @@ const Content = styled.div`
 const Link = styled.a`
   display: inline-flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 
   &:hover {

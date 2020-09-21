@@ -1,7 +1,27 @@
-import { Resume } from '../../components/Resume';
+import styled from 'styled-components';
+import { Personal } from '../../components/atoms/Personal';
+import { SkillList } from '../../components/organisms/SkillList';
+import { ExperienceList } from '../../components/organisms/ExperienceList';
 
-const ResumePage = () => {
-  return <Resume />;
-};
+export default function Resume() {
+  return (
+    <Container>
+      <Content>
+        <Personal />
+        <SkillList />
+        <ExperienceList />
+      </Content>
+    </Container>
+  );
+}
 
-export default ResumePage;
+const Container = styled.div`
+  max-width: 760px;
+  margin: 30px auto 0;
+  padding: 0 20px;
+`;
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+`;

@@ -17,10 +17,10 @@ export const WorksCard = ({ data }: Props) => {
     <Link href={`/works/${slug}`}>
       <Content>
         <Img src={image[0]} alt={`${title}-image`} />
-        <Bottom className="porfolio-description">
+        <Caveat className="porfolio-description">
           <Title>{title}</Title>
           <Description>{description}</Description>
-        </Bottom>
+        </Caveat>
       </Content>
     </Link>
   );
@@ -36,18 +36,18 @@ const Content = styled.div`
 
   &:hover {
     img {
-      filter: grayscale(40%) blur(1px);
+      filter: drop-shadow(0 1px 1px silver);
     }
 
     .porfolio-description {
-      filter: opacity(100%);
+      filter: opacity(80%);
     }
   }
 `;
 
 const Img = styled.img`
-  width: 280px;
-  height: 240px;
+  width: 220px;
+  height: 200px;
   margin: 0 auto;
   object-fit: cover;
   background: #ffffff;
@@ -57,20 +57,32 @@ const Img = styled.img`
   transition: 0.3s ease-in-out;
 `;
 
-const Bottom = styled.div`
+const Caveat = styled.div`
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #ffffff;
+  border-radius: 8px;
   filter: opacity(0%);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 `;
 
-const Title = styled.h2``;
+const Title = styled.h2`
+  font-size: 20px;
+  margin-top: 50px;
+`;
 
 const Description = styled.p`
   font-size: 14px;
-  margin-top: 5px;
-  padding-top: 5px;
-  border-top: 1px solid #353b48;
+  font-weight: 350;
+  margin-top: 4px;
 `;

@@ -3,7 +3,7 @@
     {
       "image": ["/works/nino.svg"],
       "title": "nino-ui",
-      "description": "Storybook Project by Flat UI.",
+      "description": "React Component Catalog.",
       "overview": "StorybookでReactコンポーネントをカタログ化しました。アトミックデザインを参考にしています。デザインはFlatUIを意識しました。",
       "language": ["React", "TypeScript", "Circle CI"],
       "period": "March 2020",

@@ -8,7 +8,7 @@ export const ExperienceList = () => {
       <Title>Job Experience</Title>
       <Content>
         {experienceData.data.map((data) => {
-          return <Experience key={data.overview} data={data} />;
+          return <Experience key={data.devPeriod} data={data} />;
         })}
       </Content>
     </Container>
@@ -34,11 +34,11 @@ const Content = styled.div`
 
   .experience-card {
     &:nth-child(2n - 1) {
-      margin-right: 25px;
+      margin-right: 20px;
     }
 
     &:nth-child(n + 3) {
-      margin-top: 25px;
+      margin-top: 20px;
     }
   }
 `;

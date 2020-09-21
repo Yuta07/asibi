@@ -15,13 +15,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-touch-icon-144x144.png" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="manifest" href="manifest.webmanifest" />
-        <script
-          async
-          src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js"
-          integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA"
-          crossOrigin="anonymous"
-        />
       </Head>
       <GlobalStyle />
       <Layout>
