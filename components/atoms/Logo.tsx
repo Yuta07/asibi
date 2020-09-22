@@ -4,7 +4,9 @@ import styled from 'styled-components';
 export const Logo = () => {
   return (
     <Link href="/">
-      <Img src="/logo.svg" alt="logo" />
+      <a href="/">
+        <Img src="/logo.svg" alt="logo" />
+      </a>
     </Link>
   );
 };

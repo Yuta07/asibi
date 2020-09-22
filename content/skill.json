@@ -3,7 +3,7 @@
     {
       "name": "React",
       "image": "/skills/react.svg",
-      "level": 60,
+      "level": 50,
       "color": "#61dafb"
     },
     {
@@ -27,13 +27,13 @@
     {
       "name": "Ruby on Rails",
       "image": "/skills/rails.svg",
-      "level": 25,
+      "level": 20,
       "color": "#cc0000"
     },
     {
       "name": "Firebase",
       "image": "/skills/firebase.svg",
-      "level": 40,
+      "level": 30,
       "color": "#ffa000"
     }
   ]

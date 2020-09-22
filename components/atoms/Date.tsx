@@ -13,4 +13,8 @@ export const Date = ({ dateString }: { dateString: string }) => {
 const Small = styled.small`
   font-size: 12.5px;
   color: #7f8c8d;
+
+  @media (max-width: 575.98px) {
+    font-size: 12px;
+  }
 `;

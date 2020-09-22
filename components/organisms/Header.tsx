@@ -8,27 +8,77 @@ export const Header = () => {
 
   return (
     <Outer>
+      <style jsx>{`
+        a.header-anchor {
+          padding: 12px 5px 8px;
+          display: inline-block;
+          cursor: pointer;
+          position: relative;
+        }
+
+        a.header-anchor:hover {
+          transition: 0.3s;
+          color: #3fb0ac;
+        }
+
+        a.header-anchor:hover:before {
+          transform: scale3d(1, 1, 1);
+          transform-origin: 0% 50%;
+        }
+
+        a.header-anchor:before {
+          content: '';
+          color: #3fb0ac;
+          position: absolute;
+          top: calc(50% - -21px);
+          left: 0;
+          width: 100%;
+          height: 2px;
+          pointer-events: none;
+          background: currentColor;
+          transform: scale3d(0, 1, 1);
+          transform-origin: 100% 50%;
+          transition: transform 0.3s;
+          transition-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+        }
+
+        a.current-link {
+          color: #3fb0ac;
+          cursor: default;
+        }
+
+        a.current-link:before {
+          transform: scale3d(1, 1, 1);
+          transform-origin: 0% 50%;
+        }
+
+        @media (max-width: 575.98px) {
+          a.header-anchor {
+            font-size: 12px;
+            padding: 8px 2px 4px;
+          }
+
+          a.header-anchor:before {
+            top: calc(50% - -15px);
+          }
+        }
+      `}</style>
       <Content>
         <Logo />
         <Nav>
           <List>
-            <Link href="/resume">
-              <Anchor path={router.pathname === '/resume'}>Resume</Anchor>
+            <Link href="/resume" as="/resume">
+              <a className={`header-anchor ${router.pathname === '/resume' && 'current-link'}`}>Resume</a>
             </Link>
           </List>
           <List>
-            <Link href="/works">
-              <Anchor path={router.pathname === '/works'}>Works</Anchor>
+            <Link href="/works" as="/works">
+              <a className={`header-anchor ${router.pathname === '/works' && 'current-link'}`}>Works</a>
             </Link>
           </List>
           <List>
-            <Link href="/blog">
-              <Anchor path={router.pathname === '/blog'}>Blog</Anchor>
-            </Link>
-          </List>
-          <List>
-            <Link href="/contact">
-              <Anchor path={router.pathname === '/contact'}>Contact</Anchor>
+            <Link href="/blog" as="/blog">
+              <a className={`header-anchor ${router.pathname === '/blog' && 'current-link'}`}>Blog</a>
             </Link>
           </List>
         </Nav>
@@ -62,51 +112,4 @@ const Nav = styled.ul`
 
 const List = styled.li`
   margin: 0 8px;
-`;
-
-const Anchor = styled.a<{ path: boolean }>`
-  ${({ path }) => {
-    return css`
-      padding: 18px 5px 8px;
-      display: inline-block;
-      cursor: pointer;
-      position: relative;
-      color: ${path ? '#3fb0ac' : null};
-      cursor: ${path ? 'default' : 'pointer'};
-
-      &:hover {
-        transition: 0.3s;
-        color: ${path ? null : '#3fb0ac'};
-        ${path
-          ? null
-          : `&:before {
-            transform: scale3d(1, 1, 1);
-            transform-origin: 0% 50%;
-          }`};
-      }
-
-      &:before {
-        content: '';
-        color: #3fb0ac;
-        position: absolute;
-        top: calc(50% - -21px);
-        left: 0;
-        width: 100%;
-        height: 2px;
-        pointer-events: none;
-        background: currentColor;
-        transform: scale3d(0, 1, 1);
-        transform-origin: 100% 50%;
-        transition: transform 0.3s;
-        transition-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
-
-        ${path
-          ? `
-          transform: scale3d(1, 1, 1);
-          transform-origin: 0% 50%;
-        `
-          : null};
-      }
-    `;
-  }}
 `;

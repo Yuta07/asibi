@@ -1,5 +1,8 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
+import styled from 'styled-components';
+import ReactMarkdown from 'react-markdown/with-html';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { Date } from '../../components/atoms/Date';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
@@ -7,13 +10,25 @@ type Props = {
   postData: {
     title: string;
     date: string;
-    contentHtml: string;
+    content: string;
   };
 };
 
+type Code = {
+  language: string;
+  value: string;
+};
+
+export const config = { amp: true };
+
+const CodeBlock = ({ language, value }: Code) => {
+  return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>;
+};
+
 export default function Post({ postData }: Props) {
+  console.log(postData);
   return (
-    <div>
+    <Article>
       <Head>
         <title>{postData.title}</title>
       </Head>
@@ -22,9 +37,9 @@ export default function Post({ postData }: Props) {
         <div>
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <ReactMarkdown escapeHtml={false} source={postData.content} renderers={{ code: CodeBlock }} />
       </article>
-    </div>
+    </Article>
   );
 }
 
@@ -46,3 +61,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false,
   };
 };
+
+const Article = styled.article`
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+`;

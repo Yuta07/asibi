@@ -85,6 +85,11 @@ const SkillFlame = styled.div<{ color: string }>`
         stroke-linecap: round;
         animation: ${Progress} 1s ease-out forwards;
       }
+
+      @media (max-width: 575.98px) {
+        width: 70px;
+        height: 70px;
+      }
     `;
   }}
 `;
@@ -109,6 +114,11 @@ const BackgeoundImg = styled.div<{ path: string }>`
       background-position: center center;
       width: 40px;
       height: 40px;
+
+      @media (max-width: 575.98px) {
+        width: 30px;
+        height: 30px;
+      }
       }
     `;
   }}
@@ -118,4 +128,9 @@ const Name = styled.h3`
   font-weight: 550;
   text-align: center;
   padding: 15px 0 10px;
+
+  @media (max-width: 575.98px) {
+    font-size: 14px;
+    padding: 10px 0 10px;
+  }
 `;

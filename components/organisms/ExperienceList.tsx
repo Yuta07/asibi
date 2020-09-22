@@ -17,7 +17,7 @@ export const ExperienceList = () => {
 
 const Container = styled.div`
   width: 100%;
-  margin: 60px 0 80px;
+  margin-top: 100px;
 `;
 
 const Title = styled.h2`
@@ -38,6 +38,25 @@ const Content = styled.div`
 
     &:nth-child(n + 3) {
       margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    .experience-card {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:nth-child(2n - 1) {
+        margin-right: 0;
+      }
+
+      &:nth-child(n + 3) {
+        margin-top: 30px;
+      }
     }
   }
 `;

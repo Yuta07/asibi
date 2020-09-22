@@ -43,10 +43,11 @@ vvvvvvvvvvvvvvvv
 
 これは `const a = b` ですよ
 
-```typescript
-import React from 'react';
+\`\`\`jsx
+
+import React from "react";
 
 const CoolComponent = () => <div>I'm a cool component!!</div>;
 
 export default CoolComponent;
-```
+\`\`\`

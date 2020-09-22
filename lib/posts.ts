@@ -64,12 +64,12 @@ export async function getPostData(id: string) {
 
   // Use remark to convert markdown into HTML string
   const processedContent = await remark().use(html).process(matterResult.content);
-  const contentHtml = processedContent.toString();
+  const content = processedContent.toString();
 
   // Combine the data with the id and contentHtml
   return {
     id,
-    contentHtml,
+    content,
     ...(matterResult.data as { date: string; title: string; spoiler: string; image: string }),
   };
 }

@@ -29,6 +29,12 @@ const UnOrderedList = styled.ul`
   display: flex;
   flex-direction: column;
   list-style: none;
+
+  @media (max-width: 575.98px) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
 `;
 
 const List = styled.li`
@@ -53,4 +59,9 @@ const Img = styled.img`
 const Txt = styled.span`
   padding-left: 15px;
   font-weight: 500;
+
+  @media (max-width: 575.98px) {
+    padding-left: 10px;
+    font-size: 12px;
+  }
 `;

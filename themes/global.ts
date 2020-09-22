@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     word-wrap: break-word;
     font-kerning: normal;
     color: #353b48;
-    background: #ffffff;
+    background: #f1f3f4;
     min-height: 100vh;
   }
 

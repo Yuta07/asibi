@@ -17,7 +17,7 @@ export const SkillList = () => {
 
 const Container = styled.div`
   width: 100%;
-  margin-top: 60px;
+  margin-top: 100px;
 `;
 
 const Title = styled.h2`
@@ -32,4 +32,10 @@ const Content = styled.div`
   grid-template-columns: 165px 165px 165px 165px;
   grid-row-gap: 20px;
   grid-column-gap: 20px;
+
+  @media (max-width: 575.98px) {
+    grid-template-rows: auto;
+    grid-template-columns: 45% 45%;
+    grid-column-gap: 10%;
+  }
 `;

@@ -9,7 +9,6 @@ type Props = {
     description: string;
     link: string;
   };
-  index: number;
 };
 
 export const Card = ({ data }: Props) => {
@@ -57,7 +56,7 @@ const Content = styled.div`
   max-width: 400px;
   margin: 0 auto;
   padding: 0 15px;
-  height: 100%;
+  height: 100vw;
   position: relative;
 `;
 

@@ -43,6 +43,10 @@ const Content = styled.div`
       filter: opacity(80%);
     }
   }
+
+  @media (max-width: 575.98px) {
+    min-width: 300px;
+  }
 `;
 
 const Img = styled.img`
@@ -55,6 +59,10 @@ const Img = styled.img`
   filter: grayscale(0) blur(0) drop-shadow(0 4px 4px silver);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+
+  @media (max-width: 575.98px) {
+    width: 100%;
+  }
 `;
 
 const Caveat = styled.div`

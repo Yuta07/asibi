@@ -37,12 +37,17 @@ export const Experience = ({ data }: Props) => {
 
 const Card = styled.div`
   position: relative;
-  width: 350px;
+  width: calc(50% - 10px);
   background: #ffffff;
   padding: 10px 15px;
   border-bottom: 2px solid #01a3a4;
   border-radius: 8px 8px 0 0;
   filter: drop-shadow(0 4px 4px silver);
+
+  @media (max-width: 575.98px) {
+    width: 100%;
+    margin-top: 30px;
+  }
 `;
 
 const BackgeoundImg = styled.div<{ path: string }>`
@@ -90,10 +95,6 @@ const Text = styled.p`
   margin: 15px 0 25px;
   font-size: 14px;
   font-weight: 300;
-
-  @media (max-width: 425px) {
-    margin: 15px 0;
-  }
 `;
 
 const Span = styled.span`
