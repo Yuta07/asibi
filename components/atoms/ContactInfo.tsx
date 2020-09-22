@@ -16,6 +16,10 @@ export const ContactInfo = () => {
 const Content = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 575.98px) {
+    margin-top: 30px;
+  }
 `;
 
 const Link = styled.a`
@@ -32,4 +36,9 @@ const Link = styled.a`
 
 const Txt = styled.span`
   margin-top: 10px;
+
+  @media (max-width: 575.98px) {
+    font-size: 14px;
+    margin-top: 8px;
+  }
 `;

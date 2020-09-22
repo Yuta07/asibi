@@ -59,7 +59,6 @@ const Container = styled.div`
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
 `;
 
 const Article = styled.article`
@@ -73,20 +72,30 @@ const Article = styled.article`
 `;
 
 const ImgField = styled.p`
-  height: 90px;
-  width: 90px;
+  height: 80px;
+  width: 80px;
   margin-right: 30px;
   background: #353942;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
+
+  @media (max-width: 575.98px) {
+    height: 60px;
+    width: 60px;
+  }
 `;
 
 const Image = styled.img`
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   object-fit: cover;
+
+  @media (max-width: 575.98px) {
+    height: 40px;
+    width: 40px;
+  }
 `;
 
 const Description = styled.div``;
@@ -96,9 +105,13 @@ const Heading = styled.h3`
 `;
 
 const Anchor = styled.a`
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   color: #3fb0ac;
+
+  @media (max-width: 575.98px) {
+    font-size: 18px;
+  }
 `;
 
 const Spoiler = styled.p`

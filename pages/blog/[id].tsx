@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
+import ReactMarkdown from 'react-markdown/with-html';
 import { Date } from '../../components/atoms/Date';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
@@ -7,24 +8,34 @@ type Props = {
   postData: {
     title: string;
     date: string;
-    contentHtml: string;
+    spoiler: string;
+    id: string;
+    content: string;
   };
 };
 
+export const config = { amp: true };
+
 export default function Post({ postData }: Props) {
   return (
-    <div>
+    <article className="">
       <Head>
-        <title>{postData.title}</title>
+        <title>{`${postData.title} | Yutaka Miyazaki`}</title>
+        <meta property="og:title" content={postData.title} />
+        <meta property="og:description" content={postData.spoiler} />
+        <meta property="og:url" content={`https://yutazon.me/blog/${postData.id}`} />
+        <meta property="og:type" content="article" />
       </Head>
-      <article>
-        <h1>{postData.title}</h1>
-        <div>
+      <header className="">
+        <h1 className="">{postData.title}</h1>
+        <div className="">
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </article>
-    </div>
+      </header>
+      <main className="">
+        <ReactMarkdown escapeHtml={false} source={postData.content} />
+      </main>
+    </article>
   );
 }
 

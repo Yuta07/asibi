@@ -42,7 +42,7 @@ export default function WorkPage() {
 
 const Content = styled.div`
   max-width: 380px;
-  margin: 30px auto 0;
+  margin: 0 auto;
   padding: 0 20px;
   display: flex;
   flex-direction: column;

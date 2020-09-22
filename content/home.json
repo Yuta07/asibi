@@ -1,6 +1,5 @@
 {
-  "data": [
-    {
+  "data": [{
       "image": "/home/resume.svg",
       "title": "Resume",
       "theme": "#f3d770",
@@ -20,13 +19,6 @@
       "theme": "#1a4f52",
       "description": "Personal blog.",
       "link": "/blog"
-    },
-    {
-      "image": "/home/contact.svg",
-      "title": "Contact",
-      "theme": "#c4c5bc",
-      "description": "Get in touch.",
-      "link": "/contact"
     }
   ]
 }
