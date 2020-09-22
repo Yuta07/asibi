@@ -23,7 +23,7 @@ export const Personal = () => {
 
 const AboutField = styled.div`
   max-width: 480px;
-  padding: 20px;
+  padding: 0 20px;
   margin: 0 auto;
 `;
 

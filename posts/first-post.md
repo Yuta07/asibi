@@ -1,6 +1,6 @@
 ---
 title: 'ポートフォリオ'
-spoiler: 'いまご覧になっているサイトのこと。'
+spoiler: 'ご覧になっているサイトについて'
 date: '2020-09-22'
 image: '/blog/first-post.svg'
 ---
@@ -26,8 +26,6 @@ Next.js has two forms of pre-rendering: **Static Generation** and **Server-side 
 Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
 
 [Yutaka Miyazaki](https://yutazon.me)
-
-![first-post](/blog/first-post.svg)
 
 ```typescript
 const a = 'TypeScript';

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Logo } from '../atoms/Logo';
 
 export const Header = () => {
@@ -94,7 +94,7 @@ const Outer = styled.header`
 const Content = styled.div`
   max-width: 760px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 60px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -112,4 +112,8 @@ const Nav = styled.ul`
 
 const List = styled.li`
   margin: 0 8px;
+
+  @media (max-width: 575.98px) {
+    margin: 0 5px;
+  }
 `;

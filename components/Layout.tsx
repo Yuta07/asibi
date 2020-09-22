@@ -23,4 +23,5 @@ const RootWrapper = styled.div`
 
 const Wrapper = styled.div`
   width: 100%;
+  margin: 30px 0 100px;
 `;

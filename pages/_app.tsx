@@ -10,9 +10,17 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Yutaka Miyazaki 🤔</title>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="yutaka's space" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="yutaka's space." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@yutazon7" />
+        <meta name="twitter:creator" content="Yuta07" />
+        <meta property="og:title" content="Yutaka Miyazaki 🤔" />
+        <meta property="og:description" content="Yutaka Miyazakiのポートフォリオ" />
+        <meta property="og:url" content="https://yutazon.me" />
+        <meta property="og:image" content="/ogp.jpg" />
+        <meta property="og:type" content="website" />
         <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" href="/icons/apple-icon-precomposed.png" />
         <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-touch-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-touch-icon-72x72.png" />

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { Copyright } from '../components/atoms/Copyright';
 import { Greeting } from '../components/atoms/Greeting';
-import { Logo } from '../components/atoms/Logo';
 import { Card } from '../components/organisms/Card';
 import homeData from '../content/home.json';
 
@@ -11,7 +10,7 @@ export default function Home() {
       <IntroContainer>
         <Introduction>
           <Top>
-            <Logo />
+            <Image src="/logo.svg" alt="logo" />
           </Top>
           <Greeting />
           <Copyright />
@@ -62,4 +61,14 @@ const Top = styled.div`
   position: absolute;
   top: 40px;
   left: 10px;
+`;
+
+const Image = styled.img`
+  width: 60px;
+  height: 60px;
+
+  @media (max-width: 575.98px) {
+    width: 40px;
+    height: 40px;
+  }
 `;

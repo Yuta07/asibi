@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;

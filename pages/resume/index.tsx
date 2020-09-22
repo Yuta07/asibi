@@ -26,9 +26,4 @@ const Container = styled.div`
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 100px 0;
-
-  @media (max-width: 575.98px) {
-    margin: 60px 0 100px;
-  }
 `;

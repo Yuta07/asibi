@@ -1,8 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
-import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown/with-html';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { Date } from '../../components/atoms/Date';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
@@ -10,36 +8,34 @@ type Props = {
   postData: {
     title: string;
     date: string;
+    spoiler: string;
+    id: string;
     content: string;
   };
 };
 
-type Code = {
-  language: string;
-  value: string;
-};
-
 export const config = { amp: true };
 
-const CodeBlock = ({ language, value }: Code) => {
-  return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>;
-};
-
 export default function Post({ postData }: Props) {
-  console.log(postData);
   return (
-    <Article>
+    <article className="">
       <Head>
-        <title>{postData.title}</title>
+        <title>{`${postData.title} | Yutaka Miyazaki`}</title>
+        <meta property="og:title" content={postData.title} />
+        <meta property="og:description" content={postData.spoiler} />
+        <meta property="og:url" content={`https://yutazon.me/blog/${postData.id}`} />
+        <meta property="og:type" content="article" />
       </Head>
-      <article>
-        <h1>{postData.title}</h1>
-        <div>
+      <header className="">
+        <h1 className="">{postData.title}</h1>
+        <div className="">
           <Date dateString={postData.date} />
         </div>
-        <ReactMarkdown escapeHtml={false} source={postData.content} renderers={{ code: CodeBlock }} />
-      </article>
-    </Article>
+      </header>
+      <main className="">
+        <ReactMarkdown escapeHtml={false} source={postData.content} />
+      </main>
+    </article>
   );
 }
 
@@ -61,9 +57,3 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false,
   };
 };
-
-const Article = styled.article`
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 0 20px;
-`;
