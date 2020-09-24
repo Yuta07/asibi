@@ -12,7 +12,9 @@ export const Layout: FC = ({ children }) => {
   ) : (
     <>
       <Header />
-      <Wrapper>{children}</Wrapper>
+      <Wrapper>
+        <Container>{children}</Container>
+      </Wrapper>
     </>
   );
 };
@@ -24,4 +26,10 @@ const RootWrapper = styled.div`
 const Wrapper = styled.div`
   width: 100%;
   margin: 30px 0 100px;
+`;
+
+const Container = styled.div`
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
 `;

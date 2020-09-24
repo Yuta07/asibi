@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="yutaka's space." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@yutazon7" />
         <meta name="twitter:creator" content="Yuta07" />
         <meta property="og:title" content="Yutaka Miyazaki 🤔" />

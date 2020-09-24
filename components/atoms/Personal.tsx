@@ -1,10 +1,8 @@
 import styled from 'styled-components';
-import { Avatar } from './Avatar';
 
 export const Personal = () => {
   return (
     <AboutField>
-      <Avatar />
       <Name>Yutaka Miyazaki</Name>
       <Position>Engineer</Position>
       <Txt>フロントエンドエンジニア🎉 主にReact/Next.jsを触っています。このサイトはNext.jsで構築されています。</Txt>

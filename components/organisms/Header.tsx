@@ -8,6 +8,26 @@ export const Header = () => {
 
   return (
     <Outer>
+      <Content>
+        <Logo />
+        <Nav>
+          <List>
+            <Link href="/resume" as="/resume">
+              <a className={`header-anchor ${router.pathname === '/resume' && 'current-link'}`}>Resume</a>
+            </Link>
+          </List>
+          <List>
+            <Link href="/works" as="/works">
+              <a className={`header-anchor ${router.pathname === '/works' && 'current-link'}`}>Works</a>
+            </Link>
+          </List>
+          <List>
+            <Link href="/blog" as="/blog">
+              <a className={`header-anchor ${router.pathname === '/blog' && 'current-link'}`}>Blog</a>
+            </Link>
+          </List>
+        </Nav>
+      </Content>
       <style jsx>{`
         a.header-anchor {
           padding: 12px 5px 8px;
@@ -63,26 +83,6 @@ export const Header = () => {
           }
         }
       `}</style>
-      <Content>
-        <Logo />
-        <Nav>
-          <List>
-            <Link href="/resume" as="/resume">
-              <a className={`header-anchor ${router.pathname === '/resume' && 'current-link'}`}>Resume</a>
-            </Link>
-          </List>
-          <List>
-            <Link href="/works" as="/works">
-              <a className={`header-anchor ${router.pathname === '/works' && 'current-link'}`}>Works</a>
-            </Link>
-          </List>
-          <List>
-            <Link href="/blog" as="/blog">
-              <a className={`header-anchor ${router.pathname === '/blog' && 'current-link'}`}>Blog</a>
-            </Link>
-          </List>
-        </Nav>
-      </Content>
     </Outer>
   );
 };

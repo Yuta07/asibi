@@ -17,26 +17,24 @@ type Props = {
 
 export default function Blog({ allPostsData }: Props) {
   return (
-    <Container>
-      <Content>
-        {allPostsData.map((data) => (
-          <Article key={data.id}>
-            <ImgField>
-              <Image src={data.image} alt={data.title} />
-            </ImgField>
-            <Description>
-              <Link href={`/blog/${data.id}`}>
-                <Heading>
-                  <Anchor>{data.title}</Anchor>
-                </Heading>
-              </Link>
-              <Date dateString={data.date} />
-              <Spoiler>{data.spoiler}</Spoiler>
-            </Description>
-          </Article>
-        ))}
-      </Content>
-    </Container>
+    <Content>
+      {allPostsData.map((data) => (
+        <Article key={data.id}>
+          <ImgField>
+            <Image src={data.image} alt={data.title} />
+          </ImgField>
+          <Description>
+            <Link href={`/blog/${data.id}`}>
+              <Heading>
+                <Anchor>{data.title}</Anchor>
+              </Heading>
+            </Link>
+            <Date dateString={data.date} />
+            <Spoiler>{data.spoiler}</Spoiler>
+          </Description>
+        </Article>
+      ))}
+    </Content>
   );
 }
 
@@ -49,12 +47,6 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
-
-const Container = styled.div`
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 0 20px;
-`;
 
 const Content = styled.div`
   display: flex;
@@ -80,6 +72,7 @@ const ImgField = styled.p`
   align-items: center;
   justify-content: center;
   border-radius: 8px;
+  filter: drop-shadow(0 4px 4px silver);
 
   @media (max-width: 575.98px) {
     height: 60px;

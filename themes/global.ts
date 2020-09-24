@@ -10,12 +10,13 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.5px;
     word-wrap: break-word;
     font-kerning: normal;
     color: #353b48;
-    background: #f1f3f4;
+    background: #ebf5fc;
     min-height: 100vh;
+    counter-reset: number 0;
   }
 
   * {
@@ -47,5 +48,9 @@ export const GlobalStyle = createGlobalStyle`
 
   small {
     font-size: 12px;
+  }
+
+  pre {
+    border-radius: 8px;
   }
 `;

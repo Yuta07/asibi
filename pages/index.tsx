@@ -64,11 +64,6 @@ const Top = styled.div`
 `;
 
 const Image = styled.img`
-  width: 60px;
-  height: 60px;
-
-  @media (max-width: 575.98px) {
-    width: 40px;
-    height: 40px;
-  }
+  width: 40px;
+  height: 40px;
 `;

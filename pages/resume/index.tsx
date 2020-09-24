@@ -6,22 +6,14 @@ import { ExperienceList } from '../../components/organisms/ExperienceList';
 
 export default function Resume() {
   return (
-    <Container>
-      <Content>
-        <Personal />
-        <SkillList />
-        <ExperienceList />
-        <Contact />
-      </Content>
-    </Container>
+    <Content>
+      <Personal />
+      <SkillList />
+      <ExperienceList />
+      <Contact />
+    </Content>
   );
 }
-
-const Container = styled.div`
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 0 20px;
-`;
 
 const Content = styled.div`
   display: flex;

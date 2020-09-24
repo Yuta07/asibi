@@ -1,50 +1,22 @@
 ---
-title: 'ポートフォリオ'
+title: 'ポートフォリオのこと'
 spoiler: 'ご覧になっているサイトについて'
+quickword: 'ポートフォリオに何を書いたかを簡単に残しておく。'
 date: '2020-09-22'
-image: '/blog/first-post.svg'
+image: '/blog/first-post/first-post.svg'
 ---
 
-# First Post
+## ポートフォリオについて
 
-## First Post
+- Resume - 自分のこと、できること、今までの仕事について。
+- Work - 個人での成果物を載せています。
+- Blog - 個人ブログ。元々は Gatsby で作成していましたが、ポートフォリオ内に移しました。
+  - `react-markdown` を使用してマークダウンのスタイルを表現しています。
 
-### First Post
+## 使用した技術
 
-#### First Post
+- Next.js
+- AMP(ブログポストのみ、将来的に全ページ AMP にする予定
+- Vercel(デプロイ)
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
-
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- aaaaaaaaaaaaaaaaa
-- bbbbbbbbbbbbbbbbb
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
-
-1. 11111111111111111
-2. 22222222222222222
-
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
-
-[Yutaka Miyazaki](https://yutazon.me)
-
-```typescript
-const a = 'TypeScript';
-```
-
-aaaaaaaaaa
-
----
-
-vvvvvvvvvvvvvvvv
-
-> これは引用ですよ。
-
-これは `const a = b` ですよ
-
-```typescript
-import React from 'react';
-
-const CoolComponent = () => <div>I'm a cool component!!</div>;
-
-export default CoolComponent;
-```
+[Source Code - github](https://github.com/Yuta07/yutazon.me)

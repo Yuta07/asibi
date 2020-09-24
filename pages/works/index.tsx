@@ -4,21 +4,13 @@ import { WorksCard } from '../../components/organisms/WorksCard';
 
 export default function WorksPage() {
   return (
-    <Content>
-      <Grid>
-        {worksData.data.map((data) => {
-          return <WorksCard key={data.title} data={data} />;
-        })}
-      </Grid>
-    </Content>
+    <Grid>
+      {worksData.data.map((data) => {
+        return <WorksCard key={data.title} data={data} />;
+      })}
+    </Grid>
   );
 }
-
-const Content = styled.div`
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 0 20px;
-`;
 
 const Grid = styled.div`
   width: 100%;
