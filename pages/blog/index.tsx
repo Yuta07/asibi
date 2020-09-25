@@ -1,6 +1,4 @@
 import { GetStaticProps } from 'next';
-import Link from 'next/link';
-import styled from 'styled-components';
 import { Date } from '../../components/atoms/Date';
 import { getSortedPostsData } from '../../lib/posts';
 
@@ -15,28 +13,100 @@ type Props = {
   }[];
 };
 
+export const config = { amp: true };
+
 export default function Blog({ allPostsData }: Props) {
   return (
-    <Container>
-      <Content>
-        {allPostsData.map((data) => (
-          <Article key={data.id}>
-            <ImgField>
-              <Image src={data.image} alt={data.title} />
-            </ImgField>
-            <Description>
-              <Link href={`/blog/${data.id}`}>
-                <Heading>
-                  <Anchor>{data.title}</Anchor>
-                </Heading>
-              </Link>
-              <Date dateString={data.date} />
-              <Spoiler>{data.spoiler}</Spoiler>
-            </Description>
-          </Article>
-        ))}
-      </Content>
-    </Container>
+    <div className="blog-index-wrapper">
+      {allPostsData.map((data) => (
+        <a key={data.id} href={`/blog/${data.id}`} className="blog-index-anchor">
+          <p className="blog-index-image-wrapper">
+            <amp-img src={data.image} fallback="" width="55" height="55" layout="intrinsic" alt={data.title}></amp-img>
+          </p>
+          <div className="blog-index-description">
+            <h3 className="blog-index-heading">{data.title}</h3>
+            <Date dateString={data.date} />
+            <p className="blog-index-spoiler">{data.spoiler}</p>
+          </div>
+        </a>
+      ))}
+      <style jsx>{`
+        .blog-index-wrapper {
+          display: flex;
+          flex-direction: column;
+          color: #353b48;
+        }
+
+        .blog-index-anchor {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          padding: 20px 10px;
+          background: #efefef;
+          box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7), -6px -6px 10px rgba(255, 255, 255, 0.5),
+            6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
+          border-radius: 15px;
+        }
+
+        .blog-index-anchor:hover {
+          transition: 0.3s;
+          box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6), -2px -2px 4px rgba(255, 255, 255, 0.4),
+            2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-index-anchor:not(:first-child) {
+          margin-top: 50px;
+        }
+
+        .blog-index-image-wrapper {
+          height: 80px;
+          width: 80px;
+          margin: 0 30px 0 10px;
+          background: #353942;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 15px;
+          filter: drop-shadow(0 4px 4px silver);
+        }
+
+        amp-img {
+          width: 55px;
+          height: 55px;
+          object-fit: cover;
+        }
+
+        .blog-index-description {
+        }
+
+        .blog-index-heading {
+          cursor: pointer;
+          font-size: 22px;
+          font-weight: 700;
+        }
+
+        .blog-index-spoiler {
+          font-size: 14px;
+          margin-top: 4px;
+        }
+
+        @media (max-width: 575.98px) {
+          .blog-index-image-wrapper {
+            height: 60px;
+            width: 60px;
+          }
+
+          amp-img {
+            height: 40px;
+            width: 40px;
+          }
+
+          .blog-index-anchor {
+            font-size: 18px;
+          }
+        }
+      `}</style>
+    </div>
   );
 }
 
@@ -49,72 +119,3 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
-
-const Container = styled.div`
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 0 20px;
-`;
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Article = styled.article`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-
-  &:not(:first-child) {
-    margin-top: 50px;
-  }
-`;
-
-const ImgField = styled.p`
-  height: 80px;
-  width: 80px;
-  margin-right: 30px;
-  background: #353942;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-
-  @media (max-width: 575.98px) {
-    height: 60px;
-    width: 60px;
-  }
-`;
-
-const Image = styled.img`
-  width: 55px;
-  height: 55px;
-  object-fit: cover;
-
-  @media (max-width: 575.98px) {
-    height: 40px;
-    width: 40px;
-  }
-`;
-
-const Description = styled.div``;
-
-const Heading = styled.h3`
-  cursor: pointer;
-`;
-
-const Anchor = styled.a`
-  font-size: 22px;
-  font-weight: 700;
-  color: #3fb0ac;
-
-  @media (max-width: 575.98px) {
-    font-size: 18px;
-  }
-`;
-
-const Spoiler = styled.p`
-  font-size: 14px;
-  margin-top: 4px;
-`;

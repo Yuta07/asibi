@@ -1,10 +1,7 @@
-import { parseISO, format } from 'date-fns';
-
 export const Date = ({ dateString }: { dateString: string }) => {
-  const date = parseISO(dateString);
   return (
     <small>
-      <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>
+      <time dateTime={dateString}>{dateString}</time>
       <style jsx>{`
         small {
           font-size: 12.5px;

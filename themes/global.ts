@@ -10,12 +10,13 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.5px;
     word-wrap: break-word;
     font-kerning: normal;
-    color: #353b48;
-    background: #f1f3f4;
+    color: #696969;
+    background: #efefef;
     min-height: 100vh;
+    counter-reset: number 0;
   }
 
   * {
@@ -41,11 +42,15 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: #353b48;
+    color: #696969;
     text-decoration:none;
   }
 
   small {
     font-size: 12px;
+  }
+
+  pre {
+    border-radius: 8px;
   }
 `;
