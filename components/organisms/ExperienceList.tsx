@@ -13,11 +13,11 @@ export const ExperienceList = () => {
       <style jsx>{`
         .experience-wrapper {
           width: 100%;
-          margin-top: 100px;
+          margin-top: 150px;
         }
 
         .experience-hero {
-          font-size: 60px;
+          font-size: 48px;
           filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.25));
           text-align: center;
         }
@@ -32,7 +32,7 @@ export const ExperienceList = () => {
 
         @media (max-width: 575.98px) {
           .experience-hero {
-            font-size: 48px;
+            font-size: 40px;
           }
 
           .experience-container {

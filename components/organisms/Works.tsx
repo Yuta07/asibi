@@ -9,7 +9,7 @@ export const Works = () => {
           const { image, title, description, slug } = data;
 
           return (
-            <a href={`/works/${slug}`} className="works-link">
+            <a key={title} href={`/works/${slug}`} className="works-link">
               <amp-img src={image[0]} layout="intrinsic" width="350" height="280" alt={`${title}-image`}></amp-img>
               <div className="works-caveat">
                 <h3 className="works-title">{title}</h3>
@@ -22,11 +22,11 @@ export const Works = () => {
       <style jsx>{`
         .works-wrapper {
           width: 100%;
-          margin-top: 100px;
+          margin-top: 150px;
         }
 
         .works-hero {
-          font-size: 60px;
+          font-size: 48px;
           filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.25));
           text-align: center;
         }
@@ -105,6 +105,10 @@ export const Works = () => {
         }
 
         @media (max-width: 575.98px) {
+          .works-hero {
+            font-size: 40px;
+          }
+
           amp-img {
             width: 100%;
           }
@@ -114,7 +118,7 @@ export const Works = () => {
           }
 
           .works-link:nth-child(n + 1) {
-            margin-top: 20px;
+            margin-top: 30px;
           }
         }
       `}</style>
