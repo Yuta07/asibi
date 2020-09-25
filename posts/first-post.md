@@ -16,7 +16,7 @@ image: '/blog/first-post/first-post.svg'
 ## 使用した技術
 
 - Next.js
-- AMP(ブログポストのみ、将来的に全ページ AMP にする予定
+- AMP
 - Vercel(デプロイ)
 
 [Source Code - github](https://github.com/Yuta07/yutazon.me)

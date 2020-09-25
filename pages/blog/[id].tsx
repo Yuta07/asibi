@@ -121,7 +121,7 @@ export default function Post({ postData }: Props) {
           <div className="blog-header-date">
             <Date dateString={postData.data.date} />
           </div>
-          <p className="blog-header-quick-word">{postData.data.quickword}</p>
+          {postData.data.quickword && <p className="blog-header-quick-word">{postData.data.quickword}</p>}
         </header>
         <main className="blog-main-content">
           <ReactMarkdown
@@ -146,9 +146,16 @@ export default function Post({ postData }: Props) {
       <style jsx>{`
         .blog-article {
           width: 100%;
-          border-radius: 15px;
-          background: #ffffff;
-          filter: drop-shadow(2px 6px 4px silver);
+          color: #353b48;
+          border-radius: 30px;
+          box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5),
+            inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #ffffff;
+          background: linear-gradient(
+            315deg,
+            rgba(239, 239, 239, 0.1) 0%,
+            rgba(239, 239, 239, 0.1) 55%,
+            rgba(239, 239, 239, 0.25) 100%
+          );
         }
 
         .blog-wrapper {
@@ -166,7 +173,7 @@ export default function Post({ postData }: Props) {
           align-items: center;
           justify-content: center;
           background: #282c35;
-          border-radius: 15px 15px 0 0;
+          border-radius: 30px 30px 0 0;
         }
 
         .blog-header-title {

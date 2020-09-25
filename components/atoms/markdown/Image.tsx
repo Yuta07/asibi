@@ -23,12 +23,13 @@ export const Image = ({ alt, src }: Props) => {
           display: flex;
           justify-content: center;
           align-items: center;
-          background: #ebf5fc;
-          border-radius: 8px;
+          background: #efefef;
+          box-shadow: inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #ffffff;
+          border-radius: 15px;
         }
 
         amp-img {
-          border-radius: 8px;
+          border-radius: 15px;
         }
       `}</style>
     </span>

@@ -13,6 +13,8 @@ Next.js でのブログの作成に関しては[公式サイト](https://nextjs.
 
 公式と異なるのは `remark` ではなく、 `react-markdown` を使用していることです。
 
+[参考サイト](https://jfelix.info/blog/how-to-make-a-static-blog-with-next-js)
+
 以下がブログ内で使用されているマークダウンの表現となります。
 
 ## Heading

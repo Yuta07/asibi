@@ -6,7 +6,7 @@ export const InlineCode: FC = ({ children }) => {
       {children}
       <style jsx>{`
         code {
-          background: #ebf5fc;
+          background: #efefef;
           padding: 2px 8px;
           border-radius: 8px;
         }

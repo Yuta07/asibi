@@ -13,8 +13,8 @@ export const GlobalStyle = createGlobalStyle`
     letter-spacing: 0.5px;
     word-wrap: break-word;
     font-kerning: normal;
-    color: #353b48;
-    background: #ebf5fc;
+    color: #696969;
+    background: #efefef;
     min-height: 100vh;
     counter-reset: number 0;
   }
@@ -42,7 +42,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: #353b48;
+    color: #696969;
     text-decoration:none;
   }
 

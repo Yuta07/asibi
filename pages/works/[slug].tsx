@@ -32,7 +32,7 @@ export default function WorkPage() {
           );
         })}
         <Link href={ref} target="_blank">
-          <RefImg src="/links/github-icon.svg" alt="github" />
+          <RefImg src="/links/github.svg" alt="github" />
           Source Code
         </Link>
       </Note>
@@ -53,12 +53,13 @@ const Img = styled.img`
   height: 280px;
   margin: 0 auto;
   object-fit: cover;
-  background: #ffffff;
-  border-radius: 8px;
-  filter: grayscale(0) blur(0) drop-shadow(0 4px 4px silver);
+  background: #efefef;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7), -6px -6px 10px rgba(255, 255, 255, 0.5),
+    6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
 
   &:not(:first-child) {
-    margin-top: 15px;
+    margin-top: 30px;
   }
 `;
 

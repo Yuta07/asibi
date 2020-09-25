@@ -1,62 +1,46 @@
-import styled from 'styled-components';
 import { Experience } from './Experience';
 import experienceData from '../../content/experience.json';
 
 export const ExperienceList = () => {
   return (
-    <Container>
-      <Title>Job Experience</Title>
-      <Content>
+    <div className="experience-wrapper">
+      <h2 className="experience-hero">Job Experience</h2>
+      <div className="experience-container">
         {experienceData.data.map((data) => {
           return <Experience key={data.devPeriod} data={data} />;
         })}
-      </Content>
-    </Container>
+      </div>
+      <style jsx>{`
+        .experience-wrapper {
+          width: 100%;
+          margin-top: 100px;
+        }
+
+        .experience-hero {
+          font-size: 60px;
+          filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.25));
+          text-align: center;
+        }
+
+        .experience-container {
+          width: 100%;
+          margin-top: 50px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        @media (max-width: 575.98px) {
+          .experience-hero {
+            font-size: 48px;
+          }
+
+          .experience-container {
+            flex-direction: column;
+            flex-wrap: nowrap;
+          }
+        }
+      `}</style>
+    </div>
   );
 };
-
-const Container = styled.div`
-  width: 100%;
-  margin-top: 100px;
-`;
-
-const Title = styled.h2`
-  font-size: 24px;
-`;
-
-const Content = styled.div`
-  width: 100%;
-  margin-top: 30px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  .experience-card {
-    &:nth-child(2n - 1) {
-      margin-right: 20px;
-    }
-
-    &:nth-child(n + 3) {
-      margin-top: 20px;
-    }
-  }
-
-  @media (max-width: 575.98px) {
-    flex-direction: column;
-    flex-wrap: nowrap;
-
-    .experience-card {
-      &:first-child {
-        margin-top: 0;
-      }
-
-      &:nth-child(2n - 1) {
-        margin-right: 0;
-      }
-
-      &:nth-child(n + 3) {
-        margin-top: 30px;
-      }
-    }
-  }
-`;
