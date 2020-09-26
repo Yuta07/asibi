@@ -103,13 +103,9 @@ export default function Post({ postData }: Props) {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@yutazon7" />
         <meta name="twitter:creator" content="Yuta07" />
-        <meta name="twitter:title" content={postData.data.title} />
-        <meta name="twitter:description" content={postData.data.spoiler} />
-        <meta name="twitter:image" content="/ogp.jpg" />
         <meta property="og:title" content={postData.data.title} />
         <meta property="og:description" content={postData.data.spoiler} />
         <meta property="og:url" content={`https://yutazon.me/blog/${postData.id}`} />
-        <meta property="og:image" content={postData.data.image} />
         <meta property="og:type" content="article" />
         <script async src="https://cdn.ampproject.org/v0.js"></script>
       </Head>
