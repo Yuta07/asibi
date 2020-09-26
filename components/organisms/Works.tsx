@@ -6,12 +6,15 @@ export const Works = () => {
       <h2 className="works-hero">Works</h2>
       <div className="works-inner">
         {worksData.data.map((data) => {
-          const { image, title, description, slug } = data;
+          const { image, title, description, period, slug } = data;
 
           return (
-            <a href={`/works/${slug}`} className="works-link">
-              <amp-img src={image[0]} layout="intrinsic" width="350" height="280" alt={`${title}-image`}></amp-img>
+            <a key={title} href={`/works/${slug}`} className="works-link">
+              <div className="works-image-container">
+                <amp-img src={image[0]} layout="intrinsic" width="350" height="200" alt={`${title}-image`}></amp-img>
+              </div>
               <div className="works-caveat">
+                <p className="works-period">{period}</p>
                 <h3 className="works-title">{title}</h3>
                 <p className="works-description">{description}</p>
               </div>
@@ -22,11 +25,11 @@ export const Works = () => {
       <style jsx>{`
         .works-wrapper {
           width: 100%;
-          margin-top: 100px;
+          margin-top: 150px;
         }
 
         .works-hero {
-          font-size: 60px;
+          font-size: 48px;
           filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.25));
           text-align: center;
         }
@@ -48,18 +51,19 @@ export const Works = () => {
           box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7), -6px -6px 10px rgba(255, 255, 255, 0.5),
             6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
           border-radius: 30px;
-          position: relative;
           cursor: pointer;
+          transition: 0.3s ease-in-out;
+          -webkit-transition: 0.3s ease-in-out;
         }
 
         .works-link:hover {
-          transition: 0.3s;
           box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6), -2px -2px 4px rgba(255, 255, 255, 0.4),
             2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .works-link:hover .works-caveat {
-          filter: opacity(70%);
+        .works-link:hover amp-img {
+          box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7), -6px -6px 10px rgba(255, 255, 255, 0.5),
+            6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
         }
 
         .works-link:nth-child(n + 3) {
@@ -68,43 +72,42 @@ export const Works = () => {
 
         amp-img {
           margin: 0 auto;
-          object-fit: cover;
+          width: 100%;
           background: #efefef;
+          box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6), -2px -2px 4px rgba(255, 255, 255, 0.4),
+            2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
           border-radius: 30px;
-          -webkit-transition: 0.3s ease-in-out;
           transition: 0.3s ease-in-out;
+          -webkit-transition: 0.3s ease-in-out;
         }
 
         .works-caveat {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          width: 100%;
-          height: 100%;
-          padding: 0 20px 30px;
           display: flex;
           flex-direction: column;
-          justify-content: flex-end;
-          background: #efefef;
-          border-radius: 30px;
-          filter: opacity(0%);
-          -webkit-transition: 0.3s ease-in-out;
-          transition: 0.3s ease-in-out;
+          padding: 20px;
+        }
+
+        .works-period {
+          font-size: 14px;
+          font-weight: 350;
         }
 
         .works-title {
-          font-size: 20px;
+          font-size: 22px;
+          margin-top: 5px;
         }
 
         .works-description {
           font-size: 14px;
           font-weight: 350;
-          margin-top: 4px;
+          margin-top: 5px;
         }
 
         @media (max-width: 575.98px) {
+          .works-hero {
+            font-size: 40px;
+          }
+
           amp-img {
             width: 100%;
           }
@@ -114,7 +117,7 @@ export const Works = () => {
           }
 
           .works-link:nth-child(n + 1) {
-            margin-top: 20px;
+            margin-top: 30px;
           }
         }
       `}</style>

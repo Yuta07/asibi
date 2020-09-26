@@ -14,6 +14,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@yutazon7" />
         <meta name="twitter:creator" content="Yuta07" />
+        <meta name="twitter:url" content="/ogp.jpg" />
+        <meta name="twitter:title" content="yutaka's space." />
+        <meta name="twitter:description" content="yutaka's space." />
+        <meta name="twitter:image" content="/ogp.jpg" />
         <meta property="og:title" content="Yutaka Miyazaki 🤔" />
         <meta property="og:description" content="Yutaka Miyazakiのポートフォリオ" />
         <meta property="og:url" content="https://yutazon.me" />

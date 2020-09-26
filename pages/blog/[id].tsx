@@ -14,6 +14,7 @@ import { ListItem } from '../../components/atoms/markdown/ListItem';
 import { Paragraph } from '../../components/atoms/markdown/Paragraph';
 import { Strong } from '../../components/atoms/markdown/Strong';
 import { ThematicBreak } from '../../components/atoms/markdown/ThematicBreak';
+import { Share } from '../../components/atoms/Share';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
 type Props = {
@@ -99,9 +100,16 @@ export default function Post({ postData }: Props) {
     <article className="blog-article">
       <Head>
         <title>{`${postData.data.title} | Yutaka Miyazaki`}</title>
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@yutazon7" />
+        <meta name="twitter:creator" content="Yuta07" />
+        <meta name="twitter:title" content={postData.data.title} />
+        <meta name="twitter:description" content={postData.data.spoiler} />
+        <meta name="twitter:image" content="/ogp.jpg" />
         <meta property="og:title" content={postData.data.title} />
         <meta property="og:description" content={postData.data.spoiler} />
         <meta property="og:url" content={`https://yutazon.me/blog/${postData.id}`} />
+        <meta property="og:image" content={postData.data.image} />
         <meta property="og:type" content="article" />
         <script async src="https://cdn.ampproject.org/v0.js"></script>
       </Head>
@@ -141,6 +149,9 @@ export default function Post({ postData }: Props) {
               thematicBreak: MarkdownThematicBreak,
             }}
           />
+          <div className="share-content">
+            <Share />
+          </div>
         </main>
       </div>
       <style jsx>{`
@@ -191,6 +202,16 @@ export default function Post({ postData }: Props) {
           margin: 20px 0 50px;
           padding: 25px 0 50px;
           border-top: 1px solid #7f8c8d;
+        }
+
+        .share-content {
+          width: 100%;
+          margin-top: 100px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: relative;
         }
 
         @media (max-width: 575.98px) {

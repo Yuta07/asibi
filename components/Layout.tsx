@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import styled from 'styled-components';
+import { Copyright } from './atoms/Copyright';
 import { Header } from './organisms/Header';
 
 export const Layout: FC = ({ children }) => {
@@ -8,6 +9,7 @@ export const Layout: FC = ({ children }) => {
       <Header />
       <Wrapper>
         <Container>{children}</Container>
+        <Copyright />
       </Wrapper>
     </>
   );
@@ -15,7 +17,7 @@ export const Layout: FC = ({ children }) => {
 
 const Wrapper = styled.div`
   width: 100%;
-  margin: 30px 0 100px;
+  margin: 30px 0 0;
 `;
 
 const Container = styled.div`

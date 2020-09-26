@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="200px" height="160px" viewBox="0 0 200 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="350px" height="200px" viewBox="0 0 350 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>frey-dates</title>
     <defs>
-        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+        <linearGradient x1="-0.530500266%" y1="0%" x2="100.5305%" y2="100%" id="linearGradient-1">
             <stop stop-color="#F39C12" stop-opacity="0.504444067" offset="0%"></stop>
             <stop stop-color="#F39912" stop-opacity="0.5" offset="24.4703039%"></stop>
             <stop stop-color="#F36E12" stop-opacity="0.75" offset="58.7007075%"></stop>
@@ -11,28 +11,28 @@
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="frey-dates">
-            <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="200" height="160"></rect>
-            <rect id="Rectangle-3" fill="#FFD693" fill-rule="nonzero" x="0" y="0" width="100" height="160"></rect>
-            <path d="M36.0086715,32.1743149 C36.002919,32.2669862 36,32.360425 36,32.4545455 L36,32.4545455 L36,61.5454545 C36,64.0056321 37.9943679,66 40.4545455,66 L40.4545455,66 C42.914723,66 44.9090909,64.0056321 44.9090909,61.5454545 L44.9090909,61.5454545 L44.9090909,47 L60.0882353,47 C62.2486433,47 64,45.2486433 64,43.0882353 C64,40.9278273 62.2486433,39.1764706 60.0882353,39.1764706 L60.0882353,39.1764706 L44.9090909,39.1764706 L44.9090909,35.8235294 L60.0882353,35.8235294 C62.2486433,35.8235294 64,34.0721727 64,31.9117647 L64,31.9117647 C64,29.7513567 62.2486433,28 60.0882353,28 L60.0882353,28 L39.9117647,28 L39.9117647,28 C37.7513567,28 36,29.7513567 36,31.9117647 C36,32 36.002921,32.0875414 36.0086715,32.1743149 Z" id="Logo" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
-            <text id="Simple-calendar" fill="#FEFEFE" fill-rule="nonzero" font-family="ArialMT, Arial" font-size="7" font-weight="normal">
-                <tspan x="15" y="139">Simple calendar</tspan>
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="350" height="200"></rect>
+            <rect id="Rectangle-3" fill="#FFD693" fill-rule="nonzero" x="0" y="0" width="175" height="200"></rect>
+            <path d="M68.0123879,43.9319212 C68.00417,44.063612 68,44.1963934 68,44.3301436 L68,85.6698564 C68,89.1658982 70.849097,92 74.3636364,92 C77.8781757,92 80.7272727,89.1658982 80.7272727,85.6698564 L80.7272727,65 L102.411765,65 C105.498062,65 108,62.51123 108,59.4411765 C108,56.371123 105.498062,53.882353 102.411765,53.882353 L80.7272727,53.882353 L80.7272727,49.117647 L102.411765,49.117647 C105.498062,49.117647 108,46.628877 108,43.5588235 C108,40.48877 105.498062,38 102.411765,38 L73.5882353,38 C70.5019381,38 68,40.48877 68,43.5588235 C68,43.6842021 68.0041729,43.8086115 68.0123879,43.9319212 Z" id="Logo" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+            <text id="Simple-calendar" fill="#FEFEFE" fill-rule="nonzero" font-family="ArialMT, Arial" font-size="12" font-weight="normal">
+                <tspan x="33" y="171">Simple calendar</tspan>
             </text>
-            <text id="select-multiple-dates" fill="#FEFEFE" fill-rule="nonzero" font-family="ArialMT, Arial" font-size="7" font-weight="normal">
-                <tspan x="15" y="146">select multiple dates</tspan>
+            <text id="select-multiple-date" fill="#FEFEFE" fill-rule="nonzero" font-family="ArialMT, Arial" font-size="12" font-weight="normal">
+                <tspan x="33" y="185">select multiple dates</tspan>
             </text>
-            <g id="Title" transform="translate(19.000000, 73.000000)" fill="#FEFEFE" fill-rule="nonzero" font-family="ArialMT, Arial" font-size="12" font-weight="normal">
+            <g id="Title" transform="translate(49.000000, 105.000000)" fill="#FEFEFE" fill-rule="nonzero" font-family="ArialMT, Arial" font-size="16" font-weight="normal">
                 <g id="Frey">
                     <text>
-                        <tspan x="0" y="11">Frey</tspan>
+                        <tspan x="0" y="14">Frey</tspan>
                     </text>
                 </g>
-                <g id="Dates" transform="translate(28.000000, 0.000000)">
+                <g id="Dates" transform="translate(36.000000, 0.000000)">
                     <text>
-                        <tspan x="0" y="11">Dates</tspan>
+                        <tspan x="0" y="14">Dates</tspan>
                     </text>
                 </g>
             </g>
-            <g id="calendar" transform="translate(120.000000, 57.000000)">
+            <g id="calendar" transform="translate(235.000000, 70.000000)">
                 <path d="M60,9.4621875 L60,50.5284375 C60,55.7540625 55.7540625,60 50.5283203,60 L9.47167969,60 C8.42460937,60 7.41597656,59.8271484 6.47460937,59.5101562 C3.65039062,58.5686719 1.42171875,56.3401172 0.480351562,53.5157812 C0.172851562,52.5744141 0,51.5755078 0,50.5284375 L0,9.4621875 C0,4.2459375 4.2459375,0 9.47167969,0 L50.5283203,0 C52.1037891,0 53.5830469,0.384257812 54.8895703,1.06640625 C56.6186719,1.96933594 58.0403906,3.39105469 58.9433203,5.12015625 C59.6157422,6.41695312 60,7.89621094 60,9.4621875 Z" id="Shape" fill="#EB9D5D" fill-rule="nonzero"></path>
                 <path d="M2,50.7562496 C2,54.7403003 5.17325423,58 9.05165013,58 L49.9483499,58 C53.8267458,58 57,54.7403003 57,50.7562496 L57,31 L2,31 L2,50.7562496 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
                 <path d="M49.9483499,2 L9.05165013,2 C5.17325423,2 2,5.20463477 2,9.12138442 L2,31 L57,31 L57,9.12126656 C57,5.20451691 53.8267458,2 49.9483499,2 Z" id="Shape" fill="#F4F4F5" fill-rule="nonzero"></path>

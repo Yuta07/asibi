@@ -48,18 +48,28 @@ export const Personal = () => {
 
         .author-link-content {
           width: 100%;
-          margin-top: 15px;
+          margin-top: 20px;
           display: inline-flex;
           align-items: center;
           justify-content: center;
         }
 
         .author-link {
+          margin: 0 20px;
+          padding: 10px;
+          display: inline-flex;
+          box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7), -6px -6px 10px rgba(255, 255, 255, 0.5),
+            6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
+          border-radius: 50%;
+          transition: 0.3s ease-in-out;
+        }
+
+        .author-link:hover {
+          box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6), -2px -2px 4px rgba(255, 255, 255, 0.4),
+            2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         amp-img {
-          margin: 0 15px;
-          filter: drop-shadow(-6px -6px 14px rgba(255, 255, 255, 0.7));
         }
 
         .autho-single-word {
@@ -67,7 +77,7 @@ export const Personal = () => {
           color: #838386;
           filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.25));
           text-align: center;
-          margin-top: 10px;
+          margin-top: 20px;
         }
 
         @media (max-width: 575.98px) {

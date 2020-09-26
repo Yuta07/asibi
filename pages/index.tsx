@@ -1,4 +1,5 @@
 import { Personal } from '../components/atoms/Personal';
+import { ScrollToTopButton } from '../components/atoms/ScrollToTopButton';
 import { SkillList } from '../components/organisms/SkillList';
 import { ExperienceList } from '../components/organisms/ExperienceList';
 import { Works } from '../components/organisms/Works';
@@ -12,6 +13,7 @@ export default function Resume() {
       <SkillList />
       <ExperienceList />
       <Works />
+      <ScrollToTopButton />
       <style jsx>{`
         .resume {
           display: flex;

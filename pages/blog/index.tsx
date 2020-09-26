@@ -73,7 +73,6 @@ export default function Blog({ allPostsData }: Props) {
         amp-img {
           width: 55px;
           height: 55px;
-          object-fit: cover;
         }
 
         .blog-index-description {
@@ -97,12 +96,20 @@ export default function Blog({ allPostsData }: Props) {
           }
 
           amp-img {
-            height: 40px;
-            width: 40px;
+            height: 35px;
+            width: 55px;
           }
 
           .blog-index-anchor {
             font-size: 18px;
+          }
+
+          .blog-index-heading {
+            font-size: 18px;
+          }
+
+          .blog-index-spoiler {
+            font-szie: 12px;
           }
         }
       `}</style>

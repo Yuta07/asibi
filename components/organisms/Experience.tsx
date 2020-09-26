@@ -17,7 +17,7 @@ export const Experience = ({ data }: Props) => {
 
   return (
     <div className="experience-card">
-      <amp-img src={image} fallback="" width="60" height="60" layout="intrinsic" alt={`${language}-image`}></amp-img>
+      <amp-img src={image} fallback="" width="70" height="70" layout="intrinsic" alt={`${language}-image`}></amp-img>
       <small className="experience-role">{role}</small>
       {overviewArray.map((overview) => {
         return (
@@ -119,6 +119,11 @@ export const Experience = ({ data }: Props) => {
 
           .experience-card:nth-child(n + 3) {
             margin-top: 30px;
+          }
+
+          amp-img {
+            width: 60px;
+            height: 60px;
           }
         }
       `}</style>

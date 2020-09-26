@@ -13,11 +13,11 @@ export const SkillList = () => {
       <style jsx>{`
         .skill-wrapper {
           width: 100%;
-          margin-top: 100px;
+          margin-top: 150px;
         }
 
         .skill-hero {
-          font-size: 60px;
+          font-size: 48px;
           filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.25));
           text-align: center;
         }
@@ -34,7 +34,7 @@ export const SkillList = () => {
 
         @media (max-width: 575.98px) {
           .skill-hero {
-            font-size: 48px;
+            font-size: 40px;
           }
 
           .skill-container {
