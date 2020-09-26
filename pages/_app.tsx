@@ -14,12 +14,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@yutazon7" />
         <meta name="twitter:creator" content="Yuta07" />
-        <meta name="twitter:url" content="/ogp.jpg" />
-        <meta name="twitter:image" content="/ogp.jpg" />
+        <meta name="twitter:url" content="https://yutazon.me/ogp.jpg" />
+        <meta name="twitter:image" content="https://yutazon.me/ogp.jpg" />
         <meta property="og:title" content="Yutaka Miyazaki 🤔" />
         <meta property="og:description" content="Yutaka Miyazakiのポートフォリオ" />
         <meta property="og:url" content="https://yutazon.me" />
-        <meta property="og:image" content="../public/ogp.jpg" />
+        <meta property="og:image" content="https://yutazon.me/ogp.jpg" />
         <meta property="og:type" content="website" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon-precomposed" href="/icons/apple-icon-precomposed.png" />
