@@ -55,6 +55,16 @@ export const Share = () => {
 
         blog-author-name {
         }
+
+        @media (max-width: 575.98px) {
+          .blog-author-area {
+            top: 100%;
+            left: 0;
+            right: 0;
+            margin-top: 30px;
+            text-align: center;
+          }
+        }
       `}</style>
     </>
   );

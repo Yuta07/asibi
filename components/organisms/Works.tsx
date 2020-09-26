@@ -110,6 +110,7 @@ export const Works = () => {
 
           amp-img {
             width: 100%;
+            padding: 6px;
           }
 
           .works-link {
@@ -118,6 +119,12 @@ export const Works = () => {
 
           .works-link:nth-child(n + 1) {
             margin-top: 30px;
+          }
+        }
+
+        @media (max-width: 375px) {
+          amp-img {
+            padding: 0;
           }
         }
       `}</style>
