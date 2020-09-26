@@ -8,7 +8,11 @@ image: '/blog/first-post/first-post.svg'
 
 ## ニューモーフィズムとは
 
+準備中です。。。
+
 ## 実装方法
+
+準備中です。。。
 
 ## 参考サイト
 

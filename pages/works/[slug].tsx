@@ -88,15 +88,26 @@ const Link = styled.a`
   margin-top: 20px;
   color: #838386;
   font-size: 14px;
+  transition: 0.3s ease-in-out;
 
   &:hover {
-    transition: 0.3s;
     color: #3fb0ac;
+
+    img {
+      box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6), -2px -2px 4px rgba(255, 255, 255, 0.4),
+        2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
   }
 `;
 
 const RefImg = styled.img`
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  padding: 5px;
+  display: inline-flex;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7), -6px -6px 10px rgba(255, 255, 255, 0.5),
+    6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
 `;
