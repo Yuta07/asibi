@@ -20,6 +20,7 @@ export const Share = () => {
 
         amp-social-share {
           margin-top: 20px;
+          transition: 0.3s ease-in-out;
         }
 
         amp-social-share:focus {

@@ -30,7 +30,7 @@ export const Heading: FC<{ level: number }> = ({ level = 2, children }) => {
         h3,
         h4,
         h5 {
-          margin: 50px 0 10px;
+          margin: 50px 0 15px;
           padding-left: 15px;
           position: relative;
         }

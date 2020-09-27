@@ -52,7 +52,7 @@ const Img = styled.img`
   width: 100%;
   height: 280px;
   margin: 0 auto;
-  object-fit: cover;
+  object-fit: contain;
   background: #efefef;
   box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7), -6px -6px 10px rgba(255, 255, 255, 0.5),
     6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
@@ -83,31 +83,28 @@ const Txt = styled.p`
 `;
 
 const Link = styled.a`
+  color: #838386;
+  font-size: 14px;
   display: flex;
   align-items: center;
   margin-top: 20px;
-  color: #838386;
-  font-size: 14px;
+  padding: 8px 10px;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7), -6px -6px 10px rgba(255, 255, 255, 0.5),
+    6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
   transition: 0.3s ease-in-out;
 
   &:hover {
     color: #3fb0ac;
-
-    img {
-      box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6), -2px -2px 4px rgba(255, 255, 255, 0.4),
-        2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
-    }
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6), -2px -2px 4px rgba(255, 255, 255, 0.4),
+      2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
 `;
 
 const RefImg = styled.img`
   width: 30px;
   height: 30px;
-  margin-right: 15px;
-  padding: 5px;
+  margin: 0 20px 0 10px;
   display: inline-flex;
-  box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7), -6px -6px 10px rgba(255, 255, 255, 0.5),
-    6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 50%;
   transition: 0.3s ease-in-out;
 `;
