@@ -6,7 +6,7 @@ export const Paragraph: FC = ({ children }) => {
       {children}
       <style jsx>{`
         p {
-          margin-bottom: 10px;
+          margin-bottom: 15px;
         }
       `}</style>
     </p>
