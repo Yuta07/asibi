@@ -14,17 +14,17 @@ export const List: FC<Props> = ({ ordered, tight, depth, children }) => {
         ol {
           padding: 0 20px 0 0;
           list-style: none;
-        }d
+        }
       `}</style>
     </ol>
   ) : (
     <ul style={{ margin: depth > 0 ? `10px 0 0` : `15px 0` }}>
       {children}
       <style jsx>{`
-    ul {
-      padding: 0 20px;
-    }d
-  `}</style>
+        ul {
+          padding: 0 20px;
+        }
+      `}</style>
     </ul>
   );
 };
