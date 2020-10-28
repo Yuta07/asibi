@@ -11,13 +11,13 @@
     },
     {
       "image": ["/works/frey-dates.svg"],
-      "title": "frey-dates",
+      "title": "frey-date",
       "description": "React MultiSelect Calendar.",
       "overview": "Reactによる日付を複数指定できるカレンダーです。npm packageにして公開しています。",
-      "language": ["React", "TypeScript"],
+      "language": ["React", "TypeScript", "Jest", "GitHub Actions"],
       "period": "April 2020",
       "ref": "https://github.com/Yuta07/nino-ui",
-      "slug": "frey-dates"
+      "slug": "frey-date"
     }
   ]
 }
