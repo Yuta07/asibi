@@ -34,6 +34,8 @@ AMP ページが Google のようなプラットフォームによってキャ�
 
 ## When AMP ?
 
+以下のような状況の場合、AMP を使用するのにはいいかもしれません。
+
 - ユーザーのサイト流入を高めたい場合。
   - 単純に読み込み速度が向上して、検索結果の上位に表示されれば、ユーザーが増える可能性が高まります。
 - ニュースサイト、e コマース、ストーリーテラーのいずれであっても、AMP を使用することができます。
@@ -46,7 +48,7 @@ Next.js で AMP を使用する場合は `AMP First Page` か `Hybrid AMP Page` 
 
 - AMP First Page
   - AMP のみです。スタイルの記述もインラインで行う必要があります。おそらく `CSS-in-JS` で記述することがほとんどだと思います。
-  - AMP Optimizer が自動的に最適化することで、最大 42%パフォーマンスがパフォーマンスが改善されます。
+  - AMP Optimizer が自動的に最適化することで、最大 42%パフォーマンスが改善されます。
 - Hybrid AMP Page
   - 単なる HTML ページとしても、AMP ページとしてもレンダリングできます。AMP 対応したい場合は、URL に `amp=1` をつける必要があります。
   - AMP Optimizer で最適化されません。
@@ -89,9 +91,9 @@ const App = () => {
 ```
 
 ただ、 `Hyblid AMP Page` で作成する場合は、AMP のみのページとそうでないページの 2 つを用意する必要があるため、少々面倒なこともあります。
-2 ページ作成するとしても、デザインを凝っているページほど時間がかかってしまったり、結局同じようなデザインになって差別化ができなかったりするため、AMP 対応する際は、事前によく考慮したほうがいいかもしれません.
+2 ページ作成するとしても、デザインを凝っているページほど時間がかかってしまったり、結局同じようなデザインになって差別化ができなかったりするため、AMP 対応する際は、事前によく考慮したほうがいいかもしれません。
 
-今ご覧になっているサイトは AMP で作成されていますが、上記の理由により、ヘッダーロゴと一部のページを除いて `AMP First Page` で作成しています。
+今ご覧になっているこのサイトは AMP で作成されていますが、上記の理由により、ヘッダーロゴと一部のページを除いて `AMP First Page` で作成しています。
 
 ## AMP Component を使用する
 
@@ -100,13 +102,13 @@ Next.js 上で AMP Component / Actions and events を使用してみます。
 - [The AMP Component Catalogue](https://amp.dev/ja/documentation/components/?format=websites)
 - [Actions and events](https://amp.dev/documentation/guides-and-tutorials/learn/amp-actions-and-events/#*---all-elements)
 
-今回、本サイト内で使用した AMP Component / Actions and events は下記になります。
+今回、本サイト内で使用した下記の AMP Component / Actions and events を例に進めていきます。
 
 - [amp-img](https://amp.dev/ja/documentation/components/amp-img/?format=websites)
 - [amp-social-share](https://amp.dev/ja/documentation/components/amp-social-share/?format=websites)
 - [scrollTo](https://amp.dev/documentation/guides-and-tutorials/learn/amp-actions-and-events/#*---all-elements)
 
-#### `amp-img` を使用する場合
+#### `amp-img`
 
 ```tsx
 /*
@@ -116,7 +118,7 @@ intrinsic - responsiveと基本同一だが、拡大縮小する要素として 
 fixed - fixedにした上でwidth / height を指定すると固定サイズとなる。
 */
 
-<amp-img src="/image-path" width="240" height="240" layout="intrinsic" alt="scroll-to-top"></amp-img>
+<amp-img src="/image-path" width="240" height="240" layout="intrinsic" alt="image-alt"></amp-img>
 ```
 
 css を記述する場合は、 `style jsx` を使用して、 `amp-img` を指定した中で記述する必要があります。
@@ -154,7 +156,7 @@ declare namespace JSX {
 }
 ```
 
-#### `amp-social-share` を使用する場合
+#### `amp-social-share`
 
 ```tsx
 /*
@@ -171,12 +173,12 @@ className - className="rounded" にすることで丸型アイコンに変更で
 ></amp-social-share>
 ```
 
-#### `scrollTo` を使用する場合
+#### `scrollTo`
 
 アニメーションを使用して、ページの上部に戻るアクションを作成するために使用する例です。
 `amp-animation` を使用したかったのですが、難しかったため、 `scrollTo` で対応しました。
 
-アクションとそれに対応する要素に対して `id` をふる必要があります。
+アクションとそれに対応する要素に対して `id` を割り当てる必要があります。
 
 ```tsx
 // ページのどこまで戻るか。今回はヘッダーの位置まで戻ることにする。
