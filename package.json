@@ -15,6 +15,7 @@
     "react-lazyload": "^3.0.0",
     "react-markdown": "^4.3.1",
     "react-syntax-highlighter": "^13.5.3",
+    "remark-gfm": "^1.0.0",
     "sass": "^1.26.11",
     "serialize-javascript": "^5.0.1",
     "styled-components": "^5.2.0"

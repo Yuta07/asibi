@@ -6,6 +6,7 @@ type Props = {
   allPostsData: {
     excerpt: string;
     date: string;
+    updated?: string;
     title: string;
     spoiler: string;
     image: string;
@@ -25,7 +26,10 @@ export default function Blog({ allPostsData }: Props) {
           </p>
           <div className="blog-index-description">
             <h3 className="blog-index-heading">{data.title}</h3>
-            <Date dateString={data.date} />
+            <div className="blog-index-date-img">
+              <amp-img src="/blog/calendar.svg" fallback="" width="16" height="16" layout="intrinsic" alt="blog-created-img"></amp-img><Date dateString={data.date} />
+              {data.updated && <><div className="blog-index-date-margin" /><amp-img src="/blog/refresh-cw.svg" fallback="" width="16" height="16" layout="intrinsic" alt="blog-created-img"></amp-img><Date dateString={data.updated} /></>}
+            </div>
             <p className="blog-index-spoiler">{data.spoiler}</p>
           </div>
         </a>
@@ -70,9 +74,13 @@ export default function Blog({ allPostsData }: Props) {
           filter: drop-shadow(0 4px 4px silver);
         }
 
-        amp-img {
+        .blog-index-image-wrapper amp-img {
           width: 55px;
           height: 55px;
+        }
+
+        .blog-index-date-margin {
+          margin-right: 30px;
         }
 
         .blog-index-description {
@@ -82,6 +90,18 @@ export default function Blog({ allPostsData }: Props) {
           cursor: pointer;
           font-size: 22px;
           font-weight: 700;
+        }
+
+        .blog-index-date-img {
+          display: flex;
+          align-items: center;
+          margin-top: 5px;
+        }
+
+        .blog-index-date-img amp-img {
+          width: 16px;
+          height: 16px;
+          margin-right: 10px;
         }
 
         .blog-index-spoiler {
@@ -98,6 +118,17 @@ export default function Blog({ allPostsData }: Props) {
           amp-img {
             height: 35px;
             width: 55px;
+          }
+
+          .blog-index-date-img {
+            width: 140px;
+            flex-wrap: wrap;
+            align-items: flex-start
+          }
+
+          .blog-index-date-img amp-img {
+            width: 16px;
+            height: 16px;
           }
 
           .blog-index-anchor {

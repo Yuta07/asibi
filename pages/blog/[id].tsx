@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown/with-html';
 import { Date } from '../../components/atoms/Date';
 import { BlockCode } from '../../components/atoms/markdown/BlockCode';
 import { Blockquote } from '../../components/atoms/markdown/Blockquote';
+import { Delete } from '../../components/atoms/markdown/Delete';
 import { Heading } from '../../components/atoms/markdown/Heading';
 import { Image } from '../../components/atoms/markdown/Image';
 import { InlineCode } from '../../components/atoms/markdown/InlineCode';
@@ -22,6 +23,7 @@ type Props = {
     data: {
       title: string;
       date: string;
+      updated?:string;
       spoiler: string;
       quickword: string;
       image: string;
@@ -45,6 +47,10 @@ export default function Post({ postData }: Props) {
 
   const MarkdownBlockquote: FC = ({ children }) => {
     return <Blockquote>{children}</Blockquote>;
+  };
+
+  const MarkdownDelete: FC<{ href: string }> = ({ children }) => {
+    return <Delete>{children}</Delete>;
   };
 
   const MarkdownHeading: FC<{ level: number }> = ({ children, ...props }) => {
@@ -123,7 +129,8 @@ export default function Post({ postData }: Props) {
         <header className="blog-header">
           <h1 className="blog-header-title">{postData.data.title}</h1>
           <div className="blog-header-date">
-            <Date dateString={postData.data.date} />
+            <amp-img src="/blog/calendar.svg" fallback="" width="16" height="16" layout="intrinsic" alt="blog-created-img"></amp-img><Date dateString={postData.data.date} />
+            {postData.data.updated && <><div className="blog-header-date-margin" /><amp-img src="/blog/refresh-cw.svg" fallback="" width="16" height="16" layout="intrinsic" alt="blog-created-img"></amp-img><Date dateString={postData.data.updated} /></>}
           </div>
           {postData.data.quickword && <p className="blog-header-quick-word">{postData.data.quickword}</p>}
         </header>
@@ -134,6 +141,7 @@ export default function Post({ postData }: Props) {
             renderers={{
               blockquote: MarkdownBlockquote,
               code: CodeBlock,
+              delete: MarkdownDelete,
               heading: MarkdownHeading,
               image: MarkdownImage,
               inlineCode: MarkdownInlineCode,
@@ -188,6 +196,19 @@ export default function Post({ postData }: Props) {
         }
 
         .blog-header-date {
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+        }
+
+        .blog-header-date amp-img {
+          width: 16px;
+          height: 16px;
+          margin-right: 5px;
+        }
+
+        .blog-header-date-margin {
+          margin-right: 30px;
         }
 
         .blog-header-quick-word {
@@ -222,6 +243,8 @@ export default function Post({ postData }: Props) {
 
 export const getStaticProps: GetStaticProps = async ({ params }: any) => {
   const postData = await getPostData(params.id as string);
+
+  console.log(postData)
 
   return {
     props: {
