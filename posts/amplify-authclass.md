@@ -1,12 +1,13 @@
 ---
-title: 'React + Amplify Auth(Cognito)で独自UIで認証を行う'
-spoiler: 'amplify + cognitoの認証で独自UIを使用して認証する方法'
-quickword: 'AuthClassのメソッドを使用して、認証周りを整える。'
+title: 'React + Amplify Auth(Cognito)での認証'
+spoiler: 'amplify authでカスタムUIで認証する方法'
+quickword: 'Auth APIで認証周りを整える🧘‍♂️'
 date: '2020-10-27'
+updated: '2020-10-28'
 image: '/blog/amplify-authclass/aws-cognito.svg'
 ---
 
-この記事では、`amplify auth` の設定を行っていません。事前に設定してあることが前提となっています。
+この記事は、`amplify auth` がインストール済みであることが前提となっています。
 
 ## Aamplify について
 
@@ -65,11 +66,11 @@ React を使用して Amplify を使用する時に[Amplify の React チュー�
 
 ただ一方で、自分で作成した認証用の UI で amplify のログインなどの機能を利用することができなくなってしまいます。
 
-そういった自分で作成した UI で`amplify auth` を使用したい場合、 [AWS Amplify API](https://aws-amplify.github.io/amplify-js/api/classes/authclass.html)を使用するで、実現することができます。
+そういった自分で作成した UI で`amplify auth` を使用したい場合、 [AWS Amplify API](https://aws-amplify.github.io/amplify-js/api/classes/authclass.html)を使用することで、実現することができます。
 
 ## Auth API を使用する
 
-今回は `AWS Amplify API` の中でも、よく使用されそうな API を説明していきます。
+今回は `AWS Amplify API` の中でも、よく使用され流ことが想定される API を説明していきます。
 
 `Auth` をインポートすることで各 API の使用が可能となります。
 
@@ -195,12 +196,12 @@ import { Auth } from 'aws-amplify';
 
 メールの内容をカスタマイズする場合、以下の方法があります。
 
-1. cognito の画面から行う。「メッセージのカスタマイズ」メニューから可能です。
+1. cognito の画面から行う。「メッセージのカスタマイズ」メニューから行う。
 2. lambda でイベント毎のメール内容の設定を行う。
 
 ## まとめ
 
-amplify を使用すれば、cognito を使用した auth の機能だけではなく、dynamoDB や lambda 等も使用することができます。amplify のみで Web / モバイルアプリの開発を完結させることもできるため、サーバサイドいらずで簡単かつ迅速な開発ができるようになります。
+amplify を使用すれば、cognito を使用した auth の機能だけではなく、dynamoDB や lambda 等も使用することができます。amplify だけで Web アプリの開発を完結させることができるため、フロントエンドのみで簡単かつ迅速な開発ができるようになります。
 
 一方でサーバレスアーキテクチャとしては Google の Firebase という選択肢もあります。
 

@@ -3,6 +3,7 @@ title: 'マークダウンの表現'
 spoiler: 'ブログで使用しているマークダウンの表現一覧'
 quickword: 'マークダウンで使用しているスタイルを忘れないようにまとめておく。'
 date: '2020-09-24'
+updated: '2020-10-28'
 image: '/blog/markdown-express/markdown-express.svg'
 ---
 
@@ -70,6 +71,8 @@ Next.js でのブログの作成に関しては[公式サイト](https://nextjs.
 ```
 
 **これは太字です。**
+
+~~この文章に打ち消し線を。~~
 
 ここに `code` をいれます。
 
