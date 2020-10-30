@@ -3,6 +3,7 @@ title: 'lambdaトリガーでカスタムメッセージ'
 spoiler: 'Cognitoのメールの内容を動的に変更する。'
 quickword: 'カスタムメッセージ Lambda トリガーを利用する📮'
 date: '2020-10-29'
+updated: '2020-10-30'
 image: '/blog/cognito-custom-message/message_customize.svg'
 ---
 
@@ -85,12 +86,10 @@ exports.handler = (event, context, callback) => {
 ```
 
 メッセージのカスタマイズを作成した後は、Cognito のコンソール上の「トリガー」にあるカスタムメッセージに作成した lambda 関数を割り当てることを忘れないように行う必要があります。
-これでイベントに応じて、メールの内容をどう的に変更することが出来るようになったかと思います。
+これでイベントに応じて、メールの内容を動的に変更することが出来るようになったかと思います。
 
 カスタマイズ可能なイベントは他にも用意されているので、上記以外のイベントを探している場合は、参考サイトを確認するといいかもしれません。
 
 ## 参考サイト
 
 - [カスタムメッセージ Lambda トリガー](https://docs.aws.amazon.com/ja_jp/cognito/latest/developerguide/user-pool-lambda-custom-message.html)
-
-[Source Code - github](https://github.com/Yuta07/yutazon.me)
