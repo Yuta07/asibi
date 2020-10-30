@@ -9,7 +9,7 @@ export const Heading: FC<{ level: number }> = ({ level = 2, children }) => {
     <Tag>
       {children}
       <style jsx>{`
-        h2 {
+        h1 {
           font-size: 22px;
         }
 
