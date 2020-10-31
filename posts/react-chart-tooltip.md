@@ -1,7 +1,7 @@
 ---
 title: 'React + Chart.jsでカスタムツールチップ'
 spoiler: 'Chart.jsのツールチップをカスタマイズする。'
-quickword: 'ReactでChart.jsのツールチップをカスタム💬'
+quickword: 'ReactでChart.jsのツールチップをカスタマイズする💬'
 date: '2020-10-30'
 image: '/blog/react-chart-tooltip/tooltip.svg'
 ---
@@ -175,7 +175,7 @@ const options: ChartOptions = {
         // 作成したツールチップの内容をテーブルに挿入する。
         tableRoot.innerHTML = innerHtml;
 
-        // chartとして表示されているcanbas要素のclassを取得する
+        // chartとして表示されているcanvas要素のclassを取得する
         const chartMonitor = document.getElementsByClassName('chartjs-render-monitor');
 
         tooltipEl.style.opacity = '1';
