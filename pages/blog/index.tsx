@@ -27,8 +27,29 @@ export default function Blog({ allPostsData }: Props) {
           <div className="blog-index-description">
             <h3 className="blog-index-heading">{data.title}</h3>
             <div className="blog-index-date-img">
-              <amp-img src="/blog/calendar.svg" fallback="" width="16" height="16" layout="intrinsic" alt="blog-created-img"></amp-img><Date dateString={data.date} />
-              {data.updated && <><div className="blog-index-date-margin" /><amp-img src="/blog/refresh-cw.svg" fallback="" width="16" height="16" layout="intrinsic" alt="blog-created-img"></amp-img><Date dateString={data.updated} /></>}
+              <amp-img
+                src="/blog/calendar.svg"
+                fallback=""
+                width="16"
+                height="16"
+                layout="intrinsic"
+                alt="blog-created-img"
+              ></amp-img>
+              <Date dateString={data.date} />
+              {data.updated && (
+                <>
+                  <div className="blog-index-date-margin" />
+                  <amp-img
+                    src="/blog/refresh-cw.svg"
+                    fallback=""
+                    width="16"
+                    height="16"
+                    layout="intrinsic"
+                    alt="blog-created-img"
+                  ></amp-img>
+                  <Date dateString={data.updated} />
+                </>
+              )}
             </div>
             <p className="blog-index-spoiler">{data.spoiler}</p>
           </div>
@@ -115,7 +136,7 @@ export default function Blog({ allPostsData }: Props) {
             width: 60px;
           }
 
-          amp-img {
+          .blog-index-image-wrapper amp-img {
             height: 35px;
             width: 55px;
           }
@@ -123,7 +144,7 @@ export default function Blog({ allPostsData }: Props) {
           .blog-index-date-img {
             width: 140px;
             flex-wrap: wrap;
-            align-items: flex-start
+            align-items: flex-start;
           }
 
           .blog-index-date-img amp-img {

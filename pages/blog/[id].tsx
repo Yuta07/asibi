@@ -23,7 +23,7 @@ type Props = {
     data: {
       title: string;
       date: string;
-      updated?:string;
+      updated?: string;
       spoiler: string;
       quickword: string;
       image: string;
@@ -124,8 +124,8 @@ export default function Post({ postData }: Props) {
       handle: 'Yuta07',
       site: '@yutazon7',
       cardType: 'summary',
-    }
-  }
+    },
+  };
 
   return (
     <>
@@ -145,8 +145,29 @@ export default function Post({ postData }: Props) {
           <header className="blog-header">
             <h1 className="blog-header-title">{postData.data.title}</h1>
             <div className="blog-header-date">
-              <amp-img src="/blog/calendar.svg" fallback="" width="16" height="16" layout="intrinsic" alt="blog-created-img"></amp-img><Date dateString={postData.data.date} />
-              {postData.data.updated && <><div className="blog-header-date-margin" /><amp-img src="/blog/refresh-cw.svg" fallback="" width="16" height="16" layout="intrinsic" alt="blog-created-img"></amp-img><Date dateString={postData.data.updated} /></>}
+              <amp-img
+                src="/blog/calendar.svg"
+                fallback=""
+                width="16"
+                height="16"
+                layout="intrinsic"
+                alt="blog-created-img"
+              ></amp-img>
+              <Date dateString={postData.data.date} />
+              {postData.data.updated && (
+                <>
+                  <div className="blog-header-date-margin" />
+                  <amp-img
+                    src="/blog/refresh-cw.svg"
+                    fallback=""
+                    width="16"
+                    height="16"
+                    layout="intrinsic"
+                    alt="blog-created-img"
+                  ></amp-img>
+                  <Date dateString={postData.data.updated} />
+                </>
+              )}
             </div>
             {postData.data.quickword && <p className="blog-header-quick-word">{postData.data.quickword}</p>}
           </header>
