@@ -43,7 +43,7 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     color: #696969;
-    text-decoration:none;
+    text-decoration: none;
   }
 
   small {

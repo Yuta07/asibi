@@ -70,7 +70,7 @@ React を使用して Amplify を使用する時に[Amplify の React チュー�
 
 ## Auth API を使用する
 
-今回は `AWS Amplify API` の中でも、よく使用され流ことが想定される API を説明していきます。
+今回は `AWS Amplify API` の中でも、よく使用される API に関して説明していきます。
 
 `Auth` をインポートすることで各 API の使用が可能となります。
 
