@@ -1,0 +1,14 @@
+// breakpoint
+// inspired by tailwind.css. ref: https://tailwindcss.com/docs/breakpoints
+// ex) @include max-screen($breakpoint-sm) {} or @include min-screen($breakpoint-sm) {}
+
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+@mixin max-screen($break-point) {
+	@media screen and (max-width: $break-point) {
+		@content;
+	}
+}

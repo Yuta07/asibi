@@ -1,0 +1,57 @@
+@import './mixins';
+@import './variables';
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	color: var(--color-primary);
+	background: var(--color-secondary);
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+		Helvetica Neue, sans-serif;
+	font-size: var(--font-size-m);
+	font-weight: var(--font-weight-normal);
+	line-height: 1.5;
+	letter-spacing: 0.5px;
+	word-wrap: break-word;
+	font-kerning: normal;
+	counter-reset: number 0;
+}
+
+h1 {
+	font-size: var(--font-size-xl);
+}
+
+h2,
+h3 {
+	font-size: var(--font-size-l);
+}
+
+h3,
+h4,
+h5,
+p {
+	font-size: var(--font-size-m);
+}
+
+span,
+a {
+	font-size: var(--font-size-s);
+}
+
+a {
+	color: var(--color-gray);
+	text-decoration: none;
+}
+
+small {
+	font-size: 12px;
+}
+
+pre {
+	border-radius: 8px;
+}
