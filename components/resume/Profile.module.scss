@@ -1,0 +1,42 @@
+@import '/styles/mixins';
+
+.container {
+	margin-top: 32px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.photo {
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -6px;
+		left: -6px;
+		width: 172px;
+		height: 172px;
+		border-radius: 50%;
+		background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+	}
+}
+
+.avatar {
+	border-radius: 50%;
+	position: relative;
+}
+
+.profile {
+}
+
+.name {
+}
+
+.birth {
+}
+
+.role {
+}
+
+.links {
+}

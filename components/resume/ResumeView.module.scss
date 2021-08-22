@@ -1,0 +1,18 @@
+@import '/styles/mixins';
+
+.container {
+	width: 100%;
+}
+
+.curriculum {
+	text-align: center;
+}
+
+.hero {
+	font-size: 32px;
+}
+
+.txt {
+	margin-top: 8px;
+	color: var(--color-gray);
+}
