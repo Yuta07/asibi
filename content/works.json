@@ -1,5 +1,6 @@
 {
-  "data": [{
+  "data": [
+    {
       "image": ["/works/nino.svg"],
       "title": "nino-ui",
       "description": "React Component Catalog.",

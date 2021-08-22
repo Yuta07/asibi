@@ -89,11 +89,11 @@ Next.js でのブログの作成に関しては[公式サイト](https://nextjs.
 ## Code
 
 ```typescript
-import React from 'react';
+import React from 'react'
 
-const CoolComponent = () => <div>I'm a cool component!!</div>;
+const CoolComponent = () => <div>I'm a cool component!!</div>
 
-export default CoolComponent;
+export default CoolComponent
 ```
 
 ## Image

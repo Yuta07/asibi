@@ -5,8 +5,8 @@ os:
   - osx
 
 node_js:
-  - "node"
-  - "10"
+  - 'node'
+  - '10'
 
 script:
   - yarn

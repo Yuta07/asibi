@@ -1,43 +1,43 @@
 type Props = {
-  data: {
-    role: string;
-    overview: string;
-    language: string;
-    devPeriod: string;
-    company: string;
-    image: string;
-  };
-};
+	data: {
+		role: string
+		overview: string
+		language: string
+		devPeriod: string
+		company: string
+		image: string
+	}
+}
 
 export const Experience = ({ data }: Props) => {
-  const { role, overview, language, devPeriod, company, image } = data;
+	const { role, overview, language, devPeriod, company, image } = data
 
-  const overviewArray = overview.split('・');
-  const languageArray = language.split('・');
+	const overviewArray = overview.split('・')
+	const languageArray = language.split('・')
 
-  return (
-    <div className="experience-card">
-      <amp-img src={image} fallback="" width="70" height="70" layout="intrinsic" alt={`${language}-image`}></amp-img>
-      <small className="experience-role">{role}</small>
-      {overviewArray.map((overview) => {
-        return (
-          <h3 key={overview} className="experience-overview">
-            {overview}
-          </h3>
-        );
-      })}
-      <div className="experience-language-field">
-        {languageArray.map((language) => {
-          return (
-            <span key={language} className="experience-language">
-              {language}
-            </span>
-          );
-        })}
-      </div>
-      <p className="experience-period">{devPeriod}</p>
-      <span className="experience-company">{company}</span>
-      <style jsx>{`
+	return (
+		<div className="experience-card">
+			<amp-img src={image} fallback="" width="70" height="70" layout="intrinsic" alt={`${language}-image`}></amp-img>
+			<small className="experience-role">{role}</small>
+			{overviewArray.map((overview) => {
+				return (
+					<h3 key={overview} className="experience-overview">
+						{overview}
+					</h3>
+				)
+			})}
+			<div className="experience-language-field">
+				{languageArray.map((language) => {
+					return (
+						<span key={language} className="experience-language">
+							{language}
+						</span>
+					)
+				})}
+			</div>
+			<p className="experience-period">{devPeriod}</p>
+			<span className="experience-company">{company}</span>
+			<style jsx>{`
         .experience-card {
           position: relative;
           width: calc(50% - 10px);
@@ -127,6 +127,6 @@ export const Experience = ({ data }: Props) => {
           }
         }
       `}</style>
-    </div>
-  );
-};
+		</div>
+	)
+}

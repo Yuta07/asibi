@@ -75,7 +75,7 @@ React を使用して Amplify を使用する時に[Amplify の React チュー�
 `Auth` をインポートすることで各 API の使用が可能となります。
 
 ```typescript
-import { Auth } from 'aws-amplify';
+import { Auth } from 'aws-amplify'
 ```
 
 あとは `Auth.signUp` のような形で利用していくだけです。
@@ -88,10 +88,10 @@ import { Auth } from 'aws-amplify';
     password: password,
     attributes: {
       email, // optional
-      phone_number, // optional - E.164 number convention
+      phone_number // optional - E.164 number convention
       // other custom attributes
-    },
-  });
+    }
+  })
   ```
 - signIn
 
@@ -100,8 +100,8 @@ import { Auth } from 'aws-amplify';
   ```typescript
   const response: CognitoUser = await Auth.signIn({
     username: email,
-    password: password,
-  });
+    password: password
+  })
   ```
 
 - confirmSignUp
@@ -109,7 +109,7 @@ import { Auth } from 'aws-amplify';
   - サインアップ後の検証コードでの認証をすることができます。認証後、アカウントのステータスは `COMFIRMED` になります。成功の場合、レスポンスは `SUCCESS` が返ってきます。
 
   ```typescript
-  const response = await Auth.confirmSignUp(email, verificationCode);
+  const response = await Auth.confirmSignUp(email, verificationCode)
   ```
 
 - forgotPassword
@@ -117,7 +117,7 @@ import { Auth } from 'aws-amplify';
   - パスワードをリセットする際に、登録したメールアドレス宛に認証コードとともに再設定用メールを送信します。
 
   ```typescript
-  const response = await Auth.forgotPassword(email);
+  const response = await Auth.forgotPassword(email)
   ```
 
 - forgotPasswordSubmit
@@ -125,7 +125,7 @@ import { Auth } from 'aws-amplify';
   - メールアドレス・認証コードを使用して、パスワードの再設定が可能です。
 
   ```typescript
-  await Auth.forgotPasswordSubmit(email, verificationCode, newPassword);
+  await Auth.forgotPasswordSubmit(email, verificationCode, newPassword)
   ```
 
 - currentSession
@@ -133,7 +133,7 @@ import { Auth } from 'aws-amplify';
   - 現在ログイン中のユーザーセッションを取得できます。Redux などを使用している場合、ブラウザ更新時に auth 情報がなくなってしまいますが、この API を使用すれば再取得が可能です。
 
   ```typescript
-  const response = await Auth.currentSession();
+  const response = await Auth.currentSession()
   ```
 
 - currentAuthenticatedUser
@@ -141,16 +141,16 @@ import { Auth } from 'aws-amplify';
   - 現在ログイン中のユーザー情報を取得できます。ログイン状態でパスワード変更をする際などに使用できます。
 
   ```typescript
-  Auth.currentAuthenticatedUser();
+  Auth.currentAuthenticatedUser()
 
   // ex) change password
   await Auth.currentAuthenticatedUser()
     .then((user) => {
-      const result = await Auth.changePassword(user, password.old, password.new);
+      const result = await Auth.changePassword(user, password.old, password.new)
     })
     .catch((e) => {
-      console.log(e);
-    });
+      console.log(e)
+    })
   ```
 
 - updateUserAttributes
@@ -158,16 +158,16 @@ import { Auth } from 'aws-amplify';
   - ユーザー情報の変更が可能です。
 
   ```typescript
-  Auth.currentAuthenticatedUser();
+  Auth.currentAuthenticatedUser()
 
   // ex) update user email
   await Auth.currentAuthenticatedUser()
     .then(async (user) => {
-      const result = await Auth.updateUserAttributes(user, { email: newEmail });
+      const result = await Auth.updateUserAttributes(user, { email: newEmail })
     })
     .catch((e) => {
-      console.log(e);
-    });
+      console.log(e)
+    })
   ```
 
 - changePassword
@@ -177,11 +177,11 @@ import { Auth } from 'aws-amplify';
   ```typescript
   await Auth.currentAuthenticatedUser()
     .then((user) => {
-      return Auth.changePassword(user, password.old, password.new);
+      return Auth.changePassword(user, password.old, password.new)
     })
     .catch((e) => {
-      console.log(e);
-    });
+      console.log(e)
+    })
   ```
 
 - signOut
@@ -189,7 +189,7 @@ import { Auth } from 'aws-amplify';
   - サインアウトが可能です。
 
   ```typescript
-  Auth.signOut();
+  Auth.signOut()
   ```
 
 #### メール内容のカスタマイズ

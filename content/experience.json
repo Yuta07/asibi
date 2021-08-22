@@ -1,5 +1,6 @@
 {
-  "data": [{
+  "data": [
+    {
       "role": "FRONTEND ENGINEER",
       "overview": "飲食店のデータ分析プラットフォーム・デリバリー事業の売上改善サービス開発",
       "language": "React / Redux / TypeScript・Next.js / TypeScript / AppSync / Cypress",

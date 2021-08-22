@@ -1,16 +1,16 @@
-import { FC } from 'react';
+import { FC } from 'react'
 
 type Props = {
-  ordered: boolean;
-  tight: boolean;
-  index: number;
-};
+	ordered: boolean
+	tight: boolean
+	index: number
+}
 
 export const ListItem: FC<Props> = ({ ordered, tight, children }) => {
-  return (
-    <li>
-      {children}
-      <style jsx>{`
+	return (
+		<li>
+			{children}
+			<style jsx>{`
         li {
           padding: 5px 0;
           position: relative;
@@ -20,9 +20,9 @@ export const ListItem: FC<Props> = ({ ordered, tight, children }) => {
 
         li:before {
           ${
-            ordered &&
-            tight &&
-            `
+						ordered &&
+						tight &&
+						`
             display: inline-block;
             position: absolute;
             left: 0px;
@@ -39,8 +39,8 @@ export const ListItem: FC<Props> = ({ ordered, tight, children }) => {
             border-radius: 50%;
             background: #3fb0ac;
             `
-          }
+					}
       `}</style>
-    </li>
-  );
-};
+		</li>
+	)
+}

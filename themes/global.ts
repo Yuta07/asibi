@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -53,4 +53,4 @@ export const GlobalStyle = createGlobalStyle`
   pre {
     border-radius: 8px;
   }
-`;
+`

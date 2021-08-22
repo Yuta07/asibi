@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import { FC } from 'react'
 
 export const Strong: FC = ({ children }) => {
-  return (
-    <strong>
-      {children}
-      <style jsx>{``}</style>
-    </strong>
-  );
-};
+	return (
+		<strong>
+			{children}
+			<style jsx>{``}</style>
+		</strong>
+	)
+}
