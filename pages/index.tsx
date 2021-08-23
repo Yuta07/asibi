@@ -1,7 +1,11 @@
-export default function Resume() {
+import { NextPage } from 'next'
+
+const Home: NextPage = () => {
 	return (
-		<div className="resume">
+		<div>
 			<p>test</p>
 		</div>
 	)
 }
+
+export default Home
