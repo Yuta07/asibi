@@ -1,0 +1,95 @@
+@import '/styles/mixins';
+
+.container {
+	margin-top: 60px;
+}
+
+.title {
+	font-size: var(--font-size-xxl);
+}
+
+.experiences {
+	width: 100%;
+	margin-top: 100px;
+	position: relative;
+}
+
+.circle {
+	position: absolute;
+	left: 20px;
+	top: -40px;
+	background: #c2e9fb;
+	width: 4px;
+	height: calc(100% + 100px);
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -20px;
+		left: -8px;
+		z-index: 10;
+		width: 20px;
+		height: 20px;
+		background: var(--color-main);
+		border-radius: 50%;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: calc(100% - 1px);
+		left: -5px;
+		z-index: 5;
+		width: 15px;
+		height: 15px;
+		background: #c2e9fb;
+		border-radius: 50%;
+	}
+}
+
+.content {
+	margin-left: 80px;
+	padding: 20px 24px;
+	border: 2px solid #a1c4fd;
+	border-radius: var(--line-radius);
+	background: var(--color-secondary);
+
+	&:not(:first-child) {
+		margin-top: 40px;
+	}
+}
+
+.period {
+	color: var(--color-gray);
+}
+
+.company {
+	margin-top: 8px;
+	font-size: var(--font-size-xl);
+}
+
+.overview {
+	margin: 12px 0;
+	color: var(--color-gray);
+}
+
+.roles {
+	list-style: none;
+}
+
+.list {
+	margin-top: 4px;
+	padding-left: 16px;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 10px;
+		left: 0;
+		width: 5px;
+		height: 5px;
+		background: var(--color-main);
+		border-radius: 50%;
+	}
+}

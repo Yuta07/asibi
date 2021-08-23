@@ -1,0 +1,17 @@
+@import '/styles/mixins';
+
+.container {
+	margin-top: 60px;
+}
+
+.title {
+	font-size: var(--font-size-xxl);
+}
+
+.about {
+	margin-top: 16px;
+}
+
+.txt {
+	margin-top: 8px;
+}

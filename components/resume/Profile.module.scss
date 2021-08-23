@@ -1,8 +1,9 @@
 @import '/styles/mixins';
 
 .container {
-	margin-top: 32px;
+	margin-top: 40px;
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
 }
 
@@ -23,20 +24,53 @@
 
 .avatar {
 	border-radius: 50%;
-	position: relative;
-}
-
-.profile {
 }
 
 .name {
 }
 
 .birth {
+	margin-top: 8px;
+	letter-spacing: 0;
 }
 
 .role {
+	margin-top: 8px;
+	color: var(--color-gray);
 }
 
 .links {
+	margin-top: 8px;
+}
+
+.anchor {
+	padding: 2px 4px;
+	display: inline-flex;
+	align-items: center;
+}
+
+.github {
+	@extend .anchor;
+
+	background: #333333;
+}
+
+.twitter {
+	@extend .anchor;
+
+	margin-left: 8px;
+	background: #1da1f2;
+}
+
+.gmail {
+	@extend .anchor;
+
+	margin-left: 8px;
+	background: var(--color-gray);
+}
+
+.linkTxt {
+	padding-left: 4px;
+	font-size: var(--font-size-xs);
+	color: var(--color-secondary);
 }

@@ -1,23 +1,7 @@
-import { Personal } from '../components/atoms/Personal'
-import { SkillList } from '../components/organisms/SkillList'
-import { ExperienceList } from '../components/organisms/ExperienceList'
-import { Works } from '../components/organisms/Works'
-
-export const config = { amp: true }
-
 export default function Resume() {
 	return (
 		<div className="resume">
-			<Personal />
-			<SkillList />
-			<ExperienceList />
-			<Works />
-			<style jsx>{`
-				.resume {
-					display: flex;
-					flex-direction: column;
-				}
-			`}</style>
+			<p>test</p>
 		</div>
 	)
 }
