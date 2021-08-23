@@ -19,14 +19,14 @@
 	left: 20px;
 	top: -40px;
 	background: #c2e9fb;
-	width: 4px;
+	width: 2px;
 	height: calc(100% + 100px);
 
-	&:before {
+	&::before {
 		content: '';
 		position: absolute;
 		top: -20px;
-		left: -8px;
+		left: -9px;
 		z-index: 10;
 		width: 20px;
 		height: 20px;
@@ -38,7 +38,7 @@
 		content: '';
 		position: absolute;
 		top: calc(100% - 1px);
-		left: -5px;
+		left: -6px;
 		z-index: 5;
 		width: 15px;
 		height: 15px;
@@ -53,9 +53,20 @@
 	border: 2px solid #a1c4fd;
 	border-radius: var(--line-radius);
 	background: var(--color-secondary);
+	position: relative;
 
 	&:not(:first-child) {
 		margin-top: 40px;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 20px;
+		left: -60px;
+		width: 60px;
+		height: 2px;
+		background: var(--color-main);
 	}
 }
 
