@@ -1,0 +1,25 @@
+{
+  "title": "yutaka miyazaki",
+  "titleTemplate": "%s - yutaaaaa",
+  "description": "yutaka miyazaki's blog and resume",
+  "openGraph": {
+    "type": "website",
+    "url": "https://yutaaaaa.vercel.app/",
+    "site_name": "yutaaaaa.vercel.app",
+    "title": "%s | originally posted on yutaaaaa.vercel.app",
+    "description": "yutaka miyazaki's blog and resume",
+    "images": [
+      {
+        "url": "https://yutaaaaa.vercel.app/ogp.jpg",
+        "width": 800,
+        "height": 600,
+        "alt": "Og Image Alt"
+      }
+    ]
+  },
+  "twitter": {
+    "handle": "@yutaaaaa___",
+    "site": "yutaaaaa.vercel.app",
+    "cardType": "summary"
+  }
+}

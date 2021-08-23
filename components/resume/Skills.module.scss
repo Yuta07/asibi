@@ -1,0 +1,26 @@
+@import '/styles/mixins';
+
+.container {
+	margin-top: 60px;
+}
+
+.title {
+	font-size: var(--font-size-xxl);
+}
+
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.skill {
+	width: 20%;
+	padding-top: 20px;
+	text-align: center;
+}
+
+.language {
+	font-size: var(--font-size-s);
+	font-weight: var(--font-weight-bold);
+	letter-spacing: 0;
+}

@@ -36,8 +36,8 @@ yarn add -D @types/chart.js
 今回はツールチップがメインなので、データの用意は飛ばします。
 
 ```tsx
-import React from 'react';
-import { Line } from 'react-chartjs-2';
+import React from 'react'
+import { Line } from 'react-chartjs-2'
 
 export const Chart = () => {
   // data => https://www.chartjs.org/docs/latest/charts/line.html#data-structure
@@ -48,8 +48,8 @@ export const Chart = () => {
     <>
       <Line data={} options={} plugins={} />
     </>
-  );
-};
+  )
+}
 ```
 
 ツールチップを表示するためには、オプションに記述する必要があります。
@@ -57,9 +57,9 @@ export const Chart = () => {
 [Chart.js - docs/tooltip/Label Callback](https://www.chartjs.org/docs/latest/configuration/tooltip.html#label-callback)
 
 ```tsx
-import React from 'react';
-import { ChartOptions } from 'chart.js';
-import { Line } from 'react-chartjs-2';
+import React from 'react'
+import { ChartOptions } from 'chart.js'
+import { Line } from 'react-chartjs-2'
 
 export const Chart = () => {
   const options: ChartOptions = {
@@ -75,33 +75,33 @@ export const Chart = () => {
       */
       callbacks: {
         label: function (tooltipItem, data) {
-          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+          var label = data.datasets[tooltipItem.datasetIndex].label || ''
 
           if (label) {
-            label += ': ';
+            label += ': '
           }
-          label += Math.round(tooltipItem.yLabel * 100) / 100;
-          return label;
+          label += Math.round(tooltipItem.yLabel * 100) / 100
+          return label
         },
         labelColor: function (tooltipItem, chart) {
           return {
             borderColor: 'rgb(255, 0, 0)',
-            backgroundColor: 'rgb(255, 0, 0)',
-          };
+            backgroundColor: 'rgb(255, 0, 0)'
+          }
         },
         labelTextColor: function (tooltipItem, chart) {
-          return '#543453';
-        },
-      },
-    },
-  };
+          return '#543453'
+        }
+      }
+    }
+  }
 
   return (
     <>
       <Line data={} options={options} plugins={} />
     </>
-  );
-};
+  )
+}
 ```
 
 基本的なツールチップの表示であれば、これだけで事足りるかと思います。
@@ -120,80 +120,80 @@ const options: ChartOptions = {
     enabled: false,
     custom: function (tooltipModel: any) {
       // ルールチップのidを取得する。
-      let tooltipEl = document.getElementById('chartjs-tooltip');
+      let tooltipEl = document.getElementById('chartjs-tooltip')
 
       // idが見つからなかったらエレメントを作成してbody直下に置く。
       if (!tooltipEl) {
-        tooltipEl = document.createElement('div');
-        tooltipEl.id = 'chartjs-tooltip';
-        tooltipEl.innerHTML = '<table></table>';
-        document.body.appendChild(tooltipEl);
+        tooltipEl = document.createElement('div')
+        tooltipEl.id = 'chartjs-tooltip'
+        tooltipEl.innerHTML = '<table></table>'
+        document.body.appendChild(tooltipEl)
       }
 
       // ツールチップがないなら隠す。
       if (tooltipModel.opacity === 0) {
-        tooltipEl.style.opacity = '0';
-        return;
+        tooltipEl.style.opacity = '0'
+        return
       }
 
       // Set caret Position
-      tooltipEl.classList.remove('above', 'below', 'no-transform');
+      tooltipEl.classList.remove('above', 'below', 'no-transform')
       if (tooltipModel.yAlign) {
-        tooltipEl.classList.add(tooltipModel.yAlign);
+        tooltipEl.classList.add(tooltipModel.yAlign)
       } else {
-        tooltipEl.classList.add('no-transform');
+        tooltipEl.classList.add('no-transform')
       }
 
       // ツールチップに表示するデータを取得
       function getBody(bodyItem: any) {
-        return bodyItem.lines;
+        return bodyItem.lines
       }
 
       // ツールチップ内のテキストをセットする。
       if (tooltipModel.body) {
-        const titleLines = tooltipModel.title || [];
-        const bodyLines = tooltipModel.body.map(getBody);
+        const titleLines = tooltipModel.title || []
+        const bodyLines = tooltipModel.body.map(getBody)
 
-        let theadStyle = `font-size: 12px; color: #000000;`;
-        let innerHtml = '<thead style="' + theadStyle + '">';
+        let theadStyle = `font-size: 12px; color: #000000;`
+        let innerHtml = '<thead style="' + theadStyle + '">'
 
         titleLines.forEach(function (title: string) {
-          innerHtml += '<tr><th>' + title + '</th></tr>';
-        });
-        innerHtml += '</thead><tbody>';
+          innerHtml += '<tr><th>' + title + '</th></tr>'
+        })
+        innerHtml += '</thead><tbody>'
 
         bodyLines.forEach(function (body: any) {
-          const spanStyle = `background: #27ae60; width: 8px; height: 8px; position: absolute; top: 4px; left: 0;`;
-          const span = '<span style="' + spanStyle + '"></span>';
-          const tDataStyled = 'padding-left: 15px; position: relative;';
-          innerHtml += '<tr><td style="' + tDataStyled + '">' + span + body + '</td></tr>';
-        });
-        innerHtml += '</tbody>';
+          const spanStyle = `background: #27ae60; width: 8px; height: 8px; position: absolute; top: 4px; left: 0;`
+          const span = '<span style="' + spanStyle + '"></span>'
+          const tDataStyled = 'padding-left: 15px; position: relative;'
+          innerHtml += '<tr><td style="' + tDataStyled + '">' + span + body + '</td></tr>'
+        })
+        innerHtml += '</tbody>'
 
-        let tableRoot = tooltipEl.querySelector('table');
+        let tableRoot = tooltipEl.querySelector('table')
 
         // 作成したツールチップの内容をテーブルに挿入する。
-        tableRoot.innerHTML = innerHtml;
+        tableRoot.innerHTML = innerHtml
 
         // chartとして表示されているcanvas要素のclassを取得する
-        const chartMonitor = document.getElementsByClassName('chartjs-render-monitor');
+        const chartMonitor = document.getElementsByClassName('chartjs-render-monitor')
 
-        tooltipEl.style.opacity = '1';
-        tooltipEl.style.position = 'absolute';
+        tooltipEl.style.opacity = '1'
+        tooltipEl.style.position = 'absolute'
         tooltipEl.style.left =
-          chartMonitor[0].getBoundingClientRect().left + window.pageXOffset + tooltipModel.caretX + 'px';
+          chartMonitor[0].getBoundingClientRect().left + window.pageXOffset + tooltipModel.caretX + 'px'
         tooltipEl.style.top =
-          chartMonitor[0].getBoundingClientRect().top + window.pageYOffset + tooltipModel.caretY + 'px';
-        tooltipEl.style.fontSize = '12px';
-        tooltipEl.style.color = '#616e81';
-        tooltipEl.style.background = '#ffffff';
-        tooltipEl.style.filter = 'drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.2))';
-        tooltipEl.style.padding = '10px 15px';
-        tooltipEl.style.pointerEvents = 'none';
+          chartMonitor[0].getBoundingClientRect().top + window.pageYOffset + tooltipModel.caretY + 'px'
+        tooltipEl.style.fontSize = '12px'
+        tooltipEl.style.color = '#616e81'
+        tooltipEl.style.background = '#ffffff'
+        tooltipEl.style.filter = 'drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.2))'
+        tooltipEl.style.padding = '10px 15px'
+        tooltipEl.style.pointerEvents = 'none'
       }
-    },
-  },
-};
+    }
+  }
+}
 ```
 
 基本的にはドキュメントに書いてある通りにすれば、ツールチップのカスタムは可能です。

@@ -40,9 +40,9 @@ lambda 関数を作成したあとはカスタムロジックを追加するこ�
 ```javascript
 exports.handler = (event, context, callback) => {
   // Send post authentication data to Cloudwatch logs
-  console.log('Authentication successful');
-  console.log('Trigger function =', event.triggerSource);
-  console.log('User pool = ', event.userPoolId);
+  console.log('Authentication successful')
+  console.log('Trigger function =', event.triggerSource)
+  console.log('User pool = ', event.userPoolId)
 
   /*
 	smsMessage - カスタム SMS メッセージ
@@ -52,37 +52,37 @@ exports.handler = (event, context, callback) => {
 
   // 新規登録後の認証コード送信
   if (event.triggerSource === 'CustomMessage_SignUp') {
-    event.response.smsMessage = '認証コード' + event.request.codeParameter;
-    event.response.emailSubject = 'メールタイトル';
-    event.response.emailMessage = '認証コード ' + event.request.codeParameter;
+    event.response.smsMessage = '認証コード' + event.request.codeParameter
+    event.response.emailSubject = 'メールタイトル'
+    event.response.emailMessage = '認証コード ' + event.request.codeParameter
   }
 
   // 認証コード再送
   if (event.triggerSource === 'CustomMessage_ResendCode') {
-    event.response.smsMessage = '認証コード：' + event.request.codeParameter + '<br />';
-    event.response.emailSubject = 'メールタイトル';
-    event.response.emailMessage = '認証コード：' + event.request.codeParameter + '<br />';
+    event.response.smsMessage = '認証コード：' + event.request.codeParameter + '<br />'
+    event.response.emailSubject = 'メールタイトル'
+    event.response.emailMessage = '認証コード：' + event.request.codeParameter + '<br />'
   }
 
   // パスワードを忘れてしまった場合
   if (event.triggerSource === 'CustomMessage_ForgotPassword') {
-    event.response.smsMessage = '認証コード：' + event.request.codeParameter;
-    event.response.emailSubject = 'メールタイトル';
-    event.response.emailMessage = '認証コード： ' + event.request.codeParameter;
+    event.response.smsMessage = '認証コード：' + event.request.codeParameter
+    event.response.emailSubject = 'メールタイトル'
+    event.response.emailMessage = '認証コード： ' + event.request.codeParameter
   }
 
   //管理者によるユーザー招待
   if (event.triggerSource === 'CustomMessage_AdminCreateUser') {
-    event.response.smsMessage = 'ユーザー名' + event.request.usernameParameter + '<br />';
-    '仮パスワード ' + event.request.codeParameter + '<br />';
-    event.response.emailSubject = 'メールタイトル';
+    event.response.smsMessage = 'ユーザー名' + event.request.usernameParameter + '<br />'
+    '仮パスワード ' + event.request.codeParameter + '<br />'
+    event.response.emailSubject = 'メールタイトル'
     event.response.emailMessage =
-      'ユーザー名' + event.request.usernameParameter + '<br />' + '仮パスワード ' + event.request.codeParameter;
+      'ユーザー名' + event.request.usernameParameter + '<br />' + '仮パスワード ' + event.request.codeParameter
   }
 
   // Return to Amazon Cognito
-  callback(null, event);
-};
+  callback(null, event)
+}
 ```
 
 メッセージのカスタマイズを作成した後は、Cognito のコンソール上の「トリガー」にあるカスタムメッセージに作成した lambda 関数を割り当てることを忘れないように行う必要があります。

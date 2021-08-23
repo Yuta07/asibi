@@ -8,7 +8,7 @@ image: '/blog/next-amplify-hosting/slution-laugh.svg'
 
 ## 背景
 
-Amplify で Next.js の開発をしていて、 `amplify add hosting` でデプロイまで上手くいっているにも関わらず、存在しない URL に遷移した場合に期待しているカスタム 404 ページでなく、403 `Access Denied` に飛んだしまう事象が生じていました。
+Amplify で Next.js の開発をしていて、 `amplify add hosting` でデプロイまで上手くいっているにも関わらず、存在しない URL に遷移した場合に期待しているカスタム 404 ページでなく、403 `Access Denied` に飛んでしまう事象が生じていました。
 
 また `post/[id]` のような動的ルーティングのページでブラウザを更新すると、同様の問題が生じていました。
 
