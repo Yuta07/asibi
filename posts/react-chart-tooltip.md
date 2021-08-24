@@ -1,9 +1,8 @@
 ---
 title: 'React + Chart.jsでカスタムツールチップ'
-spoiler: 'Chart.jsのツールチップをカスタマイズする。'
-quickword: 'ReactでChart.jsのツールチップをカスタマイズする💬'
 date: '2020-10-30'
 image: '/blog/react-chart-tooltip/tooltip.svg'
+tag: 'dev'
 ---
 
 ## はじめに

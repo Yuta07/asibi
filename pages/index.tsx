@@ -1,11 +1,66 @@
-import { NextPage } from 'next'
+import { GetStaticProps, NextPage } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+import { getSortedPostsData } from '@lib/posts'
+import styles from '@styles/Home.module.scss'
 
-const Home: NextPage = () => {
+type Props = {
+	allPostsData: {
+		excerpt: string
+		date: string
+		updated?: string
+		title: string
+		image: string
+		id: string
+		tag: string
+	}[]
+}
+
+const Home: NextPage<Props> = ({ allPostsData }) => {
 	return (
-		<div>
-			<p>test</p>
+		<div className={styles.container}>
+			{allPostsData.map((data, i) => {
+				return (
+					<Link key={data.id} href={`/blogs/${data.id}`}>
+						<a className={i === 0 ? styles.first : styles.blog}>
+							<div className={styles[data.tag]}>
+								<Image quality={85} src={data.image} alt={data.title} width={80} height={80} />
+							</div>
+							<div className={styles.description}>
+								<div className={styles.dateBox}>
+									<div className={styles.createdAt}>
+										<Image quality={85} src="/images/created.svg" alt="created_icon" width={16} height={16} />
+										<small className={styles.date}>{data.date}</small>
+									</div>
+									{data.updated && (
+										<div className={styles.updatedAt}>
+											<Image quality={85} src="/images/updated.svg" alt="updated_icon" width={16} height={16} />
+											<small className={styles.date}>{data.updated}</small>
+										</div>
+									)}
+								</div>
+								<h2 className={styles.title}>{data.title}</h2>
+								<p className={styles.excerpt}>
+									{data.excerpt.substr(0, 80)}
+									{data.excerpt.length > 80 && '...'}
+								</p>
+							</div>
+						</a>
+					</Link>
+				)
+			})}
 		</div>
 	)
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+	const allPostsData = getSortedPostsData()
+
+	return {
+		props: {
+			allPostsData,
+		},
+	}
 }
 
 export default Home
