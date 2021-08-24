@@ -61,6 +61,6 @@ export async function getPostData(id: string) {
 		id,
 		content,
 		data,
-		...(data.data as { date: string; title: string; image: string }),
+		...(data.data as { date: string; quickword: string; title: string; image: string }),
 	}
 }

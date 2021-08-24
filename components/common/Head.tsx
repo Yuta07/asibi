@@ -10,8 +10,8 @@ export const Head = () => {
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-				<meta name="twitter:url" content="https://yutazon.me/ogp.jpg" />
-				<meta name="twitter:image" content="https://yutazon.me/ogp.jpg" />
+				<meta name="twitter:url" content="https://yutaaaaa.vercel.app/ogp.jpg" />
+				<meta name="twitter:image" content="https://yutaaaaa.vercel.app/ogp.jpg" />
 				<link rel="shortcut icon" href="/favicon.ico" />
 			</NextHead>
 		</>

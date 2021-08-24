@@ -1,5 +1,6 @@
 ---
 title: 'ブログ内マークダウンの表現'
+quickword: 'マークダウンで使用しているスタイルを忘れないようにまとめておく。'
 date: '2020-09-24'
 updated: '2021-08-24'
 image: '/blog/markdown-express/markdown-express.svg'

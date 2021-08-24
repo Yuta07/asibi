@@ -1,6 +1,6 @@
 {
-  "title": "yutaka miyazaki",
   "titleTemplate": "%s - yutaaaaa",
+  "defaultTitle": "yutaaaaa",
   "description": "yutaka miyazaki's blog and resume",
   "openGraph": {
     "type": "website",
