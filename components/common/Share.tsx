@@ -10,8 +10,6 @@ export const Share = ({ slug, title }: Props) => {
 	const pageUrl = `https://yutaaaaa.vercel.app/blogs/${slug}`
 	const encodeTitle = encodeURIComponent(title)
 
-	console.log(encodeTitle)
-
 	return (
 		<div className={styles.container}>
 			<h3 className={styles.share}>SHARE</h3>
