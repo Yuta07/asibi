@@ -10,7 +10,7 @@ const EXPERIENCES = [
 			'Figmaでのデザインワイヤーフレームの作成',
 			'Cypressでのe2eテスト導入',
 			'Mixpanelのイベント設定、運用',
-			'Chart.jsでの売上データのグラフ化',
+			'Chart.jsでのCVデータのグラフ化',
 		],
 	},
 	{
@@ -21,6 +21,7 @@ const EXPERIENCES = [
 			'導入企業の運用にあったパラメータ設定',
 			'Classic ASPでのカスタマイズ開発、機能開発',
 			'SQL Serverでのパラメータ設定',
+			'GASを用いた社内評価システムの構築',
 		],
 	},
 	{
