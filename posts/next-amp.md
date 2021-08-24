@@ -1,5 +1,6 @@
 ---
 title: 'Next.jsでAMP対応'
+quickword: 'Next.jsでAMP対応する際の留意点✏️'
 date: '2020-09-30'
 updated: '2020-10-28'
 image: '/blog/next-amp/amp-imitation.svg'

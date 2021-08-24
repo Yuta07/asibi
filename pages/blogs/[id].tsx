@@ -1,6 +1,7 @@
 import { ReactNode, VFC } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Image from 'next/image'
+import { BlogJsonLd, NextSeo } from 'next-seo'
 import ReactMarkdown from 'react-markdown/with-html'
 import { Share } from '@components/common/Share'
 import { BlockCode } from '@components/markdown/BlockCode'
@@ -22,6 +23,7 @@ type Props = {
 	readonly postData: {
 		data: {
 			title: string
+			quickword: string
 			date: string
 			updated?: string
 			image: string
@@ -106,6 +108,24 @@ const Blog: NextPage<Props> = ({ postData }) => {
 
 	return (
 		<div className={styles.container}>
+			<NextSeo
+				title={postData.data.title}
+				description={postData.data.quickword}
+				openGraph={{
+					title: postData.data.title,
+					description: postData.data.quickword,
+					url: `https://yutaaaaa.vercel.app/blogs/${postData.id}`,
+				}}
+			/>
+			<BlogJsonLd
+				url={`https://yutaaaaa.vercel.app/blogs/${postData.id}`}
+				title={postData.data.title}
+				images={['https://yutaaaaa.vercel.app/ogp.jpg']}
+				datePublished={`${postData.data.date}2015-02-05T09:00:00+08:00`}
+				dateModified={`${postData.data.updated}2015-02-05T09:00:00+08:00`}
+				authorName="yutaaaaa"
+				description={postData.data.quickword}
+			/>
 			<div className={styles.dateBox}>
 				<div className={styles.createdAt}>
 					<Image quality={85} src="/images/created.svg" alt="created_icon" width={16} height={16} />

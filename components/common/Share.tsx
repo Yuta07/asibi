@@ -8,12 +8,15 @@ type Props = {
 
 export const Share = ({ slug, title }: Props) => {
 	const pageUrl = `https://yutaaaaa.vercel.app/blogs/${slug}`
+	const encodeTitle = encodeURIComponent(title)
+
+	console.log(encodeTitle)
 
 	return (
 		<div className={styles.container}>
 			<h3 className={styles.share}>SHARE</h3>
 			<a
-				href={`https://twitter.com/intent/tweet?url=${pageUrl}&text=${`${title} | yutaaaaa`}&via=/yutaaaaa___`}
+				href={`https://twitter.com/share?url=${pageUrl}&text=${encodeTitle}&via=yutaaaaa___`}
 				rel="nofollow"
 				className={styles.anchor}
 			>

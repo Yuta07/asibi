@@ -1,5 +1,6 @@
 ---
 title: 'ニューモーフィズムとは'
+quickword: '2020年流行りのニューモーフィズムとはなんぞや🤔'
 date: '2020-09-27'
 image: '/blog/neumorphism/neumorphism.svg'
 tag: 'design'

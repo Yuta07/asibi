@@ -1,5 +1,6 @@
 ---
 title: 'lambdaトリガーでCognitoカスタムメッセージ'
+quickword: 'カスタムメッセージ Lambda トリガーを利用する📮'
 date: '2020-10-29'
 updated: '2021-08-24'
 image: '/blog/cognito-custom-message/message_customize.svg'

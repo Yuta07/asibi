@@ -1,5 +1,6 @@
 ---
 title: 'React + Amplify Auth(Cognito)での認証'
+quickword: 'Auth APIで認証周りを整える🧘‍♂️'
 date: '2020-10-27'
 updated: '2020-10-28'
 image: '/blog/amplify-authclass/aws-cognito.svg'
