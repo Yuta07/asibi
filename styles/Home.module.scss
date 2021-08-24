@@ -1,7 +1,6 @@
 @import './mixins';
 
 .container {
-	margin-top: 40px;
 	display: grid;
 	grid-template-columns: calc(50% - 20px) calc(50% - 20px);
 	grid-row-gap: 32px;
@@ -13,7 +12,18 @@
 	}
 }
 
+.pageAnchor {
+	cursor: pointer;
+
+	&:hover {
+		opacity: var(--hover-feedback-opacity);
+		transition: var(--animation-transition);
+	}
+}
+
 .first {
+	@extend .pageAnchor;
+
 	@include min-screen($breakpoint-md) {
 		margin-bottom: 40px;
 		grid-row: 1/2;
@@ -41,6 +51,8 @@
 }
 
 .blog {
+	@extend .pageAnchor;
+
 	width: 100%;
 }
 

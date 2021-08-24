@@ -28,7 +28,7 @@ export const getSortedPostsData = () => {
 		return {
 			id,
 			excerpt: matterResult.excerpt,
-			...(matterResult.data as { date: string; title: string; spoiler: string; image: string }),
+			...(matterResult.data as { date: string; title: string; image: string }),
 		}
 	})
 
@@ -61,6 +61,6 @@ export async function getPostData(id: string) {
 		id,
 		content,
 		data,
-		...(data.data as { date: string; title: string; spoiler: string; quickword: string; image: string }),
+		...(data.data as { date: string; title: string; image: string }),
 	}
 }

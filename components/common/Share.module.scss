@@ -1,0 +1,41 @@
+@import '/styles/mixins';
+
+.container {
+	margin-top: 40px;
+	text-align: center;
+}
+
+.share {
+	font-size: var(--font-size-xxl);
+}
+
+.anchor {
+	margin-top: 16px;
+	padding: 16px;
+	display: inline-flex;
+	border-radius: 50%;
+	background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+	transition: 0.3s ease-in-out;
+
+	&::before {
+		content: '';
+		width: 90%;
+		height: 10px;
+		position: absolute;
+		top: 100%;
+		left: 5%;
+		background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 80%);
+		z-index: -1;
+		opacity: 0;
+		transition: 0.3s;
+	}
+
+	&:hover {
+		transform: translateY(-6px);
+
+		&::before {
+			transform: translateY(6px);
+			opacity: 1;
+		}
+	}
+}
