@@ -6,12 +6,20 @@
 
 .title {
 	font-size: var(--font-size-xxl);
+
+	@include max-screen($breakpoint-sm) {
+		font-size: var(--font-size-xl);
+	}
 }
 
 .experiences {
 	width: 100%;
 	margin-top: 100px;
 	position: relative;
+
+	@include max-screen($breakpoint-sm) {
+		margin-top: 80px;
+	}
 }
 
 .circle {
@@ -20,7 +28,7 @@
 	top: -40px;
 	background: #c2e9fb;
 	width: 2px;
-	height: calc(100% + 100px);
+	height: calc(100% + 80px);
 
 	&::before {
 		content: '';
@@ -68,20 +76,43 @@
 		height: 2px;
 		background: var(--color-main);
 	}
+
+	@include max-screen($breakpoint-sm) {
+		margin-left: 60px;
+		padding: 20px;
+
+		&::before {
+			top: 20px;
+			left: -40px;
+			width: 40px;
+		}
+	}
 }
 
 .period {
 	color: var(--color-gray);
+
+	@include max-screen($breakpoint-sm) {
+		font-size: var(--font-size-xs);
+	}
 }
 
 .company {
 	margin-top: 8px;
 	font-size: var(--font-size-xl);
+
+	@include max-screen($breakpoint-sm) {
+		font-size: var(--font-size-m);
+	}
 }
 
 .overview {
 	margin: 12px 0;
 	color: var(--color-gray);
+
+	@include max-screen($breakpoint-sm) {
+		font-size: var(--font-size-s);
+	}
 }
 
 .roles {
@@ -102,5 +133,9 @@
 		height: 5px;
 		background: var(--color-main);
 		border-radius: 50%;
+	}
+
+	@include max-screen($breakpoint-sm) {
+		font-size: var(--font-size-s);
 	}
 }

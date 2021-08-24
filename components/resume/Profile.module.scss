@@ -5,6 +5,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+	@include max-screen($breakpoint-sm) {
+		flex-direction: column;
+		justify-content: center;
+	}
 }
 
 .photo {
@@ -27,6 +32,10 @@
 }
 
 .name {
+	@include max-screen($breakpoint-sm) {
+		margin-top: 20px;
+		font-size: var(--font-size-m);
+	}
 }
 
 .birth {
@@ -41,6 +50,11 @@
 
 .links {
 	margin-top: 8px;
+
+	@include max-screen($breakpoint-sm) {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
 
 .anchor {

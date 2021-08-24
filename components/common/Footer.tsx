@@ -9,7 +9,7 @@ export const Footer = () => {
 				</a>
 			</p>
 			<p className={styles.copyright}>
-				© {new Date().getFullYear()},
+				©{new Date().getFullYear()},
 				<a href="https://github.com/Yuta07" target="_blank" rel="noreferrer" className={styles.githubLink}>
 					Yutaka Miyazaki
 				</a>

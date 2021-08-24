@@ -2,7 +2,7 @@ import styles from './Experience.module.scss'
 
 const EXPERIENCES = [
 	{
-		company: 'Lisa Technologies株式会社',
+		company: 'LisaTechnologies株式会社',
 		period: '2020/06 ~ 現在<FreeLance>',
 		overview: 'フードデリバリー事業の売上改善サービス FDM の開発',
 		role: [
@@ -25,7 +25,7 @@ const EXPERIENCES = [
 		],
 	},
 	{
-		company: 'Lisa Technologies株式会社',
+		company: 'LisaTechnologies株式会社',
 		period: '2018/07 ~ 2019/03<Internship>',
 		overview: 'モバイルオーダーペイアプリ TOGO のWeb管理画面の開発',
 		role: [

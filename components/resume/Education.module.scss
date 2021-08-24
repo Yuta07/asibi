@@ -2,10 +2,18 @@
 
 .container {
 	margin-top: 132px;
+
+	@include max-screen($breakpoint-sm) {
+		margin-top: 100px;
+	}
 }
 
 .title {
 	font-size: var(--font-size-xxl);
+
+	@include max-screen($breakpoint-sm) {
+		font-size: var(--font-size-xl);
+	}
 }
 
 .content {
@@ -43,6 +51,10 @@
 .year {
 	font-size: var(--font-size-s);
 	color: var(--color-gray);
+
+	@include max-screen($breakpoint-sm) {
+		font-size: var(--font-size-xs);
+	}
 }
 
 .end {
@@ -54,4 +66,8 @@
 .name {
 	margin-left: 40px;
 	font-size: var(--font-size-l);
+
+	@include max-screen($breakpoint-sm) {
+		font-size: var(--font-size-m);
+	}
 }

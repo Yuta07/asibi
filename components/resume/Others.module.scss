@@ -6,6 +6,10 @@
 
 .title {
 	font-size: var(--font-size-xxl);
+
+	@include max-screen($breakpoint-sm) {
+		font-size: var(--font-size-xl);
+	}
 }
 
 .content {
@@ -43,6 +47,10 @@
 		height: 5px;
 		background: var(--color-main);
 		border-radius: 50%;
+	}
+
+	@include max-screen($breakpoint-sm) {
+		font-size: var(--font-size-s);
 	}
 }
 
