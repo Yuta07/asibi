@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from './Header.module.scss'
 
@@ -7,17 +8,21 @@ export const Header = () => {
 
 	return (
 		<header className={styles.header}>
-			<Image quality={90} src="/logo.svg" alt="logo_yutaaaaa" width={48} height={48} />
+			<Link href="/">
+				<a>
+					<Image quality={90} src="/logo.svg" alt="logo_yutaaaaa" width={48} height={48} />
+				</a>
+			</Link>
 			<ul className={styles.nav}>
 				<li className={styles.list}>
-					<a href="/" className={`${styles.anchor} ${router.pathname === '/' && styles.currentLink}`}>
-						Blog
-					</a>
+					<Link href="/">
+						<a className={`${styles.anchor} ${router.pathname === '/' && styles.currentLink}`}>Blog</a>
+					</Link>
 				</li>
 				<li className={styles.list}>
-					<a href="/resume" className={`${styles.anchor} ${router.pathname === '/resume' && styles.currentLink}`}>
-						Resume
-					</a>
+					<Link href="/resume">
+						<a className={`${styles.anchor} ${router.pathname === '/resume' && styles.currentLink}`}>Resume</a>
+					</Link>
 				</li>
 			</ul>
 		</header>

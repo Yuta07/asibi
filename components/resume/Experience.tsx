@@ -2,7 +2,7 @@ import styles from './Experience.module.scss'
 
 const EXPERIENCES = [
 	{
-		company: 'Lisa Technologies株式会社',
+		company: 'LisaTechnologies株式会社',
 		period: '2020/06 ~ 現在<FreeLance>',
 		overview: 'フードデリバリー事業の売上改善サービス FDM の開発',
 		role: [
@@ -10,7 +10,7 @@ const EXPERIENCES = [
 			'Figmaでのデザインワイヤーフレームの作成',
 			'Cypressでのe2eテスト導入',
 			'Mixpanelのイベント設定、運用',
-			'Chart.jsでの売上データのグラフ化',
+			'Chart.jsでのCVデータのグラフ化',
 		],
 	},
 	{
@@ -21,10 +21,11 @@ const EXPERIENCES = [
 			'導入企業の運用にあったパラメータ設定',
 			'Classic ASPでのカスタマイズ開発、機能開発',
 			'SQL Serverでのパラメータ設定',
+			'GASを用いた社内評価システムの構築',
 		],
 	},
 	{
-		company: 'Lisa Technologies株式会社',
+		company: 'LisaTechnologies株式会社',
 		period: '2018/07 ~ 2019/03<Internship>',
 		overview: 'モバイルオーダーペイアプリ TOGO のWeb管理画面の開発',
 		role: [

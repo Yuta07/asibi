@@ -6,6 +6,10 @@
 
 .title {
 	font-size: var(--font-size-xxl);
+
+	@include max-screen($breakpoint-sm) {
+		font-size: var(--font-size-xl);
+	}
 }
 
 .skills {
@@ -17,6 +21,10 @@
 	width: 20%;
 	padding-top: 20px;
 	text-align: center;
+
+	@include max-screen($breakpoint-sm) {
+		width: 33.33%;
+	}
 }
 
 .language {

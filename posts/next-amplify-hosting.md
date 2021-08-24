@@ -1,9 +1,8 @@
 ---
 title: 'AmplifyでNext.jsをホスティングしてAccess Deniedになるエラーを解決する。'
-spoiler: 'Amplify コンソール Rewrite, Redirect を変更する。'
-quickword: '動的ルーティングと404ページに対応する🔥'
 date: '2020-12-10'
 image: '/blog/next-amplify-hosting/slution-laugh.svg'
+tag: 'dev'
 ---
 
 ## 背景

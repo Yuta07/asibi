@@ -1,10 +1,9 @@
 ---
-title: 'マークダウンの表現'
-spoiler: 'ブログで使用しているマークダウンの表現一覧'
-quickword: 'マークダウンで使用しているスタイルを忘れないようにまとめておく。'
+title: 'ブログ内マークダウンの表現'
 date: '2020-09-24'
-updated: '2020-10-28'
+updated: '2021-08-24'
 image: '/blog/markdown-express/markdown-express.svg'
+tag: 'general'
 ---
 
 ## はじめに

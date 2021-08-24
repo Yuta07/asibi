@@ -1,9 +1,8 @@
 ---
 title: 'Chart.jsのチャート内に注釈を描写する'
-spoiler: 'Reactでchartjs-plugin-annotation.jsを使用する'
-quickword: 'チャート内にラインによるannotationを引く。'
 date: '2020-10-31'
 image: '/blog/chartjs-annotation/annotation.svg'
+tag: 'dev'
 ---
 
 ## はじめに

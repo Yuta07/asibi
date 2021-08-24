@@ -1,4 +1,5 @@
 import { About } from './About'
+import { Education } from './Education'
 import { Experience } from './Experience'
 import { Others } from './Others'
 import { Profile } from './Profile'
@@ -16,6 +17,7 @@ export const ResumeView = () => {
 			<About />
 			<Skills />
 			<Experience />
+			<Education />
 			<Others />
 		</div>
 	)

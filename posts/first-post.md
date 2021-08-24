@@ -4,6 +4,7 @@ spoiler: 'いまご覧になっているサイトについて'
 quickword: 'ポートフォリオに何を書いたかを簡単に残しておく。'
 date: '2020-09-22'
 image: '/blog/first-post/first-post.svg'
+tag: 'general'
 ---
 
 ## ポートフォリオについて

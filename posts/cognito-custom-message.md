@@ -1,10 +1,9 @@
 ---
-title: 'lambdaトリガーでカスタムメッセージ'
-spoiler: 'Cognitoのメールの内容を動的に変更する。'
-quickword: 'カスタムメッセージ Lambda トリガーを利用する📮'
+title: 'lambdaトリガーでCognitoカスタムメッセージ'
 date: '2020-10-29'
-updated: '2020-10-30'
+updated: '2021-08-24'
 image: '/blog/cognito-custom-message/message_customize.svg'
+tag: 'dev'
 ---
 
 ## はじめに

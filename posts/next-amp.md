@@ -1,10 +1,9 @@
 ---
 title: 'Next.jsでAMP対応'
-spoiler: 'Next.jsでほぼ全部AMPなポートフォリオ兼ブログを作った。'
-quickword: 'Next.jsでAMP対応する際の留意点を今後のために残しておく✏️'
 date: '2020-09-30'
 updated: '2020-10-28'
 image: '/blog/next-amp/amp-imitation.svg'
+tag: 'dev'
 ---
 
 ## What's AMP ?

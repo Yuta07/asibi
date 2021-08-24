@@ -6,6 +6,10 @@
 
 .title {
 	font-size: var(--font-size-xxl);
+
+	@include max-screen($breakpoint-sm) {
+		font-size: var(--font-size-xl);
+	}
 }
 
 .about {

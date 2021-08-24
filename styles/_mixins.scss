@@ -12,3 +12,9 @@ $breakpoint-xl: 1280px;
 		@content;
 	}
 }
+
+@mixin min-screen($break-point) {
+	@media screen and (min-width: $break-point) {
+		@content;
+	}
+}
