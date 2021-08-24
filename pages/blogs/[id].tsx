@@ -112,6 +112,7 @@ const Blog: NextPage<Props> = ({ postData }) => {
 				title={postData.data.title}
 				description={postData.data.quickword}
 				openGraph={{
+					type: 'article',
 					title: postData.data.title,
 					description: postData.data.quickword,
 					url: `https://yutaaaaa.vercel.app/blogs/${postData.id}`,
