@@ -123,7 +123,7 @@ const Blog: NextPage<Props> = ({ postData }) => {
 							url: CLOUDINARY_URL,
 							width: 800,
 							height: 420,
-							alt: 'Og Image',
+							alt: 'Og Image Alt',
 						},
 					],
 				}}
