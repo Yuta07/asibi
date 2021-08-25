@@ -118,6 +118,19 @@ const Blog: NextPage<Props> = ({ postData }) => {
 					title: postData.data.title,
 					description: postData.data.quickword,
 					url: `https://yutaaaaa.vercel.app/blogs/${postData.id}`,
+					images: [
+						{
+							url: CLOUDINARY_URL,
+							width: 800,
+							height: 420,
+							alt: 'Og Image',
+						},
+					],
+				}}
+				twitter={{
+					handle: '@yutaaaaa___',
+					site: '@yutaaaaa___',
+					cardType: 'summary_large_image',
 				}}
 			/>
 			<BlogJsonLd
