@@ -3,6 +3,7 @@
 .container {
 	margin-top: 40px;
 	text-align: center;
+	position: relative;
 }
 
 .share {
@@ -38,4 +39,14 @@
 			opacity: 1;
 		}
 	}
+}
+
+.feed {
+	@extend .anchor;
+
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+
+	background: linear-gradient(to right, #90f9c4 0%, #39f3bb 100%) !important;
 }

@@ -22,27 +22,6 @@ body {
 	counter-reset: number 0;
 }
 
-h1 {
-	font-size: var(--font-size-xl);
-}
-
-h2,
-h3 {
-	font-size: var(--font-size-l);
-}
-
-h3,
-h4,
-h5,
-p {
-	font-size: var(--font-size-m);
-}
-
-span,
-a {
-	font-size: var(--font-size-s);
-}
-
 a {
 	color: var(--color-gray);
 	text-decoration: none;
@@ -50,8 +29,4 @@ a {
 
 small {
 	font-size: 12px;
-}
-
-pre {
-	border-radius: 8px;
 }

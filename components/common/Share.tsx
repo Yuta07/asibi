@@ -20,6 +20,9 @@ export const Share = ({ slug, title }: Props) => {
 			>
 				<Image quality={85} src="/images/twitter.svg" alt="twitter_share" width={40} height={40} />
 			</a>
+			<a href="https://yutaaaaa.vercel.app/rss/feed.xml" rel="nofollow" className={styles.feed}>
+				<Image quality={85} src="/images/rss.svg" alt="twitter_share" width={20} height={20} />
+			</a>
 		</div>
 	)
 }

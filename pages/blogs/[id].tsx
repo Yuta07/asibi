@@ -140,26 +140,28 @@ const Blog: NextPage<Props> = ({ postData }) => {
 				)}
 			</div>
 			<h2 className={styles.title}>{postData.data.title}</h2>
-			<ReactMarkdown
-				escapeHtml={false}
-				source={postData.content}
-				disallowedTypes={['paragraph']}
-				unwrapDisallowed={true}
-				renderers={{
-					blockquote: MarkdownBlockquote,
-					code: CodeBlock,
-					delete: MarkdownDelete,
-					heading: MarkdownHeading,
-					image: MarkdownImage,
-					inlineCode: MarkdownInlineCode,
-					link: MarkdownLink,
-					list: MarkdownList,
-					listItem: MarkdownListItem,
-					paragraph: MarkdownParagraph,
-					strong: MarkdownStrong,
-					thematicBreak: MarkdownThematicBreak,
-				}}
-			/>
+			<main className={styles.main}>
+				<ReactMarkdown
+					escapeHtml={false}
+					source={postData.content}
+					disallowedTypes={['paragraph']}
+					unwrapDisallowed={true}
+					renderers={{
+						blockquote: MarkdownBlockquote,
+						code: CodeBlock,
+						delete: MarkdownDelete,
+						heading: MarkdownHeading,
+						image: MarkdownImage,
+						inlineCode: MarkdownInlineCode,
+						link: MarkdownLink,
+						list: MarkdownList,
+						listItem: MarkdownListItem,
+						paragraph: MarkdownParagraph,
+						strong: MarkdownStrong,
+						thematicBreak: MarkdownThematicBreak,
+					}}
+				/>
+			</main>
 			<Share slug={postData.id} title={postData.data.title} />
 		</div>
 	)
