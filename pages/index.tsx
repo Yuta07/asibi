@@ -1,6 +1,7 @@
 import { GetStaticProps, NextPage } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { NextSeo } from 'next-seo'
 import { generatedRssFeed } from '@lib/feed'
 import { getSortedPostsData } from '@lib/posts'
 import styles from '@styles/Home.module.scss'
@@ -21,6 +22,16 @@ type Props = {
 const Home: NextPage<Props> = ({ allPostsData }) => {
 	return (
 		<div className={styles.container}>
+			<NextSeo
+				title="resume"
+				description="yutaka miyazakiのブログ"
+				openGraph={{
+					type: 'website',
+					title: 'yutaka miyazakiのブログ',
+					description: 'yutaka miyazakiのブログ一覧',
+					url: 'https://yutaaaaa.vercel.app',
+				}}
+			/>
 			{allPostsData.map((data, i) => {
 				return (
 					<Link key={data.id} href={`/blogs/${data.id}`}>
