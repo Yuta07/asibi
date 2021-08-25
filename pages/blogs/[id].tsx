@@ -106,6 +106,9 @@ const Blog: NextPage<Props> = ({ postData }) => {
 		return <ThematicBreak />
 	}
 
+	console.log(postData.data.title)
+	const CLOUDINARY_URL = `https://res.cloudinary.com/https-yutaaaaa-vercel-app/image/upload/l_text:TakaoGothic_40:${postData.data.title},co_rgb:333333,w_520,c_fit/v1629900552/background_rtlhnt.png`
+
 	return (
 		<div className={styles.container}>
 			<NextSeo
@@ -121,7 +124,7 @@ const Blog: NextPage<Props> = ({ postData }) => {
 			<BlogJsonLd
 				url={`https://yutaaaaa.vercel.app/blogs/${postData.id}`}
 				title={postData.data.title}
-				images={['https://yutaaaaa.vercel.app/ogp.jpg']}
+				images={[CLOUDINARY_URL]}
 				datePublished={`${postData.data.date}2015-02-05T09:00:00+08:00`}
 				dateModified={`${postData.data.updated}2015-02-05T09:00:00+08:00`}
 				authorName="yutaaaaa"
