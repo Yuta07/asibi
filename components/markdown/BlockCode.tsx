@@ -21,6 +21,7 @@ export const BlockCode = ({ language, value }: Props) => {
 				pre {
 					color: #ffffff;
 					background: #282c35;
+					border-radius: 8px;
 				}
 			`}</style>
 		</div>
