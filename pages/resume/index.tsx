@@ -1,8 +1,23 @@
 import { NextPage } from 'next'
+import { NextSeo } from 'next-seo'
 import { ResumeView } from '@components/resume/ResumeView'
 
 const Resume: NextPage = () => {
-	return <ResumeView />
+	return (
+		<>
+			<NextSeo
+				title="resume"
+				description="yutaka miyazakiのレジュメ"
+				openGraph={{
+					type: 'website',
+					title: 'yutaka miyazakiのレジュメ',
+					description: 'yutaka miyazakiのレジュメ',
+					url: 'https://yutaaaaa.vercel.app/resume',
+				}}
+			/>
+			<ResumeView />
+		</>
+	)
 }
 
 export default Resume
