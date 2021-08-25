@@ -106,7 +106,6 @@ const Blog: NextPage<Props> = ({ postData }) => {
 		return <ThematicBreak />
 	}
 
-	console.log(postData.data.title)
 	const CLOUDINARY_URL = `https://res.cloudinary.com/https-yutaaaaa-vercel-app/image/upload/l_text:TakaoGothic_40:${postData.data.title},co_rgb:333333,w_520,c_fit/v1629900552/background_rtlhnt.png`
 
 	return (
