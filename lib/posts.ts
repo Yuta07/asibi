@@ -28,7 +28,7 @@ export const getSortedPostsData = () => {
 		return {
 			id,
 			excerpt: matterResult.excerpt,
-			...(matterResult.data as { date: string; title: string; image: string }),
+			...(matterResult.data as { date: string; title: string; quickword: string; image: string }),
 		}
 	})
 
@@ -44,6 +44,7 @@ export const getSortedPostsData = () => {
 
 export function getAllPostIds() {
 	const fileNames = fs.readdirSync(postsDirectory)
+
 	return fileNames.map((fileName) => {
 		return {
 			params: {

@@ -1,12 +1,14 @@
 import { GetStaticProps, NextPage } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { generatedRssFeed } from '@lib/feed'
 import { getSortedPostsData } from '@lib/posts'
 import styles from '@styles/Home.module.scss'
 
 type Props = {
 	allPostsData: {
 		excerpt: string
+		quickword?: string
 		date: string
 		updated?: string
 		title: string
@@ -55,6 +57,8 @@ const Home: NextPage<Props> = ({ allPostsData }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
 	const allPostsData = getSortedPostsData()
+
+	generatedRssFeed()
 
 	return {
 		props: {
