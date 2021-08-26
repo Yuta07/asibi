@@ -1,0 +1,10 @@
+@import '/styles/mixins';
+
+.blockCode {
+	margin: 30px 0;
+	font-size: var(--font-size-s);
+
+	pre {
+		border-radius: var(--line-radius);
+	}
+}

@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import styles from './Img.module.scss'
 
 type Props = {
 	alt: string
@@ -7,13 +7,8 @@ type Props = {
 
 export const Img = ({ alt, src }: Props) => {
 	return (
-		<div>
-			<Image quality={90} src={src} alt={alt} className="amp-image" width={540} height={320} />
-			<style jsx>{`
-				amp-img {
-					border-radius: 15px;
-				}
-			`}</style>
-		</div>
+		<span className={styles.flame}>
+			<img src={src} alt={alt} className={styles.image} width={540} height={320} />
+		</span>
 	)
 }

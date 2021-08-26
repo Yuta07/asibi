@@ -38,6 +38,8 @@ type Code = {
 	readonly value: string
 }
 
+type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+
 const Blog: NextPage<Props> = ({ postData }) => {
 	const CodeBlock = ({ language, value }: Code) => {
 		return <BlockCode language={language} value={value} />
@@ -53,7 +55,8 @@ const Blog: NextPage<Props> = ({ postData }) => {
 
 	const MarkdownHeading: VFC<{ children: ReactNode; level: number }> = ({ children, ...props }) => {
 		const { level } = props
-		return <Heading level={level}>{children}</Heading>
+		const headingLevel = `h${level}` as HeadingLevel
+		return <Heading headingLevel={headingLevel}>{children}</Heading>
 	}
 
 	const MarkdownImage = ({ ...props }) => {
@@ -154,12 +157,11 @@ const Blog: NextPage<Props> = ({ postData }) => {
 					</div>
 				)}
 			</div>
-			<h2 className={styles.title}>{postData.data.title}</h2>
+			<h1 className={styles.title}>{postData.data.title}</h1>
 			<main className={styles.main}>
 				<ReactMarkdown
 					escapeHtml={false}
 					source={postData.content}
-					disallowedTypes={['paragraph']}
 					unwrapDisallowed={true}
 					renderers={{
 						blockquote: MarkdownBlockquote,

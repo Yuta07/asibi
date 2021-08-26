@@ -1,14 +1,6 @@
-import { FC } from 'react'
+import { ReactNode, VFC } from 'react'
+import styles from './Paragraph.module.scss'
 
-export const Paragraph: FC = ({ children }) => {
-	return (
-		<p>
-			{children}
-			<style jsx>{`
-				p {
-					margin-bottom: 15px;
-				}
-			`}</style>
-		</p>
-	)
+export const Paragraph: VFC<{ children: ReactNode }> = ({ children }) => {
+	return <p className={styles.paragraph}>{children}</p>
 }

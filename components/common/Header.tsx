@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from './Header.module.scss'
+import { ThemeSwitch } from './ThemeSwitch'
 
 export const Header = () => {
 	const router = useRouter()
@@ -9,7 +10,7 @@ export const Header = () => {
 	return (
 		<header className={styles.header}>
 			<Link href="/">
-				<a>
+				<a className={styles.logo}>
 					<Image quality={90} src="/logo.svg" alt="logo_yutaaaaa" width={48} height={48} />
 				</a>
 			</Link>
@@ -23,6 +24,9 @@ export const Header = () => {
 					<Link href="/resume">
 						<a className={`${styles.anchor} ${router.pathname === '/resume' && styles.currentLink}`}>Resume</a>
 					</Link>
+				</li>
+				<li className={styles.list}>
+					<ThemeSwitch />
 				</li>
 			</ul>
 		</header>

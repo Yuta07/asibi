@@ -1,10 +1,5 @@
-import { FC } from 'react'
+import { ReactNode, VFC } from 'react'
 
-export const Strong: FC = ({ children }) => {
-	return (
-		<strong>
-			{children}
-			<style jsx>{``}</style>
-		</strong>
-	)
+export const Strong: VFC<{ children: ReactNode }> = ({ children }) => {
+	return <strong>{children}</strong>
 }
