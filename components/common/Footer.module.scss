@@ -19,6 +19,10 @@
 	color: var(--color-gray);
 	font-weight: var(--font-weight-bold);
 	letter-spacing: 0;
+
+	@include max-screen($breakpoint-sm) {
+		font-size: var(--font-size-xs);
+	}
 }
 
 .anchor {
