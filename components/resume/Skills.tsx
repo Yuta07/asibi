@@ -8,6 +8,7 @@ const SKILLS = [
 	{ name: 'Next.js', image: 'nextjs' },
 	{ name: 'GraphQL', image: 'graphql' },
 	{ name: 'Sass', image: 'sass' },
+	{ name: 'Gatsby', image: 'gatsby' },
 	{ name: 'Figma', image: 'figma' },
 ]
 
