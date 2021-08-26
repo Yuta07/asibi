@@ -20,6 +20,12 @@ body {
 	word-wrap: break-word;
 	font-kerning: normal;
 	counter-reset: number 0;
+
+	&.dark {
+		background: #1c1d1f;
+		--color-primary: #ffffff;
+		--color-secondary: #1c1d1f;
+	}
 }
 
 a {
