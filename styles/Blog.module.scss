@@ -21,10 +21,14 @@
 }
 
 .title {
-	margin-top: 8px;
-	font-size: var(--font-size-xxl);
+	margin-top: 12px;
+	font-size: 32px;
 
 	@include max-screen($breakpoint-sm) {
-		font-size: var(--font-size-l);
+		font-size: var(--font-size-xxl);
 	}
+}
+
+.main {
+	margin-top: 32px;
 }

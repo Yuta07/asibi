@@ -1,0 +1,28 @@
+@import '/styles/mixins';
+
+.blockquote {
+	height: 100%;
+	margin: 20px 0;
+	padding: 8px 0 8px 16px;
+	border-radius: 0 8px 8px 0;
+	display: flex;
+	align-items: center;
+	background: rgba(147, 149, 151, 0.2);
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: inline-block;
+		width: 5px;
+		height: 100%;
+		border-radius: var(--line-radius);
+		background: rgba(121, 127, 142, 0.6);
+	}
+
+	p {
+		margin-top: 0;
+	}
+}

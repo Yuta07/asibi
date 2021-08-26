@@ -1,26 +1,15 @@
-import { FC } from 'react'
+import { ReactNode, VFC } from 'react'
+import styles from './Link.module.scss'
 
 type Props = {
+	children: ReactNode
 	href: string
 }
 
-export const Link: FC<Props> = ({ href, children }) => {
+export const Link: VFC<Props> = ({ children, href }) => {
 	return (
-		<a href={href} target="_blank" rel="noreferrer">
+		<a href={href} target="_blank" rel="noreferrer" className={styles.anchor}>
 			{children}
-			<style jsx>{`
-				a {
-					font-size: 16px;
-					text-decoration: underline;
-					cursor: pointer;
-				}
-
-				a:hover {
-					color: #3fb0ac;
-					text-decoration: none;
-					background-color: transparent;
-				}
-			`}</style>
 		</a>
 	)
 }

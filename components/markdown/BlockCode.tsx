@@ -1,5 +1,6 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import styles from './BlockCode.module.scss'
 
 type Props = {
 	readonly language: string
@@ -8,22 +9,10 @@ type Props = {
 
 export const BlockCode = ({ language, value }: Props) => {
 	return (
-		<div className="blog-blockcode">
+		<div className={styles.blockCode}>
 			<SyntaxHighlighter language={language} style={darcula}>
 				{value}
 			</SyntaxHighlighter>
-			<style jsx>{`
-				.blog-blockcode {
-					margin: 30px 0;
-					font-size: 14px;
-				}
-
-				pre {
-					color: #ffffff;
-					background: #282c35;
-					border-radius: 8px;
-				}
-			`}</style>
 		</div>
 	)
 }

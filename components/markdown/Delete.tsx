@@ -1,19 +1,6 @@
-import { FC } from 'react'
+import { ReactNode, VFC } from 'react'
+import styles from './Delete.module.scss'
 
-export const Delete: FC = ({ children }) => {
-	return (
-		<del>
-			{children}
-			<style jsx>{`
-				del {
-					background-image: linear-gradient(#e74c3c, #e74c3c);
-					background-position: 0 50%;
-					background-size: 100% 2px;
-					background-repeat: repeat-x;
-					color: #7f8c8d;
-					text-decoration: none;
-				}
-			`}</style>
-		</del>
-	)
+export const Delete: VFC<{ children: ReactNode }> = ({ children }) => {
+	return <del className={styles.delete}>{children}</del>
 }

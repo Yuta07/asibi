@@ -67,10 +67,6 @@
 	@extend .anchor;
 
 	background: #333333;
-
-	.linkTxt {
-		color: #ffffff;
-	}
 }
 
 .twitter {
@@ -90,5 +86,5 @@
 .linkTxt {
 	padding-left: 4px;
 	font-size: var(--font-size-xs);
-	color: var(--color-secondary);
+	color: #ffffff;
 }

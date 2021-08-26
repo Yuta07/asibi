@@ -1,30 +1,21 @@
-import { FC } from 'react'
+import { ReactNode, VFC } from 'react'
+import styles from './List.module.scss'
 
 type Props = {
+	children: ReactNode
 	ordered: boolean
 	tight: boolean
 	depth: number
 }
 
-export const List: FC<Props> = ({ ordered, tight, depth, children }) => {
+export const List: VFC<Props> = ({ children, ordered, tight, depth }) => {
 	return tight && ordered ? (
-		<ol style={{ margin: depth > 0 ? `10px 0 0` : `15px 0` }}>
+		<ol style={{ margin: depth > 0 ? `10px 0 0` : `15px 0` }} className={styles.ordered}>
 			{children}
-			<style jsx>{`
-				ol {
-					padding: 0 20px 0 0;
-					list-style: none;
-				}
-			`}</style>
 		</ol>
 	) : (
-		<ul style={{ margin: depth > 0 ? `10px 0 0` : `15px 0` }}>
+		<ul style={{ margin: depth > 0 ? `10px 0 0` : `15px 0` }} className={styles.unOrdered}>
 			{children}
-			<style jsx>{`
-				ul {
-					padding: 0 20px;
-				}
-			`}</style>
 		</ul>
 	)
 }

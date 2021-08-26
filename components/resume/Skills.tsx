@@ -19,7 +19,14 @@ export const Skills = () => {
 				{SKILLS.map((skill) => {
 					return (
 						<div key={skill.name} className={styles.skill}>
-							<Image quality={85} src={`/images/${skill.image}.svg`} alt="" width={40} height={40} />
+							<Image
+								quality={85}
+								src={`/images/${skill.image}.svg`}
+								alt=""
+								width={40}
+								height={40}
+								className={styles[skill.image]}
+							/>
 							<p className={styles.language}>{skill.name}</p>
 						</div>
 					)

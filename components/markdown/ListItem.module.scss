@@ -1,0 +1,29 @@
+@import '/styles/mixins';
+
+.orderedList {
+	padding: 5px 0 5px 32px;
+	position: relative;
+
+	&::before {
+		position: absolute;
+		left: 0px;
+		top: 5px;
+		width: 1.5rem;
+		height: 1.5rem;
+		border-radius: 50%;
+		display: inline-block;
+		color: #ffffff;
+		background: var(--color-main);
+		font-weight: var(--font-weight-bold);
+		font-size: var(--font-size-s);
+		text-align: center;
+		line-height: 24px;
+		content: counter(number);
+		counter-increment: number 1;
+	}
+}
+
+.unOrderedList {
+	padding: 5px 0;
+	position: relative;
+}
