@@ -25,10 +25,11 @@
 .circle {
 	position: absolute;
 	left: 20px;
-	top: -40px;
+	top: -32px;
+	z-index: 5;
 	background: #c2e9fb;
 	width: 2px;
-	height: calc(100% + 80px);
+	height: calc(100% + 65px);
 
 	&::before {
 		content: '';
@@ -47,46 +48,60 @@
 		position: absolute;
 		top: calc(100% - 1px);
 		left: -6px;
-		z-index: 5;
+		z-index: 10;
 		width: 15px;
 		height: 15px;
-		background: #c2e9fb;
+		background: var(--color-main);
 		border-radius: 50%;
 	}
 }
 
 .content {
+	margin-top: 32px;
 	margin-left: 80px;
-	padding: 20px 24px;
-	border: 2px solid #a1c4fd;
-	border-radius: var(--line-radius);
-	background: var(--color-secondary);
 	position: relative;
-
-	&:not(:first-child) {
-		margin-top: 40px;
-	}
 
 	&::before {
 		content: '';
 		position: absolute;
-		top: 20px;
-		left: -60px;
-		width: 60px;
-		height: 2px;
+		top: 8px;
+		left: -63px;
+		z-index: 15;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
 		background: var(--color-main);
 	}
 
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0px;
+		left: -71px;
+		z-index: 10;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background: var(--color-secondary);
+	}
+
 	@include max-screen($breakpoint-sm) {
-		margin-left: 60px;
-		padding: 20px;
+		margin-left: 48px;
 
 		&::before {
-			top: 20px;
+			left: -31px;
+		}
+
+		&::after {
 			left: -40px;
-			width: 40px;
 		}
 	}
+}
+
+.first {
+	@extend .content;
+
+	margin-top: 0;
 }
 
 .period {
