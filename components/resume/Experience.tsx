@@ -10,7 +10,7 @@ const EXPERIENCES = [
 			'Figmaでのデザインワイヤーフレームの作成',
 			'Cypressでのe2eテスト導入',
 			'Mixpanelのイベント設定、運用',
-			'Chart.jsでのCVデータのグラフ化',
+			'GatsbyでHP・LP作成',
 		],
 	},
 	{
@@ -31,6 +31,7 @@ const EXPERIENCES = [
 		role: [
 			'React/ReduxでのSPA開発',
 			'firebaseでのバックエンド開発・運用・導入',
+			'Cloud FunctionsでWebプッシュ通知の実装',
 			'フロントエンドのJavaScriptからTypeScriptへのリプレイス',
 		],
 	},
@@ -44,7 +45,7 @@ export const Experience = () => {
 				<span className={styles.circle} />
 				{EXPERIENCES.map((experience, i) => {
 					return (
-						<div key={i} className={styles.content}>
+						<div key={i} className={i > 0 ? styles.content : styles.first}>
 							<span className={styles.period}>{experience.period}</span>
 							<h3 className={styles.company}>{experience.company}</h3>
 							<p className={styles.overview}>{experience.overview}</p>

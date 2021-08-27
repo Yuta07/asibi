@@ -18,8 +18,8 @@
 }
 
 .skill {
-	width: 20%;
-	padding-top: 20px;
+	width: calc(100% / 6);
+	padding-top: 24px;
 	text-align: center;
 
 	@include max-screen($breakpoint-sm) {
