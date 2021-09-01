@@ -15,7 +15,7 @@
 }
 
 .h1 {
-	margin-top: 20px;
+	margin-top: 40px;
 	font-size: var(--font-size-xxl);
 
 	&::before {
@@ -26,7 +26,7 @@
 }
 
 .h2 {
-	margin-top: 20px;
+	margin-top: 32px;
 	font-size: var(--font-size-xl);
 
 	&::before {
@@ -37,7 +37,7 @@
 }
 
 .h3 {
-	margin-top: 20px;
+	margin-top: 24px;
 	font-size: var(--font-size-l);
 
 	&::before {
@@ -48,7 +48,7 @@
 }
 
 .h4 {
-	margin-top: 16px;
+	margin-top: 20px;
 	font-size: var(--font-size-m);
 
 	&::before {
@@ -59,7 +59,7 @@
 }
 
 .h5 {
-	margin-top: 16px;
+	margin-top: 20px;
 	font-size: var(--font-size-m);
 
 	&::before {

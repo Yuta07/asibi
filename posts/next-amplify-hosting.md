@@ -2,46 +2,44 @@
 title: 'AmplifyでNext.jsをホスティングしてAccess Deniedになるエラーを解決する。'
 quickword: 'Amplify コンソール Rewrite, Redirect を変更する🔥'
 date: '2020-12-10'
-image: '/blog/next-amplify-hosting/slution-laugh.svg'
+updated: '2021-09-01'
+image: '/blog/next-amplify-hosting/solution-laugh.svg'
 tag: 'dev'
 ---
 
 ## 背景
 
-Amplify で Next.js の開発をしていて、 `amplify add hosting` でデプロイまで上手くいっているにも関わらず、存在しない URL に遷移した場合に期待しているカスタム 404 ページでなく、403 `Access Denied` に飛んでしまう事象が生じていました。
+Amplify で Next.js の開発をしていて、 `amplify add hosting` でデプロイまで上手くいっているにも関わらず、存在しない URL に遷移した場合にカスタム 404 ページでなく、403 `Access Denied` に飛んでしまう事象が発生。
 
-また `post/[id]` のような動的ルーティングのページでブラウザを更新すると、同様の問題が生じていました。
+また `users/[id]/dashboard` のような動的ルーティングのページでブラウザを更新しても同様の事象が発生。
 
-## 対処法
+## Amplify の設定を変更して対応
 
-Next.js の問題ではなく、 `Amplify コンソール` の 「書き換えて、リダイレクト」でリダイレクトの設定をする必要がありました。
+Amplify の 「書き換えて、リダイレクト」でリダイレクトの設定をする必要がありました。
 
 例えば、pages フォルダに下記ファイルが用意されているとします。
 
-- index.tsx
-- plans/index.tsx
-- plans/[id].tsx
+- users/index.tsx
+- users/[id].tsx
+- users/[id]/dashboard.tsx
 
-この場合、 `Amplify コンソール` でこのように設定する必要があります。
+最初は Amplify のドキュメント [Amplify Dynamic routes](https://docs.amplify.aws/guides/hosting/nextjs/q/platform/js/#dynamic-routes)を参考にしていて、下記のように設定をしていたのですが`Access Denied` になってしまうようでした。
 
-![amplify-rewrite_redirect](/blog/next-amplify-hosting/amplify-rewrite_redirect.svg)
+![pre_amplify-rewrite_redirect.png](/blog/next-amplify-hosting/pre_amplify-rewrite_redirect.png)
 
-設定していない場合は先述したとおり、 `/abc` のような存在しないページに遷移した時や `plans/abc` のようなページで更新をした時に `Access Denied` が表示されます。
+色々調べた結果、AWS の公式ドキュメント[Query strings and path parameters](https://docs.aws.amazon.com/ja_jp/amplify/latest/userguide/redirects.html#query-strings-and-path-parameters)によると、Amplify コンソールにて下記のように設定する必要があるようです。
 
-しっかりと対応することで、想定通りのルーティングを実現できるようになりました。
+![amplify-rewrite_redirect](/blog/next-amplify-hosting/amplify-rewrite_redirect.png)
 
-## まとめ
+これで、動的ルーティングの場合でも期待通りのルーティングをするようになるかと思います。
+送信元アドレスのクエリ文字列と一致するフォルダにパスを通すみたいです。
 
-Amplify を用いた Next.js に関する記事はまだ数が少なく、根気強く調べる必要があると感じました。
+注意点として、「書き換えて、リダイレクト」では上からマッチした順に結果が反映されることになるので注意が必要です。
 
-2020/09 に Amplify がサーバー側レンダリング (SSR) を Next.js や Nuxt.js などのフレームワークに組み込むことができるようになりましたが、
-2020/12/10 現在、[Amplify Next.js hosting](https://docs.amplify.aws/guides/hosting/nextjs/q/platform/js#kicking-off-a-new-build)に
+今回の場合だと、 `users/[id].tsx` は `users/[id]/dashboard.tsx` の下に追加する必要があります。
 
-> Next also supports pre-rendering for dynamic server-rendered routes. At this time, Amplify does not support the hosting of dynamic server-rendered routes with Next.
-
-とあるように動的ルーティングをサポートしていないと記載されているため、 `Amplify コンソール` での設定が必要になるかもしれません。
+また、`404` ページは一番下に追加することを忘れないようにしましょう。
 
 ## 参考サイト
 
-- [Developers.IO](https://dev.classmethod.jp/articles/amplify-javascript-adds-server-side-rendering-support-frameworks-next-js-nuxt-js/)
-- [Amplify Next.js Tutorial](https://docs.amplify.aws/start/getting-started/installation/q/integration/next)
+- [AWS Amplify Using redirects](https://docs.aws.amazon.com/ja_jp/amplify/latest/userguide/redirects.html)
