@@ -9,14 +9,12 @@ tag: 'general'
 
 ## はじめに
 
-このブログは Next.js で構築されており、AMP に対応しています。
+このブログは Next.js で構築されています。
 Next.js でのブログの作成に関しては[公式サイト](https://nextjs.org/)に記載されています。
 
 公式と異なるのは `remark` ではなく、 `react-markdown` を使用していることです。
 
 [参考サイト](https://jfelix.info/blog/how-to-make-a-static-blog-with-next-js)
-
-以下がブログ内で使用されているマークダウンの表現となります。
 
 ## Heading
 

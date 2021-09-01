@@ -8,7 +8,7 @@ type Props = {
 
 export const Link: VFC<Props> = ({ children, href }) => {
 	return (
-		<a href={href} target="_blank" rel="noreferrer" className={styles.anchor}>
+		<a href={href} target="_blank" rel="noopener noreferrer" className={styles.anchor}>
 			{children}
 		</a>
 	)

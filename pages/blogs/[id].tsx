@@ -77,9 +77,9 @@ const Blog: NextPage<Props> = ({ postData }) => {
 		children,
 		...props
 	}) => {
-		const { ordered, tight, depth } = props
+		const { ordered, depth } = props
 		return (
-			<List ordered={ordered} tight={tight} depth={depth}>
+			<List ordered={ordered} depth={depth}>
 				{children}
 			</List>
 		)
@@ -89,9 +89,9 @@ const Blog: NextPage<Props> = ({ postData }) => {
 		children,
 		...props
 	}) => {
-		const { ordered, tight, index } = props
+		const { ordered, index } = props
 		return (
-			<ListItem ordered={ordered} tight={tight} index={index}>
+			<ListItem ordered={ordered} index={index}>
 				{children}
 			</ListItem>
 		)
@@ -140,8 +140,8 @@ const Blog: NextPage<Props> = ({ postData }) => {
 				url={`https://yutaaaaa.vercel.app/blogs/${postData.id}`}
 				title={postData.data.title}
 				images={[CLOUDINARY_URL]}
-				datePublished={`${postData.data.date}2015-02-05T09:00:00+08:00`}
-				dateModified={`${postData.data.updated}2015-02-05T09:00:00+08:00`}
+				datePublished={`${postData.data.date}T09:00:00+08:00`}
+				dateModified={`${postData.data.updated}T09:00:00+08:00`}
 				authorName="yutaaaaa"
 				description={postData.data.quickword}
 			/>

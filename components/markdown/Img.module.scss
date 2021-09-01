@@ -1,6 +1,7 @@
 @import '/styles/mixins';
 
 .flame {
+	margin: 40px 0;
 	display: block;
 	text-align: center;
 }
@@ -9,5 +10,6 @@
 	max-width: 100%;
 	height: auto;
 	border-radius: 15px;
-	object-fit: cover;
+	object-fit: contain;
+	max-height: 320px;
 }

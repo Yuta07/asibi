@@ -21,9 +21,17 @@
 		content: counter(number);
 		counter-increment: number 1;
 	}
+
+	p {
+		margin-top: 0;
+	}
 }
 
 .unOrderedList {
 	padding: 5px 0;
 	position: relative;
+
+	p {
+		margin-top: 0;
+	}
 }
