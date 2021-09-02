@@ -22,7 +22,7 @@ tag: 'dev'
 
 ## OGP 画像を動的に生成する
 
-#### 1. 画像をアップロード
+**1. 画像をアップロード**
 
 画像の動的生成を行うための元となる画像をアップロードします。
 
@@ -34,7 +34,7 @@ tag: 'dev'
 
 これで画像の用意は完了です。
 
-#### 2. OGP 画像の URL をカスタマイズして動的画像を生成
+**2. OGP 画像の URL をカスタマイズして動的画像を生成**
 
 画像をアップロードしたら、画像左上の `Copy URL` アイコンをクリックして画像の URL をコピーします。
 
@@ -100,7 +100,7 @@ https://res.cloudinary.com/Cloudinary_cloud_name/image/upload/l_text:TakaoGothic
 - 実際の例をいくつかみたい場合
   - [Cloudinary Cookbook](https://cloudinary.com/cookbook)
 
-#### 3. OGP 画像の URL を メタタグに含める
+**3. OGP 画像の URL を メタタグに含める**
 
 Next.js にて動的 OGP 画像の配信をする場合のみ参考にしていただければと思います。なお、今回は `next-seo` を使用して実装していく流れとなります。
 
