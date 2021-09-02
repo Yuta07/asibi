@@ -52,9 +52,10 @@
 	font-size: var(--font-size-m);
 
 	&::before {
-		width: 4px;
-		height: 100%;
-		border-radius: var(--line-radius);
+		top: calc(50% - 4px);
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
 	}
 }
 
@@ -63,8 +64,9 @@
 	font-size: var(--font-size-m);
 
 	&::before {
+		top: calc(50% - 2px);
 		width: 4px;
-		height: 100%;
-		border-radius: var(--line-radius);
+		height: 4px;
+		border-radius: 50%;
 	}
 }
