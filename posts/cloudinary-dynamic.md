@@ -2,6 +2,7 @@
 title: 'Next.jsブログ用のOGP画像をCloudinaryで動的に生成する'
 quickword: 'Next.jsのブログタイトルを動的に生成'
 date: '2021-09-01'
+updated: '2021-09-03'
 image: '/blog/cloudinary-dynamic/cloudinary.svg'
 tag: 'dev'
 ---
@@ -79,7 +80,7 @@ https://res.cloudinary.com/Cloudinary_cloud_name/image/upload/l_text:TakaoGothic
 - `Cloudinary_cloud_name`
   - ここには自身の `cloudinary` の名前が入ります。
 - `co_rgb:333333`
-  - フォントカラーを `#333333` にするという意味になります。
+  - フォントカラーを `#333333` にします。
 - `w_520`
   - フォントの表示される幅を 520px に設定しています。
 - `c_fit`
@@ -89,7 +90,7 @@ https://res.cloudinary.com/Cloudinary_cloud_name/image/upload/l_text:TakaoGothic
 
 ![cloudinary_customize.png](/blog/cloudinary-dynamic/cloudinary_customize.png)
 
-これで動的に画像を生成することができました。
+これで動的に画像を生成することができました。参考にしたサイトを下記に記載しておくので覗いてみるといいかもしれません。
 
 **参考サイト**
 
@@ -106,7 +107,7 @@ Next.js にて動的 OGP 画像の配信をする場合のみ参考にしてい�
 
 とはいえ、やること自体は単純で取得したブログのタイトルや画像などをメタタグに書き込んでいくだけです。
 
-```TypeScript
+```typescript
 import { BlogJsonLd, NextSeo } from 'next-seo'
 
 ~~~
