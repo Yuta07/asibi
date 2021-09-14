@@ -23,7 +23,7 @@ const Home: NextPage<Props> = ({ allPostsData }) => {
 	return (
 		<div className={styles.container}>
 			<NextSeo
-				title="blog"
+				title=""
 				description="yutaka miyazakiのブログ"
 				openGraph={{
 					type: 'website',
