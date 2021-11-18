@@ -12,7 +12,7 @@ export const generatedRssFeed = () => {
 	// 	return
 	// }
 
-	const baseUrl = 'https://yutaaaaa.vercel.app'
+	const baseUrl = 'https://yutaaaaa.vercel.app/blogs'
 
 	const date = new Date()
 
