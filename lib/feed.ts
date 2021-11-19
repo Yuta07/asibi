@@ -23,7 +23,7 @@ export const generatedRssFeed = () => {
 	}
 
 	const feed = new Feed({
-		title: 'yutaaaaa',
+		title: 'yutaaaaa | blog and resume by yutaka miyazaki.',
 		description: "yutaka miyazaki's blog and resume",
 		id: baseUrl,
 		link: baseUrl,
