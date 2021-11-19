@@ -19,7 +19,7 @@ export const generatedRssFeed = () => {
 	const author = {
 		name: 'yutaaaaa',
 		email: 'mono.12dev@gmail.com',
-		link: 'https://yutaaaaa.vercel.app',
+		link: 'https://yutaaaaa.dev',
 	}
 
 	const feed = new Feed({
