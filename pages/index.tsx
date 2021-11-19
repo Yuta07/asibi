@@ -34,7 +34,7 @@ const Home: NextPage<Props> = ({ allPostsData }) => {
 			/>
 			{allPostsData.map((data, i) => {
 				return (
-					<Link key={data.id} href={`/blogs/${data.id}`}>
+					<Link key={data.id} href={`/${data.id}`}>
 						<a className={i === 0 ? styles.first : styles.blog}>
 							<div className={styles[data.tag]}>
 								<Image quality={85} src={data.image} alt={data.title} width={80} height={80} />
