@@ -28,6 +28,7 @@ export const getSortedPostsData = () => {
 		return {
 			id,
 			excerpt: matterResult.excerpt,
+			content: matterResult.content,
 			...(matterResult.data as { date: string; title: string; quickword: string; image: string }),
 		}
 	})
