@@ -8,9 +8,9 @@ import { getSortedPostsData } from './posts'
 // ref: https://phiilu.com/generate-rss-feeds-for-your-static-next-js-blog
 
 export const generatedRssFeed = () => {
-	// if (process.env.NODE_ENV === 'development') {
-	// 	return
-	// }
+	if (process.env.NODE_ENV === 'development') {
+		return
+	}
 
 	const baseUrl = 'https://yutaaaaa.dev'
 

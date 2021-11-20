@@ -2,7 +2,6 @@ import { GetStaticProps, NextPage } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { NextSeo } from 'next-seo'
-import { generatedRssFeed } from '@lib/feed'
 import { getSortedPostsData } from '@lib/posts'
 import styles from '@styles/Home.module.scss'
 
@@ -54,7 +53,7 @@ const Home: NextPage<Props> = ({ allPostsData }) => {
 								</div>
 								<h2 className={styles.title}>{data.title}</h2>
 								<p className={styles.excerpt}>
-									{data.excerpt.substr(0, 80)}
+									{data.excerpt.slice(0, 80)}
 									{data.excerpt.length > 80 && '...'}
 								</p>
 							</div>
@@ -68,8 +67,6 @@ const Home: NextPage<Props> = ({ allPostsData }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
 	const allPostsData = getSortedPostsData()
-
-	generatedRssFeed()
 
 	return {
 		props: {
