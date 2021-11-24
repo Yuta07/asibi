@@ -120,7 +120,7 @@ const Blog: NextPage<Props> = ({ postData }) => {
 					type: 'article',
 					title: postData.data.title,
 					description: postData.data.quickword,
-					url: `https://yutaaaaa.vercel.app/blogs/${postData.id}`,
+					url: `https://yutaaaaa.dev/${postData.id}`,
 					images: [
 						{
 							url: CLOUDINARY_URL,
@@ -137,7 +137,7 @@ const Blog: NextPage<Props> = ({ postData }) => {
 				}}
 			/>
 			<BlogJsonLd
-				url={`https://yutaaaaa.vercel.app/blogs/${postData.id}`}
+				url={`https://yutaaaaa.dev/${postData.id}`}
 				title={postData.data.title}
 				images={[CLOUDINARY_URL]}
 				datePublished={`${postData.data.date}T09:00:00+08:00`}

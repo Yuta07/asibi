@@ -7,7 +7,7 @@ type Props = {
 }
 
 export const Share = ({ slug, title }: Props) => {
-	const pageUrl = `https://yutaaaaa.vercel.app/blogs/${slug}`
+	const pageUrl = `https://yutaaaaa.dev/${slug}`
 	const encodeTitle = encodeURIComponent(title)
 
 	return (
@@ -20,7 +20,7 @@ export const Share = ({ slug, title }: Props) => {
 			>
 				<Image quality={85} src="/images/twitter.svg" alt="twitter_share" width={40} height={40} />
 			</a>
-			<a href="https://yutaaaaa.vercel.app/rss/feed.xml" rel="nofollow" className={styles.feed}>
+			<a href="https://yutaaaaa.dev/rss/feed.xml" rel="nofollow" className={styles.feed}>
 				<Image quality={85} src="/images/rss.svg" alt="twitter_share" width={20} height={20} />
 			</a>
 		</div>
