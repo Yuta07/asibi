@@ -2,6 +2,7 @@ import { GetStaticProps, NextPage } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { NextSeo } from 'next-seo'
+import { generatedRssFeed } from '@lib/feed'
 import { getSortedPostsData } from '@lib/posts'
 import styles from '@styles/Home.module.scss'
 
@@ -28,7 +29,7 @@ const Home: NextPage<Props> = ({ allPostsData }) => {
 					type: 'website',
 					title: 'yutaka miyazakiのブログ',
 					description: 'yutaka miyazakiのブログ一覧',
-					url: 'https://yutaaaaa.vercel.app',
+					url: 'https://yutaaaaa.dev',
 				}}
 			/>
 			{allPostsData.map((data, i) => {
@@ -67,6 +68,8 @@ const Home: NextPage<Props> = ({ allPostsData }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
 	const allPostsData = getSortedPostsData()
+
+	generatedRssFeed()
 
 	return {
 		props: {

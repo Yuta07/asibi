@@ -123,7 +123,7 @@ return (
         type: 'article',
         title: ブログタイトル,
         description: ブログの説明,
-        url: `https://yutaaaaa.vercel.app/blogs/${ブログのURL}`,
+        url: `https://yutaaaaa.dev/${ブログのURL}`,
         images: [
           {
             url: CLOUDINARY_URL,
@@ -140,7 +140,7 @@ return (
       }}
     />
     <BlogJsonLd
-      url={`https://yutaaaaa.vercel.app/blogs/${ブログのURL}`}
+      url={`https://yutaaaaa.dev/${ブログのURL}`}
       title={postData.data.title}
       images={[CLOUDINARY_URL]}
       datePublished={`${ブログ公開日}T09:00:00+08:00`}
@@ -157,4 +157,4 @@ return (
 
 以上で Next.js + Cloudinary で動的に OGP 画像の生成して配信まで完了となります！
 
-ソースコードは[こちらから](https://github.com/Yuta07/yutaaaaa/blob/b1f33d283195eb155e55d4185cea3274842aaccd/pages/blogs/%5Bid%5D.tsx#L112)から確認できます。
+ソースコードは[こちらから](https://github.com/Yuta07/yutaaaaa/blob/master/pages/%5Bid%5D.tsx)から確認できます。

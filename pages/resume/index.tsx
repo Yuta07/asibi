@@ -12,7 +12,7 @@ const Resume: NextPage = () => {
 					type: 'website',
 					title: 'yutaka miyazakiのレジュメ',
 					description: 'yutaka miyazakiのレジュメ',
-					url: 'https://yutaaaaa.vercel.app/resume',
+					url: 'https://yutaaaaa.dev/resume',
 				}}
 			/>
 			<ResumeView />
