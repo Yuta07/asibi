@@ -7,6 +7,7 @@ import { Share } from '@components/common/Share'
 import { BlockCode } from '@components/markdown/BlockCode'
 import { Blockquote } from '@components/markdown/Blockquote'
 import { Delete } from '@components/markdown/Delete'
+import { TwitterCard } from '@components/markdown/Embed'
 import { Heading } from '@components/markdown/Heading'
 import { Img } from '@components/markdown/Img'
 import { InlineCode } from '@components/markdown/InlineCode'
@@ -42,6 +43,10 @@ type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 
 const Blog: NextPage<Props> = ({ postData }) => {
 	const CodeBlock = ({ language, value }: Code) => {
+		if (language === 'twitter') {
+			return <TwitterCard value={value} />
+		}
+
 		return <BlockCode language={language} value={value} />
 	}
 
@@ -70,6 +75,11 @@ const Blog: NextPage<Props> = ({ postData }) => {
 
 	const MarkdownLink: VFC<{ children: ReactNode; href: string }> = ({ children, ...props }) => {
 		const { href } = props
+
+		// if (href.startsWith('https://twitter.com/')) {
+		// 	return <TwitterCard url={href} />
+		// }
+
 		return <Link href={href}>{children}</Link>
 	}
 
