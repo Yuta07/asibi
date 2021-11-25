@@ -94,6 +94,18 @@ const CoolComponent = () => <div>I'm a cool component!!</div>
 export default CoolComponent
 ```
 
+## Embed
+
+````
+```twitter
+1394870794933575686
+```
+````
+
+```twitter
+1394870794933575686
+```
+
 ## Image
 
 ```
