@@ -7,7 +7,6 @@ import { Share } from '@components/common/Share'
 import { BlockCode } from '@components/markdown/BlockCode'
 import { Blockquote } from '@components/markdown/Blockquote'
 import { Delete } from '@components/markdown/Delete'
-import { TwitterCard } from '@components/markdown/Embed'
 import { Heading } from '@components/markdown/Heading'
 import { Img } from '@components/markdown/Img'
 import { InlineCode } from '@components/markdown/InlineCode'
@@ -43,10 +42,6 @@ type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 
 const Blog: NextPage<Props> = ({ postData }) => {
 	const CodeBlock = ({ language, value }: Code) => {
-		if (language === 'twitter') {
-			return <TwitterCard value={value} />
-		}
-
 		return <BlockCode language={language} value={value} />
 	}
 
@@ -92,10 +87,7 @@ const Blog: NextPage<Props> = ({ postData }) => {
 		)
 	}
 
-	const MarkdownListItem: VFC<{ children: ReactNode; ordered: boolean; tight: boolean; index: number }> = ({
-		children,
-		...props
-	}) => {
+	const MarkdownListItem: VFC<{ children: ReactNode; ordered: boolean; index: number }> = ({ children, ...props }) => {
 		const { ordered, index } = props
 		return (
 			<ListItem ordered={ordered} index={index}>
@@ -168,23 +160,37 @@ const Blog: NextPage<Props> = ({ postData }) => {
 			<main className={styles.main}>
 				<ReactMarkdown
 					skipHtml={false}
-					children={postData.content} // eslint-disable-line react/no-children-prop
 					unwrapDisallowed={true}
 					components={{
 						blockquote: MarkdownBlockquote,
-						// code: CodeBlock,
-						delete: MarkdownDelete,
+						code({ inline, className, children, ...props }) {
+							const match = /language-(\w+)/.exec(className || '')
+
+							return !inline && match ? (
+								<CodeBlock language={match[1]} value={children.toString()} {...props} />
+							) : (
+								<MarkdownInlineCode>{children}</MarkdownInlineCode>
+							)
+						},
+						del: MarkdownDelete,
 						heading: MarkdownHeading,
-						image: MarkdownImage,
-						inlineCode: MarkdownInlineCode,
-						link: MarkdownLink,
+						img: MarkdownImage,
+						a: MarkdownLink,
 						list: MarkdownList,
-						listItem: MarkdownListItem,
-						paragraph: MarkdownParagraph,
+						li({ children, index, ordered, ...props }) {
+							return (
+								<MarkdownListItem ordered={ordered} index={index} {...props}>
+									{children}
+								</MarkdownListItem>
+							)
+						},
+						p: MarkdownParagraph,
 						strong: MarkdownStrong,
-						thematicBreak: MarkdownThematicBreak,
+						hr: MarkdownThematicBreak,
 					}}
-				/>
+				>
+					{postData.content}
+				</ReactMarkdown>
 			</main>
 			<Share slug={postData.id} title={postData.data.title} />
 		</div>
