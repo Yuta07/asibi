@@ -2,7 +2,7 @@ import { ReactNode, VFC } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Image from 'next/image'
 import { BlogJsonLd, NextSeo } from 'next-seo'
-import ReactMarkdown from 'react-markdown/with-html'
+import ReactMarkdown from 'react-markdown'
 import { Share } from '@components/common/Share'
 import { BlockCode } from '@components/markdown/BlockCode'
 import { Blockquote } from '@components/markdown/Blockquote'
@@ -66,6 +66,7 @@ const Blog: NextPage<Props> = ({ postData }) => {
 
 	const MarkdownImage = ({ ...props }) => {
 		const { alt, src } = props
+
 		return <Img alt={alt} src={src} />
 	}
 
@@ -75,10 +76,6 @@ const Blog: NextPage<Props> = ({ postData }) => {
 
 	const MarkdownLink: VFC<{ children: ReactNode; href: string }> = ({ children, ...props }) => {
 		const { href } = props
-
-		// if (href.startsWith('https://twitter.com/')) {
-		// 	return <TwitterCard url={href} />
-		// }
 
 		return <Link href={href}>{children}</Link>
 	}
@@ -170,12 +167,12 @@ const Blog: NextPage<Props> = ({ postData }) => {
 			<h1 className={styles.title}>{postData.data.title}</h1>
 			<main className={styles.main}>
 				<ReactMarkdown
-					escapeHtml={false}
-					source={postData.content}
+					skipHtml={false}
+					children={postData.content} // eslint-disable-line react/no-children-prop
 					unwrapDisallowed={true}
-					renderers={{
+					components={{
 						blockquote: MarkdownBlockquote,
-						code: CodeBlock,
+						// code: CodeBlock,
 						delete: MarkdownDelete,
 						heading: MarkdownHeading,
 						image: MarkdownImage,
