@@ -18,7 +18,7 @@ Next.js でのブログの作成に関しては[公式サイト](https://nextjs.
 
 ## Heading
 
-```
+```txt
 ## Heading2
 ### Heading3
 #### Heading4 or 5
@@ -32,7 +32,7 @@ Next.js でのブログの作成に関しては[公式サイト](https://nextjs.
 
 ## List
 
-```
+```txt
 - unOrderedList
   - ListItem
   - ListItem
@@ -62,8 +62,9 @@ Next.js でのブログの作成に関しては[公式サイト](https://nextjs.
 
 ## Inline
 
-```
+```txt
 **これは太字です。**
+~~この文章に打ち消し線を。~~
 ここに `code` をいれます。
 これは[Githubのリンク](https://github.com/Yuta07)です。
 ```
@@ -78,7 +79,7 @@ Next.js でのブログの作成に関しては[公式サイト](https://nextjs.
 
 ## Blockquote
 
-```
+```txt
 > これは引用です。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
 ```
 
@@ -94,21 +95,9 @@ const CoolComponent = () => <div>I'm a cool component!!</div>
 export default CoolComponent
 ```
 
-## Embed
-
-````
-```twitter
-1394870794933575686
-```
-````
-
-```twitter
-1394870794933575686
-```
-
 ## Image
 
-```
+```txt
 ![imageSampleStars](/stars_sample.jpg)
 ```
 

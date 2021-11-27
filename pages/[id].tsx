@@ -2,12 +2,11 @@ import { ReactNode, VFC } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Image from 'next/image'
 import { BlogJsonLd, NextSeo } from 'next-seo'
-import ReactMarkdown from 'react-markdown/with-html'
+import ReactMarkdown from 'react-markdown'
 import { Share } from '@components/common/Share'
 import { BlockCode } from '@components/markdown/BlockCode'
 import { Blockquote } from '@components/markdown/Blockquote'
 import { Delete } from '@components/markdown/Delete'
-import { TwitterCard } from '@components/markdown/Embed'
 import { Heading } from '@components/markdown/Heading'
 import { Img } from '@components/markdown/Img'
 import { InlineCode } from '@components/markdown/InlineCode'
@@ -43,10 +42,6 @@ type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 
 const Blog: NextPage<Props> = ({ postData }) => {
 	const CodeBlock = ({ language, value }: Code) => {
-		if (language === 'twitter') {
-			return <TwitterCard value={value} />
-		}
-
 		return <BlockCode language={language} value={value} />
 	}
 
@@ -66,6 +61,7 @@ const Blog: NextPage<Props> = ({ postData }) => {
 
 	const MarkdownImage = ({ ...props }) => {
 		const { alt, src } = props
+
 		return <Img alt={alt} src={src} />
 	}
 
@@ -76,17 +72,10 @@ const Blog: NextPage<Props> = ({ postData }) => {
 	const MarkdownLink: VFC<{ children: ReactNode; href: string }> = ({ children, ...props }) => {
 		const { href } = props
 
-		// if (href.startsWith('https://twitter.com/')) {
-		// 	return <TwitterCard url={href} />
-		// }
-
 		return <Link href={href}>{children}</Link>
 	}
 
-	const MarkdownList: VFC<{ children: ReactNode; ordered: boolean; tight: boolean; depth: number }> = ({
-		children,
-		...props
-	}) => {
+	const MarkdownList: VFC<{ children: ReactNode; ordered: boolean; depth: number }> = ({ children, ...props }) => {
 		const { ordered, depth } = props
 		return (
 			<List ordered={ordered} depth={depth}>
@@ -95,10 +84,7 @@ const Blog: NextPage<Props> = ({ postData }) => {
 		)
 	}
 
-	const MarkdownListItem: VFC<{ children: ReactNode; ordered: boolean; tight: boolean; index: number }> = ({
-		children,
-		...props
-	}) => {
+	const MarkdownListItem: VFC<{ children: ReactNode; ordered: boolean; index: number }> = ({ children, ...props }) => {
 		const { ordered, index } = props
 		return (
 			<ListItem ordered={ordered} index={index}>
@@ -170,24 +156,92 @@ const Blog: NextPage<Props> = ({ postData }) => {
 			<h1 className={styles.title}>{postData.data.title}</h1>
 			<main className={styles.main}>
 				<ReactMarkdown
-					escapeHtml={false}
-					source={postData.content}
+					skipHtml={false}
 					unwrapDisallowed={true}
-					renderers={{
+					components={{
 						blockquote: MarkdownBlockquote,
-						code: CodeBlock,
-						delete: MarkdownDelete,
-						heading: MarkdownHeading,
-						image: MarkdownImage,
-						inlineCode: MarkdownInlineCode,
-						link: MarkdownLink,
-						list: MarkdownList,
-						listItem: MarkdownListItem,
-						paragraph: MarkdownParagraph,
+						code({ inline, className, children, ...props }) {
+							const match = /language-(\w+)/.exec(className || '')
+
+							return !inline && match ? (
+								<CodeBlock language={match[1]} value={children.toString()} {...props} />
+							) : (
+								<MarkdownInlineCode>{children}</MarkdownInlineCode>
+							)
+						},
+						del: MarkdownDelete,
+						h1({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						h2({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						h3({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						h4({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						h5({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						h6({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						img: MarkdownImage,
+						a: MarkdownLink,
+						li({ children, index, ordered, ...props }) {
+							return (
+								<MarkdownListItem ordered={ordered} index={index} {...props}>
+									{children}
+								</MarkdownListItem>
+							)
+						},
+						ul({ children, depth, ordered, ...props }) {
+							return (
+								<MarkdownList depth={depth} ordered={ordered} {...props}>
+									{children}
+								</MarkdownList>
+							)
+						},
+						ol({ children, depth, ordered, ...props }) {
+							return (
+								<MarkdownList depth={depth} ordered={ordered} {...props}>
+									{children}
+								</MarkdownList>
+							)
+						},
+						p: MarkdownParagraph,
 						strong: MarkdownStrong,
-						thematicBreak: MarkdownThematicBreak,
+						hr: MarkdownThematicBreak,
 					}}
-				/>
+				>
+					{postData.content}
+				</ReactMarkdown>
 			</main>
 			<Share slug={postData.id} title={postData.data.title} />
 		</div>
