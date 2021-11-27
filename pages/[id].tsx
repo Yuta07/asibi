@@ -75,10 +75,7 @@ const Blog: NextPage<Props> = ({ postData }) => {
 		return <Link href={href}>{children}</Link>
 	}
 
-	const MarkdownList: VFC<{ children: ReactNode; ordered: boolean; tight: boolean; depth: number }> = ({
-		children,
-		...props
-	}) => {
+	const MarkdownList: VFC<{ children: ReactNode; ordered: boolean; depth: number }> = ({ children, ...props }) => {
 		const { ordered, depth } = props
 		return (
 			<List ordered={ordered} depth={depth}>
@@ -176,12 +173,25 @@ const Blog: NextPage<Props> = ({ postData }) => {
 						heading: MarkdownHeading,
 						img: MarkdownImage,
 						a: MarkdownLink,
-						list: MarkdownList,
 						li({ children, index, ordered, ...props }) {
 							return (
 								<MarkdownListItem ordered={ordered} index={index} {...props}>
 									{children}
 								</MarkdownListItem>
+							)
+						},
+						ul({ children, depth, ordered, ...props }) {
+							return (
+								<MarkdownList depth={depth} ordered={ordered} {...props}>
+									{children}
+								</MarkdownList>
+							)
+						},
+						ol({ children, depth, ordered, ...props }) {
+							return (
+								<MarkdownList depth={depth} ordered={ordered} {...props}>
+									{children}
+								</MarkdownList>
 							)
 						},
 						p: MarkdownParagraph,
