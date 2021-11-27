@@ -64,6 +64,7 @@ Next.js でのブログの作成に関しては[公式サイト](https://nextjs.
 
 ```txt
 **これは太字です。**
+~~この文章に打ち消し線を。~~
 ここに `code` をいれます。
 これは[Githubのリンク](https://github.com/Yuta07)です。
 ```

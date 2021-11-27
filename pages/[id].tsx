@@ -170,7 +170,48 @@ const Blog: NextPage<Props> = ({ postData }) => {
 							)
 						},
 						del: MarkdownDelete,
-						heading: MarkdownHeading,
+						h1({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						h2({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						h3({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						h4({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						h5({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						h6({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
 						img: MarkdownImage,
 						a: MarkdownLink,
 						li({ children, index, ordered, ...props }) {
