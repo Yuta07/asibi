@@ -23,7 +23,7 @@ module.exports = {
 		'prettier',
 	],
 	ignorePatterns: ['*.config.js'],
-	plugins: ['prettier', 'react'],
+	plugins: ['@typescript-eslint', 'import'],
 	rules: {
 		'react/react-in-jsx-scope': 'off',
 		'react/prop-types': 'off',
@@ -35,6 +35,23 @@ module.exports = {
 		'@typescript-eslint/no-require-imports': 'warn',
 		'@typescript-eslint/no-unused-vars': 'error',
 		'@typescript-eslint/prefer-for-of': 'warn',
+		'import/order': [
+			'warn',
+			{
+				groups: ['builtin', 'external', 'parent', 'index', 'sibling', 'object', 'type'],
+				pathGroups: [
+					{
+						pattern: '@alias/**',
+						group: 'parent',
+						position: 'after',
+					},
+				],
+				alphabetize: {
+					order: 'asc',
+				},
+				'newlines-between': 'always',
+			},
+		],
 	},
 	settings: {
 		react: {
