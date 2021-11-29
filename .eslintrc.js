@@ -20,6 +20,9 @@ module.exports = {
 		'plugin:react/recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:@typescript-eslint/eslint-recommended',
+		'plugin:import/errors',
+		'plugin:import/warnings',
+		'plugin:import/typescript',
 		'prettier',
 	],
 	ignorePatterns: ['*.config.js'],
@@ -35,27 +38,16 @@ module.exports = {
 		'@typescript-eslint/no-require-imports': 'warn',
 		'@typescript-eslint/no-unused-vars': 'error',
 		'@typescript-eslint/prefer-for-of': 'warn',
-		'import/order': [
-			'warn',
-			{
-				groups: ['builtin', 'external', 'parent', 'index', 'sibling', 'object', 'type'],
-				pathGroups: [
-					{
-						pattern: '@alias/**',
-						group: 'parent',
-						position: 'after',
-					},
-				],
-				alphabetize: {
-					order: 'asc',
-				},
-				'newlines-between': 'always',
-			},
-		],
 	},
 	settings: {
 		react: {
 			version: 'detect', // detect the version of React to use
+		},
+		'import/resolver': {
+			node: {
+				extensions: ['.js', '.jsx', '.ts', '.tsx'],
+			},
+			typescript: {},
 		},
 	},
 }
