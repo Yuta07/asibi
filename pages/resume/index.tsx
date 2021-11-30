@@ -1,5 +1,6 @@
 import { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
+
 import { ResumeView } from '@components/resume/ResumeView'
 
 const Resume: NextPage = () => {

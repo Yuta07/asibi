@@ -1,7 +1,8 @@
 import { GetStaticProps, NextPage } from 'next'
+import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 import Link from 'next/link'
-import { NextSeo } from 'next-seo'
+
 import { generatedRssFeed } from '@lib/feed'
 import { getSortedPostsData } from '@lib/posts'
 import styles from '@styles/Home.module.scss'

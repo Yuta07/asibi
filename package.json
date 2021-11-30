@@ -9,10 +9,10 @@
     "start": "next start",
     "check-types": "tsc --noEmit",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore .",
-    "lint-fix": "eslint /**/*.{ts,tsx} --fix",
+    "lint:fix": "eslint /**/*.{ts,tsx} --fix",
     "lint-style": "stylelint '/**/*.{ts,tsx,css,scss}'",
-    "prettier-check": "prettier --check .",
-    "prettier-fix": "prettier --write .",
+    "prettier:check": "prettier --check .",
+    "prettier:fix": "prettier --write .",
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
@@ -54,8 +54,8 @@
     "@typescript-eslint/parser": "^5.4.0",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.24.0",
     "feed": "^4.2.2",
     "husky": "^7.0.0",
@@ -70,8 +70,9 @@
     }
   },
   "lint-staged": {
-    "*.{js, jsx, ts, tsx, json, md}": [
-      
+    "*.{js, jsx, ts, tsx}": [
+      "yarn lint:fix",
+      "yarn prettier:fix"
     ]
   }
 }

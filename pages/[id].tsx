@@ -1,3 +1,10 @@
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import { BlogJsonLd, NextSeo } from 'next-seo'
+import Image from 'next/image'
+import { ReactNode, VFC } from 'react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+
 import { Share } from '@components/common/Share'
 import { BlockCode } from '@components/markdown/BlockCode'
 import { Blockquote } from '@components/markdown/Blockquote'
@@ -13,12 +20,6 @@ import { Strong } from '@components/markdown/Strong'
 import { ThematicBreak } from '@components/markdown/ThematicBreak'
 import { getAllPostIds, getPostData } from '@lib/posts'
 import styles from '@styles/Blog.module.scss'
-import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
-import { BlogJsonLd, NextSeo } from 'next-seo'
-import Image from 'next/image'
-import { ReactNode, VFC } from 'react'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
 
 type Props = {
 	readonly postData: {
