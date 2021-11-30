@@ -1,6 +1,7 @@
 import { FC } from 'react'
 
 import styles from './Layout.module.scss'
+
 import { Footer } from '@components/common/Footer'
 import { Header } from '@components/common/Header'
 

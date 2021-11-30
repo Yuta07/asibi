@@ -1,4 +1,5 @@
 import { ReactNode, VFC } from 'react'
+
 import styles from './List.module.scss'
 
 type Props = {

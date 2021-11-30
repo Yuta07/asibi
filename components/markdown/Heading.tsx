@@ -1,5 +1,6 @@
-import { createElement, ReactNode, VFC } from 'react'
 import classnames from 'classnames'
+import { createElement, ReactNode, VFC } from 'react'
+
 import styles from './Heading.module.scss'
 
 type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
