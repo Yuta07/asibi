@@ -1,9 +1,9 @@
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
 import { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
-import { Layout } from '@components/common/Layout'
 import { Head } from '@components/common/Head'
+import { Layout } from '@components/common/Layout'
 import { GA_ID, pageview } from '@lib/gtag'
 import '@styles/global.scss'
 

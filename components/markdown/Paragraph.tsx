@@ -1,4 +1,5 @@
 import { ReactNode, VFC } from 'react'
+
 import styles from './Paragraph.module.scss'
 
 export const Paragraph: VFC<{ children: ReactNode }> = ({ children }) => {

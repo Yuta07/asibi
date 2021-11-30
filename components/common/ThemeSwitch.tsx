@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+
 import styles from './ThemeSwitch.module.scss'
 
 export const ThemeSwitch = () => {

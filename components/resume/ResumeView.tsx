@@ -3,8 +3,8 @@ import { Education } from './Education'
 import { Experience } from './Experience'
 import { Others } from './Others'
 import { Profile } from './Profile'
-import { Skills } from './Skills'
 import styles from './ResumeView.module.scss'
+import { Skills } from './Skills'
 
 export const ResumeView = () => {
 	return (

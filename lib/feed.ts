@@ -1,6 +1,8 @@
 import fs from 'fs'
+
 import { Feed } from 'feed'
-import marked from 'marked'
+import { marked } from 'marked'
+
 import { getSortedPostsData } from './posts'
 
 // ref: https://zenn.dev/catnose99/articles/c7754ba6e4adac
