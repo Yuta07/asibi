@@ -16,13 +16,16 @@ Next.js でのブログの作成に関しては[公式サイト](https://nextjs.
 
 [参考サイト](https://jfelix.info/blog/how-to-make-a-static-blog-with-next-js)
 
-## Heading
+# Heading
 
 ```txt
+# Heading
 ## Heading2
 ### Heading3
 #### Heading4 or 5
 ```
+
+# Heading
 
 ## Heading2
 
