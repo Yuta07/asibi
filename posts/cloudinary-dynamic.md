@@ -43,7 +43,7 @@ tag: 'dev'
 
 コピーした URL はこんな感じになります。
 
-```
+```txt
 https://res.cloudinary.com/Cloudinary_cloud_name/image/upload/v12345678910/background.png
 ```
 
@@ -54,7 +54,7 @@ https://res.cloudinary.com/Cloudinary_cloud_name/image/upload/v12345678910/backg
 
 画像にテキストを埋め込む場合は
 
-```
+```txt
 l_text:フォントの種類_サイズ_太さ:テキスト内容,カラーなどのオプション
 ```
 
@@ -73,7 +73,7 @@ l_text:フォントの種類_サイズ_太さ:テキスト内容,カラーなど
 
 今回はオプションを追加して以下のような URL とします。
 
-```
+```txt
 https://res.cloudinary.com/Cloudinary_cloud_name/image/upload/l_text:TakaoGothic_40:Next.jsブログ用の OGP 画像を Cloudinary で動的に生成する,co_rgb:333333,w_520,c_fit/v12345678910/background.png
 ```
 
@@ -112,7 +112,7 @@ import { BlogJsonLd, NextSeo } from 'next-seo'
 
 ~~~
 
-	const CLOUDINARY_URL = `https://res.cloudinary.com/Cloudinary_cloud_name/image/upload/l_text:TakaoGothic_40:${blog_title},co_rgb:333333,w_520,c_fit/v12345678910/background.png`
+const CLOUDINARY_URL = `https://res.cloudinary.com/Cloudinary_cloud_name/image/upload/l_text:TakaoGothic_40:${blog_title},co_rgb:333333,w_520,c_fit/v12345678910/background.png`
 
 return (
   <div>
