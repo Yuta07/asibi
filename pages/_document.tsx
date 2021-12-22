@@ -26,8 +26,8 @@ export default class MyDocument extends Document {
 					<link
 						rel="alternate"
 						type="application/rss+xml"
-						title="yutaka miyazaki's Blog RSS Feed"
-						href="https://yutaaaaa.dev/feed"
+						title="yutaaaaaの日常とtechブログ"
+						href="https://yutaaaaa.dev"
 					/>
 				</Head>
 				<body>

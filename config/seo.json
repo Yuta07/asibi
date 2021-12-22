@@ -1,16 +1,16 @@
 {
   "titleTemplate": "%s | yutaaaaa",
-  "defaultTitle": "yutaaaaa",
-  "description": "yutaka miyazaki's blog and resume",
+  "defaultTitle": "yutaaaaaの日常",
+  "description": "Flightless pig's ordinary day and tech.",
   "openGraph": {
     "type": "website",
     "url": "https://yutaaaaa.dev/",
-    "site_name": "yutaaaaa.dev",
-    "title": "yutaka miyazaki's blog and resume",
-    "description": "yutaka miyazaki's blog and resume",
+    "site_name": "yutaaaaaの日常",
+    "title": "yutaaaaaの日常",
+    "description": "Flightless pig's ordinary day and tech.",
     "images": [
       {
-        "url": "https://yutaaaaa.dev/ogp.jpg",
+        "url": "https://yutaaaaa.dev/ogp.png",
         "width": 800,
         "height": 600,
         "alt": "Og Image Alt"
@@ -20,6 +20,6 @@
   "twitter": {
     "handle": "@yutaaaaa___",
     "site": "@yutaaaaa___",
-    "cardType": "summary"
+    "cardType": "summary_large_image"
   }
 }
