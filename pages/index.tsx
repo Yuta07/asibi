@@ -1,5 +1,4 @@
 import { GetStaticProps, NextPage } from 'next'
-import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -20,19 +19,21 @@ type Props = {
 	}[]
 }
 
+export const getStaticProps: GetStaticProps = async () => {
+	const allPostsData = getSortedPostsData()
+
+	generatedRssFeed()
+
+	return {
+		props: {
+			allPostsData,
+		},
+	}
+}
+
 const Home: NextPage<Props> = ({ allPostsData }) => {
 	return (
 		<div className={styles.container}>
-			<NextSeo
-				title=""
-				description="yutaka miyazakiのブログ"
-				openGraph={{
-					type: 'website',
-					title: 'yutaka miyazakiのブログ',
-					description: 'yutaka miyazakiのブログ一覧',
-					url: 'https://yutaaaaa.dev',
-				}}
-			/>
 			{allPostsData.map((data, i) => {
 				return (
 					<Link key={data.id} href={`/${data.id}`}>
@@ -65,18 +66,6 @@ const Home: NextPage<Props> = ({ allPostsData }) => {
 			})}
 		</div>
 	)
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-	const allPostsData = getSortedPostsData()
-
-	generatedRssFeed()
-
-	return {
-		props: {
-			allPostsData,
-		},
-	}
 }
 
 export default Home

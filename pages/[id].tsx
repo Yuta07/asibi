@@ -107,7 +107,7 @@ const Blog: NextPage<Props> = ({ postData }) => {
 		return <ThematicBreak />
 	}
 
-	const CLOUDINARY_URL = `https://res.cloudinary.com/https-yutaaaaa-vercel-app/image/upload/l_text:TakaoGothic_40:${postData.data.title},co_rgb:000000,w_720,c_fit/v1640180870/cloudinary_fzk9qg.png`
+	const CLOUDINARY_URL = `https://res.cloudinary.com/https-yutaaaaa-vercel-app/image/upload/l_text:TakaoGothic_50:${postData.data.title},co_rgb:000000,w_720,c_fit/v1640180870/cloudinary_fzk9qg.png`
 
 	return (
 		<div className={styles.container}>
@@ -115,10 +115,11 @@ const Blog: NextPage<Props> = ({ postData }) => {
 				title={postData.data.title}
 				description={postData.data.quickword}
 				openGraph={{
-					type: 'article',
+					type: 'website',
 					title: postData.data.title,
 					description: postData.data.quickword,
 					url: `https://yutaaaaa.dev/${postData.id}`,
+					site_name: postData.data.title,
 					images: [
 						{
 							url: CLOUDINARY_URL,

@@ -2,7 +2,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 import { GA_ID } from '@lib/gtag'
 
-export default class MyDocument extends Document {
+class MyDocument extends Document {
 	render() {
 		return (
 			<Html lang="ja-JP">
@@ -38,3 +38,5 @@ export default class MyDocument extends Document {
 		)
 	}
 }
+
+export default MyDocument
