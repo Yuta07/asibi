@@ -1,10 +1,10 @@
 ---
 title: 'ブログ内マークダウンの表現'
-quickword: 'マークダウンで使用しているスタイルを忘れないようにまとめておく。'
-date: '2020-09-24'
-updated: '2021-08-26'
-image: '/blog/markdown-express/markdown-express.svg'
-tag: 'general'
+preface: 'マークダウンで使用しているスタイルを忘れないようにまとめておく。'
+createdAt: '2020-09-24'
+updatedAt: '2021-08-26'
+category: 'ordinary'
+tags: ['Others']
 ---
 
 ## はじめに

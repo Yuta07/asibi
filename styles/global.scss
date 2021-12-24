@@ -9,10 +9,10 @@
 
 body {
 	min-height: 100vh;
+	font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+		'Droid Sans', 'Helvetica Neue', sans-serif;
 	color: var(--color-primary);
 	background: var(--color-background);
-	font-family: 'monaco', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-		'Helvetica Neue', sans-serif;
 	font-size: var(--font-size-m);
 	font-weight: var(--font-weight-normal);
 	line-height: 1.5;
@@ -22,22 +22,16 @@ body {
 	counter-reset: number 0;
 
 	&.dark {
-		--color-background: #0d1117;
+		--color-background: #0e141b;
 		--color-primary: #ffffff;
-		--color-secondary: #0d1117;
+		--color-secondary: #0e141b;
 	}
 }
 
 a {
-	color: var(--color-gray);
 	text-decoration: none;
 }
 
 small {
 	font-size: 12px;
-}
-
-.twitter-tweet {
-	max-width: 400px !important;
-	margin: 40px auto 0 !important;
 }

@@ -1,4 +1,4 @@
-@import '/styles/mixins';
+@use '/styles/mixins';
 
 .switch {
 	padding: 4px;
@@ -22,8 +22,8 @@
 }
 
 .theme {
-	width: 32px;
-	height: 32px;
+	width: 24px;
+	height: 24px;
 }
 
 .light {

@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { BlogJsonLd, NextSeo } from 'next-seo'
-import Image from 'next/image'
 import { ReactNode, VFC } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -25,9 +24,9 @@ type Props = {
 	readonly postData: {
 		data: {
 			title: string
-			quickword: string
+			preface: string
 			date: string
-			updated?: string
+			updatedAt?: string
 			image: string
 		}
 		id: string
@@ -113,11 +112,11 @@ const Blog: NextPage<Props> = ({ postData }) => {
 		<div className={styles.container}>
 			<NextSeo
 				title={postData.data.title}
-				description={postData.data.quickword}
+				description={postData.data.preface}
 				openGraph={{
 					type: 'website',
 					title: postData.data.title,
-					description: postData.data.quickword,
+					description: postData.data.preface,
 					url: `https://yutaaaaa.dev/${postData.id}`,
 					site_name: postData.data.title,
 					images: [
@@ -140,19 +139,17 @@ const Blog: NextPage<Props> = ({ postData }) => {
 				title={postData.data.title}
 				images={[CLOUDINARY_URL]}
 				datePublished={`${postData.data.date}T09:00:00+08:00`}
-				dateModified={`${postData.data.updated}T09:00:00+08:00`}
+				dateModified={`${postData.data.updatedAt}T09:00:00+08:00`}
 				authorName="yutaaaaa"
-				description={postData.data.quickword}
+				description={postData.data.preface}
 			/>
 			<div className={styles.dateBox}>
 				<div className={styles.createdAt}>
-					<Image quality={85} src="/images/created.svg" alt="created_icon" width={16} height={16} />
 					<small className={styles.date}>{postData.data.date}</small>
 				</div>
-				{postData.data.updated && (
+				{postData.data.updatedAt && (
 					<div className={styles.updatedAt}>
-						<Image quality={85} src="/images/updated.svg" alt="updated_icon" width={16} height={16} />
-						<small className={styles.date}>{postData.data.updated}</small>
+						<small className={styles.date}>{postData.data.updatedAt}</small>
 					</div>
 				)}
 			</div>

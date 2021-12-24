@@ -1,21 +1,13 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useDarkmode } from '@hooks/useDarkmode'
 
-import styles from './ThemeSwitch.module.scss'
+import styles from './ThemeToggle.module.scss'
 
-export const ThemeSwitch = () => {
-	const [isDark, setIsDark] = useState<boolean>(false)
+export const ThemeToggle = () => {
+	const { isDark, setIsDark } = useDarkmode()
 
-	useEffect(() => {
-		if (isDark) {
-			document.body.classList.add('dark')
-		} else {
-			document.body.classList.remove('dark')
-		}
-	}, [isDark])
-
-	const handleSwitchTheme = useCallback(() => {
-		setIsDark((prev) => !prev)
-	}, [])
+	const handleSwitchTheme = () => {
+		setIsDark(!isDark)
+	}
 
 	return (
 		<button name="toggle" className={isDark ? styles.switchOn : styles.switchOff} onClick={handleSwitchTheme}>

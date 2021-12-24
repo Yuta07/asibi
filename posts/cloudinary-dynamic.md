@@ -1,10 +1,10 @@
 ---
 title: 'Next.jsブログ用のOGP画像をCloudinaryで動的に生成する'
-quickword: 'Next.jsのブログタイトルを動的に生成'
-date: '2021-09-01'
-updated: '2021-09-03'
-image: '/blog/cloudinary-dynamic/cloudinary.svg'
-tag: 'dev'
+preface: 'Next.jsのブログタイトルを動的に生成'
+createdAt: '2021-09-01'
+updatedAt: '2021-09-03'
+category: 'tech'
+tags: ['Cloudinary']
 ---
 
 ## Cloudinary
