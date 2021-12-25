@@ -85,18 +85,6 @@ export const getSortedPostsDataWithTag = (tag: string) => {
 	})
 }
 
-export function getAllPostIds() {
-	const fileNames = fs.readdirSync(postsDirectory)
-
-	return fileNames.map((fileName) => {
-		return {
-			params: {
-				id: fileName.replace(/\.md$/, ''),
-			},
-		}
-	})
-}
-
 export async function getPostData(id: string) {
 	const markdownWithMetadata = fs.readFileSync(path.join(postsDirectory, `${id}.md`)).toString()
 	const { data, content } = matter(markdownWithMetadata)
@@ -104,7 +92,13 @@ export async function getPostData(id: string) {
 	return {
 		id,
 		content,
-		data,
-		...(data.data as { date: string; preface: string; title: string; image: string }),
+		...(data as {
+			title: string
+			preface: string
+			createdAt: string
+			updatedAt: string
+			category: string
+			tags: string[]
+		}),
 	}
 }

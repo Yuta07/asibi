@@ -19,12 +19,12 @@ body {
 	letter-spacing: 0.5px;
 	word-wrap: break-word;
 	font-kerning: normal;
-	counter-reset: number 0;
 
 	&.dark {
 		--color-background: #0e141b;
 		--color-primary: #ffffff;
 		--color-secondary: #0e141b;
+		--color-inlineCode: #053959;
 	}
 }
 

@@ -1,4 +1,4 @@
-import styles from './Img.module.scss'
+import Image from 'next/image'
 
 type Props = {
 	alt: string
@@ -7,8 +7,31 @@ type Props = {
 
 export const Img = ({ alt, src }: Props) => {
 	return (
-		<span className={styles.flame}>
-			<img src={src} alt={alt} className={styles.image} width={540} height={320} />
+		<span className="container">
+			<Image
+				src={src}
+				alt={alt}
+				className="image"
+				width={540}
+				height={320}
+				layout="responsive"
+				quality={85}
+				objectFit="contain"
+				priority={true}
+			/>
+			<style jsx>{`
+				.container {
+					margin: 60px 0;
+					display: block;
+					text-align: center;
+				}
+
+				.image {
+					max-width: 100%;
+					border-radius: 15px;
+					max-height: 400px;
+				}
+			`}</style>
 		</span>
 	)
 }

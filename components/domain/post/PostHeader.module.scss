@@ -1,0 +1,76 @@
+@import '/styles/mixins';
+
+.container {
+	width: 100%;
+	padding: 40px 0;
+}
+
+.title {
+	font-size: var(--font-size-xxl);
+	text-align: center;
+}
+
+.info {
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.date {
+	color: var(--color-gray);
+	font-size: var(--font-size-xs);
+	letter-spacing: 0;
+}
+
+.refresh {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+
+	svg {
+		color: var(--color-gray);
+	}
+}
+
+.category {
+	padding: 2px 8px;
+	border-radius: var(--line-radius-light);
+	color: #ffffff;
+	font-size: var(--font-size-xs);
+
+	&:hover {
+		opacity: var(--hover-feedback-opacity);
+		transition: var(--animation-transition);
+	}
+}
+
+.ordinary {
+	@extend .category;
+
+	background: var(--color-main-coral);
+}
+
+.tech {
+	@extend .category;
+
+	background: var(--color-main-blue);
+}
+
+.tags {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.tag {
+	color: var(--color-primary);
+	font-size: var(--font-size-xs);
+	text-decoration: underline;
+
+	&:hover {
+		opacity: var(--hover-feedback-opacity);
+		transition: var(--animation-transition);
+	}
+}

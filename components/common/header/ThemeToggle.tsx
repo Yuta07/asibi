@@ -13,25 +13,18 @@ export const ThemeToggle = () => {
 		<button name="toggle" className={isDark ? styles.switchOn : styles.switchOff} onClick={handleSwitchTheme}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 64 64"
-				aria-labelledby="title"
-				aria-describedby="desc"
-				role="img"
-				xmlnsXlink="http://www.w3.org/1999/xlink"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="#939597"
+				strokeWidth="2"
+				strokeLinecap="round"
+				strokeLinejoin="round"
 				className={isDark ? styles.dark : styles.light}
 			>
 				<title>Half Moon</title>
-				<desc>A line styled icon from Orion Icon Library.</desc>
-				<path
-					data-name="layer1"
-					d="M33.9 11A16.8 16.8 0 0 1 12 34.1 20.1 20.1 0 1 0 33.9 11z"
-					fill="none"
-					stroke="#939597"
-					strokeMiterlimit="10"
-					strokeWidth="2"
-					strokeLinejoin="round"
-					strokeLinecap="round"
-				></path>
+				<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
 			</svg>
 		</button>
 	)

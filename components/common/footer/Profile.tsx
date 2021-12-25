@@ -18,7 +18,7 @@ export const Profile = () => {
 				<a href="https://twitter.com/yutaaaaa___" target="_blank" rel="noopener noreferrer" className={styles.link}>
 					<TwitterSVG />
 				</a>
-				<a href="https://twitter.com/yutaaaaa___" target="_blank" rel="noopener noreferrer" className={styles.link}>
+				<a href="https://yutaaaaa.dev/rss/feed.xml" rel="nofollow" className={styles.link}>
 					<RssSVG />
 				</a>
 			</div>

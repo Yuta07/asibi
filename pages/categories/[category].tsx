@@ -1,10 +1,8 @@
-import { InferGetStaticPropsType } from 'next'
-
 import { Home } from '@components/domain/home'
 import { ParamHeader } from '@components/domain/home/ParamHeader'
 import { getSortedPostsDataWithCategory } from '@lib/posts'
 
-import type { GetStaticPaths, GetStaticPropsContext } from 'next'
+import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 	const { category } = params as { category: string }

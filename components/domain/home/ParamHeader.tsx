@@ -10,13 +10,13 @@ export const ParamHeader = ({ total }: Props) => {
 
 	let paramsTxt = ''
 	if (category) {
-		paramsTxt = `カテゴリが ${category.toString()} のエントリは${total}件あります`
+		paramsTxt = `${category.toString()} カテゴリのエントリは${total}件あります`
 	}
 	if (tag) {
 		const upperTag = tag.toString().charAt(0).toUpperCase() + tag.slice(1)
 		const regTag = upperTag.replace('-', '.')
 
-		paramsTxt = `タグが #${regTag} のエントリは${total}件あります`
+		paramsTxt = `#${regTag} タグのエントリは${total}件あります`
 	}
 
 	return (

@@ -14,15 +14,16 @@ Next.js でのブログの作成に関しては[公式サイト](https://nextjs.
 
 公式と異なるのは `remark` ではなく、 `react-markdown` を使用していることです。
 
-[参考サイト](https://jfelix.info/blog/how-to-make-a-static-blog-with-next-js)
+https://jfelix.info/blog/how-to-make-a-static-blog-with-next-js
 
 # Heading
 
 ```txt
-# Heading
-## Heading2
-### Heading3
-#### Heading4 or 5
+# 見出し1
+## 見出し2
+### 見出し3
+#### 見出し4
+##### 見出し5
 ```
 
 # Heading
@@ -31,33 +32,47 @@ Next.js でのブログの作成に関しては[公式サイト](https://nextjs.
 
 ### Heading3
 
-#### Heading4 or 5
+#### Heading4
+
+##### Heading5
 
 ## List
 
 ```txt
-- unOrderedList
-  - ListItem
-  - ListItem
-  - ListItem
-- List
-- List
+- リスト
+  - アイテム
+  - アイテム
+  - アイテム
+    1. 1 番目
+    2. 2 番目
+    3. 3 番目
+- リスト
+- リスト
 
 1. 1番目
 2. 2番目
 3. 3番目
+  1. 1 番目
+  2. 2 番目
+  3. 3 番目
 ```
 
-- List
-  - ListItem
-  - ListItem
-  - ListItem
-- List
-- List
+- リスト
+  - アイテム
+  - アイテム
+  - アイテム
+    1. 1 番目
+    2. 2 番目
+    3. 3 番目
+- リスト
+- リスト
 
 1. 1 番目
 2. 2 番目
 3. 3 番目
+   1. 1 番目
+   2. 2 番目
+   3. 3 番目
 
 ## Hr
 
