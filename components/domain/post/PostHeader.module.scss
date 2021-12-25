@@ -8,6 +8,10 @@
 .title {
 	font-size: var(--font-size-xxl);
 	text-align: center;
+
+	@include max-screen($breakpoint-sm) {
+		font-size: var(--font-size-xl);
+	}
 }
 
 .info {

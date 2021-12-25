@@ -21,7 +21,7 @@ export const Img = ({ alt, src }: Props) => {
 			/>
 			<style jsx>{`
 				.container {
-					margin: 60px 0;
+					margin: 40px 0;
 					display: block;
 					text-align: center;
 				}
