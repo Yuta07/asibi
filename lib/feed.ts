@@ -32,7 +32,7 @@ export const generatedRssFeed = () => {
 		language: 'ja',
 		image: `${baseUrl}/favicon.png`,
 		copyright: `All rights reserved ${date.getFullYear()}, ${author.name}`,
-		updatedAt: date,
+		updated: date,
 		feedLinks: {
 			rss2: `${baseUrl}/rss/feed.xml`,
 			json: `${baseUrl}/rss/feed.json`,
@@ -48,11 +48,11 @@ export const generatedRssFeed = () => {
 
 		feed.addItem({
 			title: post.title,
-			description: post.excerpt,
+			description: post.preface,
 			id: url,
 			link: url,
 			content: marked(post.content),
-			date: new Date(post.date),
+			date: new Date(post.createdAt),
 		})
 	})
 
