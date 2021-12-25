@@ -1,9 +1,9 @@
 ---
 title: 'イージーな気分でダークモードを実装する'
-quickword: 'Next.jsで最小限の実装でダークモードを実装する'
-date: '2021-09-03'
-image: '/blog/easy-darkmode/flat-moon.svg'
-tag: 'dev'
+preface: 'Next.jsで最小限の実装でダークモードを実装する'
+createdAt: '2021-09-03'
+category: 'tech'
+tags: ['Others']
 ---
 
 ## やること

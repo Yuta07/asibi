@@ -1,10 +1,10 @@
 ---
 title: 'ポートフォリオのこと'
-quickword: 'ポートフォリオに何を書いたかを簡単に残しておく。'
-date: '2020-09-22'
-updated: '2021-09-01'
-image: '/blog/first-post/first-post.svg'
-tag: 'self'
+preface: 'ポートフォリオに何を書いたかを簡単に残しておく。'
+createdAt: '2020-09-22'
+updatedAt: '2021-09-01'
+category: 'ordinary'
+tags: ['Others']
 ---
 
 ## ポートフォリオについて

@@ -3,13 +3,21 @@ import Image from 'next/image'
 import styles from './Share.module.scss'
 
 type Props = {
-	slug: string
-	title: string
+	post: {
+		title: string
+		preface: string
+		createdAt: string
+		updatedAt: string
+		category: string
+		tags: string[]
+		id: string
+		content: string
+	}
 }
 
-export const Share = ({ slug, title }: Props) => {
-	const pageUrl = `https://yutaaaaa.dev/${slug}`
-	const encodeTitle = encodeURIComponent(title)
+export const Share = ({ post }: Props) => {
+	const pageUrl = `https://yutaaaaa.dev/${post.id}`
+	const encodeTitle = encodeURIComponent(post.title)
 
 	return (
 		<div className={styles.container}>
@@ -19,10 +27,7 @@ export const Share = ({ slug, title }: Props) => {
 				rel="nofollow"
 				className={styles.anchor}
 			>
-				<Image quality={85} src="/images/twitter.svg" alt="twitter_share" width={40} height={40} />
-			</a>
-			<a href="https://yutaaaaa.dev/rss/feed.xml" rel="nofollow" className={styles.feed}>
-				<Image quality={85} src="/images/rss.svg" alt="twitter_share" width={20} height={20} />
+				<Image quality={85} src="/twitter.svg" alt="twitter_share" width={40} height={40} />
 			</a>
 		</div>
 	)

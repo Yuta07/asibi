@@ -5,14 +5,7 @@ import matter from 'gray-matter'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-const firstFourLines = (file: any): string => {
-	file.excerpt = file.content.split('\n').slice(0, 4).join(' ')
-
-	return file.excerpt
-}
-
-export const getSortedPostsData = () => {
-	// Get file names under /posts
+export const getAllPostsData = () => {
 	const fileNames = fs.readdirSync(postsDirectory)
 	const allPostsData = fileNames.map((fileName) => {
 		// Remove ".md" from file name to get id
@@ -23,20 +16,32 @@ export const getSortedPostsData = () => {
 		const fileContents = fs.readFileSync(fullPath, 'utf8')
 
 		// Use gray-matter to parse the post metadata section
-		const matterResult: matter.GrayMatterFile<string> = matter([fileContents].join('\n'), { excerpt: firstFourLines })
+		const matterResult: matter.GrayMatterFile<string> = matter([fileContents].join('\n'))
 
 		// Combine the data with the id
 		return {
 			id,
-			excerpt: matterResult.excerpt,
 			content: matterResult.content,
-			...(matterResult.data as { date: string; title: string; quickword: string; image: string }),
+			...(matterResult.data as {
+				title: string
+				preface: string
+				createdAt: string
+				updatedAt: string
+				category: string
+				tags: string[]
+			}),
 		}
 	})
 
+	return allPostsData
+}
+
+export const getSortedPostsData = () => {
+	const allPostsData = getAllPostsData()
+
 	// Sort posts by date
 	return allPostsData.sort((a, b) => {
-		if (a.date < b.date) {
+		if (a.createdAt < b.createdAt) {
 			return 1
 		} else {
 			return -1
@@ -44,14 +49,38 @@ export const getSortedPostsData = () => {
 	})
 }
 
-export function getAllPostIds() {
-	const fileNames = fs.readdirSync(postsDirectory)
+export const getSortedPostsDataWithCategory = (category: string) => {
+	const allPostsData = getAllPostsData()
 
-	return fileNames.map((fileName) => {
-		return {
-			params: {
-				id: fileName.replace(/\.md$/, ''),
-			},
+	const filterPostsData = allPostsData.filter((post) => {
+		if (post.category === category) {
+			return post
+		}
+	})
+
+	return filterPostsData.sort((a, b) => {
+		if (a.createdAt < b.createdAt) {
+			return 1
+		} else {
+			return -1
+		}
+	})
+}
+
+export const getSortedPostsDataWithTag = (tag: string) => {
+	const allPostsData = getAllPostsData()
+
+	const filterPostsData = allPostsData.filter((post) => {
+		if (post.tags.indexOf(tag) !== -1) {
+			return post
+		}
+	})
+
+	return filterPostsData.sort((a, b) => {
+		if (a.createdAt < b.createdAt) {
+			return 1
+		} else {
+			return -1
 		}
 	})
 }
@@ -63,7 +92,13 @@ export async function getPostData(id: string) {
 	return {
 		id,
 		content,
-		data,
-		...(data.data as { date: string; quickword: string; title: string; image: string }),
+		...(data as {
+			title: string
+			preface: string
+			createdAt: string
+			updatedAt: string
+			category: string
+			tags: string[]
+		}),
 	}
 }

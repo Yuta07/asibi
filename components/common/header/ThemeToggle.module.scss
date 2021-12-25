@@ -1,0 +1,43 @@
+@use '/styles/mixins';
+
+.switch {
+	padding: 4px;
+	display: inline-flex;
+	border-radius: var(--line-radius);
+	cursor: pointer;
+}
+
+.switchOn {
+	@extend .switch;
+
+	background: #1c1d1f;
+	border: 1px solid#F5DF4D;
+}
+
+.switchOff {
+	@extend .switch;
+
+	background: #939597;
+	border: 1px solid transparent;
+}
+
+.theme {
+	width: 24px;
+	height: 24px;
+}
+
+.light {
+	@extend .theme;
+
+	path {
+		fill: #ffffff;
+	}
+}
+
+.dark {
+	@extend .theme;
+
+	path {
+		fill: #f5df4d;
+	}
+}

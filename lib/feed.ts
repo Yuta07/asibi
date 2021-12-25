@@ -48,11 +48,11 @@ export const generatedRssFeed = () => {
 
 		feed.addItem({
 			title: post.title,
-			description: post.excerpt,
+			description: post.preface,
 			id: url,
 			link: url,
 			content: marked(post.content),
-			date: new Date(post.date),
+			date: new Date(post.createdAt),
 		})
 	})
 

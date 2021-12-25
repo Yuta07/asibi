@@ -9,9 +9,8 @@ type Props = {
 }
 
 export const BlockCode = ({ language, value }: Props) => {
-	console.log(language)
 	return (
-		<div className={styles.blockCode}>
+		<div className={styles.container}>
 			<SyntaxHighlighter language={language} style={darcula}>
 				{value}
 			</SyntaxHighlighter>

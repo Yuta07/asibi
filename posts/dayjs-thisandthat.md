@@ -1,9 +1,9 @@
 ---
 title: 'Day.jsあれこれ'
-quickword: 'Day.jsのちょっとした機能紹介'
-date: '2021-09-02'
-image: '/blog/dayjs-thisandthat/ruler.svg'
-tag: 'dev'
+preface: 'Day.jsのちょっとした機能紹介'
+createdAt: '2021-09-02'
+category: 'tech'
+tags: ['Others']
 ---
 
 ## Moment.js から Day.js へ

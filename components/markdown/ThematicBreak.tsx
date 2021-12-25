@@ -1,5 +1,13 @@
-import styles from './ThematicBreak.module.scss'
-
 export const ThematicBreak = () => {
-	return <hr className={styles.break} />
+	return (
+		<>
+			<hr className="container" />
+			<style jsx>{`
+				.container {
+					border-top: var(--border-normal);
+					margin: 40px 0;
+				}
+			`}</style>
+		</>
+	)
 }
