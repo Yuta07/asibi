@@ -1,13 +1,16 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-import { AnalyticsScript } from '@components/common/AnalyticsScript'
-
 class MyDocument extends Document {
 	render() {
 		return (
 			<Html lang="ja-JP">
 				<Head>
-					<AnalyticsScript />
+					<link
+						rel="alternate"
+						type="application/rss+xml"
+						title="yutaaaaaの日常とtechブログ"
+						href="https://yutaaaaa.dev"
+					/>
 				</Head>
 				<body>
 					<Main />

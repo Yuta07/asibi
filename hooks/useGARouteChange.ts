@@ -16,6 +16,7 @@ export const useGARouteChange = () => {
 		}
 
 		router.events.on('routeChangeComplete', handleRouteChange)
+
 		return () => {
 			router.events.off('routeChangeComplete', handleRouteChange)
 		}
