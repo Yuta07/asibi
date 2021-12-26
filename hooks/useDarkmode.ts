@@ -4,14 +4,10 @@ export const useDarkmode = () => {
 	const [isDark, setIsDark] = useState<boolean>(true)
 
 	useEffect(() => {
-		document.body.classList.add('dark')
-	}, [])
-
-	useEffect(() => {
 		if (isDark) {
-			document.body.classList.add('dark')
+			document.body.classList.remove('light')
 		} else {
-			document.body.classList.remove('dark')
+			document.body.classList.add('light')
 		}
 	}, [isDark])
 

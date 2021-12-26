@@ -30,8 +30,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 			.reduce((previous: any, current: Element) => {
 				const property = current.getAttribute('property')?.trim().replace('og:', '')
 
-				console.log(property)
-
 				if (!property) return
 
 				const content = current.getAttribute('content')
@@ -39,8 +37,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
 				return previous
 			}, {})
-
-		console.log(ogp)
 
 		res.status(200).json(ogp)
 	} catch {

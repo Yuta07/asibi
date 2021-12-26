@@ -123,4 +123,4 @@ export default CoolComponent
 
 ## Embed Link
 
-[Embed](https://shop.ohmsha.co.jp/shopdetail/000000001901/)
+[Embed](https://ja.reactjs.org/)

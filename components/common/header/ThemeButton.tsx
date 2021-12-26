@@ -1,8 +1,8 @@
 import { useDarkmode } from '@hooks/useDarkmode'
 
-import styles from './ThemeToggle.module.scss'
+import styles from './ThemeButton.module.scss'
 
-export const ThemeToggle = () => {
+export const ThemeButton = () => {
 	const { isDark, setIsDark } = useDarkmode()
 
 	const handleSwitchTheme = () => {
