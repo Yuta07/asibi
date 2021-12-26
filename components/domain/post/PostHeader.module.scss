@@ -7,7 +7,9 @@
 
 .title {
 	font-size: var(--font-size-xxl);
-	text-align: center;
+	margin: 0 auto;
+	display: table;
+	text-align: left;
 
 	@include max-screen($breakpoint-sm) {
 		font-size: var(--font-size-xl);
@@ -26,16 +28,6 @@
 	color: var(--color-gray);
 	font-size: var(--font-size-xs);
 	letter-spacing: 0;
-}
-
-.refresh {
-	display: inline-flex;
-	align-items: center;
-	gap: 4px;
-
-	svg {
-		color: var(--color-gray);
-	}
 }
 
 .category {

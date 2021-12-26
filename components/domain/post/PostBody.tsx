@@ -11,7 +11,7 @@ import { InlineCode } from '@components/markdown/InlineCode'
 import { Link } from '@components/markdown/Link'
 import { List } from '@components/markdown/List'
 import { ListItem } from '@components/markdown/ListItem'
-import { Paragraph } from '@components/markdown/Paragraph'
+import { ElParagraph, Paragraph } from '@components/markdown/Paragraph'
 import { Strong } from '@components/markdown/Strong'
 import { ThematicBreak } from '@components/markdown/ThematicBreak'
 
@@ -87,6 +87,10 @@ export const PostBody = ({ post }: Props) => {
 				{children}
 			</ListItem>
 		)
+	}
+
+	const MarkdownElementParagraph: VFC<{ children: ReactNode }> = ({ children }) => {
+		return <ElParagraph>{children}</ElParagraph>
 	}
 
 	const MarkdownParagraph: VFC<{ children: ReactNode }> = ({ children }) => {
@@ -196,7 +200,13 @@ export const PostBody = ({ post }: Props) => {
 						)
 					},
 					p({ children, ...props }) {
-						return <MarkdownParagraph {...props}>{children}</MarkdownParagraph>
+						const detectTagName = ['img', 'a']
+
+						if (props.node.children[0].type === 'element' && detectTagName.includes(props.node.children[0].tagName)) {
+							return <MarkdownElementParagraph {...props}>{children}</MarkdownElementParagraph>
+						} else {
+							return <MarkdownParagraph {...props}>{children}</MarkdownParagraph>
+						}
 					},
 					strong({ children, ...props }) {
 						return <MarkdownStrong {...props}>{children}</MarkdownStrong>

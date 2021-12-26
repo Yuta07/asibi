@@ -7,7 +7,7 @@ type Props = {
 
 export const Img = ({ alt, src }: Props) => {
 	return (
-		<span className="container">
+		<p className="container">
 			<Image
 				src={src}
 				alt={alt}
@@ -32,6 +32,6 @@ export const Img = ({ alt, src }: Props) => {
 					max-height: 400px;
 				}
 			`}</style>
-		</span>
+		</p>
 	)
 }

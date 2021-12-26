@@ -1,7 +1,5 @@
 import Link from 'next/link'
 
-import RefreshCW from '../../../assets/refresh-cw.svg'
-
 import styles from './PostHeader.module.scss'
 
 type Props = {
@@ -23,12 +21,6 @@ export const PostHeader = ({ post }: Props) => {
 			<h1 className={styles.title}>{post.title}</h1>
 			<div className={styles.info}>
 				<time className={styles.date}>{post.createdAt}</time>
-				{post.updatedAt && (
-					<span className={styles.refresh}>
-						<RefreshCW />
-						<time className={styles.date}>{post.updatedAt}</time>
-					</span>
-				)}
 				<Link href={`/categories/${post.category}`}>
 					<a className={styles[post.category]}>{post.category}</a>
 				</Link>
