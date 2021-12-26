@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import styles from './Header.module.scss'
-import { ThemeToggle } from './ThemeToggle'
+import { ThemeButton } from './ThemeButton'
 
 export const Header = () => {
 	return (
@@ -13,7 +13,7 @@ export const Header = () => {
 					<h1 className={styles.title}>yutaaaaa</h1>
 				</a>
 			</Link>
-			<ThemeToggle />
+			<ThemeButton />
 		</header>
 	)
 }

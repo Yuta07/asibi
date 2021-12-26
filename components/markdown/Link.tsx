@@ -1,11 +1,19 @@
 import { ReactNode, VFC } from 'react'
 
+import { EmbedLink } from '@components/EmbedLink'
+
 type Props = {
 	children: ReactNode
 	href: string
 }
 
 export const Link: VFC<Props> = ({ children, href }) => {
+	const isEmbedChidlren = children?.toString() === 'Embed'
+
+	if (isEmbedChidlren) {
+		return <EmbedLink href={href} />
+	}
+
 	const isURLChildren = children?.toString().startsWith('http') || children?.toString().startsWith('https')
 
 	return (
@@ -14,7 +22,7 @@ export const Link: VFC<Props> = ({ children, href }) => {
 			<style jsx>{`
 				.container,
 				.urlContainer {
-					font-size: 16px;
+					margin: 0 4px;
 					color: var(--color-main-blue);
 				}
 

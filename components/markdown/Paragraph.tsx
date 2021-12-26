@@ -1,4 +1,4 @@
-import { ReactNode, VFC } from 'react'
+import React, { ReactNode, VFC } from 'react'
 
 export const Paragraph: VFC<{ children: ReactNode }> = ({ children }) => {
 	return (
@@ -8,6 +8,7 @@ export const Paragraph: VFC<{ children: ReactNode }> = ({ children }) => {
 				.container {
 					margin-top: 20px;
 					font-size: var(--font-size-m);
+					line-height: 1.6;
 				}
 
 				.container a {
@@ -15,5 +16,24 @@ export const Paragraph: VFC<{ children: ReactNode }> = ({ children }) => {
 				}
 			`}</style>
 		</p>
+	)
+}
+
+export const ElParagraph: VFC<{ children: ReactNode }> = ({ children }) => {
+	return (
+		<div className="container">
+			{children}
+			<style jsx>{`
+				.container {
+					margin-top: 20px;
+					font-size: var(--font-size-m);
+					line-height: 1.6;
+				}
+
+				.container a {
+					margin: 0 2px;
+				}
+			`}</style>
+		</div>
 	)
 }

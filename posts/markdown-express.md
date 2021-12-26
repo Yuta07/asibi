@@ -120,3 +120,7 @@ export default CoolComponent
 ```
 
 ![imageSampleStars](/blog/markdown-express/stars_sample.jpg)
+
+## Embed Link
+
+[Embed](https://ja.reactjs.org/)
