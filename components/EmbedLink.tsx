@@ -28,31 +28,29 @@ export const EmbedLink = ({ href }: Props) => {
 
 	if (ogState === null) return null
 
-	console.log(ogState)
-
 	let title = ''
 	let description = ''
 	let imageURL = ''
 	let imageAlt = ''
 
-	if ('og:title' in ogState) {
-		title = ogState['og:title']
-	} else if ('og:site_name' in ogState) {
-		title = ogState['og:site_name']
+	if ('title' in ogState) {
+		title = ogState['title']
+	} else if ('site_name' in ogState) {
+		title = ogState['site_name']
 	}
 
-	if ('og:description' in ogState) {
-		description = ogState['og:description']
+	if ('description' in ogState) {
+		description = ogState['description']
 	}
 
-	if ('og:image' in ogState) {
-		imageURL = ogState['og:image']
+	if ('image' in ogState) {
+		imageURL = ogState['image']
 	}
 
-	if ('og:image:alt' in ogState) {
-		imageAlt = ogState['og:image:alt']
-	} else if ('og:title' in ogState) {
-		imageAlt = ogState['og:title']
+	if ('image:alt' in ogState) {
+		imageAlt = ogState['image:alt']
+	} else if ('title' in ogState) {
+		imageAlt = ogState['title']
 	}
 
 	return (
@@ -90,6 +88,11 @@ export const EmbedLink = ({ href }: Props) => {
 				.ogTitle {
 					color: var(--color-primary);
 					font-size: var(--font-size-m);
+					word-break: break-all;
+					display: -webkit-box;
+					-webkit-line-clamp: 2;
+					-webkit-box-orient: vertical;
+					overflow: hidden;
 				}
 
 				.ogDescription {
@@ -107,6 +110,11 @@ export const EmbedLink = ({ href }: Props) => {
 					margin-top: 4px;
 					color: var(--color-primary);
 					font-size: var(--font-size-xs);
+					word-break: break-all;
+					display: -webkit-box;
+					-webkit-line-clamp: 1;
+					-webkit-box-orient: vertical;
+					overflow: hidden;
 				}
 
 				.thumbnail {
