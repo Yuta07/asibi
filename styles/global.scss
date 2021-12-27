@@ -19,13 +19,6 @@ body {
 	letter-spacing: 0.5px;
 	word-wrap: break-word;
 	font-kerning: normal;
-
-	&.light {
-		--color-primary: #0e141b;
-		--color-secondary: #ffffff;
-		--color-background: #ffffff;
-		--color-inlineCode: #acd6f2;
-	}
 }
 
 a {

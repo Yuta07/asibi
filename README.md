@@ -1,3 +1,3 @@
 ## yutaaaaa
 
-This is my introduction.
+Personal blog by yutaka miyazaki.

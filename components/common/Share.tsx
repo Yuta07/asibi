@@ -10,13 +10,13 @@ type Props = {
 		updatedAt: string
 		category: string
 		tags: string[]
-		id: string
+		slug: string
 		content: string
 	}
 }
 
 export const Share = ({ post }: Props) => {
-	const pageUrl = `https://yutaaaaa.dev/${post.id}`
+	const pageUrl = `https://yutaaaaa.dev/${post.slug}`
 	const encodeTitle = encodeURIComponent(post.title)
 
 	return (

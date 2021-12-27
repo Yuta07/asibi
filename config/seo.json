@@ -1,12 +1,12 @@
 {
-  "titleTemplate": "%s | yutaaaaaの日常",
-  "defaultTitle": "yutaaaaaの日常",
+  "titleTemplate": "%s | yutanote",
+  "defaultTitle": "yutanote",
   "description": "Flightless pig's ordinary day and tech.",
   "openGraph": {
     "type": "website",
     "url": "https://yutaaaaa.dev/",
-    "site_name": "yutaaaaaの日常",
-    "title": "yutaaaaaの日常",
+    "site_name": "yutanote",
+    "title": "yutanote",
     "description": "Flightless pig's ordinary day and tech.",
     "images": [
       {

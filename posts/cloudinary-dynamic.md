@@ -1,6 +1,6 @@
 ---
-title: 'Next.jsブログ用のOGP画像をCloudinaryで動的に生成する'
-preface: 'Next.jsのブログタイトルを動的に生成'
+title: 'Next.js製ブログ用のOGP画像をCloudinaryで動的に生成する'
+preface: 'Next.jsで作成されている本サイトの記事のタイトルをCloudinaryを使用して動的に生成します。'
 createdAt: '2021-09-01'
 updatedAt: '2021-09-03'
 category: 'tech'
@@ -69,7 +69,7 @@ l_text:フォントの種類_サイズ_太さ:テキスト内容,カラーなど
 - TakaoPGothic
 - TakaoPMincho
 
-[Can I create text overlays in Japanese?](https://support.cloudinary.com/hc/en-us/articles/202521262-Can-I-create-text-overlays-in-Japanese-)
+https://support.cloudinary.com/hc/en-us/articles/202521262-Can-I-create-text-overlays-in-Japanese-
 
 今回はオプションを追加して以下のような URL とします。
 

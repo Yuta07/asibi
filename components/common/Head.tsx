@@ -15,7 +15,7 @@ export const Head = () => {
 				<link
 					rel="alternate"
 					type="application/rss+xml"
-					title="yutaaaaaの日常とtechブログ"
+					title="yutanoteとtechブログ"
 					href="https://yutaaaaa.dev/rss/feed.xml"
 				/>
 			</NextHead>

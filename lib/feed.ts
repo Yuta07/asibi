@@ -44,7 +44,7 @@ export const generatedRssFeed = () => {
 	const posts = getSortedPostsData()
 
 	posts?.forEach((post) => {
-		const url = `${baseUrl}/${post.id}`
+		const url = `${baseUrl}/${post.slug}`
 
 		feed.addItem({
 			title: post.title,

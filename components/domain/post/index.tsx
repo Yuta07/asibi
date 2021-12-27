@@ -11,7 +11,7 @@ type Props = {
 		updatedAt: string
 		category: string
 		tags: string[]
-		id: string
+		slug: string
 		content: string
 	}
 }
