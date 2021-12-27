@@ -107,8 +107,6 @@ export const PostBody = ({ post }: Props) => {
 		return <ThematicBreak />
 	}
 
-	console.log(post.content.toString().length)
-
 	return (
 		<div>
 			<p className={styles.preface}>{post.preface}</p>

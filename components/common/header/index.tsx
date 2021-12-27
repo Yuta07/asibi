@@ -9,7 +9,14 @@ export const Header = () => {
 			<div className={styles.inner}>
 				<Link href="/">
 					<a className={styles.logo}>
-						<Image quality={90} src="/logo/logo-circle.svg" alt="logo_yutaaaaa" width={40} height={40} />
+						<Image
+							quality={90}
+							src="/logo/logo-circle.svg"
+							alt="logo_yutaaaaa"
+							width={40}
+							height={40}
+							priority={true}
+						/>
 						<h1 className={styles.title}>yutanote</h1>
 					</a>
 				</Link>

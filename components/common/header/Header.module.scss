@@ -25,8 +25,8 @@
 .container {
 	width: 100%;
 	margin: 80px auto;
-	animation: fade-in 0.4s ease-in 0s 1 normal both;
-	-webkit-animation: fade-in 0.4s ease-in 0s 1 normal both;
+	animation: fade-in 0.25s ease-in 0s 1 normal both;
+	-webkit-animation: fade-in 0.25s ease-in 0s 1 normal both;
 }
 
 .inner {
@@ -44,6 +44,6 @@
 
 .title {
 	margin-top: 8px;
-	color: var(--color-primary);
+	color: var(--color-white);
 	font-size: var(--font-size-xl);
 }

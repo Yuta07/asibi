@@ -30,6 +30,7 @@
 }
 
 .title {
+	color: var(--color-white);
 	font-size: var(--font-size-xxl);
 	margin: 0 auto;
 	display: table;
@@ -50,7 +51,7 @@
 }
 
 .date {
-	color: var(--color-gray);
+	color: var(--color-gray-lighten);
 	font-size: var(--font-size-s);
 	letter-spacing: 0;
 }
@@ -59,7 +60,7 @@
 	padding: 2px 8px;
 	border-radius: var(--line-radius-light);
 	color: #ffffff;
-	font-size: var(--font-size-xs);
+	font-size: var(--font-size-s);
 	font-weight: var(--font-weight-bold);
 
 	&:hover {
@@ -78,4 +79,18 @@
 	@extend .category;
 
 	background: var(--color-main-blue);
+}
+
+.author {
+	color: var(--color-white);
+	font-size: var(--font-size-s);
+
+	a {
+		margin-left: 4px;
+		color: var(--color-white);
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }

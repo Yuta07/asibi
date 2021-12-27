@@ -1,6 +1,6 @@
 ---
 title: 'React + Amplify Auth(Cognito)での認証'
-preface: 'Auth APIで認証周りを整える🧘‍♂️'
+preface: 'Amplifyをプロジェクトで使用していたAuth APIについてまとめました。自分でデザインしたUIでAuthを利用する際のTIPSを簡単に紹介します。'
 createdAt: '2020-10-27'
 updatedAt: '2020-10-28'
 category: 'tech'
@@ -16,7 +16,7 @@ Amplify とは、モバイル・ウェブアプリ開発におけるバックエ
 
 Amplify の機能の中でも、代表的なものは下記かと思います。
 
-#### Authentication
+### Authentication
 
 - `Cognito` での認証が可能となります。
 
@@ -24,7 +24,7 @@ Amplify の機能の中でも、代表的なものは下記かと思います。
 amplify add auth
 ```
 
-#### API(GraphQL / REST)
+### API(GraphQL / REST)
 
 - API の作成や DB の利用ができるようになります。
 
@@ -36,7 +36,7 @@ amplify add storage
 amplify add api
 ```
 
-#### Functions
+### Functions
 
 - `Lambda` 関数をトリガーとして API の作成が可能となります。
 
@@ -203,7 +203,7 @@ import { Auth } from 'aws-amplify'
 
 amplify を使用すれば、cognito を使用した auth の機能だけではなく、dynamoDB や lambda 等も使用することができます。amplify だけで Web アプリの開発を完結させることができるため、フロントエンドのみで簡単かつ迅速な開発ができるようになります。
 
-一方でサーバレスアーキテクチャとしては Google の Firebase という選択肢もあります。
+一方でサーバレスアーキテクチャとしては Google の Firebase という手段もあります。最近では Supabase という選択肢も増えました。
 
 個人的には amplify は Firebase に比べると出来ることが多いですが、少し複雑に感じることもあったので、全体的には Firebase の方が使いやすいなという印象を受けました。
 

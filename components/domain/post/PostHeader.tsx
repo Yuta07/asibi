@@ -25,6 +25,12 @@ export const PostHeader = ({ post }: Props) => {
 				<Link href={`/categories/${post.category}`}>
 					<a className={styles[post.category]}>{post.category}</a>
 				</Link>
+				<span className={styles.author}>
+					By
+					<a href="https://github.com/Yuta07" target="_blank" rel="noopener noreferrer">
+						@yutaaaaa___
+					</a>
+				</span>
 			</div>
 		</header>
 	)

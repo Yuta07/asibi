@@ -27,7 +27,7 @@ export const ElParagraph: VFC<{ children: ReactNode }> = ({ children }) => {
 				.container {
 					margin-top: 20px;
 					font-size: var(--font-size-m);
-					line-height: 1.6;
+					line-height: 1.8;
 				}
 
 				.container a {
