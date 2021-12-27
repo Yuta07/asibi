@@ -8,8 +8,8 @@ const postsDirectory = path.join(process.cwd(), 'posts')
 export const getAllPostsData = () => {
 	const fileNames = fs.readdirSync(postsDirectory)
 	const allPostsData = fileNames.map((fileName) => {
-		// Remove ".md" from file name to get id
-		const id = fileName.replace(/\.md$/, '')
+		// Remove ".md" from file name to get slug
+		const slug = fileName.replace(/\.md$/, '')
 
 		// Read markdown file as string
 		const fullPath = path.join(postsDirectory, fileName)
@@ -18,9 +18,9 @@ export const getAllPostsData = () => {
 		// Use gray-matter to parse the post metadata section
 		const matterResult: matter.GrayMatterFile<string> = matter([fileContents].join('\n'))
 
-		// Combine the data with the id
+		// Combine the data with the slug
 		return {
-			id,
+			slug,
 			content: matterResult.content,
 			...(matterResult.data as {
 				title: string
@@ -85,12 +85,12 @@ export const getSortedPostsDataWithTag = (tag: string) => {
 	})
 }
 
-export async function getPostData(id: string) {
-	const markdownWithMetadata = fs.readFileSync(path.join(postsDirectory, `${id}.md`)).toString()
+export async function getPostData(slug: string) {
+	const markdownWithMetadata = fs.readFileSync(path.join(postsDirectory, `${slug}.md`)).toString()
 	const { data, content } = matter(markdownWithMetadata)
 
 	return {
-		id,
+		slug,
 		content,
 		...(data as {
 			title: string

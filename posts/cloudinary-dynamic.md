@@ -69,7 +69,7 @@ l_text:フォントの種類_サイズ_太さ:テキスト内容,カラーなど
 - TakaoPGothic
 - TakaoPMincho
 
-[Can I create text overlays in Japanese?](https://support.cloudinary.com/hc/en-us/articles/202521262-Can-I-create-text-overlays-in-Japanese-)
+https://support.cloudinary.com/hc/en-us/articles/202521262-Can-I-create-text-overlays-in-Japanese-
 
 今回はオプションを追加して以下のような URL とします。
 

@@ -119,7 +119,7 @@ export default CoolComponent
 ![imageSampleStars](/stars_sample.jpg)
 ```
 
-![imageSampleStars](/blog/markdown-express/stars_sample.jpg)
+![imageSampleStars](/blog/starting-blog/stars_sample.jpg)
 
 ## Embed Link
 

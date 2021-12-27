@@ -40,6 +40,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
 		res.status(200).json(ogp)
 	} catch {
-		res.status(400).json({ message: 'error' })
+		res.status(200).json({})
 	}
 }

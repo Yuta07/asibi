@@ -6,10 +6,10 @@ import { Header } from './header'
 
 export const Layout: FC = ({ children }) => {
 	return (
-		<div className={styles.container}>
+		<>
 			<Header />
 			<main className={styles.main}>{children}</main>
 			<Footer />
-		</div>
+		</>
 	)
 }

@@ -15,6 +15,8 @@ import { ElParagraph, Paragraph } from '@components/markdown/Paragraph'
 import { Strong } from '@components/markdown/Strong'
 import { ThematicBreak } from '@components/markdown/ThematicBreak'
 
+import styles from './PostBody.module.scss'
+
 type Props = {
 	readonly post: {
 		title: string
@@ -23,7 +25,7 @@ type Props = {
 		updatedAt: string
 		category: string
 		tags: string[]
-		id: string
+		slug: string
 		content: string
 	}
 }
@@ -105,127 +107,121 @@ export const PostBody = ({ post }: Props) => {
 		return <ThematicBreak />
 	}
 
+	console.log(post.content.toString().length)
+
 	return (
 		<div>
-			<p className="preface">{post.preface}</p>
-			<ReactMarkdown
-				skipHtml={false}
-				unwrapDisallowed={true}
-				remarkPlugins={[remarkGfm]}
-				components={{
-					blockquote({ children, ...props }) {
-						return <MarkdownBlockquote {...props}>{children}</MarkdownBlockquote>
-					},
-					code({ inline, className, children, ...props }) {
-						const match = /language-(\w+)/.exec(className || '')
+			<p className={styles.preface}>{post.preface}</p>
+			<div className={styles.content}>
+				<ReactMarkdown
+					skipHtml={false}
+					unwrapDisallowed={true}
+					remarkPlugins={[remarkGfm]}
+					components={{
+						blockquote({ children, ...props }) {
+							return <MarkdownBlockquote {...props}>{children}</MarkdownBlockquote>
+						},
+						code({ inline, className, children, ...props }) {
+							const match = /language-(\w+)/.exec(className || '')
 
-						return !inline && match ? (
-							<CodeBlock language={match[1]} value={children.toString()} {...props} />
-						) : (
-							<MarkdownInlineCode>{children}</MarkdownInlineCode>
-						)
-					},
-					del({ children, ...props }) {
-						return <MarkdownDelete {...props}>{children}</MarkdownDelete>
-					},
-					h1({ children, level, ...props }) {
-						return (
-							<MarkdownHeading level={level} {...props}>
-								{children}
-							</MarkdownHeading>
-						)
-					},
-					h2({ children, level, ...props }) {
-						return (
-							<MarkdownHeading level={level} {...props}>
-								{children}
-							</MarkdownHeading>
-						)
-					},
-					h3({ children, level, ...props }) {
-						return (
-							<MarkdownHeading level={level} {...props}>
-								{children}
-							</MarkdownHeading>
-						)
-					},
-					h4({ children, level, ...props }) {
-						return (
-							<MarkdownHeading level={level} {...props}>
-								{children}
-							</MarkdownHeading>
-						)
-					},
-					h5({ children, level, ...props }) {
-						return (
-							<MarkdownHeading level={level} {...props}>
-								{children}
-							</MarkdownHeading>
-						)
-					},
-					h6({ children, level, ...props }) {
-						return (
-							<MarkdownHeading level={level} {...props}>
-								{children}
-							</MarkdownHeading>
-						)
-					},
-					img: MarkdownImage,
-					a({ children, href, ...props }) {
-						return (
-							<MarkdownLink href={href} {...props}>
-								{children}
-							</MarkdownLink>
-						)
-					},
-					li({ children, index, ordered, ...props }) {
-						return (
-							<MarkdownListItem ordered={ordered} index={index} {...props}>
-								{children}
-							</MarkdownListItem>
-						)
-					},
-					ul({ children, depth, ordered, ...props }) {
-						return (
-							<MarkdownList depth={depth} ordered={ordered} {...props}>
-								{children}
-							</MarkdownList>
-						)
-					},
-					ol({ children, depth, ordered, ...props }) {
-						return (
-							<MarkdownList depth={depth} ordered={ordered} {...props}>
-								{children}
-							</MarkdownList>
-						)
-					},
-					p({ children, ...props }) {
-						const detectTagName = ['img', 'a']
+							return !inline && match ? (
+								<CodeBlock language={match[1]} value={children.toString()} {...props} />
+							) : (
+								<MarkdownInlineCode>{children}</MarkdownInlineCode>
+							)
+						},
+						del({ children, ...props }) {
+							return <MarkdownDelete {...props}>{children}</MarkdownDelete>
+						},
+						h1({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						h2({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						h3({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						h4({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						h5({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						h6({ children, level, ...props }) {
+							return (
+								<MarkdownHeading level={level} {...props}>
+									{children}
+								</MarkdownHeading>
+							)
+						},
+						img: MarkdownImage,
+						a({ children, href, ...props }) {
+							return (
+								<MarkdownLink href={href} {...props}>
+									{children}
+								</MarkdownLink>
+							)
+						},
+						li({ children, index, ordered, ...props }) {
+							return (
+								<MarkdownListItem ordered={ordered} index={index} {...props}>
+									{children}
+								</MarkdownListItem>
+							)
+						},
+						ul({ children, depth, ordered, ...props }) {
+							return (
+								<MarkdownList depth={depth} ordered={ordered} {...props}>
+									{children}
+								</MarkdownList>
+							)
+						},
+						ol({ children, depth, ordered, ...props }) {
+							return (
+								<MarkdownList depth={depth} ordered={ordered} {...props}>
+									{children}
+								</MarkdownList>
+							)
+						},
+						p({ children, ...props }) {
+							const detectTagName = ['img', 'a']
 
-						if (props.node.children[0].type === 'element' && detectTagName.includes(props.node.children[0].tagName)) {
-							return <MarkdownElementParagraph {...props}>{children}</MarkdownElementParagraph>
-						} else {
-							return <MarkdownParagraph {...props}>{children}</MarkdownParagraph>
-						}
-					},
-					strong({ children, ...props }) {
-						return <MarkdownStrong {...props}>{children}</MarkdownStrong>
-					},
-					hr: MarkdownThematicBreak,
-				}}
-			>
-				{post.content}
-			</ReactMarkdown>
-			<style jsx>{`
-				.preface {
-					margin: 0 auto;
-					padding: 40px 0;
-					display: table;
-					color: var(--color-primary);
-					font-size: var(--font-size-s);
-					text-align: left;
-				}
-			`}</style>
+							if (props.node.children[0].type === 'element' && detectTagName.includes(props.node.children[0].tagName)) {
+								return <MarkdownElementParagraph {...props}>{children}</MarkdownElementParagraph>
+							} else {
+								return <MarkdownParagraph {...props}>{children}</MarkdownParagraph>
+							}
+						},
+						strong({ children, ...props }) {
+							return <MarkdownStrong {...props}>{children}</MarkdownStrong>
+						},
+						hr: MarkdownThematicBreak,
+					}}
+				>
+					{post.content}
+				</ReactMarkdown>
+			</div>
 		</div>
 	)
 }

@@ -59,7 +59,6 @@ export const EmbedLink = ({ href }: Props) => {
 				{href}
 				<style jsx>{`
 					.normalLink {
-						margin: 0 4px;
 						color: var(--color-main-blue);
 					}
 

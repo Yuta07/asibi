@@ -25,7 +25,7 @@ Cognito を通して認証を行なった場合、登録したメールアドレ
 
 また、amplify を使用している場合、CLI から作成することができます。
 
-[Amplify Docs Functions Overview](https://docs.amplify.aws/cli/function#function-templates)
+https://docs.amplify.aws/cli/function#function-templates
 
 ```bash
 amplify add function

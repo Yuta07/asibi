@@ -6,9 +6,9 @@ import { getPostData } from '@lib/posts'
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
-	const { id } = params as { id: string }
+	const { slug } = params as { slug: string }
 
-	const post = await getPostData(id)
+	const post = await getPostData(slug)
 
 	return {
 		props: {
@@ -36,14 +36,14 @@ const PostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
 					type: 'website',
 					title: post.title,
 					description: post.preface,
-					url: `https://yutaaaaa.dev/${post.id}`,
+					url: `https://yutaaaaa.dev/${post.slug}`,
 					site_name: post.title,
 					images: [
 						{
 							url: CLOUDINARY_URL,
 							width: 800,
 							height: 420,
-							alt: 'yutaaaaa og image',
+							alt: 'yutanote image',
 						},
 					],
 				}}
@@ -54,7 +54,7 @@ const PostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
 				}}
 			/>
 			<BlogJsonLd
-				url={`https://yutaaaaa.dev/${post.id}`}
+				url={`https://yutaaaaa.dev/${post.slug}`}
 				title={post.title}
 				images={[CLOUDINARY_URL]}
 				datePublished={`${post.createdAt}T09:00:00+08:00`}

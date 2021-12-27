@@ -1,3 +1,5 @@
+import { NextSeo } from 'next-seo'
+
 import { Home } from '@components/domain/home'
 import { ParamHeader } from '@components/domain/home/ParamHeader'
 import { getSortedPostsDataWithCategory } from '@lib/posts'
@@ -12,6 +14,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 	return {
 		props: {
 			posts,
+			category,
 		},
 	}
 }
@@ -22,9 +25,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 		fallback: 'blocking',
 	}
 }
-const CategoryPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const CategoryPage = ({ posts, category }: InferGetStaticPropsType<typeof getStaticProps>) => {
 	return (
 		<>
+			<NextSeo title={category} />
 			<ParamHeader total={posts.length} />
 			<Home posts={posts} />
 		</>
