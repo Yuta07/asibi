@@ -10,6 +10,7 @@
 	margin: 0 auto;
 	display: table;
 	text-align: left;
+	word-break: break-all;
 
 	@include max-screen($breakpoint-sm) {
 		font-size: var(--font-size-xl);

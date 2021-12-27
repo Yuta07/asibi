@@ -53,6 +53,24 @@ export const EmbedLink = ({ href }: Props) => {
 		imageAlt = ogState['title']
 	}
 
+	if (!Object.keys(ogState).length) {
+		return (
+			<a href={href} className="normalLink" target="_blank" rel="noopener noreferrer">
+				{href}
+				<style jsx>{`
+					.normalLink {
+						margin: 0 4px;
+						color: var(--color-main-blue);
+					}
+
+					.normalLink:hover {
+						text-decoration: underline;
+					}
+				`}</style>
+			</a>
+		)
+	}
+
 	return (
 		<>
 			<a className="container" href={href} target="_blank" rel="noopener noreferrer">
@@ -76,6 +94,11 @@ export const EmbedLink = ({ href }: Props) => {
 					border: var(--border-normal);
 					border-radius: var(--line-radius);
 					overflow: hidden;
+					transition: var(--animation-transition) ease-in;
+				}
+
+				.container:hover {
+					filter: brightness(70%);
 				}
 
 				.ogInfo {
@@ -131,6 +154,22 @@ export const EmbedLink = ({ href }: Props) => {
 
 				.dummyHref {
 					display: none;
+				}
+
+				@media screen and (max-width: 640px) {
+					.ogTitle {
+						font-size: var(--font-size-s);
+						-webkit-line-clamp: 1;
+					}
+
+					.ogDescription {
+						font-size: var(--font-size-xs);
+					}
+
+					.thumbnail {
+						width: 120px;
+						height: 80px;
+					}
 				}
 			`}</style>
 		</>

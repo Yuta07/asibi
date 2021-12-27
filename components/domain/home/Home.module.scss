@@ -17,6 +17,7 @@
 	margin: 0 auto;
 	display: table;
 	text-align: left;
+	word-break: break-all;
 
 	&:hover {
 		opacity: var(--hover-feedback-opacity);

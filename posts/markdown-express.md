@@ -123,4 +123,16 @@ export default CoolComponent
 
 ## Embed Link
 
-[Embed](https://ja.reactjs.org/)
+```txt
+// propertyタグが存在しない場合
+
+https://swr.vercel.app/
+
+// propertyタグが存在する場合
+
+https://ja.reactjs.org/
+```
+
+https://swr.vercel.app/
+
+https://ja.reactjs.org/
