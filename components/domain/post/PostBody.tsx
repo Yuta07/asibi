@@ -21,8 +21,8 @@ type Props = {
 	readonly post: {
 		title: string
 		preface: string
+		attention: string
 		createdAt: string
-		updatedAt: string
 		category: string
 		tags: string[]
 		slug: string
@@ -111,6 +111,7 @@ export const PostBody = ({ post }: Props) => {
 		<div>
 			<p className={styles.preface}>{post.preface}</p>
 			<div className={styles.content}>
+				{post.attention && <p className={styles.attention}>{post.attention}</p>}
 				<ReactMarkdown
 					skipHtml={false}
 					unwrapDisallowed={true}

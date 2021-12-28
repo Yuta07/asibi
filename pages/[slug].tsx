@@ -58,7 +58,7 @@ const PostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
 				title={post.title}
 				images={[CLOUDINARY_URL]}
 				datePublished={`${post.createdAt}T09:00:00+08:00`}
-				dateModified={`${post.updatedAt}T09:00:00+08:00`}
+				dateModified={`${post.createdAt}T09:00:00+08:00`}
 				authorName="yutaaaaa"
 				description={post.preface}
 			/>

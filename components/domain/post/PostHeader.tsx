@@ -7,8 +7,8 @@ type Props = {
 	post: {
 		title: string
 		preface: string
+		attention: string
 		createdAt: string
-		updatedAt: string
 		category: string
 		tags: string[]
 		slug: string
@@ -27,7 +27,7 @@ export const PostHeader = ({ post }: Props) => {
 				</Link>
 				<span className={styles.author}>
 					By
-					<a href="https://github.com/Yuta07" target="_blank" rel="noopener noreferrer">
+					<a href="https://twitter.com/yutaaaaa___" target="_blank" rel="noopener noreferrer">
 						@yutaaaaa___
 					</a>
 				</span>

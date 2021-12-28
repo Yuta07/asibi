@@ -6,8 +6,8 @@ type Props = {
 	post: {
 		title: string
 		preface: string
+		attention: string
 		createdAt: string
-		updatedAt: string
 		category: string
 		tags: string[]
 		slug: string

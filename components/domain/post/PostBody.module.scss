@@ -24,13 +24,19 @@
 
 .preface {
 	margin: 0 auto;
-	padding: 40px 0 60px;
+	padding: 60px 0;
 	display: table;
 	color: var(--color-primary);
 	font-size: var(--font-size-s);
 	text-align: left;
 	animation: fade-in 0.5s ease-in 0s 1 normal both;
 	-webkit-animation: fade-in 0.5s ease-in 0s 1 normal both;
+}
+
+.attention {
+	padding: 20px 0;
+	color: var(--color-main-coral);
+	font-weight: var(--font-weight-bold);
 }
 
 .content {
