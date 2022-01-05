@@ -6,6 +6,13 @@ import { getSortedPostsDataWithCategory } from '@lib/posts'
 
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 
+export const getStaticPaths: GetStaticPaths = async () => {
+	return {
+		paths: [],
+		fallback: 'blocking',
+	}
+}
+
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 	const { category } = params as { category: string }
 
@@ -19,12 +26,6 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 	}
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-	return {
-		paths: [],
-		fallback: 'blocking',
-	}
-}
 const CategoryPage = ({ posts, category }: InferGetStaticPropsType<typeof getStaticProps>) => {
 	return (
 		<>
