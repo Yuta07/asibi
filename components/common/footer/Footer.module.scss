@@ -8,18 +8,25 @@
 .inner {
 	max-width: 720px;
 	margin: 0 auto;
-	padding: 20px;
-	border-top: var(--border-normal);
+	padding: 0 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
 
+.flame {
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px 0;
+	border-top: var(--border-normal);
+}
+
 .copyright {
 	margin-top: 32px;
 	font-size: var(--font-size-xs);
 	letter-spacing: 0;
+	text-align: center;
 }
 
 .anchor {

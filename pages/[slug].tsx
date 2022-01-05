@@ -1,9 +1,22 @@
 import { BlogJsonLd, NextSeo } from 'next-seo'
 
 import { Post } from '@components/domain/post'
-import { getPostData } from '@lib/posts'
+import { getPostData, getSortedPostsData } from '@lib/posts'
 
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+
+export const getStaticPaths: GetStaticPaths = async () => {
+	const posts = getSortedPostsData()
+
+	const paths = posts.map((post) => ({
+		params: { slug: post.slug },
+	}))
+
+	return {
+		paths: paths,
+		fallback: false,
+	}
+}
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 	const { slug } = params as { slug: string }
@@ -14,13 +27,6 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 		props: {
 			post,
 		},
-	}
-}
-
-export const getStaticPaths: GetStaticPaths = async () => {
-	return {
-		paths: [],
-		fallback: 'blocking',
 	}
 }
 
