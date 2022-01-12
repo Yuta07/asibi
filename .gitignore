@@ -41,3 +41,6 @@ tsconfig.tsbuildinfo
 /public/rss/atom.xml
 /public/rss/feed.json
 /public/rss/feed.xml
+
+# api key
+keys.json
