@@ -1,13 +1,13 @@
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
-import { GA_ID, pageview } from '@lib/gtag'
+import { UNIVERSAL_ID, pageview } from '@lib/gtag'
 
 export const useGARouteChange = () => {
 	const router = useRouter()
 
 	useEffect(() => {
-		if (!GA_ID) {
+		if (!UNIVERSAL_ID) {
 			return
 		}
 
