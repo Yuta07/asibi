@@ -333,4 +333,6 @@ export const EmbedLink = ({ href }: Props) => {
 補足事項として、ogp 情報が property で取得できない場合があり、例えば name で存在していたりすることがあります。今回はそういった場合ではリンクのみの表示となりますのでご留意ください。
 また amazon では head 内ではなく、body 内の要素として ogp 情報が存在しているためこういったケースにも別途対応する必要があります。
 
-この記事が誰かの参考になれば幸いです。
+## 参考サイト
+
+- [外部サイトの OGP を取得する](https://zenn.dev/littleforest/articles/scrape-og-tags/)

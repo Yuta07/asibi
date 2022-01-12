@@ -1,7 +1,6 @@
 import { DefaultSeo } from 'next-seo'
 import NextHead from 'next/head'
 
-import { AnalyticsScript } from '@components/common/AnalyticsScript'
 import config from '@config/seo.json'
 
 export const Head = () => {
@@ -9,7 +8,6 @@ export const Head = () => {
 		<>
 			<DefaultSeo {...config} />
 			<NextHead>
-				<AnalyticsScript />
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta httpEquiv="X-UA-Compatible" content="IE=edge" />

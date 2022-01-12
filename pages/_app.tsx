@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app'
 
+import { AnalyticsScript } from '@components/common/AnalyticsScript'
 import { Head } from '@components/common/Head'
 import { Layout } from '@components/common/Layout'
 import { useGARouteChange } from '@hooks/useGARouteChange'
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<Head />
+			<AnalyticsScript />
 			<Layout>
 				<Component {...pageProps} />
 			</Layout>
