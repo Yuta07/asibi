@@ -5,4 +5,8 @@ export const pageview = (path: string) => {
 	window.gtag('config', UNIVERSAL_ID, {
 		page_path: path,
 	})
+
+	window.gtag('config', GA_ID, {
+		page_path: path,
+	})
 }
