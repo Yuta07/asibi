@@ -1,8 +1,12 @@
 import { google } from 'googleapis'
 
+import type { NextApiRequest, NextApiResponse } from 'next'
+
 export const VIEW_ID = process.env.NEXT_PUBLIC_VIEW_ID || ''
 
-export default async () => {
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+	console.log(req)
+
 	const auth = new google.auth.GoogleAuth({
 		keyFilename: './keys.json',
 		scopes: 'https://www.googleapis.com/auth/analytics.readonly',
@@ -15,7 +19,7 @@ export default async () => {
 		auth: client,
 	})
 
-	const res = await analyticsreporting.reports.batchGet({
+	const response = await analyticsreporting.reports.batchGet({
 		requestBody: {
 			reportRequests: [
 				{
@@ -26,13 +30,11 @@ export default async () => {
 							endDate: 'today',
 						},
 					],
-					metrics: [{ expression: 'ga:pageviews' }],
-					dimensions: [{ name: 'ga:pagePath' }, { name: 'ga:pageTitle' }],
-					orderBys: [{ fieldName: 'ga:pageviews', sortOrder: 'DESCENDING' }],
+					metrics: [{ expression: 'ga:users' }],
 				},
 			],
 		},
 	})
 
-	console.log(JSON.stringify(res.data))
+	res.status(200).json(JSON.stringify(response.data))
 }
