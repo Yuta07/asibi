@@ -1,6 +1,6 @@
 import Script from 'next/script'
 
-import { GA_ID, UNIVERSAL_ID } from '@lib/gtag'
+import { UNIVERSAL_ID } from '@lib/gtag'
 
 export const AnalyticsScript = () => {
 	return (
@@ -12,7 +12,6 @@ export const AnalyticsScript = () => {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
 							gtag('config', '${UNIVERSAL_ID}');
-              gtag('config', '${GA_ID}');
           `}
 			</Script>
 		</>
