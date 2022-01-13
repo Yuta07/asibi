@@ -14,13 +14,6 @@ export const AnalyticsScript = () => {
 
 					gtag('config', '${UNIVERSAL_ID}');
 					gtag('config', '${GA_TRACKING_ID}');
-
-					// gtag('config', '${UNIVERSAL_ID}', {
-					// 	page_path: window.location.pathname,
-					// });
-					// gtag('config', '${GA_TRACKING_ID}', {
-					// 	page_path: window.location.pathname,
-					// });
 			`}
 			</Script>
 		</>
