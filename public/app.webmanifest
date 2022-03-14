@@ -1,0 +1,12 @@
+{
+	"name": "yutanote",
+	"short_name": "yutanote",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#0e141b",
+	"description": "yutaaaaa's ordinary day and tech.",
+	"icons": [
+		{ "src": "/icon/icon-192.png", "type": "image/png", "sizes": "192x192" },
+		{ "src": "/icon/icon-512.png", "type": "image/png", "sizes": "512x512" }
+	]
+}

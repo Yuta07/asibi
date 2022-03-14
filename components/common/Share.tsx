@@ -27,7 +27,7 @@ export const Share = ({ post }: Props) => {
 				rel="nofollow"
 				className={styles.anchor}
 			>
-				<Image quality={85} src="/twitter.svg" alt="twitter_share" width={40} height={40} />
+				<Image quality={85} src="../../assets/twitter.svg" alt="twitter_share" width={40} height={40} />
 			</a>
 		</div>
 	)

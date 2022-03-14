@@ -2,7 +2,7 @@
   "name": "yutaaaaa",
   "version": "1.0.0",
   "license": "UNLICENSED",
-  "description": "Flightless pig's ordinary day and tech.",
+  "description": "yutaaaaa's ordinary day and tech.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -25,7 +25,6 @@
     "axios": "^0.24.0",
     "classnames": "^2.3.1",
     "dayjs": "^1.10.7",
-    "googleapis": "^92.0.0",
     "gray-matter": "^4.0.3",
     "jsdom": "^19.0.0",
     "next": "^12.0.7",

@@ -55,7 +55,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 ```
 
-また、Node.js 以外でも Ruby や Go サポートされているので各々の好きな言語で書くこともできます。
+また、Node.js 以外でも Ruby や Go などもサポートされているので各々の好きな言語で書くこともできます。
 
 ## OGP の取得
 
@@ -138,7 +138,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 `queySelectorAll` で meta タグに一致するもの全てを配列で取得していますが、さらにその中の `<meta property=og:title content="" />` のように property タグを指定してフィルターをかけます。
 
 すると最終的に json の形で返すことになっているかと思います。
-例えば、 `/api/getOgp?url=https://yutaaaaa.dev/cloudinary-dynamichttps://yutaaaaa.dev/cloudinary-dynamic` の場合は下記のような結果になります。
+例えば、 `/api/getOgp?url=https://yutaaaaa.dev/cloudinary-dynamic` の場合は下記のような結果になります。
 
 ```json
 {
