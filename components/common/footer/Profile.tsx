@@ -9,7 +9,7 @@ import styles from './Profile.module.scss'
 export const Profile = () => {
 	return (
 		<div className={styles.container}>
-			<Image quality={90} src="/logo/logo.svg" alt="logo_yutaaaaa" width={40} height={40} />
+			<Image quality={90} src="/logo/logo.svg" alt="logo_yutaaaaa" width={40} height={40} priority />
 			<h2 className={styles.author}>yutaaaaa</h2>
 			<div className={styles.social}>
 				<a href="https://github.com/Yuta07" target="_blank" rel="noopener noreferrer" className={styles.link}>

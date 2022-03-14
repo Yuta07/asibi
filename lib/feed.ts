@@ -3,7 +3,7 @@ import fs from 'fs'
 import { Feed } from 'feed'
 import { marked } from 'marked'
 
-import { getSortedPostsData } from './posts'
+import { getSortedPostsDataWithCategory } from './posts'
 
 // ref: https://zenn.dev/catnose99/articles/c7754ba6e4adac
 // ref: https://fwywd.com/tech/next-feed-rss-atom
@@ -41,7 +41,7 @@ export const generatedRssFeed = () => {
 		author: author,
 	})
 
-	const posts = getSortedPostsData()
+	const posts = getSortedPostsDataWithCategory('dev')
 
 	posts?.forEach((post) => {
 		const url = `${baseUrl}/${post.slug}`

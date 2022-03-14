@@ -1,6 +1,6 @@
 ---
 title: 'React + Amplify Auth(Cognito)での認証'
-preface: 'Amplifyプロジェクトで使用していたAuth APIについてまとめました。自分でデザインしたUIでAuthを利用する際のTIPSを簡単に紹介します。'
+preface: 'Amplifyプロジェクトで使用していたAuth APIについてまとめました。自分でデザインしたUIでAuthを利用する際のTIPSを簡単に紹介。'
 createdAt: '2020-10-27'
 updatedAt: '2020-10-28'
 category: 'tech'
