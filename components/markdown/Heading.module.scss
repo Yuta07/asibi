@@ -10,13 +10,13 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		background: var(--color-main-coral);
+		background: var(--color-primary);
 	}
 }
 
 .h1 {
 	margin-top: 40px;
-	font-size: var(--font-size-xxl);
+	font-size: var(--font-size-2xl);
 
 	&::before {
 		width: 6px;

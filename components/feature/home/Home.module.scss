@@ -1,0 +1,130 @@
+@import '/styles/mixins';
+
+.container {
+	height: 100vh;
+	margin: 0 auto;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.inner {
+	width: 90%;
+	max-width: 440px;
+	padding: 40px;
+	border: 8px solid transparent;
+	border-radius: 20px;
+	background: var(--color-bg);
+	background-clip: padding-box;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		margin: -8px;
+		border-radius: inherit;
+		background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+	}
+}
+
+.header {
+	display: flex;
+	gap: 20px;
+}
+
+.author {
+	font-size: var(--font-size-2xl);
+	font-weight: var(--font-weight-semi-bold);
+	color: var(--color-text);
+}
+
+.main {
+	width: 100%;
+}
+
+.featureContaienr {
+	padding: 40px 0;
+}
+
+.feature {
+	color: var(--color-text);
+
+	&:not(&:first-child) {
+		margin-top: 10px;
+	}
+}
+
+.featureLink {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-size: var(--font-size-2xl);
+	font-weight: var(--font-weight-bold);
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+		text-decoration-color: var(--color-gray);
+		text-underline-position: under;
+	}
+}
+
+.featureGradientTxt {
+	color: var(--color-text);
+}
+
+.relatedLinkContainer {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.relatedLink {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+		text-decoration-color: var(--color-text);
+		transition: 0.3s;
+	}
+}
+
+.link {
+	font-size: var(--font-size-s);
+	color: var(--color-text);
+
+	@media screen and (max-width: 640px) {
+		display: none;
+	}
+}
+
+.trivialContainer {
+	margin-top: 10px;
+}
+
+.trivial {
+	font-size: var(--font-size-s);
+	color: var(--color-gray);
+
+	&:not(&:first-child) {
+		margin-top: 8px;
+	}
+}
+
+.footer {
+	margin-top: 40px;
+	text-align: center;
+}
+
+.copyright {
+	font-size: var(--font-size-xs);
+}

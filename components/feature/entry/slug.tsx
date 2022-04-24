@@ -1,7 +1,6 @@
-import { Share } from '@components/common/Share'
-
 import { PostBody } from './PostBody'
 import { PostHeader } from './PostHeader'
+import { Share } from './Share'
 
 type Props = {
 	post: {

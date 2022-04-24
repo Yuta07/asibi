@@ -16,7 +16,7 @@ type Props = {
 	}[]
 }
 
-export const Home = ({ posts }: Props) => {
+export const Posts = ({ posts }: Props) => {
 	return (
 		<div className={styles.container}>
 			{posts.map((post) => {

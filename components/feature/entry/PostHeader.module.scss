@@ -1,4 +1,4 @@
-@import './mixins';
+@import '/styles/mixins';
 
 @keyframes fade-in {
 	0% {
@@ -24,55 +24,42 @@
 
 .container {
 	width: 100%;
-	padding-top: 20px;
+	padding: 20px 0;
 	animation: fade-in 0.4s ease-in 0s 1 normal both;
 	-webkit-animation: fade-in 0.4s ease-in 0s 1 normal both;
 }
 
-.post {
-	margin-top: 80px;
-
-	&:first-of-type {
-		margin-top: 0;
-	}
-}
-
-.anchor {
+.title {
+	color: var(--color-primary);
+	font-size: var(--font-size-2xl);
 	margin: 0 auto;
 	display: table;
 	text-align: left;
 	word-break: break-all;
 
-	&:hover {
-		opacity: var(--hover-feedback-opacity);
-		transition: var(--animation-transition);
+	@include max-screen($breakpoint-sm) {
+		font-size: var(--font-size-xl);
 	}
 }
 
-.title {
-	color: var(--color-white);
-	font-size: var(--font-size-xl);
-	text-decoration: underline;
-}
-
 .info {
-	margin-top: 12px;
+	margin-top: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
 }
 
-.createdAt {
-	color: var(--color-gray-lighten);
+.date {
+	color: var(--color-gray);
 	font-size: var(--font-size-s);
 	letter-spacing: 0;
 }
 
 .category {
 	padding: 2px 8px;
-	border-radius: var(--line-radius-light);
-	color: var(--color-white);
+	border-radius: var(--line-radius);
+	color: #ffffff;
 	font-size: var(--font-size-s);
 	font-weight: var(--font-weight-bold);
 
@@ -85,18 +72,25 @@
 .ordinary {
 	@extend .category;
 
-	background: var(--color-main-coral);
+	background: var(--color-primary);
 }
 
 .tech {
 	@extend .category;
 
-	background: var(--color-main-blue);
+	background: var(--color-secondary);
 }
 
-.preface {
-	margin: 12px auto 0;
-	display: table;
-	text-align: left;
+.author {
+	color: var(--color-primary);
 	font-size: var(--font-size-s);
+
+	a {
+		margin-left: 4px;
+		color: var(--color-primary);
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }

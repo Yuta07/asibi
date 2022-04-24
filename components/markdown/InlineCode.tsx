@@ -9,7 +9,7 @@ export const InlineCode: VFC<{ children: ReactNode }> = ({ children }) => {
 					color: var(--color-primary);
 					background: #053959;
 					padding: 2px 8px;
-					border-radius: var(--line-radius-light);
+					border-radius: var(--line-radius);
 				}
 			`}</style>
 		</code>
