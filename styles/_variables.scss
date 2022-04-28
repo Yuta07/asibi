@@ -13,15 +13,16 @@
 	--font-size-l: 18px;
 	--font-size-xl: 20px;
 	--font-size-2xl: 24px;
+	--font-size-3xl: 32px;
 
 	/* font bold */
 	--font-weight-light: 300;
 	--font-weight-normal: 400;
-	--font-weight-semi-bold: 550;
 	--font-weight-bold: 700;
+	--font-weight-black: 900;
 
 	/* border */
-	--line-radius: 4px;
+	--line-radius: 8px;
 	--line-radius-full: 9999px;
 	--border-normal: 1px solid var(--color-gray);
 

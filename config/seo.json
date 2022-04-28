@@ -1,25 +1,25 @@
 {
-  "titleTemplate": "%s | yutanote",
-  "defaultTitle": "yutanote",
-  "description": "yutaaaaa's ordinary day and tech.",
+  "titleTemplate": "%s | zakimii",
+  "defaultTitle": "zakimii",
+  "description": "zakimii's website.",
   "openGraph": {
     "type": "website",
     "url": "https://yutaaaaa.dev/",
-    "site_name": "yutanote",
-    "title": "yutanote",
-    "description": "yutaaaaa's ordinary day and tech.",
+    "site_name": "zakimii",
+    "title": "zakimii",
+    "description": "zakimii's website.",
     "images": [
       {
         "url": "https://yutaaaaa.dev/ogp.png",
         "width": 800,
         "height": 600,
-        "alt": "Og Image Alt"
+        "alt": "zakimii og image"
       }
     ]
   },
   "twitter": {
-    "handle": "@yutaaaaa___",
-    "site": "@yutaaaaa___",
+    "handle": "@zakimii07",
+    "site": "@zakimii07",
     "cardType": "summary_large_image"
   }
 }

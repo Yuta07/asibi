@@ -30,7 +30,7 @@ export const generatedRssFeed = () => {
 		id: baseUrl,
 		link: baseUrl,
 		language: 'ja',
-		image: `${baseUrl}/favicon.png`,
+		image: `${baseUrl}/favicon.ico`,
 		copyright: `All rights reserved ${date.getFullYear()}, ${author.name}`,
 		updated: date,
 		feedLinks: {
@@ -44,7 +44,7 @@ export const generatedRssFeed = () => {
 	const posts = getSortedPostsDataWithCategory('dev')
 
 	posts?.forEach((post) => {
-		const url = `${baseUrl}/${post.slug}`
+		const url = `${baseUrl}/entry/${post.slug}`
 
 		feed.addItem({
 			title: post.title,

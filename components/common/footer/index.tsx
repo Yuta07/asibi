@@ -7,17 +7,7 @@ export const Footer = () => {
 			<div className={styles.inner}>
 				<div className={styles.flame}>
 					<Profile />
-					<p className={styles.copyright}>
-						©{new Date().getFullYear()},
-						<a
-							href="https://twitter.com/yutaaaaa___"
-							target="_blank"
-							rel="noopener noreferrer"
-							className={styles.anchor}
-						>
-							@yutaaaaa___
-						</a>
-					</p>
+					<p className={styles.copyright}>©{new Date().getFullYear()}, zakimii</p>
 				</div>
 			</div>
 		</footer>
