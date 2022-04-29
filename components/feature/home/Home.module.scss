@@ -17,6 +17,11 @@
 	border-radius: 20px;
 	background: var(--color-bg);
 	background-clip: padding-box;
+	background-image: url('/assets/cherry_blossomes.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-blend-mode: overlay;
 	position: relative;
 
 	&::before {
@@ -76,13 +81,13 @@
 	color: var(--color-text);
 }
 
-.relatedLinkContainer {
+.account {
 	display: flex;
 	align-items: center;
 	gap: 20px;
 }
 
-.relatedLink {
+.link {
 	display: inline-flex;
 	align-items: center;
 	gap: 8px;
@@ -95,17 +100,20 @@
 	}
 }
 
-.link {
+.target {
 	font-size: var(--font-size-s);
 	color: var(--color-text);
 
 	@media screen and (max-width: 640px) {
-		display: none;
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
 	}
 }
 
 .trivialContainer {
-	margin-top: 10px;
+	margin-top: 20px;
 }
 
 .trivial {

@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-import GithubSVG from '@assets/github.svg'
-import RssSVG from '@assets/rss.svg'
-import TwitterSVG from '@assets/twitter.svg'
+import GithubSVG from '@/assets/github.svg'
+import RssSVG from '@/assets/rss.svg'
+import TwitterSVG from '@/assets/twitter.svg'
 
 import styles from './Profile.module.scss'
 

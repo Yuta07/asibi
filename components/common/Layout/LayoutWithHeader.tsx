@@ -20,6 +20,7 @@ export const LayoutWithHeader: FC = ({ children }) => {
 				.footer {
 					max-width: 720px;
 					margin: 0 auto;
+					margin-top: 80px;
 					padding: 0 20px;
 					display: flex;
 					flex-direction: column;

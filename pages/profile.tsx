@@ -1,5 +1,5 @@
-import { LayoutWithHeader } from '@components/common/Layout/LayoutWithHeader'
-import { Profile } from '@components/feature/profile'
+import { LayoutWithHeader } from '@/components/common/Layout/LayoutWithHeader'
+import { Profile } from '@/components/feature/profile'
 
 import type { ReactElement } from 'react'
 

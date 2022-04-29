@@ -1,8 +1,8 @@
 import { NextSeo } from 'next-seo'
 
-import { Posts } from '@components/feature/entry'
-import { ParamHeader } from '@components/feature/entry/ParamHeader'
-import { getSortedPostsDataWithCategory } from '@lib/posts'
+import { Posts } from '@/components/feature/entry'
+import { ParamHeader } from '@/components/feature/entry/ParamHeader'
+import { getSortedPostsDataWithCategory } from '@/lib/posts'
 
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 

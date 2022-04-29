@@ -1,12 +1,12 @@
-import { AnalyticsScript } from '@components/common/AnalyticsScript'
-import { Head } from '@components/common/Head'
-import { useGARouteChange } from '@hooks/useGARouteChange'
+import { AnalyticsScript } from '@/components/common/AnalyticsScript'
+import { Head } from '@/components/common/Head'
+import { useGARouteChange } from '@/hooks/useGARouteChange'
 
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import type { ReactElement, ReactNode } from 'react'
 
-import '@styles/global.scss'
+import '@/styles/global.scss'
 
 type NextPageWithLayout = NextPage & {
 	getLayout?: (page: ReactElement) => ReactNode

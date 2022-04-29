@@ -11,7 +11,7 @@ const FEATURES = [
 	{ name: 'Profile', link: '/profile' },
 ]
 
-const ACTIVITIES = [
+const ACCOUNTS = [
 	{ name: 'Yuta07', link: 'https://github.com/Yuta07', image: FiGithub },
 	{ name: 'zakimii07', link: 'https://twitter.com/zakimii07', image: FiTwitter },
 	{
@@ -26,7 +26,15 @@ export const Home = () => {
 		<div className={styles.container}>
 			<div className={styles.inner}>
 				<div className={styles.header}>
-					<Image src="/logo/logo.svg" className={styles.avatar} width={40} height={40} quality={85} />
+					<Image
+						src="/logo/logo.svg"
+						alt="zakimii logo"
+						className={styles.avatar}
+						width={48}
+						height={48}
+						layout="fixed"
+						quality={90}
+					/>
 					<h1 className={styles.author}>zakimii</h1>
 				</div>
 				<div className={styles.main}>
@@ -44,20 +52,20 @@ export const Home = () => {
 							)
 						})}
 					</div>
-					<div className={styles.relatedLinkContainer}>
-						{ACTIVITIES.map((activity) => {
-							const SVGComponent = activity.image
+					<div className={styles.account}>
+						{ACCOUNTS.map((account) => {
+							const SVGComponent = account.image
 
 							return (
 								<a
-									key={activity.name}
-									href={activity.link}
+									key={account.name}
+									href={account.link}
 									target="_blank"
 									rel="noopener noreferrer"
-									className={styles.relatedLink}
+									className={styles.link}
 								>
 									<SVGComponent color="#ffffff" size={16} />
-									<span className={styles.link}>{activity.name}</span>
+									<span className={styles.target}>{account.name}</span>
 								</a>
 							)
 						})}

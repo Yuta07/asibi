@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { LayoutWithHeader } from '@components/common/Layout/LayoutWithHeader'
+import { LayoutWithHeader } from '@/components/common/Layout/LayoutWithHeader'
 
 import type { ReactElement } from 'react'
 

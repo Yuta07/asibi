@@ -1,9 +1,9 @@
 import { InferGetStaticPropsType } from 'next'
 
-import { Layout } from '@components/common/Layout'
-import { Posts } from '@components/feature/entry'
-import { generatedRssFeed } from '@lib/feed'
-import { getSortedPostsData } from '@lib/posts'
+import { Layout } from '@/components/common/Layout'
+import { Posts } from '@/components/feature/entry'
+import { generatedRssFeed } from '@/lib/feed'
+import { getSortedPostsData } from '@/lib/posts'
 
 import type { ReactElement } from 'react'
 

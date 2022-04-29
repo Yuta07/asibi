@@ -1,7 +1,7 @@
 import { BlogJsonLd, NextSeo } from 'next-seo'
 
-import { Post } from '@components/feature/entry/slug'
-import { getPostData, getSortedPostsData } from '@lib/posts'
+import { Post } from '@/components/feature/entry/slug'
+import { getPostData, getSortedPostsData } from '@/lib/posts'
 
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 
