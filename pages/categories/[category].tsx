@@ -1,8 +1,10 @@
-import { NextSeo } from 'next-seo'
+import { ReactElement } from 'react'
 
-import { Home } from '@components/domain/home'
-import { ParamHeader } from '@components/domain/home/ParamHeader'
-import { getSortedPostsDataWithCategory } from '@lib/posts'
+import { Layout } from '@/components/common/Layout'
+import { SEO } from '@/components/common/SEO'
+import { Posts } from '@/components/feature/entry'
+import { ParamHeader } from '@/components/feature/entry/ParamHeader'
+import { getSortedPostsDataWithCategory } from '@/lib/posts'
 
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 
@@ -26,14 +28,16 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 	}
 }
 
-const CategoryPage = ({ posts, category }: InferGetStaticPropsType<typeof getStaticProps>) => {
+export default function CategoryPage({ posts, category }: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
 		<>
-			<NextSeo title={category} />
+			<SEO title={`${category} Entry`} description={`${category}タグのエントリ一覧`} />
 			<ParamHeader total={posts.length} />
-			<Home posts={posts} />
+			<Posts posts={posts} />
 		</>
 	)
 }
 
-export default CategoryPage
+CategoryPage.getLayout = function getLayout(page: ReactElement) {
+	return <Layout>{page}</Layout>
+}

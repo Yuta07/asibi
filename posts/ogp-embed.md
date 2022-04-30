@@ -1,6 +1,6 @@
 ---
 title: 'Next.jsでMarkdownのリンクからog情報を表示する'
-preface: '個人ブログでの記事の表現を広げるためにリンクを貼った際にog情報が表示されるようにしました。Serverless Functionsを使用して実装しましたが、今後似たようなことで困った方が少しでも参考になるように書き残します。'
+preface: '個人ブログでの記事の表現を広げるためにリンクを貼った際にog情報が表示されるようにした。Serverless Functionsを使用して実装したが、今後似たようなことで困った方が少しでも参考になるように書き残す。'
 attention: '！ マークダウンをHTMLに変換するためにReact-Markdownを使用しています'
 createdAt: '2021-12-28'
 category: 'tech'
@@ -63,7 +63,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 HTTP クライアントに[axios](https://github.com/axios/axios)を、外部 Web サイトのデータを dom 操作するのに[jsdom](https://github.com/jsdom/jsdom)を使用します。
 
-#### 1. api フォルダ内に Serverless Functions を作成
+**1. api フォルダ内に Serverless Functions を作成**
 
 getOgp.ts という名前のファイルを作成します。ここまでは Vercel のサンプルと中身がない以外は同じですね。
 
@@ -73,7 +73,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 export default async (req: NextApiRequest, res: NextApiResponse) => {}
 ```
 
-#### 2. リクエスト内のクエリを使用して ogp 情報を取得する
+**2. リクエスト内のクエリを使用して ogp 情報を取得する**
 
 呼び出し元から送信された `req` 内のクエリを使用して ogp 情報の取得を行います。例えば、呼び出し元が `/api/getOgp?url=${href}` となっている場合は url クエリを受け取ります。
 
@@ -97,7 +97,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
 `req.query`でクエリの中身を取得して axios で指定した URL の情報を取得している、という流れになります。
 
-#### 3. 取得した OGP 情報を整形
+**3. 取得した OGP 情報を整形**
 
 ```typescript
 import axios from 'axios'
@@ -162,7 +162,7 @@ HTML に変換するためのライブラリとして React-Markdown を使用�
 
 取得したデータを React-Markdown で HTML に変換 => タグに合わせて作成したコンポーネントにデータを渡す => コンポーネントで OGP を表示するか判断
 
-#### 1. React-Markdown を使用して HTML に変換します。
+**1. React-Markdown を使用して HTML に変換する。**
 
 ```typescript
 export const Markdown = () => {
@@ -205,7 +205,7 @@ export const Markdown = () => {
 p タグの場合のコンポーネントを記載しているのは、以前であれば p タグを親要素に指定しないようにできたのですが、 `React-Markdown` がバージョンアップしたことでそれが出来なくなってしまったためタグで判別するためです。
 これをしない場合、OGP 表示のための a タグの親要素が p タグで確定となってしまうため、子要素に指定できるタグが限られてしまうのでこのようにしています。
 
-#### 2. 内容によってそのまま表示か OGP 表示かを切り替える
+**2. 内容によってそのまま表示か OGP 表示かを切り替える**
 
 マークダウンの文章内で下記のように書いていた場合は OGP 表示を避けるために実装します。
 
@@ -240,7 +240,7 @@ export const Link: VFC<Props> = ({ children, href }) => {
 
 文章自体が `http` または `https` で始まる場合のみ OGP 表示します。
 
-#### 3. リンクから OGP の実装、表示をする
+**3. リンクから OGP の実装、表示をする**
 
 最後にリンクごとに先ほど作成した `Serverless Functions` を呼び出して取得した値を表示します。
 

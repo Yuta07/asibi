@@ -1,26 +1,55 @@
+import Link from 'next/link'
+
+import { LayoutWithHeader } from '@/components/common/Layout/LayoutWithHeader'
+
+import type { ReactElement } from 'react'
+
 export default function Custom404() {
 	return (
 		<div className="container">
 			<h1 className="hero">404</h1>
-			<p className="lost">Let's go back. There's nothing here.</p>
+			<p className="lost-txt">Let's go back. There's nothing here.</p>
+			<Link href="/">
+				<a className="return-link">Return to TOP</a>
+			</Link>
 			<style jsx>{`
-				.hero {
-					font-size: 160px;
-					letter-spacing: 20px;
+				.container {
 					text-align: center;
-					background: linear-gradient(217deg, rgb(255 141 0), rgba(255, 0, 0, 0) 70.71%),
-						linear-gradient(127deg, rgb(255 247 0), rgba(0, 255, 0, 0) 70.71%),
-						linear-gradient(336deg, rgb(255 0 94), rgba(0, 0, 255, 0) 70.71%);
-					-webkit-background-clip: text;
-					-webkit-text-fill-color: transparent;
 				}
 
-				.lost {
-					margin-top: 40px;
-					font-size: 20px;
-					text-align: center;
+				.hero {
+					font-size: 100px;
+					letter-spacing: 20px;
+					color: transparent;
+					background: linear-gradient(to right bottom, #bf9ef2 0%, #e8eb93 100%);
+					background-clip: text;
+					-webkit-background-clip: text;
+				}
+
+				.lost-txt {
+					margin-top: 8px;
+					color: var(--color-gray);
+					font-size: var(--font-size-l);
+				}
+
+				.return-link {
+					margin-top: 20px;
+					display: inline-block;
+					color: var(--color-text);
+					font-size: var(--font-size-xl);
+					font-weight: var(--font-weight-bold);
+					text-decoration: underline;
+				}
+
+				.return-link:hover {
+					opacity: 0.7;
+					transition: 0.2s;
 				}
 			`}</style>
 		</div>
 	)
+}
+
+Custom404.getLayout = function getLayout(page: ReactElement) {
+	return <LayoutWithHeader>{page}</LayoutWithHeader>
 }

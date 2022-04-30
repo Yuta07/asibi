@@ -19,18 +19,18 @@ export const generatedRssFeed = () => {
 	const date = new Date()
 
 	const author = {
-		name: 'yutaaaaa',
+		name: 'zakimii',
 		email: 'mono.12dev@gmail.com',
 		link: 'https://yutaaaaa.dev',
 	}
 
 	const feed = new Feed({
-		title: 'yutaaaaa | blog by yutaka miyazaki.',
-		description: "yutaka miyazaki's blog",
+		title: 'zakimii',
+		description: "zakimii's personal website.",
 		id: baseUrl,
 		link: baseUrl,
 		language: 'ja',
-		image: `${baseUrl}/favicon.png`,
+		image: `${baseUrl}/favicon.ico`,
 		copyright: `All rights reserved ${date.getFullYear()}, ${author.name}`,
 		updated: date,
 		feedLinks: {
@@ -44,7 +44,7 @@ export const generatedRssFeed = () => {
 	const posts = getSortedPostsDataWithCategory('dev')
 
 	posts?.forEach((post) => {
-		const url = `${baseUrl}/${post.slug}`
+		const url = `${baseUrl}/entry/${post.slug}`
 
 		feed.addItem({
 			title: post.title,

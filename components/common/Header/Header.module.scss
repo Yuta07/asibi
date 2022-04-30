@@ -1,0 +1,27 @@
+@use '/styles/mixins';
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+.inner {
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 0 20px;
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.logoLink {
+	text-decoration: none;
+}
+
+.title {
+	color: var(--color-text);
+	font-size: var(--font-size-2xl);
+	font-weight: var(--font-weight-black);
+}
