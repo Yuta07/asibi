@@ -1,10 +1,10 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 
 import { Header } from '@/components/common/Header'
 
 import styles from './Layout.module.scss'
 
-export const LayoutWithHeader: FC = ({ children }) => {
+export const LayoutWithHeader: FC<{ children: ReactNode }> = ({ children }) => {
 	return (
 		<div className="container">
 			<Header />
