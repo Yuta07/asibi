@@ -93,6 +93,7 @@ export const EmbedLink = ({ href }: Props) => {
 					border: var(--border-normal);
 					border-radius: var(--line-radius);
 					overflow: hidden;
+					text-decoration: none;
 					transition: var(--animation-transition) ease-in;
 				}
 
@@ -108,7 +109,7 @@ export const EmbedLink = ({ href }: Props) => {
 				}
 
 				.ogTitle {
-					color: var(--color-primary);
+					color: var(--color-text);
 					font-size: var(--font-size-m);
 					word-break: break-all;
 					display: -webkit-box;

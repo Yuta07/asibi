@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 import Link from 'next/link'
 
-import styles from './Home.module.scss'
+import styles from './Entry.module.scss'
 
 type Props = {
 	posts: {
@@ -22,7 +22,7 @@ export const Posts = ({ posts }: Props) => {
 			{posts.map((post) => {
 				return (
 					<section key={post.slug} className={styles.post}>
-						<Link href={`/${post.slug}`}>
+						<Link href={`/entry/${post.slug}`}>
 							<a className={styles.anchor}>
 								<h2 className={styles.title}>{post.title}</h2>
 							</a>

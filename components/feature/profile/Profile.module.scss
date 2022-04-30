@@ -72,6 +72,8 @@
 }
 
 .aboutTxt {
+	font-size: var(--font-size-s);
+
 	&:not(&:first-of-type) {
 		margin-top: 4px;
 	}

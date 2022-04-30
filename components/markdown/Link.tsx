@@ -20,7 +20,7 @@ export const Link: VFC<Props> = ({ children, href }) => {
 			<style jsx>{`
 				.container {
 					margin: 0 4px;
-					color: var(--color-secondary);
+					color: var(--color-text);
 				}
 
 				.container:hover {

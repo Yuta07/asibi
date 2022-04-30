@@ -26,17 +26,11 @@
 	margin: 0 auto;
 	padding: 60px 0;
 	display: table;
-	color: var(--color-primary);
+	color: var(--color-text);
 	font-size: var(--font-size-s);
 	text-align: left;
 	animation: fade-in 0.5s ease-in 0s 1 normal both;
 	-webkit-animation: fade-in 0.5s ease-in 0s 1 normal both;
-}
-
-.attention {
-	padding: 20px 0;
-	color: var(--color-primary);
-	font-weight: var(--font-weight-bold);
 }
 
 .content {
@@ -44,4 +38,10 @@
 	border-top: var(--border-normal);
 	animation: fade-in 0.6s ease-in 0s 1 normal both;
 	-webkit-animation: fade-in 0.6s ease-in 0s 1 normal both;
+}
+
+.attention {
+	padding: 20px 0;
+	color: var(--color-gray);
+	font-weight: var(--font-weight-bold);
 }

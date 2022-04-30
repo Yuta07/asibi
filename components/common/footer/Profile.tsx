@@ -15,7 +15,7 @@ export const Profile = () => {
 				<a href="https://github.com/Yuta07" target="_blank" rel="noopener noreferrer" className={styles.link}>
 					<GithubSVG />
 				</a>
-				<a href="https://twitter.com/yutaaaaa___" target="_blank" rel="noopener noreferrer" className={styles.link}>
+				<a href="https://twitter.com/zakimii07" target="_blank" rel="noopener noreferrer" className={styles.link}>
 					<TwitterSVG />
 				</a>
 				<a href="https://yutaaaaa.dev/rss/feed.xml" rel="nofollow" className={styles.link}>
@@ -25,7 +25,7 @@ export const Profile = () => {
 			<p className={styles.intro}>
 				SIエンジニア -{'>'} Webフロントエンドエンジニア
 				<br />
-				好きなものはお寿司とお掃除。
+				好きなものはお寿司とお掃除とお散歩。
 			</p>
 		</div>
 	)

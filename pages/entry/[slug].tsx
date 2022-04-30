@@ -1,9 +1,11 @@
 import { BlogJsonLd, NextSeo } from 'next-seo'
 
+import { Layout } from '@/components/common/Layout'
 import { Post } from '@/components/feature/entry/slug'
 import { getPostData, getSortedPostsData } from '@/lib/posts'
 
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+import type { ReactElement } from 'react'
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const posts = getSortedPostsData()
@@ -30,9 +32,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 	}
 }
 
-const PostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
-	const CLOUDINARY_URL = `https://res.cloudinary.com/https-yutaaaaa-vercel-app/image/upload/l_text:TakaoGothic_50_bold:${post.title},co_rgb:000000,w_760,c_fit/v1640180870/cloudinary_fzk9qg.png`
-
+export default function PostPage({ post }: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
 		<>
 			<NextSeo
@@ -46,10 +46,10 @@ const PostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
 					site_name: post.title,
 					images: [
 						{
-							url: CLOUDINARY_URL,
+							url: 'https://yutaaaaa.dev/ogp.png',
 							width: 800,
 							height: 420,
-							alt: 'yutanote image',
+							alt: post.slug,
 						},
 					],
 				}}
@@ -62,7 +62,7 @@ const PostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
 			<BlogJsonLd
 				url={`https://yutaaaaa.dev/${post.slug}`}
 				title={post.title}
-				images={[CLOUDINARY_URL]}
+				images={[`https://yutaaaaa.dev/ogp.png`]}
 				datePublished={`${post.createdAt}T09:00:00+08:00`}
 				dateModified={`${post.createdAt}T09:00:00+08:00`}
 				authorName="yutaaaaa"
@@ -73,4 +73,6 @@ const PostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
 	)
 }
 
-export default PostPage
+PostPage.getLayout = function getLayout(page: ReactElement) {
+	return <Layout>{page}</Layout>
+}

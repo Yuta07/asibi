@@ -1,7 +1,7 @@
 @import '/styles/mixins';
 
 .heading {
-	color: var(--color-primary);
+	color: var(--color-text);
 	padding-left: 20px;
 	position: relative;
 
@@ -10,7 +10,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		background: var(--color-primary);
+		background: var(--color-text);
 	}
 }
 

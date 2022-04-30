@@ -6,7 +6,7 @@ export const Delete: VFC<{ children: ReactNode }> = ({ children }) => {
 			{children}
 			<style jsx>{`
 				.container {
-					background-image: linear-gradient(var(--color-primary), var(--color-primary));
+					background-image: linear-gradient(var(--color-gray), var(--color-gray));
 					background-position: 0 50%;
 					background-size: 100% 2px;
 					background-repeat: repeat-x;

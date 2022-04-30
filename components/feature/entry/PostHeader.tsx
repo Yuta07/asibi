@@ -27,8 +27,8 @@ export const PostHeader = ({ post }: Props) => {
 				</Link>
 				<span className={styles.author}>
 					By
-					<a href="https://twitter.com/yutaaaaa___" target="_blank" rel="noopener noreferrer">
-						@yutaaaaa___
+					<a href="https://twitter.com/zakimii07" target="_blank" rel="noopener noreferrer">
+						@zakimii07
 					</a>
 				</span>
 			</div>

@@ -19,14 +19,14 @@ export const generatedRssFeed = () => {
 	const date = new Date()
 
 	const author = {
-		name: 'yutaaaaa',
+		name: 'zakimii',
 		email: 'mono.12dev@gmail.com',
 		link: 'https://yutaaaaa.dev',
 	}
 
 	const feed = new Feed({
-		title: 'yutaaaaa | blog by yutaka miyazaki.',
-		description: "yutaka miyazaki's blog",
+		title: 'zakimii',
+		description: "zakimii's personal website.",
 		id: baseUrl,
 		link: baseUrl,
 		language: 'ja',

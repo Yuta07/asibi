@@ -1,5 +1,7 @@
-import { NextSeo } from 'next-seo'
+import { ReactElement } from 'react'
 
+import { Layout } from '@/components/common/Layout'
+import { SEO } from '@/components/common/SEO'
 import { Posts } from '@/components/feature/entry'
 import { ParamHeader } from '@/components/feature/entry/ParamHeader'
 import { getSortedPostsDataWithCategory } from '@/lib/posts'
@@ -26,14 +28,16 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 	}
 }
 
-const CategoryPage = ({ posts, category }: InferGetStaticPropsType<typeof getStaticProps>) => {
+export default function CategoryPage({ posts, category }: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
 		<>
-			<NextSeo title={category} />
+			<SEO title={`${category} Entry`} description={`${category}タグのエントリ一覧`} />
 			<ParamHeader total={posts.length} />
 			<Posts posts={posts} />
 		</>
 	)
 }
 
-export default CategoryPage
+CategoryPage.getLayout = function getLayout(page: ReactElement) {
+	return <Layout>{page}</Layout>
+}
