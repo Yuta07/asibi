@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { Header } from '../Header'
+import { Header } from '@/components/common/Header'
 
 import styles from './Layout.module.scss'
 
