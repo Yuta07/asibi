@@ -131,7 +131,7 @@ export const EmbedLink = ({ href }: Props) => {
 
 				.anchor {
 					margin-top: 4px;
-					color: var(--color-primary);
+					color: var(--color-text);
 					font-size: var(--font-size-xs);
 					word-break: break-all;
 					display: -webkit-box;

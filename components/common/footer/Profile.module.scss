@@ -38,6 +38,13 @@
 	}
 }
 
+.target {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
 .intro {
 	margin-top: 10px;
 	font-size: var(--font-size-xs);

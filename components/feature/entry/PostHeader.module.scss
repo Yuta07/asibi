@@ -59,8 +59,10 @@
 .category {
 	padding: 2px 8px;
 	border-radius: var(--line-radius);
+	color: var(--color-bg);
 	font-size: var(--font-size-s);
 	font-weight: var(--font-weight-bold);
+	text-decoration: none;
 
 	&:hover {
 		opacity: var(--hover-feedback-opacity);
@@ -71,14 +73,12 @@
 .ordinary {
 	@extend .category;
 
-	color: var(--color-bg);
 	background: var(--color-primary);
 }
 
 .tech {
 	@extend .category;
 
-	color: var(--color-text);
 	background: var(--color-secondary);
 }
 

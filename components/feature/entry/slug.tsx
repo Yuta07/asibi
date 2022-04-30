@@ -1,3 +1,5 @@
+import { SEO } from '@/components/common/SEO'
+
 import { PostBody } from './PostBody'
 import { PostHeader } from './PostHeader'
 import { Share } from './Share'
@@ -16,11 +18,16 @@ type Props = {
 }
 
 export const Post = ({ post }: Props) => {
+	if (post == null) return null
+
 	return (
-		<article>
-			<PostHeader post={post} />
-			<PostBody post={post} />
-			<Share post={post} />
-		</article>
+		<>
+			<SEO title={post.title} description={post.preface} />
+			<article>
+				<PostHeader post={post} />
+				<PostBody post={post} />
+				<Share post={post} />
+			</article>
+		</>
 	)
 }
