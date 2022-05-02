@@ -1,5 +1,5 @@
 import classnames from 'classnames'
-import { createElement, ReactNode, VFC } from 'react'
+import { createElement, ReactNode, FC } from 'react'
 
 import styles from './Heading.module.scss'
 
@@ -10,7 +10,7 @@ interface Props extends React.HTMLAttributes<HTMLHeadingElement> {
 	headingLevel: HeadingLevel
 }
 
-export const Heading: VFC<Props> = ({ children, headingLevel }) => {
+export const Heading: FC<Props> = ({ children, headingLevel }) => {
 	const Tag = ({ ...props }: React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>) =>
 		createElement(headingLevel, props, children)
 

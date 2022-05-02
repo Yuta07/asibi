@@ -1,4 +1,4 @@
-import { ReactNode, VFC } from 'react'
+import { ReactNode, FC } from 'react'
 
 type Props = {
 	children: ReactNode
@@ -6,7 +6,7 @@ type Props = {
 	depth: number
 }
 
-export const List: VFC<Props> = ({ children, ordered, depth }) => {
+export const List: FC<Props> = ({ children, ordered, depth }) => {
 	return ordered ? (
 		<ol style={{ margin: depth > 0 ? `10px 0 0` : `15px 0` }} className="ordered">
 			{children}

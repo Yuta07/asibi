@@ -1,6 +1,6 @@
-import { ReactNode, VFC } from 'react'
+import { ReactNode, FC } from 'react'
 
-export const InlineCode: VFC<{ children: ReactNode }> = ({ children }) => {
+export const InlineCode: FC<{ children: ReactNode }> = ({ children }) => {
 	return (
 		<code className="container">
 			{children}
