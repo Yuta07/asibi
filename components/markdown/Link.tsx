@@ -1,4 +1,4 @@
-import { ReactNode, VFC } from 'react'
+import { ReactNode, FC } from 'react'
 
 import { EmbedLink } from './EmbedLink'
 
@@ -7,7 +7,7 @@ type Props = {
 	href: string
 }
 
-export const Link: VFC<Props> = ({ children, href }) => {
+export const Link: FC<Props> = ({ children, href }) => {
 	const isURLChildren = children?.toString().startsWith('http') || children?.toString().startsWith('https')
 
 	if (isURLChildren) {

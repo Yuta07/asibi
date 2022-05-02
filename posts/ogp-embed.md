@@ -166,7 +166,7 @@ HTML に変換するためのライブラリとして React-Markdown を使用�
 
 ```typescript
 export const Markdown = () => {
-  const MarkdownLink: VFC<{ children: ReactNode; href?: string }> = ({ children, ...props }) => {
+  const MarkdownLink: FC<{ children: ReactNode; href?: string }> = ({ children, ...props }) => {
     const { href } = props
 
     return <Link href={href || ''}>{children}</Link>
@@ -216,14 +216,14 @@ HTTP クライアントに[axios](https://github.com/axios/axios)を使用する
 この場合は文章の一部としてリンクを表示したいため、OGP として表示するのは望ましくありません。 そのためリンクのみのテキストの場合のみ OGP を表示するようにします。
 
 ```typescript
-import { ReactNode, VFC } from 'react'
+import { ReactNode, FC } from 'react'
 
 type Props = {
   children: ReactNode
   href: string
 }
 
-export const Link: VFC<Props> = ({ children, href }) => {
+export const Link: FC<Props> = ({ children, href }) => {
   const isURLChildren = children?.toString().startsWith('http') || children?.toString().startsWith('https')
 
   if (isURLChildren) {

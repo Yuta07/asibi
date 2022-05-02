@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import config from '@/config/seo.json'
 
-import type { ReactNode, VFC } from 'react'
+import type { ReactNode } from 'react'
 
 type OGImageType = {
 	url?: string
@@ -24,7 +24,7 @@ type SEOProps = {
 	children?: ReactNode
 }
 
-export const SEO: VFC<SEOProps> = ({ title, description, robots, openGraph, children }) => {
+export const SEO = ({ title, description, robots, openGraph, children }: SEOProps) => {
 	return (
 		<Head>
 			<title key="title">{title ? `${config.titleTemplate.replace(/%s/g, title)}` : config.title}</title>

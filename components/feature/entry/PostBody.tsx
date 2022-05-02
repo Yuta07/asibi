@@ -1,4 +1,4 @@
-import { ReactNode, VFC } from 'react'
+import { ReactNode, FC } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
@@ -42,15 +42,15 @@ export const PostBody = ({ post }: Props) => {
 		return <BlockCode language={language} value={value} />
 	}
 
-	const MarkdownBlockquote: VFC<{ children: ReactNode }> = ({ children }) => {
+	const MarkdownBlockquote: FC<{ children: ReactNode }> = ({ children }) => {
 		return <Blockquote>{children}</Blockquote>
 	}
 
-	const MarkdownDelete: VFC<{ children: ReactNode }> = ({ children }) => {
+	const MarkdownDelete: FC<{ children: ReactNode }> = ({ children }) => {
 		return <Delete>{children}</Delete>
 	}
 
-	const MarkdownHeading: VFC<{ children: ReactNode; level: number }> = ({ children, ...props }) => {
+	const MarkdownHeading: FC<{ children: ReactNode; level: number }> = ({ children, ...props }) => {
 		const { level } = props
 		const headingLevel = `h${level}` as HeadingLevel
 
@@ -63,17 +63,17 @@ export const PostBody = ({ post }: Props) => {
 		return <Img alt={alt} src={src} />
 	}
 
-	const MarkdownInlineCode: VFC<{ children: ReactNode }> = ({ children }) => {
+	const MarkdownInlineCode: FC<{ children: ReactNode }> = ({ children }) => {
 		return <InlineCode>{children}</InlineCode>
 	}
 
-	const MarkdownLink: VFC<{ children: ReactNode; href?: string }> = ({ children, ...props }) => {
+	const MarkdownLink: FC<{ children: ReactNode; href?: string }> = ({ children, ...props }) => {
 		const { href } = props
 
 		return <Link href={href || ''}>{children}</Link>
 	}
 
-	const MarkdownList: VFC<{ children: ReactNode; ordered: boolean; depth: number }> = ({ children, ...props }) => {
+	const MarkdownList: FC<{ children: ReactNode; ordered: boolean; depth: number }> = ({ children, ...props }) => {
 		const { ordered, depth } = props
 		return (
 			<List ordered={ordered} depth={depth}>
@@ -82,7 +82,7 @@ export const PostBody = ({ post }: Props) => {
 		)
 	}
 
-	const MarkdownListItem: VFC<{ children: ReactNode; ordered: boolean; index: number }> = ({ children, ...props }) => {
+	const MarkdownListItem: FC<{ children: ReactNode; ordered: boolean; index: number }> = ({ children, ...props }) => {
 		const { ordered, index } = props
 		return (
 			<ListItem ordered={ordered} index={index}>
@@ -91,15 +91,15 @@ export const PostBody = ({ post }: Props) => {
 		)
 	}
 
-	const MarkdownElementParagraph: VFC<{ children: ReactNode }> = ({ children }) => {
+	const MarkdownElementParagraph: FC<{ children: ReactNode }> = ({ children }) => {
 		return <ElParagraph>{children}</ElParagraph>
 	}
 
-	const MarkdownParagraph: VFC<{ children: ReactNode }> = ({ children }) => {
+	const MarkdownParagraph: FC<{ children: ReactNode }> = ({ children }) => {
 		return <Paragraph>{children}</Paragraph>
 	}
 
-	const MarkdownStrong: VFC<{ children: ReactNode }> = ({ children }) => {
+	const MarkdownStrong: FC<{ children: ReactNode }> = ({ children }) => {
 		return <Strong>{children}</Strong>
 	}
 

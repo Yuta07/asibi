@@ -1,4 +1,4 @@
-import { ReactNode, VFC } from 'react'
+import { ReactNode, FC } from 'react'
 
 import styles from './ListItem.module.scss'
 
@@ -8,6 +8,6 @@ type Props = {
 	index: number
 }
 
-export const ListItem: VFC<Props> = ({ children, ordered }) => {
+export const ListItem: FC<Props> = ({ children, ordered }) => {
 	return <li className={ordered ? styles.orderedList : styles.unOrderedList}>{children}</li>
 }

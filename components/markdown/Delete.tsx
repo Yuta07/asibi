@@ -1,6 +1,6 @@
-import { ReactNode, VFC } from 'react'
+import { ReactNode, FC } from 'react'
 
-export const Delete: VFC<{ children: ReactNode }> = ({ children }) => {
+export const Delete: FC<{ children: ReactNode }> = ({ children }) => {
 	return (
 		<del className="container">
 			{children}

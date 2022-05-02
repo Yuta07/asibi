@@ -1,6 +1,6 @@
-import React, { ReactNode, VFC } from 'react'
+import React, { ReactNode, FC } from 'react'
 
-export const Paragraph: VFC<{ children: ReactNode }> = ({ children }) => {
+export const Paragraph: FC<{ children: ReactNode }> = ({ children }) => {
 	return (
 		<p className="container">
 			{children}
@@ -19,7 +19,7 @@ export const Paragraph: VFC<{ children: ReactNode }> = ({ children }) => {
 	)
 }
 
-export const ElParagraph: VFC<{ children: ReactNode }> = ({ children }) => {
+export const ElParagraph: FC<{ children: ReactNode }> = ({ children }) => {
 	return (
 		<div className="container">
 			{children}

@@ -1,5 +1,5 @@
-import { ReactNode, VFC } from 'react'
+import { ReactNode, FC } from 'react'
 
-export const Strong: VFC<{ children: ReactNode }> = ({ children }) => {
+export const Strong: FC<{ children: ReactNode }> = ({ children }) => {
 	return <strong>{children}</strong>
 }
