@@ -9,6 +9,7 @@
       "@/config/*": ["config/*"],
       "@/hooks/*": ["hooks/*"],
       "@/lib/*": ["lib/*"],
+      "@/mocks/*": ["mocks/*"],
       "@/styles/*": ["styles/*"]
     },
     "jsx": "preserve",
