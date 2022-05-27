@@ -1,6 +1,6 @@
 ---
 title: 'Next.jsでMarkdownのリンクからog情報を表示する'
-preface: '個人ブログでの記事の表現を広げるためにリンクを貼った際にog情報が表示されるようにした。Serverless Functionsを使用して実装したが、今後似たようなことで困った方が少しでも参考になるように書き残す。'
+preface: 'Next.jsのServerless Functionsを使用してリンクを貼った際にog情報が表示されるようにする方法。'
 attention: '！ マークダウンをHTMLに変換するためにReact-Markdownを使用しています'
 createdAt: '2021-12-28'
 category: 'tech'

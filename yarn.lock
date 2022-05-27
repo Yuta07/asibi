@@ -1547,6 +1547,13 @@
   resolved "https://registry.yarnpkg.com/@open-draft/until/-/until-1.0.3.tgz#db9cc719191a62e7d9200f6e7bab21c5b848adca"
   integrity sha512-Aq58f5HiWdyDlFffbbSjAlv596h/cOnt2DO1w3DOC7OJ5EHs0hd/nycJfiu9RJbT6Yk6F1knnRRXNSpxoIVZ9Q==
 
+"@playwright/test@^1.22.1":
+  version "1.22.1"
+  resolved "https://registry.yarnpkg.com/@playwright/test/-/test-1.22.1.tgz#78b4a7c13d8a7a0c6432672571d70c4d3963f027"
+  integrity sha512-8ouMBUboYslHom41W8bnSEn0TwlAMHhCACwOZeuiAgzukj7KobpZ+UBwrGE0jJ0UblJbKAQNRHXL+z7sDSkb6g==
+  dependencies:
+    playwright-core "1.22.1"
+
 "@sinclair/typebox@^0.23.3":
   version "0.23.5"
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.23.5.tgz#93f7b9f4e3285a7a9ade7557d9a8d36809cbc47d"
@@ -5926,6 +5933,11 @@ pkg-dir@^4.2.0:
   integrity sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==
   dependencies:
     find-up "^4.0.0"
+
+playwright-core@1.22.1:
+  version "1.22.1"
+  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.22.1.tgz#59ddf903546171fdfd9c3dc189630c883619667c"
+  integrity sha512-H+ZUVYnceWNXrRf3oxTEKAr81QzFsCKu5Fp//fEjQvqgKkfA1iX3E9DBrPJpPNOrgVzcE+IqeI0fDmYJe6Ynnw==
 
 postcss-media-query-parser@^0.2.3:
   version "0.2.3"

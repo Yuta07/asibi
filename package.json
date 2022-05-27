@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "test": "jest --watch",
+    "test:e2e": "playwright test",
     "check-types": "tsc --noEmit",
     "lint": "eslint --ext '**/*.{js,jsx,ts,tsx} --ignore-path .gitignore .'",
     "lint:fix": "eslint --fix '**/*.{ts,tsx}'",
@@ -41,6 +42,7 @@
   "devDependencies": {
     "@babel/core": "^7.16.5",
     "@babel/runtime-corejs2": "^7.16.5",
+    "@playwright/test": "^1.22.1",
     "@svgr/webpack": "^6.1.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
