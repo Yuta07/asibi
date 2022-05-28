@@ -19,11 +19,17 @@ type Props = {
 export const PostHeader = ({ post }: Props) => {
 	return (
 		<header className={styles.container}>
-			<h1 className={styles.title}>{post.title}</h1>
+			<h1 data-test-id="entry-title" className={styles.title}>
+				{post.title}
+			</h1>
 			<div className={styles.info}>
-				<time className={styles.date}>{dayjs(post.createdAt).format('MMM D, YYYY')}</time>
+				<time data-test-id="entry-createdAt" className={styles.date}>
+					{dayjs(post.createdAt).format('MMM D, YYYY')}
+				</time>
 				<Link href={`/categories/${post.category}`}>
-					<a className={styles[post.category]}>{post.category}</a>
+					<a data-test-id="entry-category" className={styles[post.category]}>
+						{post.category}
+					</a>
 				</Link>
 				<span className={styles.author}>
 					By
