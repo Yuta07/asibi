@@ -1,5 +1,5 @@
 import { Layout } from '@/components/common/Layout'
-import { Post } from '@/components/feature/entry/slug'
+import { Entry } from '@/components/feature/entry/slug'
 import { getPostData, getSortedPostsData } from '@/lib/posts'
 
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
@@ -30,10 +30,10 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 	}
 }
 
-export default function PostPage({ post }: InferGetStaticPropsType<typeof getStaticProps>) {
-	return <Post post={post} />
+export default function EntryPage({ post }: InferGetStaticPropsType<typeof getStaticProps>) {
+	return <Entry post={post} />
 }
 
-PostPage.getLayout = function getLayout(page: ReactElement) {
+EntryPage.getLayout = function getLayout(page: ReactElement) {
 	return <Layout>{page}</Layout>
 }

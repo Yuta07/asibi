@@ -2,7 +2,7 @@ import { InferGetStaticPropsType } from 'next'
 
 import { Layout } from '@/components/common/Layout'
 import { SEO } from '@/components/common/SEO'
-import { Posts } from '@/components/feature/entry'
+import { Entries } from '@/components/feature/entry'
 import { generatedRssFeed } from '@/lib/feed'
 import { getSortedPostsData } from '@/lib/posts'
 
@@ -20,15 +20,15 @@ export const getStaticProps = async () => {
 	}
 }
 
-export default function PostsPage({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function EntriesPage({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
 		<>
 			<SEO title="Entry" description="エントリ一覧" />
-			<Posts posts={posts} />
+			<Entries posts={posts} />
 		</>
 	)
 }
 
-PostsPage.getLayout = function getLayout(page: ReactElement) {
+EntriesPage.getLayout = function getLayout(page: ReactElement) {
 	return <Layout>{page}</Layout>
 }

@@ -10,7 +10,7 @@ export const LayoutWithHeader: FC<{ children: ReactNode }> = ({ children }) => {
 			<Header />
 			<main className={styles.main}>{children}</main>
 			<footer className="footer">
-				<p className="copyright">©{new Date().getFullYear()}, zakimii</p>
+				<p className="copyright">©{new Date().getFullYear()}, koppa</p>
 			</footer>
 			<style jsx>{`
 				.container {

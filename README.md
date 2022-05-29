@@ -1,3 +1,3 @@
 ## yutaaaaa
 
-Personal blog by yutaka miyazaki.
+Personal website by yutaka miyazaki.

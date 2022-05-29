@@ -18,7 +18,7 @@ export const Header = () => {
 				/>
 				<Link href="/">
 					<a className={styles.logoLink}>
-						<h1 className={styles.title}>zakimii</h1>
+						<h1 className={styles.title}>koppa</h1>
 					</a>
 				</Link>
 			</div>

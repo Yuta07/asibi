@@ -11,7 +11,7 @@ export const Head = () => {
 				<link rel="icon" href="/icon/icon.svg" type="image/svg+xml" />
 				<link rel="apple-touch-icon" href="/icon/apple-touch-icon.png" />
 				<link rel="manifest" href="/app.webmanifest" key="app-manifest" />
-				<link rel="alternate" type="application/rss+xml" title="zakimii" href="https://yutaaaaa.dev/rss/feed.xml" />
+				<link rel="alternate" type="application/rss+xml" title="koppa" href="https://yutaaaaa.dev/rss/feed.xml" />
 			</SEO>
 		</>
 	)

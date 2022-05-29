@@ -1,6 +1,6 @@
 import { ReactNode, FC } from 'react'
 
-import { EmbedLink } from './EmbedLink'
+import { EmbedLink } from '../EmbedLink'
 
 type Props = {
 	children: ReactNode
