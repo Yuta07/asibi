@@ -9,7 +9,7 @@ import styles from './Profile.module.scss'
 import type { IconType } from 'react-icons'
 
 const ProfileContents: { label: string; value: string }[] = [
-	{ label: 'Name', value: 'zakimii' },
+	{ label: 'Name', value: 'koppa' },
 	{ label: 'Residence', value: 'Japan / Kanagawa' },
 	{ label: 'Job / Role', value: 'Web Frontend Engineer' },
 	{ label: 'Concerns', value: 'TypeScript / React / Next.js' },
@@ -17,7 +17,7 @@ const ProfileContents: { label: string; value: string }[] = [
 
 const AccountsContents: { name: string; link: string; image: IconType }[] = [
 	{ name: 'Yuta07', link: 'https://github.com/Yuta07', image: FiGithub },
-	{ name: 'zakimii07', link: 'https://twitter.com/zakimii07', image: FiTwitter },
+	{ name: 'koppa_07', link: 'https://twitter.com/koppa_07', image: FiTwitter },
 	{
 		name: 'resume',
 		link: 'https://shorthaired-seaplane-f56.notion.site/Curriculum-vitae-fecdfaa602c54dbf8da36e5533467bc7',

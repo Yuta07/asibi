@@ -17,7 +17,7 @@ type Props = {
 	}
 }
 
-export const Post = ({ post }: Props) => {
+export const Entry = ({ post }: Props) => {
 	if (post == null) return null
 
 	return (

@@ -18,15 +18,15 @@ export const Profile = () => {
 				layout="fixed"
 				priority={true}
 			/>
-			<h2 className={styles.author}>zakimii</h2>
+			<h2 className={styles.author}>koppa</h2>
 			<div className={styles.social}>
 				<a href="https://github.com/Yuta07" target="_blank" rel="noopener noreferrer" className={styles.link}>
 					<GithubSVG />
 					<span className={styles.target}>Yuta07</span>
 				</a>
-				<a href="https://twitter.com/zakimii07" target="_blank" rel="noopener noreferrer" className={styles.link}>
+				<a href="https://twitter.com/koppa_07" target="_blank" rel="noopener noreferrer" className={styles.link}>
 					<TwitterSVG />
-					<span className={styles.target}>zakimii07</span>
+					<span className={styles.target}>koppa_07</span>
 				</a>
 				<a href="https://yutaaaaa.dev/rss/feed.xml" rel="nofollow" className={styles.link}>
 					<RssSVG />

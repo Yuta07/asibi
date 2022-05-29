@@ -13,7 +13,7 @@ const FEATURES = [
 
 const ACCOUNTS = [
 	{ name: 'Yuta07', link: 'https://github.com/Yuta07', image: FiGithub },
-	{ name: 'zakimii07', link: 'https://twitter.com/zakimii07', image: FiTwitter },
+	{ name: 'koppa_07', link: 'https://twitter.com/koppa_07', image: FiTwitter },
 	{
 		name: 'resume',
 		link: 'https://shorthaired-seaplane-f56.notion.site/Curriculum-vitae-fecdfaa602c54dbf8da36e5533467bc7',
@@ -28,14 +28,14 @@ export const Home = () => {
 				<div className={styles.header}>
 					<Image
 						src="/logo/logo.svg"
-						alt="zakimii logo"
+						alt="koppa logo"
 						className={styles.avatar}
 						width={48}
 						height={48}
 						layout="fixed"
 						quality={90}
 					/>
-					<h1 className={styles.author}>zakimii</h1>
+					<h1 className={styles.author}>koppa</h1>
 				</div>
 				<div className={styles.main}>
 					<div className={styles.featureContaienr}>
@@ -75,7 +75,7 @@ export const Home = () => {
 					</div>
 				</div>
 				<div className={styles.footer}>
-					<small className={styles.copyright}>©{new Date().getFullYear()}, zakimii</small>
+					<small className={styles.copyright}>©{new Date().getFullYear()}, koppa</small>
 				</div>
 			</div>
 		</div>

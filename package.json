@@ -1,8 +1,8 @@
 {
-  "name": "zakimii",
+  "name": "koppa",
   "version": "1.0.0",
   "license": "UNLICENSED",
-  "description": "zakimii's website.",
+  "description": "yutaka's website.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

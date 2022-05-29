@@ -7,7 +7,7 @@ export const Footer = () => {
 			<div className={styles.inner}>
 				<div className={styles.flame}>
 					<Profile />
-					<p className={styles.copyright}>©{new Date().getFullYear()}, zakimii</p>
+					<p className={styles.copyright}>©{new Date().getFullYear()}, koppa</p>
 				</div>
 			</div>
 		</footer>

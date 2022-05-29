@@ -9,7 +9,7 @@ const customJestConfig = {
 	testEnvironment: 'jest-environment-jsdom',
 	roots: ['<rootDir>'],
 	testMatch: ['**/?(*.)+(spec|test).+(ts|tsx|js|jsx)'],
-	testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
+	testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/', '<rootDir>/tests/e2e'],
 	transform: {
 		'^.+\\.(ts|tsx)$': 'ts-jest',
 	},

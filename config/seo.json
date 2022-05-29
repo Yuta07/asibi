@@ -1,25 +1,25 @@
 {
-  "title": "zakimii",
-  "titleTemplate": "%s | zakimii",
-  "description": "zakimii's website.",
+  "title": "koppa",
+  "titleTemplate": "%s | koppa",
+  "description": "yutaka's website.",
   "openGraph": {
     "type": "website",
     "url": "https://yutaaaaa.dev/",
-    "site_name": "zakimii",
-    "title": "zakimii",
-    "description": "zakimii's website.",
+    "site_name": "koppa",
+    "title": "koppa",
+    "description": "yutaka's website.",
     "images": [
       {
         "url": "https://yutaaaaa.dev/ogp.png",
         "width": 800,
         "height": 600,
-        "alt": "zakimii og image"
+        "alt": "koppa og image"
       }
     ]
   },
   "twitter": {
-    "handle": "@zakimii07",
-    "site": "@zakimii07",
+    "handle": "@koppa_07",
+    "site": "@koppa_07",
     "cardType": "summary_large_image"
   }
 }

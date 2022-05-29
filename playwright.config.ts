@@ -1,7 +1,7 @@
 import { PlaywrightTestConfig, devices } from '@playwright/test'
 
 const config: PlaywrightTestConfig = {
-	testDir: 'tests',
+	testDir: 'tests/e2e',
 	timeout: 10000,
 	forbidOnly: !!process.env.CI,
 	use: {

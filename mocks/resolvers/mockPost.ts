@@ -1,6 +1,7 @@
 import { MockedRequest, ResponseResolver, restContext } from 'msw'
 
 export const mockPost: ResponseResolver<MockedRequest, typeof restContext> = (req, res, ctx) => {
+	console.log(req)
 	return res(
 		ctx.status(200),
 		ctx.json({
