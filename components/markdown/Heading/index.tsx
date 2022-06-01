@@ -14,5 +14,9 @@ export const Heading: FC<Props> = ({ children, headingLevel }) => {
 	const Tag = ({ ...props }: React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>) =>
 		createElement(headingLevel, props, children)
 
-	return <Tag className={classnames(styles.heading, styles[headingLevel])}>{children}</Tag>
+	return (
+		<Tag className={classnames(styles.heading, styles[headingLevel])} data-testid={`markdown-heading-${headingLevel}`}>
+			{children}
+		</Tag>
+	)
 }
