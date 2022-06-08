@@ -25,6 +25,8 @@ describe('markdwon list test', () => {
 		expect(element.querySelector('ul > li:nth-child(2)')).toHaveTextContent('second')
 		expect(element.querySelector('ul > li:nth-child(3)')).toHaveTextContent('third')
 
+		expect(element.querySelector('ul > li:nth-child(4)')).not.toBeInTheDocument()
+
 		expect(element).toHaveClass('unOrdered')
 	})
 

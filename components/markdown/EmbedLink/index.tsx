@@ -55,7 +55,13 @@ export const EmbedLink = ({ href }: Props) => {
 
 	if (!Object.keys(ogState).length) {
 		return (
-			<a href={href} className="normalLink" target="_blank" rel="noopener noreferrer">
+			<a
+				href={href}
+				className="normalLink"
+				target="_blank"
+				rel="noopener noreferrer"
+				data-testid="markdown-embed-only-link"
+			>
 				{href}
 				<style jsx>{`
 					.normalLink {
@@ -72,7 +78,7 @@ export const EmbedLink = ({ href }: Props) => {
 
 	return (
 		<>
-			<a className="container" href={href} target="_blank" rel="noopener noreferrer">
+			<a className="container" href={href} target="_blank" rel="noopener noreferrer" data-testid="markdown-embed-link">
 				<div className="ogInfo">
 					<h1 className="ogTitle">{title}</h1>
 					{description && <p className="ogDescription">{description}</p>}
