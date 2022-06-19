@@ -10,14 +10,16 @@
 	max-width: 720px;
 	margin: 0 auto;
 	padding: 0 20px;
-	display: flex;
-	gap: 20px;
-	align-items: center;
-	justify-content: center;
 }
 
 .logoLink {
+	width: max-content;
+	margin: 0 auto;
+	display: flex;
+	gap: 20px;
+	align-items: center;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 .title {

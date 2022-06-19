@@ -26,7 +26,7 @@ export const Entry = ({ post }: Props) => {
 			<article>
 				<PostHeader post={post} />
 				<PostBody post={post} />
-				<Share post={post} />
+				<Share slug={post.slug} title={post.title} />
 			</article>
 		</>
 	)

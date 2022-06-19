@@ -15,23 +15,20 @@ export const Img = ({ alt, src, layout = 'raw' }: Props) => {
 				<Image
 					src={src}
 					alt={alt}
-					width={520}
-					height={0}
+					width={560}
+					height={layout === 'raw' ? 0 : 240}
 					layout={layout}
 					quality={85}
-					style={layout === 'raw' ? { ...baseStyle, objectFit: 'contain' } : { ...baseStyle }}
+					style={layout === 'raw' ? { ...baseStyle, objectFit: 'contain' } : { borderRadius: '8px' }}
 					priority={true}
 					objectFit={layout === 'raw' ? undefined : 'contain'}
 				/>
 			</p>
 			<style jsx>{`
 				.container {
-					width: 100%;
-					height: auto;
 					margin: 40px 0;
 					display: block;
 					text-align: center;
-					position: relative;
 				}
 			`}</style>
 		</>
