@@ -1,4 +1,5 @@
 import { SEO } from '@/components/common/SEO'
+import config from '@/config/seo.json'
 
 import { PostBody } from './PostBody'
 import { PostHeader } from './PostHeader'
@@ -22,7 +23,12 @@ export const Entry = ({ post }: Props) => {
 
 	return (
 		<>
-			<SEO title={post.title} description={post.preface} twitter={{ cardType: 'summary_large_image' }} />
+			<SEO
+				title={post.title}
+				description={post.preface}
+				openGraph={{ url: `${config.openGraph.url}/${post.slug}` }}
+				twitter={{ cardType: 'summary_large_image' }}
+			/>
 			<article>
 				<PostHeader post={post} />
 				<PostBody post={post} />

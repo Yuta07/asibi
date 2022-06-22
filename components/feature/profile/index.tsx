@@ -2,8 +2,6 @@ import Image from 'next/image'
 import { FiGithub, FiTwitter } from 'react-icons/fi'
 import { SiNotion } from 'react-icons/si'
 
-import { SEO } from '@/components/common/SEO'
-
 import styles from './Profile.module.scss'
 
 import type { IconType } from 'react-icons'
@@ -38,7 +36,6 @@ const ImageContent: { src: string; alt: string }[] = [
 export const Profile = () => {
 	return (
 		<>
-			<SEO title="Profile" description="koppaのプロフィール" />
 			<div className={styles.container}>
 				<section className={styles.section}>
 					<h1 className={styles.hero}>Profile</h1>
