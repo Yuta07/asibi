@@ -26,8 +26,8 @@ const AccountsContents: { name: string; link: string; image: IconType }[] = [
 ]
 
 const AboutContent: string[] = [
-	'都内にてクラウドERPのカスタマイズ開発に従事したのち、現在はWebフロントエンジニアとして活動中。',
-	'好きなものはお寿司とお掃除とお散歩で、ハウスメートは犬と猫。',
+	'クラウドERPカスタマイズ開発1年 -> Webフロントエンジニア3年目。',
+	'好きなものはお寿司とお掃除とお散歩、ハウスメートは犬と猫。',
 ]
 
 const ImageContent: { src: string; alt: string }[] = [
@@ -38,7 +38,7 @@ const ImageContent: { src: string; alt: string }[] = [
 export const Profile = () => {
 	return (
 		<>
-			<SEO title="Profile" description="zakimiiのプロフィール" />
+			<SEO title="Profile" description="koppaのプロフィール" />
 			<div className={styles.container}>
 				<section className={styles.section}>
 					<h1 className={styles.hero}>Profile</h1>

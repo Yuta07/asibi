@@ -31,7 +31,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 export default function CategoryPage({ posts, category }: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
 		<>
-			<SEO title={`${category} Entry`} description={`${category}タグのエントリ一覧`} />
+			<SEO title={`${category} Entry`} description={`${category}のエントリ一覧`} />
 			<ParamHeader total={posts.length} />
 			<Entries posts={posts} />
 		</>

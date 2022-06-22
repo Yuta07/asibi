@@ -22,11 +22,11 @@ export const Entry = ({ post }: Props) => {
 
 	return (
 		<>
-			<SEO title={post.title} description={post.preface} />
+			<SEO title={post.title} description={post.preface} twitter={{ cardType: 'summary_large_image' }} />
 			<article>
 				<PostHeader post={post} />
 				<PostBody post={post} />
-				<Share post={post} />
+				<Share slug={post.slug} title={post.title} />
 			</article>
 		</>
 	)

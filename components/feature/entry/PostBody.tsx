@@ -110,7 +110,7 @@ export const PostBody = ({ post }: Props) => {
 	return (
 		<div>
 			<p className={styles.preface}>{post.preface}</p>
-			<div className={styles.content}>
+			<div className={styles.content} data-testid="entry-content">
 				{post.attention && <p className={styles.attention}>{post.attention}</p>}
 				<ReactMarkdown
 					skipHtml={false}

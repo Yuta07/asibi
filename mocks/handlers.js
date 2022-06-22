@@ -1,5 +1,5 @@
 import { rest } from 'msw'
 
-import { mockPost } from './resolvers/mockPost'
+import { mockOgpRequest } from './resolvers/mockOgpRequest'
 
-export const handlers = [rest.get('/entry/msw-test', mockPost)]
+export const handlers = [rest.post('/api/getOgp', mockOgpRequest)]

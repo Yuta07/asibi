@@ -8,14 +8,10 @@ export const ParamHeader = ({ total }: Props) => {
 	const router = useRouter()
 	const { category } = router.query
 
-	let paramsTxt = ''
-
-	if (category) {
-		paramsTxt = `${category.toString()} カテゴリのエントリは${total}件あります`
-	}
+	const paramsTxt = category ? `${category.toString()} カテゴリのエントリは${total}件あります` : ''
 
 	return (
-		<p className="container">
+		<p className="container" data-testid="param-header">
 			{paramsTxt}
 			<style jsx>{`
 				.container {

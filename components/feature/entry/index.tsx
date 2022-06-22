@@ -21,16 +21,18 @@ export const Entries = ({ posts }: Props) => {
 		<div className={styles.container}>
 			{posts.map((post) => {
 				return (
-					<section key={post.slug} className={styles.post}>
+					<section key={post.slug} className={styles.post} data-testid="entry-section">
 						<Link href={`/entry/${post.slug}`}>
-							<a className={styles.anchor}>
+							<a className={styles.anchor} data-testid="entry-slug-link">
 								<h2 className={styles.title}>{post.title}</h2>
 							</a>
 						</Link>
 						<div className={styles.info}>
 							<time className={styles.createdAt}>{dayjs(post.createdAt).format('MMM D, YYYY')}</time>
 							<Link href={`/categories/${post.category}`}>
-								<a className={styles[post.category]}>{post.category}</a>
+								<a className={styles[post.category]} data-testid="entry-category-link">
+									{post.category}
+								</a>
 							</Link>
 						</div>
 						<p className={styles.preface}>{post.preface}</p>
