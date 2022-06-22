@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm'
 import { BlockCode } from '@/components/markdown/BlockCode'
 import { Blockquote } from '@/components/markdown/Blockquote'
 import { Delete } from '@/components/markdown/Delete'
+import { EmbedTweetURL } from '@/components/markdown/EmbedTweetURL'
 import { Heading } from '@/components/markdown/Heading'
 import { Img } from '@/components/markdown/Img'
 import { InlineCode } from '@/components/markdown/InlineCode'
@@ -176,6 +177,10 @@ export const PostBody = ({ post }: Props) => {
 						},
 						img: MarkdownImage,
 						a({ children, href, ...props }) {
+							if (href?.toString().startsWith('https://twitter.com/')) {
+								return <EmbedTweetURL href={href} />
+							}
+
 							return (
 								<MarkdownLink href={href} {...props}>
 									{children}

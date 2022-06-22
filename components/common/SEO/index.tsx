@@ -19,7 +19,9 @@ type SEOProps = {
 		title?: string
 		type?: string
 		description?: string
-		images: OGImageType
+		url?: string
+		site_name?: string
+		images?: OGImageType
 	}
 	twitter?: {
 		cardType?: string
@@ -47,9 +49,9 @@ export const SEO = ({ title, description, robots, openGraph, twitter, children }
 				property="og:description"
 				content={openGraph?.description ?? config.openGraph.description ?? description ?? config.description}
 			/>
-			<meta key="og:site_name" property="og:site_name" content={config.openGraph.site_name} />
-			<meta key="og:url" property="og:url" content={config.openGraph.url} />
-			<meta key="og:image" property="og:image" content={openGraph?.images.url ?? config.openGraph.images[0].url} />
+			<meta key="og:site_name" property="og:site_name" content={openGraph?.site_name ?? config.openGraph.site_name} />
+			<meta key="og:url" property="og:url" content={openGraph?.url ?? config.openGraph.url} />
+			<meta key="og:image" property="og:image" content={openGraph?.images?.url ?? config.openGraph.images[0].url} />
 			<meta key="twitter:card" name="twitter:card" content={twitter?.cardType ?? config.twitter.cardType} />
 			<meta key="twitter:site" name="twitter:site" content={twitter?.site ?? config.twitter.site} />
 			<meta key="twitter:creator" name="twitter:creator" content={twitter?.handle ?? config.twitter.handle} />
