@@ -27,7 +27,7 @@ export const PostHeader = ({ post }: Props) => {
 					{dayjs(post.createdAt).format('MMM D, YYYY')}
 				</time>
 				<Link href={`/categories/${post.category}`}>
-					<a className={styles[post.category]} data-testid="entry-category">
+					<a className={styles[post.category]} data-testid="entry-category-link">
 						{post.category}
 					</a>
 				</Link>

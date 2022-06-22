@@ -8,7 +8,7 @@ type Props = {
 }
 
 export const Share = ({ slug, title }: Props) => {
-	const pageUrl = `https://yutaaaaa.dev/${slug}`
+	const pageUrl = `https://yutaaaaa.dev/entry/${slug}`
 	const encodeTitle = encodeURIComponent(title)
 
 	return (
@@ -18,7 +18,7 @@ export const Share = ({ slug, title }: Props) => {
 				href={`https://twitter.com/share?url=${pageUrl}&text=${encodeTitle}&via=koppa_07`}
 				rel="nofollow"
 				className={styles.anchor}
-				data-testid="post-share-button"
+				data-testid="entry-share-button"
 			>
 				<Image quality={85} src="/assets/twitter_share.svg" alt="twitter_share" width={40} height={40} />
 			</a>
