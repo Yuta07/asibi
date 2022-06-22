@@ -42,12 +42,12 @@ export const SEO = ({ title, description, robots, openGraph, twitter, children }
 			<meta
 				key="og:title"
 				property="og:title"
-				content={openGraph?.title ?? config.openGraph.title ?? title ?? config.title}
+				content={openGraph?.title ?? title ?? config.openGraph.title ?? config.title}
 			/>
 			<meta
 				key="og:description"
 				property="og:description"
-				content={openGraph?.description ?? config.openGraph.description ?? description ?? config.description}
+				content={openGraph?.description ?? description ?? config.openGraph.description ?? config.description}
 			/>
 			<meta key="og:site_name" property="og:site_name" content={openGraph?.site_name ?? config.openGraph.site_name} />
 			<meta key="og:url" property="og:url" content={openGraph?.url ?? config.openGraph.url} />

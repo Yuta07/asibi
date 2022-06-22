@@ -52,14 +52,8 @@ export const EmbedTweetURL = ({ href }: Props) => {
 			</div>
 			<style jsx>{`
 				.container {
-					width: max-content;
-					margin: 60px auto 0;
+					margin-top: 60px;
 					cursor: pointer;
-				}
-
-				@media screen and (max-width: 640px) {
-					width: 100% !important;
-					max-width: 320px;
 				}
 			`}</style>
 		</>
