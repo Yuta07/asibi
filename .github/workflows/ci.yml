@@ -4,7 +4,7 @@ on:
   pull_request:
     branches:
       - main
-  deployment_status:
+  # deployment_status:
 
 jobs:
   ci-check:
@@ -13,7 +13,7 @@ jobs:
       matrix:
         node-version: [16.x, 18.x]
     # vercelへのデプロイがsuccessになってから実行する
-    if: github.event.deployment_status.state == 'success'
+    # if: github.event.deployment_status.state == 'success'
     steps:
       - uses: actions/checkout@v3
       # - name: Get yarn cache directory path
@@ -39,11 +39,17 @@ jobs:
       - name: test
         run: yarn jest --max-workers ${{ steps.cpu-cores.outputs.count }}
       - name: Install Playwright
-        run: npx playwright install-deps chromium
+        run: npx playwright install --with-deps
       - name: test e2e
         run: yarn test:e2e
-        env:
-          PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}s
+        # env:
+        #   PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}s
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: playwright-report
+          path: playwright-report
       - name: lint
         run: yarn lint
       - name: format
