@@ -4,11 +4,7 @@ const config: PlaywrightTestConfig = {
 	testDir: 'tests/e2e',
 	timeout: 10000,
 	forbidOnly: !!process.env.CI,
-	webServer: {
-		command: 'yarn dev',
-		port: 3000,
-		reuseExistingServer: !process.env.CI,
-	},
+	retries: process.env.CI ? 2 : 0,
 	use: {
 		actionTimeout: 5000,
 		baseURL: 'http://localhost:3000/',
