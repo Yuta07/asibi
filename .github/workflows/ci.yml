@@ -39,7 +39,7 @@ jobs:
       - name: test
         run: yarn jest --max-workers ${{ steps.cpu-cores.outputs.count }}
       - name: Install Playwright
-        run: npx playwright install-deps chromium
+        run: npx playwright install
       - name: test e2e
         run: npx playwright test --project=chromium --headed
         # env:
