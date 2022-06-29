@@ -4,6 +4,7 @@ on:
   pull_request:
     branches:
       - main
+  deployment_status:
 
 jobs:
   ci-check:
@@ -11,6 +12,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x, 18.x]
+    if: github.event.deployment_status.state == 'success'
     steps:
       - uses: actions/checkout@v3
       # - name: Get yarn cache directory path
@@ -39,6 +41,8 @@ jobs:
         run: npx playwright install --with-deps
       - name: test e2e
         run: yarn test:e2e
+        env:
+          PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}s
       - name: lint
         run: yarn lint
       - name: format
