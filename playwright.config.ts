@@ -6,7 +6,7 @@ const config: PlaywrightTestConfig = {
 	forbidOnly: !!process.env.CI,
 	use: {
 		actionTimeout: 5000,
-		baseURL: 'http://localhost:3000',
+		baseURL: 'http://localhost:3000/',
 		browserName: 'chromium',
 		headless: !!process.env.CI,
 		viewport: { width: 1280, height: 960 },
