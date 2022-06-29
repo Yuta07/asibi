@@ -39,9 +39,9 @@ jobs:
       - name: test
         run: yarn jest --max-workers ${{ steps.cpu-cores.outputs.count }}
       - name: Install Playwright
-        run: npx playwright install --with-deps
+        run: npx playwright install-deps chromium
       - name: test e2e
-        run: npx playwright test --project=chromium --headed
+        run: npx playwright test --project=chromium
         # env:
         #   PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}s
       - name: Upload test results

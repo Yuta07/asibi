@@ -9,7 +9,7 @@ const config: PlaywrightTestConfig = {
 		actionTimeout: 5000,
 		baseURL: 'http://localhost:3000/',
 		browserName: 'chromium',
-		headless: !!process.env.CI,
+		headless: false,
 		viewport: { width: 1280, height: 960 },
 		ignoreHTTPSErrors: true,
 		screenshot: 'only-on-failure',

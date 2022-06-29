@@ -320,11 +320,11 @@ jobs:
       - run: bats -v
 ```
 
-**bats は、Bash 用のテストフレームワークで、作成した UNIX プログラムが期待どおりに動作することを確認する簡単な方法を提供している。**
+bats は、Bash 用のテストフレームワークで、作成した UNIX プログラムが期待どおりに動作することを確認する簡単な方法を提供している。
 
 [Bats-core: Bash Automated Testing System](https://github.com/bats-core/bats-core)
 
-![overview-actions-event.png](/github-actions-beginning/overview-actions-event.png)
+![overview-actions-event.png](/blog/github-actions-beginning/overview-actions-event.png)
 
 ワークフローの結果はリポジトリ内の Actions から確認できる。
 また、ログにて各ステップの処理をそれぞれ確認することができる。
