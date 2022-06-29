@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  ci-check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x]
+    steps:
+      - uses: actions/checkout@v3
+      # - name: Get yarn cache directory path
+      #   id: yarn-cache-dir-path
+      #   run: echo "::set-output name=dir::$(yarn cache dir)"
+      # - uses: actions/cache@v3
+      #   id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+      #   with:
+      #     path: ${{ steps.yarn-cache-dir-path.outputs.dir }} # キャッシュ先のパス
+      #     key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }} # 既存のキャッシュとキーが一致すればキャッシュ使用
+      #     restore-keys: | # keyで一致しなければ前方一致
+      #       ${{ runner.os }}-yarn-
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: yarn install
+      - run: yarn build --if-present
+      - name: test
+        run: yarn test
+      - name: test e2e
+        run: yarn test:e2e
+      - name: lint
+        run: yarn lint
+      - name: format
+        run: yarn prettier
+      - name: check types
+        run: yarn check-types

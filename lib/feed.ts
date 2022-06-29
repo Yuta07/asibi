@@ -41,7 +41,7 @@ export const generatedRssFeed = () => {
 		author: author,
 	})
 
-	const posts = getSortedPostsDataWithCategory('dev')
+	const posts = getSortedPostsDataWithCategory('tech')
 
 	posts?.forEach((post) => {
 		const url = `${baseUrl}/entry/${post.slug}`
