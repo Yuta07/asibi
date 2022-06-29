@@ -12,7 +12,7 @@ jobs:
       matrix:
         node-version: [16.x, 18.x]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       # - name: Get yarn cache directory path
       #   id: yarn-cache-dir-path
       #   run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -35,6 +35,8 @@ jobs:
         uses: SimenB/github-actions-cpu-cores@v1
       - name: test
         run: yarn jest --max-workers ${{ steps.cpu-cores.outputs.count }}
+      - name: Install Playwright
+        run: npx playwright install --with-deps
       - name: test e2e
         run: yarn test:e2e
       - name: lint
