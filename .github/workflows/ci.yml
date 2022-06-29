@@ -41,7 +41,7 @@ jobs:
       - name: Install Playwright
         run: npx playwright install --with-deps chromium
       - name: test e2e
-        run: npx playwright test --project=chromium --config playwright.config.js
+        run: npx playwright test -- --project=chromium --config playwright.config.js
         # env:
         #   PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}s
       - name: Upload test results
