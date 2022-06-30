@@ -2,7 +2,7 @@ import { PlaywrightTestConfig, devices } from '@playwright/test'
 
 const config: PlaywrightTestConfig = {
 	testDir: 'tests/e2e',
-	timeout: 10000,
+	timeout: 20000,
 	forbidOnly: !!process.env.CI,
 	retries: process.env.CI ? 2 : 0,
 	webServer: {
@@ -12,7 +12,7 @@ const config: PlaywrightTestConfig = {
 		reuseExistingServer: !process.env.CI,
 	},
 	use: {
-		actionTimeout: 5000,
+		actionTimeout: 10000,
 		baseURL: 'http://localhost:3000/',
 		browserName: 'chromium',
 		headless: false,
