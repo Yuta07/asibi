@@ -10,11 +10,10 @@
     "test": "jest --watch",
     "test:e2e": "playwright test",
     "check-types": "tsc --noEmit",
-    "lint": "eslint --ext '**/*.{js,jsx,ts,tsx} --ignore-path .gitignore .'",
+    "lint": "eslint --ext .js,.ts,.tsx --ignore-path .gitignore .",
     "lint:fix": "eslint --fix '**/*.{ts,tsx}'",
     "lint:style": "stylelint '**/*.css'",
-    "prettier": "prettier '**/*.{js,jsx,ts,tsx}'",
-    "prettier:fix": "prettier --write '**/*.{js,jsx,ts,tsx}'",
+    "format": "prettier --ignore-path .gitignore --write '**/*.{js,jsx,ts,tsx}'",
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
@@ -79,7 +78,7 @@
   "lint-staged": {
     "*.{js, jsx, ts, tsx}": [
       "yarn lint:fix",
-      "yarn prettier:fix"
+      "yarn format"
     ],
     "*.css": [
       "yarn lint:style"
