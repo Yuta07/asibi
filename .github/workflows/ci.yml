@@ -41,7 +41,7 @@ jobs:
       - name: Install Playwright
         run: npx playwright install --with-deps
       - name: test e2e
-        run: xvfb-run yarn test:e2e --project=chromium --headed
+        run: xvfb-run yarn test:e2e --project=chromium
         # env:
         #   PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}s
       - name: Upload test results
