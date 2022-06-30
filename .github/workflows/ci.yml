@@ -53,6 +53,6 @@ jobs:
       - name: lint
         run: yarn lint
       - name: format
-        run: yarn prettier
+        run: yarn format
       - name: check types
         run: yarn check-types
