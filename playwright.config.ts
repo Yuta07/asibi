@@ -5,6 +5,12 @@ const config: PlaywrightTestConfig = {
 	timeout: 10000,
 	forbidOnly: !!process.env.CI,
 	retries: process.env.CI ? 2 : 0,
+	webServer: {
+		command: 'yarn dev',
+		url: 'http://localhost:3000/',
+		timeout: 120 * 1000,
+		reuseExistingServer: !process.env.CI,
+	},
 	use: {
 		actionTimeout: 5000,
 		baseURL: 'http://localhost:3000/',
