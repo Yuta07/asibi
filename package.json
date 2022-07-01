@@ -9,7 +9,7 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "test": "jest --watch",
-    "test:e2e": "playwright test",
+    "test:e2e": "npx playwright test",
     "check-types": "tsc --noEmit",
     "lint": "eslint --ext .js,.ts,.tsx --ignore-path .gitignore .",
     "lint:fix": "eslint --fix '**/*.{ts,tsx}'",

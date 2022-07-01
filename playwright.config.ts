@@ -5,6 +5,9 @@ const config: PlaywrightTestConfig = {
 	timeout: 20000,
 	forbidOnly: !!process.env.CI,
 	retries: process.env.CI ? 2 : 0,
+	expect: {
+		timeout: 10000,
+	},
 	webServer: {
 		command: 'yarn dev',
 		url: 'http://localhost:3000/',
@@ -31,4 +34,5 @@ const config: PlaywrightTestConfig = {
 		// },
 	],
 }
+
 export default config
