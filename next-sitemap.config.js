@@ -1,6 +1,6 @@
 module.exports = {
 	siteUrl: 'https://yutaaaaa.dev',
-	changefreq: 'weekly',
+	changefreq: 'daily',
 	generateRobotsTxt: true,
 	sitemapSize: 7000,
 }

@@ -1,6 +1,3 @@
-import { SEO } from '@/components/common/SEO'
-import config from '@/config/seo.json'
-
 import { PostBody } from './PostBody'
 import { PostHeader } from './PostHeader'
 import { Share } from './Share'
@@ -19,21 +16,11 @@ type Props = {
 }
 
 export const Entry = ({ post }: Props) => {
-	if (post == null) return null
-
 	return (
-		<>
-			<SEO
-				title={post.title}
-				description={post.preface}
-				openGraph={{ url: `${config.openGraph.url}/${post.slug}` }}
-				twitter={{ cardType: 'summary_large_image' }}
-			/>
-			<article>
-				<PostHeader post={post} />
-				<PostBody post={post} />
-				<Share slug={post.slug} title={post.title} />
-			</article>
-		</>
+		<article>
+			<PostHeader post={post} />
+			<PostBody post={post} />
+			<Share slug={post.slug} title={post.title} />
+		</article>
 	)
 }
