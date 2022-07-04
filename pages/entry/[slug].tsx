@@ -1,5 +1,7 @@
 import { Layout } from '@/components/common/Layout'
+import { SEO } from '@/components/common/SEO'
 import { Entry } from '@/components/feature/entry/slug'
+import config from '@/config/seo.json'
 import { getPostData, getSortedPostsData } from '@/lib/posts'
 
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
@@ -31,7 +33,17 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 }
 
 export default function EntryPage({ post }: InferGetStaticPropsType<typeof getStaticProps>) {
-	return <Entry post={post} />
+	return (
+		<>
+			<SEO
+				title={post.title}
+				description={post.preface}
+				openGraph={{ type: 'article', url: `${config.openGraph.url}/${post.slug}` }}
+				twitter={{ cardType: 'summary_large_image' }}
+			/>
+			<Entry post={post} />
+		</>
+	)
 }
 
 EntryPage.getLayout = function getLayout(page: ReactElement) {
