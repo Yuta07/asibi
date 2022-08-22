@@ -27,7 +27,7 @@ slack のサイドバーの App もしくはチャンネルメニューのイン
 
 追加すると Incoming Webhook の詳細に移るので、そこで通知先にしたいチャンネルを選択します。
 
-![Incoming_webhookの詳細ページ.png](/blog/slack-notification/incoming_webhook_detail.png)
+![Incoming_webhook.png](/blog/slack-notification/incoming_webhook_detail.png)
 
 選択するとさらに詳細が表示されて、下にスクロールすると `https://hooks.slack.com/services/` から始まるリクエスト用の URL が存在するはずです。
 その Webhook URL を使用して外部サービスから JSON として通知を飛ばせるようになります。
@@ -99,7 +99,7 @@ const handleSubmitSlackNotification = async () => {
 
 すると通知が来るように設定したチャンネルでは下記画像のようなメッセージがきます。
 
-![通知設定をしたslackチャンネルのメッセージ](/blog/slack-notification/notification_actually.png)
+![notification_actually.png](/blog/slack-notification/notification_actually.png)
 
 これでアプリを追加・URL の取得・JSON として送信するだけで簡単に通知を飛ばすことが実現できました。
 

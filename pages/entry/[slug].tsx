@@ -1,5 +1,3 @@
-import { useRouter } from 'next/router'
-
 import { Layout } from '@/components/common/Layout'
 import { SEO } from '@/components/common/SEO'
 import { Entry } from '@/components/feature/entry/slug'
@@ -18,7 +16,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 	return {
 		paths: paths,
-		fallback: true,
+		fallback: 'blocking',
 	}
 }
 
@@ -31,14 +29,11 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 		props: {
 			post,
 		},
+		revalidate: 3600,
 	}
 }
 
 export default function EntryPage({ post }: InferGetStaticPropsType<typeof getStaticProps>) {
-	const router = useRouter()
-
-	if (router.isFallback) return null
-
 	return (
 		<>
 			<SEO

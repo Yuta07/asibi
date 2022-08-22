@@ -6,10 +6,11 @@ export const InlineCode: FC<{ children: ReactNode }> = ({ children }) => {
 			{children}
 			<style jsx>{`
 				.container {
-					color: var(--color-text);
-					background: #053959;
 					padding: 2px 8px;
 					border-radius: var(--line-radius);
+					color: var(--color-text);
+					background: #053959;
+					line-height: 2;
 				}
 			`}</style>
 		</code>
