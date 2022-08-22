@@ -55,7 +55,7 @@ module.exports = {
 		'@typescript-eslint/no-redeclare': 'off',
 		'@typescript-eslint/no-namespace': 'error',
 		'@typescript-eslint/no-require-imports': 'warn',
-		'@typescript-eslint/no-unused-vars': 'error',
+		'@typescript-eslint/no-unused-vars': 'off',
 		'@typescript-eslint/prefer-for-of': 'warn',
 	},
 	settings: {

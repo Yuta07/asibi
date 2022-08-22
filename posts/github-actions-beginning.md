@@ -324,7 +324,7 @@ bats は、Bash 用のテストフレームワークで、作成した UNIX プ�
 
 [Bats-core: Bash Automated Testing System](https://github.com/bats-core/bats-core)
 
-![overview-actions-event.png](/blog/github-actions-beginning/overview-actions-event.png)
+![[出典元]GitHub Actions - ワークフローファイルの視覚化](/blog/github-actions-beginning/overview-actions-event.png)
 
 ワークフローの結果はリポジトリ内の Actions から確認できる。
 また、ログにて各ステップの処理をそれぞれ確認することができる。

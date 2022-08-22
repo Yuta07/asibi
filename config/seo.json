@@ -3,7 +3,7 @@
   "titleTemplate": "%s | koppa",
   "description": "yutaka's website.",
   "openGraph": {
-    "type": "website",
+    "type": "article",
     "url": "https://yutaaaaa.dev",
     "site_name": "koppa",
     "title": "koppa",
