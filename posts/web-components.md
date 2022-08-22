@@ -359,6 +359,8 @@ input.onblur = function () {
 }
 ```
 
+[GitHub - ソースコード](https://github.com/Yuta07/web-components-beginner/tree/main/input-lifecycle)
+
 ## 参考サイト
 
 - [ウェブコンポーネント | MDN](https://developer.mozilla.org/ja/docs/Web/Web_Components)
