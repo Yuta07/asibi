@@ -7,5 +7,19 @@
 	margin: 0 auto;
 	padding: 0 20px;
 	display: flex;
-	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	gap: 40px;
+}
+
+.paragraph {
+	margin-top: 20px;
+}
+
+.subHeading {
+	font-size: var(--font-size-lg);
+}
+
+.accoutns {
+	margin-top: 20px;
 }
