@@ -1,0 +1,11 @@
+@use '/styles/mixins';
+
+.container {
+	width: 100%;
+	max-width: 760px;
+	min-height: inherit;
+	margin: 0 auto;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+}

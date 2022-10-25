@@ -1,21 +1,16 @@
-import { FC, ReactNode } from 'react'
+import { ReactNode } from 'react'
 
 import { Footer } from '@/components/common/Footer'
 import { Header } from '@/components/common/Header'
 
 import styles from './Layout.module.scss'
 
-export const Layout: FC<{ children: ReactNode }> = ({ children }) => {
+export const Layout = ({ children }: { children: ReactNode }) => {
 	return (
-		<div className="container">
+		<>
 			<Header />
-			<main className={styles.main}>{children}</main>
+			<div className={styles.main}>{children}</div>
 			<Footer />
-			<style jsx>{`
-				.container {
-					min-height: 100vh;
-				}
-			`}</style>
-		</div>
+		</>
 	)
 }

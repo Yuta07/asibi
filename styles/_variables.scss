@@ -1,16 +1,18 @@
 :root {
 	/* base color */
-	--color-text: rgba(248, 250, 255, 0.85);
-	--color-bg: #191b1f;
-	--color-gray: #a9a6ab;
-	--color-primary: #ffe955;
-	--color-secondary: #4ec5a5;
+	--color-dark-primary: hsl(220, 11%, 11%);
+	--color-dark-secondary: hsl(294, 26%, 16%);
+	--color-text: hsl(196, 14%, 85%);
+	--color-gray: hsl(276, 3%, 66%);
+	--color-rosered: hsl(341, 77%, 63%);
+	--color-sunflower: hsl(43, 100%, 48%);
+	--color-clover: hsl(152, 30%, 51%);
 
 	/* font size */
 	--font-size-xs: 12px;
-	--font-size-s: 14px;
-	--font-size-m: 16px;
-	--font-size-l: 18px;
+	--font-size-sm: 14px;
+	--font-size-md: 16px;
+	--font-size-lg: 18px;
 	--font-size-xl: 20px;
 	--font-size-2xl: 24px;
 	--font-size-3xl: 32px;
@@ -18,11 +20,13 @@
 	/* font bold */
 	--font-weight-light: 300;
 	--font-weight-normal: 400;
+	--font-weight-medium: 550;
 	--font-weight-bold: 700;
 	--font-weight-black: 900;
 
 	/* border */
-	--line-radius: 4px;
+	--line-radius-sm: 4px;
+	--line-radius-base: 8px;
 	--line-radius-full: 9999px;
 	--border-normal: 1px solid var(--color-gray);
 
@@ -30,5 +34,5 @@
 	--hover-feedback-opacity: 0.7;
 
 	/* animation */
-	--animation-transition: 0.25s;
+	--animation-transition: 0.3s;
 }

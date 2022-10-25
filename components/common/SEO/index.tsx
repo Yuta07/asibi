@@ -46,7 +46,10 @@ export const SEO = ({ title, description, robots, openGraph, twitter, children }
 				content={openGraph?.description ?? description ?? config.openGraph.description ?? config.description}
 			/>
 			<meta property="og:site_name" content={openGraph?.site_name ?? config.openGraph.site_name} />
-			<meta property="og:url" content={openGraph?.url ?? config.openGraph.url} />
+			<meta
+				property="og:url"
+				content={openGraph?.url ? `${config.openGraph.url}/${openGraph?.url}` : config.openGraph.url}
+			/>
 			<meta property="og:image" content={openGraph?.images?.url ?? config.openGraph.images[0].url} />
 			<meta name="twitter:card" content={twitter?.cardType ?? config.twitter.cardType} />
 			<meta name="twitter:site" content={twitter?.site ?? config.twitter.site} />

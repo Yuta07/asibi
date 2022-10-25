@@ -1,25 +1,25 @@
 {
-  "title": "koppa",
-  "titleTemplate": "%s | koppa",
-  "description": "yutaka's website.",
+  "title": "yutawo",
+  "titleTemplate": "%s | yutawo",
+  "description": "yutawo's website.",
   "openGraph": {
-    "type": "article",
+    "type": "website",
     "url": "https://yutaaaaa.dev",
-    "site_name": "koppa",
-    "title": "koppa",
-    "description": "yutaka's website.",
+    "site_name": "YUTAWO",
+    "title": "YUTAWO",
+    "description": "yutawo's website.",
     "images": [
       {
-        "url": "https://yutaaaaa.dev/ogp.png",
+        "url": "https://yutaaaaa.dev/og.png",
         "width": 800,
         "height": 600,
-        "alt": "koppa og image"
+        "alt": "yutawo og image"
       }
     ]
   },
   "twitter": {
-    "handle": "@koppa_07",
-    "site": "@koppa_07",
+    "handle": "@_yutawo",
+    "site": "@_yutawo",
     "cardType": "summary"
   }
 }

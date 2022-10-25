@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { LayoutWithHeader } from '@/components/common/Layout/LayoutWithHeader'
+import { Layout } from '@/components/common/Layout'
 
 import type { ReactElement } from 'react'
 
@@ -12,7 +12,7 @@ export default function Custom404() {
 			<Link href="/">
 				<a className="return-link">Return to TOP</a>
 			</Link>
-			<style jsx>{`
+			<style>{`
 				.container {
 					text-align: center;
 				}
@@ -29,7 +29,7 @@ export default function Custom404() {
 				.lost-txt {
 					margin-top: 8px;
 					color: var(--color-gray);
-					font-size: var(--font-size-l);
+					font-size: var(--font-size-lg);
 				}
 
 				.return-link {
@@ -51,5 +51,5 @@ export default function Custom404() {
 }
 
 Custom404.getLayout = function getLayout(page: ReactElement) {
-	return <LayoutWithHeader>{page}</LayoutWithHeader>
+	return <Layout>{page}</Layout>
 }

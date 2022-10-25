@@ -1,0 +1,53 @@
+@use '/styles/mixins';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.navLink {
+	color: var(--color-text);
+	font-size: var(--font-size-md);
+	font-weight: var(--font-weight-medium);
+	text-decoration: none;
+
+	&:hover {
+		transition: bar(--animation-transition);
+		opacity: var(--hover-feedback-opacity);
+	}
+}
+
+.activeLink {
+	color: var(--color-text);
+	font-size: var(--font-size-md);
+	font-weight: var(--font-weight-medium);
+	text-decoration: none;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 22px;
+		left: -4px;
+		z-index: 1;
+		width: 40px;
+		height: 4px;
+		border-radius: 20px;
+		background: var(--color-rosered);
+		opacity: 0.7;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 12px;
+		left: -4px;
+		z-index: 1;
+		width: 24px;
+		height: 4px;
+		border-radius: 20px;
+		background: var(--color-rosered);
+		opacity: 0.5;
+	}
+}

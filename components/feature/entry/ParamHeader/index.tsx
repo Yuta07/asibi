@@ -13,11 +13,11 @@ export const ParamHeader = ({ total }: Props) => {
 	return (
 		<p className="container" data-testid="param-header">
 			{paramsTxt}
-			<style jsx>{`
+			<style>{`
 				.container {
 					padding-bottom: 40px;
 					color: var(--color-gray);
-					font-size: var(--font-size-m);
+					font-size: var(--font-size-md);
 					text-align: center;
 				}
 			`}</style>

@@ -1,0 +1,47 @@
+@use '/styles/mixins';
+
+.container {
+	width: 100%;
+	max-width: 760px;
+	min-height: inherit;
+	margin: 0 auto;
+	padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+}
+
+.author {
+	border-radius: var(--line-radius-full);
+}
+
+.intro {
+	font-size: var(--font-size-md);
+	font-weight: var(--font-weight-medium);
+}
+
+.readmore {
+	width: max-content;
+	margin-top: 20px;
+	padding: 8px 20px;
+	display: inline-flex;
+	align-items: center;
+	gap: 20px;
+	border-radius: var(--line-radius-base);
+	background: var(--color-rosered);
+	color: var(--color-text);
+	text-decoration: none;
+
+	&:hover {
+		transition: var(--animation-transition);
+		opacity: var(--hover-feedback-opacity);
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.author {
+		width: 80px;
+		height: 80px;
+	}
+}

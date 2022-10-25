@@ -21,7 +21,7 @@
 	&::before {
 		width: 6px;
 		height: 100%;
-		border-radius: var(--line-radius);
+		border-radius: var(--line-radius-sm);
 	}
 }
 
@@ -32,24 +32,24 @@
 	&::before {
 		width: 6px;
 		height: 100%;
-		border-radius: var(--line-radius);
+		border-radius: var(--line-radius-sm);
 	}
 }
 
 .h3 {
 	margin-top: 24px;
-	font-size: var(--font-size-l);
+	font-size: var(--font-size-lg);
 
 	&::before {
 		width: 5px;
 		height: 100%;
-		border-radius: var(--line-radius);
+		border-radius: var(--line-radius-sm);
 	}
 }
 
 .h4 {
 	margin-top: 20px;
-	font-size: var(--font-size-m);
+	font-size: var(--font-size-md);
 
 	&::before {
 		top: calc(50% - 4px);
@@ -61,7 +61,7 @@
 
 .h5 {
 	margin-top: 20px;
-	font-size: var(--font-size-s);
+	font-size: var(--font-size-sm);
 
 	&::before {
 		top: calc(50% - 2px);

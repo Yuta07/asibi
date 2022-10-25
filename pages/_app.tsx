@@ -1,4 +1,5 @@
 import { AnalyticsScript } from '@/components/common/AnalyticsScript'
+import { Head } from '@/components/common/Head'
 import { useGARouteChange } from '@/hooks/useGARouteChange'
 
 import type { NextPage } from 'next'
@@ -22,6 +23,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
 	return (
 		<>
+			<Head />
 			<AnalyticsScript />
 			{getLayout(<Component {...pageProps} />)}
 		</>

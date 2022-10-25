@@ -1,7 +1,6 @@
 ---
 title: '個人ブログを作成しました'
 preface: '日常や技術をぼちぼち書いていく。'
-attention: '！ 2021/12 にリニューアルしました。'
 createdAt: '2020-09-24'
 category: 'ordinary'
 tags: ['Others']

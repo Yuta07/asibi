@@ -1,0 +1,28 @@
+@import '/styles/mixins';
+
+.container {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.link {
+	text-decoration: none;
+
+	&:hover > svg {
+		transition: var(--animation-transition);
+		color: var(--color-rosered) !important;
+	}
+}
+
+.social {
+	width: 16px;
+	height: 16px;
+}
+
+.target {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}

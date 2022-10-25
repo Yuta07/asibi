@@ -31,7 +31,7 @@ export const Img = ({ alt, src, layout = 'raw' }: Props) => {
 					{alt}
 				</p>
 			)}
-			<style jsx>{`
+			<style>{`
 				.container {
 					margin: 40px 0;
 					display: block;

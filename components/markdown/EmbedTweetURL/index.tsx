@@ -50,7 +50,7 @@ export const EmbedTweetURL = ({ href }: Props) => {
 					<a href={href} />
 				</blockquote>
 			</div>
-			<style jsx>{`
+			<style>{`
 				.container {
 					margin-top: 60px;
 					cursor: pointer;

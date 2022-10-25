@@ -1,26 +1,25 @@
-import Image from 'next/image'
+import Image from 'next/future/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import styles from './Header.module.scss'
+import { Nav } from './Nav'
+
+const NON_BLUR_PATHS = ['/', '/about']
 
 export const Header = () => {
+	const router = useRouter()
+
 	return (
 		<header className={styles.container}>
+			{!NON_BLUR_PATHS.includes(router.pathname) && <div className={styles.bgBlur} />}
 			<div className={styles.inner}>
 				<Link href="/">
-					<a className={styles.logoLink}>
-						<Image
-							src="/logo/logo.svg"
-							alt="logo_yutaaaaa"
-							width={32}
-							height={32}
-							layout="fixed"
-							priority={true}
-							quality={90}
-						/>
-						<h1 className={styles.title}>koppa</h1>
+					<a className={styles.logo}>
+						<Image src="/logo/logo.svg" alt="yutawo_logo" width={70} height={60} priority />
 					</a>
 				</Link>
+				<Nav />
 			</div>
 		</header>
 	)
