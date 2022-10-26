@@ -1,0 +1,60 @@
+.container {
+	height: 24px;
+	position: relative;
+}
+
+.button {
+	width: 24px;
+	height: 24px;
+	border: none;
+	background: transparent;
+	list-style: none;
+	cursor: pointer;
+}
+
+@keyframes drop-down {
+	0% {
+		top: 14px;
+		opacity: 0;
+	}
+	100% {
+		top: 28px;
+		opacity: 1;
+	}
+}
+
+.listContainer {
+	width: 100px;
+	padding: 8px;
+	border-radius: var(--line-radius-base);
+	background: hsl(220, 11%, 21%, 1);
+	position: absolute;
+	right: 0;
+	z-index: 10;
+	list-style: none;
+	transition: all;
+	animation: drop-down 0.1s linear 0s 1 normal both;
+}
+
+.navLink {
+	height: 36px;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	border-radius: var(--line-radius-base);
+	color: var(--color-gray);
+	font-size: var(--font-size-md);
+	text-decoration: none;
+
+	&:hover {
+		transition: bar(--animation-transition);
+		background: hsl(220, 11%, 51%, 0.5);
+		color: var(--color-text);
+	}
+}
+
+.activeLink {
+	@extend .navLink;
+
+	color: var(--color-text);
+}

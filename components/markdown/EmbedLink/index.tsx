@@ -65,7 +65,7 @@ export const EmbedLink = ({ href }: Props) => {
 				{href}
 				<style jsx>{`
 					.normalLink {
-						color: var(--color-secondary);
+						color: var(--color-sunflower);
 					}
 
 					.normalLink:hover {
@@ -97,7 +97,7 @@ export const EmbedLink = ({ href }: Props) => {
 					display: flex;
 					align-items: center;
 					border: var(--border-normal);
-					border-radius: var(--line-radius);
+					border-radius: var(--line-radius-sm);
 					overflow: hidden;
 					text-decoration: none;
 					transition: var(--animation-transition) ease-in;
@@ -116,7 +116,7 @@ export const EmbedLink = ({ href }: Props) => {
 
 				.ogTitle {
 					color: var(--color-text);
-					font-size: var(--font-size-m);
+					font-size: var(--font-size-md);
 					word-break: break-all;
 					display: -webkit-box;
 					-webkit-line-clamp: 2;
@@ -127,7 +127,7 @@ export const EmbedLink = ({ href }: Props) => {
 				.ogDescription {
 					margin-top: 4px;
 					color: var(--color-gray);
-					font-size: var(--font-size-s);
+					font-size: var(--font-size-sm);
 					word-break: break-all;
 					display: -webkit-box;
 					-webkit-line-clamp: 1;
@@ -164,7 +164,7 @@ export const EmbedLink = ({ href }: Props) => {
 
 				@media screen and (max-width: 640px) {
 					.ogTitle {
-						font-size: var(--font-size-s);
+						font-size: var(--font-size-sm);
 						-webkit-line-clamp: 1;
 					}
 

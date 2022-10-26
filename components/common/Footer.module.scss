@@ -1,0 +1,14 @@
+.container {
+	width: 100%;
+	position: sticky;
+	top: 100vh;
+}
+
+.copyright {
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 20px;
+	font-size: var(--font-size-xs);
+	letter-spacing: 0;
+	text-align: center;
+}

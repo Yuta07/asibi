@@ -47,6 +47,12 @@ module.exports = {
 			},
 		],
 		'unused-imports/no-unused-imports': 'warn',
+		'react/no-unknown-property': [
+			2,
+			{
+				ignore: ['jsx'],
+			},
+		],
 		'react/react-in-jsx-scope': 'off',
 		'react/prop-types': 'off',
 		'react/no-unescaped-entities': 'off',
