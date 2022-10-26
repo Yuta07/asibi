@@ -16,7 +16,7 @@ export const Header = () => {
 			<div className={styles.inner}>
 				<Link href="/">
 					<a className={styles.logo}>
-						<Image src="/logo/logo.svg" alt="yutawo_logo" width={70} height={60} priority />
+						<Image src="/logo/logo.svg" alt="yutawo_logo" width={48} height={48} priority />
 					</a>
 				</Link>
 				<Nav />

@@ -4,7 +4,7 @@ export const Paragraph: FC<{ children: ReactNode }> = ({ children }) => {
 	return (
 		<p className="container">
 			{children}
-			<style>{`
+			<style jsx>{`
 				.container {
 					margin-top: 20px;
 					font-size: var(--font-size-md);
@@ -23,7 +23,7 @@ export const ElParagraph: FC<{ children: ReactNode }> = ({ children }) => {
 	return (
 		<div className="container">
 			{children}
-			<style>{`
+			<style jsx>{`
 				.container {
 					margin-top: 20px;
 					font-size: var(--font-size-md);

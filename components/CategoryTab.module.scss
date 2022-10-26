@@ -1,0 +1,43 @@
+@keyframes fade-in {
+	0% {
+		width: 10%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+.container {
+	display: flex;
+}
+
+.activeCategory {
+	padding: 0 12px 8px;
+	color: var(--color-text);
+	font-size: var(--font-size-md);
+	text-decoration: none;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 4px;
+		border-radius: var(--line-radius-base);
+		background: var(--color-rosered);
+		animation: fade-in 0.1s linear 0s 1 normal both;
+	}
+}
+
+.category {
+	padding: 0 10px;
+	color: var(--color-text);
+	font-size: var(--font-size-md);
+	text-decoration: none;
+
+	&:hover {
+		transition: var(--animation-transition);
+		opacity: var(--hover-feedback-opacity);
+	}
+}

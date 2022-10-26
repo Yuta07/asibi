@@ -1,13 +1,12 @@
-@use '/styles/mixins';
-
 .container {
 	width: 100%;
-	max-width: 760px;
+	max-width: 480px;
 	min-height: inherit;
 	margin: 0 auto;
 	padding: 0 20px;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	justify-content: center;
 	gap: 20px;
 }
@@ -17,20 +16,27 @@
 }
 
 .intro {
+	margin-top: 20px;
 	font-size: var(--font-size-md);
 	font-weight: var(--font-weight-medium);
 }
 
-.readmore {
-	width: max-content;
+.linkContainer {
+	width: 100%;
 	margin-top: 20px;
-	padding: 8px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.readmore {
+	width: 100%;
+	padding: 20px;
 	display: inline-flex;
 	align-items: center;
-	gap: 20px;
+	justify-content: center;
+	gap: 10px;
 	border-radius: var(--line-radius-base);
-	background: var(--color-rosered);
-	color: var(--color-text);
 	text-decoration: none;
 
 	&:hover {
@@ -39,9 +45,28 @@
 	}
 }
 
-@media screen and (max-width: 480px) {
-	.author {
-		width: 80px;
-		height: 80px;
-	}
+.aboutmore {
+	@extend .readmore;
+
+	background: linear-gradient(
+		to right,
+		rgba(233, 88, 135, 0.6) 0%,
+		rgba(233, 88, 135, 0.8) 30%,
+		rgba(233, 88, 135, 0.9) 50%,
+		rgba(233, 88, 135, 1) 100%
+	);
+	color: var(--color-text);
+}
+
+.blogmore {
+	@extend .readmore;
+
+	background: linear-gradient(
+		to right,
+		rgba(247, 179, 0, 0.6) 0%,
+		rgba(247, 179, 0, 0.8) 30%,
+		rgba(247, 179, 0, 0.9) 50%,
+		rgba(247, 179, 0, 1) 100%
+	);
+	color: var(--color-dark-primary);
 }

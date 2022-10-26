@@ -1,8 +1,10 @@
+import { BlogBody } from '@/components/BlogBody'
+import { BlogHeader } from '@/components/BlogHeader'
+import { Share } from '@/components/Share'
 import { Layout } from '@/components/common/Layout'
 import { SEO } from '@/components/common/SEO'
-import { Entry } from '@/components/feature/entry/slug'
-import config from '@/config/seo.json'
 import { getPostData, getSortedPostsData } from '@/lib/posts'
+import styles from '@/styles/Article.module.scss'
 
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 import type { ReactElement } from 'react'
@@ -39,10 +41,14 @@ export default function EntryPage({ post }: InferGetStaticPropsType<typeof getSt
 			<SEO
 				title={post.title}
 				description={post.preface}
-				openGraph={{ type: 'article', url: `${config.openGraph.url}/${post.slug}` }}
+				openGraph={{ type: 'article', url: `blog/${post.slug}` }}
 				twitter={{ cardType: 'summary_large_image' }}
 			/>
-			<Entry post={post} />
+			<article className={styles.container}>
+				<BlogHeader post={post} />
+				<BlogBody post={post} />
+				<Share slug={post.slug} title={post.title} />
+			</article>
 		</>
 	)
 }

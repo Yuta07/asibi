@@ -16,9 +16,4 @@ module.exports = {
 	sassOptions: {
 		includePaths: [path.join(__dirname, 'styles')],
 	},
-	experimental: {
-		images: {
-			layoutRaw: true,
-		},
-	},
 }

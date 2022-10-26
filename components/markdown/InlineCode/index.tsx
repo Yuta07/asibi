@@ -4,7 +4,7 @@ export const InlineCode: FC<{ children: ReactNode }> = ({ children }) => {
 	return (
 		<code className="container">
 			{children}
-			<style>{`
+			<style jsx>{`
 				.container {
 					padding: 2px 8px;
 					border-radius: var(--line-radius-sm);

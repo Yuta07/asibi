@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/future/image'
 
 type Props = {
 	alt: string
@@ -19,11 +19,9 @@ export const Img = ({ alt, src, layout = 'raw' }: Props) => {
 					alt={alt}
 					width={560}
 					height={layout === 'raw' ? 0 : 240}
-					layout={layout}
 					quality={85}
 					style={layout === 'raw' ? { ...baseStyle, objectFit: 'contain' } : { borderRadius: '8px' }}
-					priority={true}
-					objectFit={layout === 'raw' ? undefined : 'contain'}
+					priority
 				/>
 			</p>
 			{!regExp.test(alt) && (
@@ -31,7 +29,7 @@ export const Img = ({ alt, src, layout = 'raw' }: Props) => {
 					{alt}
 				</p>
 			)}
-			<style>{`
+			<style jsx>{`
 				.container {
 					margin: 40px 0;
 					display: block;

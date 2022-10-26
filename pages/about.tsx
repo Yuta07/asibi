@@ -1,3 +1,5 @@
+import { FiArrowUpRight } from 'react-icons/fi'
+
 import { Accounts } from '@/components/common/Accounts'
 import { Layout } from '@/components/common/Layout'
 import { PageTitle } from '@/components/common/PageTitle'
@@ -22,6 +24,17 @@ export default function About() {
 						in the frontend area.
 						<br />
 						Currently focusing mainly on React / Next.js.
+					</p>
+					<p className={styles.paragraph}>
+						<a
+							href="https://shorthaired-seaplane-f56.notion.site/Curriculum-vitae-fecdfaa602c54dbf8da36e5533467bc7"
+							className={styles.link}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							View more background and interests.
+							<FiArrowUpRight size={16} />
+						</a>
 					</p>
 				</div>
 				<div>

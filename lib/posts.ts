@@ -27,6 +27,7 @@ export const getAllPostsData = () => {
 				preface: string
 				attention: string
 				createdAt: string
+				eyecatch: string
 				category: string
 				tags: string[]
 			}),
@@ -97,6 +98,7 @@ export async function getPostData(slug: string) {
 			preface: string
 			attention: string
 			createdAt: string
+			eyecatch: string
 			category: string
 			tags: string[]
 		}),

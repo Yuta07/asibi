@@ -4,7 +4,7 @@ export const Delete: FC<{ children: ReactNode }> = ({ children }) => {
 	return (
 		<del className="container">
 			{children}
-			<style>{`
+			<style jsx>{`
 				.container {
 					background-image: linear-gradient(var(--color-gray), var(--color-gray));
 					background-position: 0 50%;

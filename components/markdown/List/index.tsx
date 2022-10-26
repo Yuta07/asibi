@@ -12,7 +12,7 @@ export const List: FC<Props> = ({ children, ordered, depth }) => {
 			<ol style={{ margin: depth > 0 ? `10px 0 0` : `15px 0` }} className="ordered" data-testid="markdown-ordered-list">
 				{children}
 			</ol>
-			<style>{`
+			<style jsx>{`
 				.ordered {
 					padding: 0 20px 0 0;
 					list-style: none;
@@ -29,7 +29,7 @@ export const List: FC<Props> = ({ children, ordered, depth }) => {
 			>
 				{children}
 			</ul>
-			<style>{`
+			<style jsx>{`
 				.unOrdered {
 					padding: 0 20px;
 				}

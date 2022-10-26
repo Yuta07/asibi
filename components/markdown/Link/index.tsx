@@ -17,7 +17,7 @@ export const Link: FC<Props> = ({ children, href }) => {
 	return (
 		<a href={href} target="_blank" rel="noopener noreferrer" className="container" data-testid="markdown-link">
 			{children}
-			<style>{`
+			<style jsx>{`
 				.container {
 					margin: 0 4px;
 					color: var(--color-text);

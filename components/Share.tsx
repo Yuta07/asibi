@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/future/image'
 
 import styles from './Share.module.scss'
 
@@ -20,7 +20,7 @@ export const Share = ({ slug, title }: Props) => {
 				className={styles.anchor}
 				data-testid="entry-share-button"
 			>
-				<Image quality={85} src="/assets/twitter_share.svg" alt="twitter_share" width={40} height={40} />
+				<Image src="/assets/twitter_share.svg" alt="twitter_share" width={40} height={40} />
 			</a>
 		</div>
 	)

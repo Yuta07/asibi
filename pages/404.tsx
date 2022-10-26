@@ -14,14 +14,18 @@ export default function Custom404() {
 			</Link>
 			<style>{`
 				.container {
-					text-align: center;
+					min-height: inherit;
+					display:flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
 				}
 
 				.hero {
 					font-size: 100px;
 					letter-spacing: 20px;
 					color: transparent;
-					background: linear-gradient(to right bottom, #bf9ef2 0%, #e8eb93 100%);
+					background: linear-gradient(to right bottom, var(--color-rosered) 0%, var(--color-sunflower) 100%);
 					background-clip: text;
 					-webkit-background-clip: text;
 				}
@@ -37,13 +41,13 @@ export default function Custom404() {
 					display: inline-block;
 					color: var(--color-text);
 					font-size: var(--font-size-xl);
-					font-weight: var(--font-weight-bold);
+					font-weight: var(--font-weight-medium);
 					text-decoration: underline;
 				}
 
 				.return-link:hover {
-					opacity: 0.7;
-					transition: 0.2s;
+					transition: var(--animation-transition);
+					opacity: var(--hover-feedback-opacity);
 				}
 			`}</style>
 		</div>

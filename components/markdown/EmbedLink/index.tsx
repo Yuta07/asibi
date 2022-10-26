@@ -63,7 +63,7 @@ export const EmbedLink = ({ href }: Props) => {
 				data-testid="markdown-embed-only-link"
 			>
 				{href}
-				<style>{`
+				<style jsx>{`
 					.normalLink {
 						color: var(--color-sunflower);
 					}
@@ -91,7 +91,7 @@ export const EmbedLink = ({ href }: Props) => {
 			<a href={href} className="dummyHref" target="_blank" rel="noopener noreferrer">
 				<span>{href}</span>
 			</a>
-			<style>{`
+			<style jsx>{`
 				.container {
 					margin: 0 auto;
 					display: flex;

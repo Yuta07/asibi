@@ -1,6 +1,6 @@
 import Image from 'next/future/image'
 import Link from 'next/link'
-import { FiArrowRight } from 'react-icons/fi'
+import { SlEmotsmile, SlNotebook } from 'react-icons/sl'
 
 import { Accounts } from '@/components/common/Accounts'
 import { Layout } from '@/components/common/Layout'
@@ -15,21 +15,29 @@ export default function Home() {
 			<SEO />
 			<div className={styles.container}>
 				<Image
-					src="/tentative.png"
+					src="/assets/tentative.png"
 					alt="Picture of the author"
-					width={100}
-					height={100}
+					width={80}
+					height={80}
 					className={styles.author}
 					priority
 				/>
 				<p className={styles.intro}>Hi, YUTAWO is a web frontend engineer.</p>
 				<Accounts />
-				<Link href="/about">
-					<a className={styles.readmore}>
-						Read more
-						<FiArrowRight color="#D3DBDE" size={14} />
-					</a>
-				</Link>
+				<div className={styles.linkContainer}>
+					<Link href="/about">
+						<a className={styles.aboutmore}>
+							<SlEmotsmile color="#D3DBDE" size={20} />
+							About
+						</a>
+					</Link>
+					<Link href="/blog">
+						<a className={styles.blogmore}>
+							<SlNotebook color="#191b1f" size={20} />
+							Blog
+						</a>
+					</Link>
+				</div>
 			</div>
 		</>
 	)
