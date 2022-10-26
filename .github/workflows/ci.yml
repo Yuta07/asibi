@@ -38,12 +38,12 @@ jobs:
         uses: SimenB/github-actions-cpu-cores@v1
       - name: test
         run: yarn jest --max-workers ${{ steps.cpu-cores.outputs.count }}
-      - name: Install Playwright
-        run: npx playwright install --with-deps chromium
-      - name: test e2e
-        run: xvfb-run yarn test:e2e --project=chromium
-        # env:
-        #   PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}s
+      # - name: Install Playwright
+      #   run: npx playwright install --with-deps chromium
+      # - name: test e2e
+      #   run: xvfb-run yarn test:e2e --project=chromium
+      # env:
+      #   PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}s
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v3

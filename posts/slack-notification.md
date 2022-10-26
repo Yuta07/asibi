@@ -3,6 +3,7 @@ title: 'JavaScript（TS）で外部ソースからslackに通知する'
 preface: 'slackのIncoming Webhookで外部ソースからの情報を簡単にワークスペースと共有する。'
 attention: '！node-slack-sdkではなくPOSTメソッドのみで実装しています'
 createdAt: '2022-05-27'
+eyecatch: '/blog/slack-notification/envelope_3d.png'
 category: 'tech'
 tags: ['slack']
 ---

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { LayoutWithHeader } from '@/components/common/Layout/LayoutWithHeader'
+import { Layout } from '@/components/common/Layout'
 
 import type { ReactElement } from 'react'
 
@@ -12,16 +12,20 @@ export default function Custom404() {
 			<Link href="/">
 				<a className="return-link">Return to TOP</a>
 			</Link>
-			<style jsx>{`
+			<style>{`
 				.container {
-					text-align: center;
+					min-height: inherit;
+					display:flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
 				}
 
 				.hero {
 					font-size: 100px;
 					letter-spacing: 20px;
 					color: transparent;
-					background: linear-gradient(to right bottom, #bf9ef2 0%, #e8eb93 100%);
+					background: linear-gradient(to right bottom, var(--color-rosered) 0%, var(--color-sunflower) 100%);
 					background-clip: text;
 					-webkit-background-clip: text;
 				}
@@ -29,7 +33,7 @@ export default function Custom404() {
 				.lost-txt {
 					margin-top: 8px;
 					color: var(--color-gray);
-					font-size: var(--font-size-l);
+					font-size: var(--font-size-lg);
 				}
 
 				.return-link {
@@ -37,13 +41,13 @@ export default function Custom404() {
 					display: inline-block;
 					color: var(--color-text);
 					font-size: var(--font-size-xl);
-					font-weight: var(--font-weight-bold);
+					font-weight: var(--font-weight-medium);
 					text-decoration: underline;
 				}
 
 				.return-link:hover {
-					opacity: 0.7;
-					transition: 0.2s;
+					transition: var(--animation-transition);
+					opacity: var(--hover-feedback-opacity);
 				}
 			`}</style>
 		</div>
@@ -51,5 +55,5 @@ export default function Custom404() {
 }
 
 Custom404.getLayout = function getLayout(page: ReactElement) {
-	return <LayoutWithHeader>{page}</LayoutWithHeader>
+	return <Layout>{page}</Layout>
 }

@@ -3,6 +3,7 @@ title: 'Next.jsでMarkdownのリンクからog情報を表示する'
 preface: 'Next.jsのServerless Functionsを使用してリンクを貼った際にog情報が表示されるようにする方法。'
 attention: '！ マークダウンをHTMLに変換するためにReact-Markdownを使用しています'
 createdAt: '2021-12-28'
+eyecatch: '/blog/ogp-embed/camera_3d.png'
 category: 'tech'
 tags: ['Next.js']
 ---
