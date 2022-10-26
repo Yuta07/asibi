@@ -41,6 +41,12 @@ export default function BlogPage({ posts }: InferGetStaticPropsType<typeof getSt
 			})
 		}
 
+		if (query.tab === 'academic') {
+			return posts.filter((post) => {
+				return post.category === 'academic'
+			})
+		}
+
 		return posts
 	}, [query, posts])
 
