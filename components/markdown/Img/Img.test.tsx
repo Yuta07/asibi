@@ -4,7 +4,7 @@ import { Img } from '.'
 
 describe('image markdown test', () => {
 	test('responsive image src and alt test', () => {
-		const { getByAltText } = render(<Img src="/logo/logo.png" alt="image-for-test.png" layout="responsive" />)
+		const { getByAltText } = render(<Img src="/logo/logo.png" alt="image-for-test.png" />)
 		const element = getByAltText('image-for-test.png')
 
 		const displayedImage = element as HTMLImageElement
@@ -12,7 +12,7 @@ describe('image markdown test', () => {
 	})
 
 	test('test caption', async () => {
-		render(<Img src="/logo/logo.png" alt="image-for-test" layout="responsive" />)
+		render(<Img src="/logo/logo.png" alt="image-for-test" />)
 
 		const element = await screen.findByTestId('image-caption')
 		expect(element).toBeInTheDocument()
