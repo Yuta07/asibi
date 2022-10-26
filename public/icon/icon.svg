@@ -6,5 +6,5 @@
   }
 </style>
 <rect width="32" height="32" class="rect" fill="#311E33"/>
-<path class="path" d="M10 16V4L16 15L22 4V16L16 22V28" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="path" d="M10 16V4L16 15L22 4V16L16 22V28" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

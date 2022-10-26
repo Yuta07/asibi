@@ -37,7 +37,7 @@ export const BlogHeader = ({ post }: Props) => {
 					<p className={styles[post.category]} data-testid="blog-category">
 						{post.category}
 					</p>
-					<time className={styles.date} data-testid="blog-createdAt">
+					<time className={styles.createdAt} data-testid="blog-createdAt">
 						{dayjs(post.createdAt).format('MMM D, YYYY')}
 					</time>
 				</div>

@@ -25,7 +25,10 @@
 }
 
 .logo {
-	padding-top: 16px;
+	height: 100%;
+	padding-top: 8px;
+	display: inline-flex;
+	align-items: center;
 	text-decoration: none;
 	cursor: pointer;
 }

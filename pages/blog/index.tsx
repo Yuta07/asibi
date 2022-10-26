@@ -7,7 +7,6 @@ import { ReactElement, useMemo } from 'react'
 
 import { CategoryTab } from '@/components/CategoryTab'
 import { Layout } from '@/components/common/Layout'
-import { PageTitle } from '@/components/common/PageTitle'
 import { SEO } from '@/components/common/SEO'
 import { generatedRssFeed } from '@/lib/feed'
 import { getSortedPostsData } from '@/lib/posts'
@@ -50,7 +49,6 @@ export default function BlogPage({ posts }: InferGetStaticPropsType<typeof getSt
 			<SEO title="Blog" description="Blog" openGraph={{ url: 'blog', type: 'article' }} />
 			<div className={styles.container}>
 				<div className={styles.header}>
-					<PageTitle title="Blog" />
 					<CategoryTab />
 				</div>
 				<div className={styles.articleContainer}>

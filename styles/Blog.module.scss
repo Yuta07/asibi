@@ -22,7 +22,7 @@
 
 .container {
 	width: 100%;
-	max-width: 760px;
+	max-width: 600px;
 	margin: 40px auto 60px;
 	padding: 0 20px;
 	animation: fade-in var(--animation-transition) ease-in 0s 1 normal both;
@@ -30,9 +30,6 @@
 
 .header {
 	width: 100%;
-	display: flex;
-	align-items: flex-end;
-	justify-content: space-between;
 }
 
 .articleContainer {
@@ -73,13 +70,13 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: var(--line-radius-base) var(--line-radius-base) 40px var(--line-radius-base);
-	background: var(--color-dark-secondary);
+	background: hsla(220deg, 11%, 21%, 0.4);
 }
 
 .eyecatch {
+	transition: var(--animation-transition);
 	translate: 0 0;
 	scale: 1;
-	transition: var(--animation-transition);
 }
 
 .info {
@@ -126,6 +123,12 @@
 	@extend .category;
 
 	background: var(--color-sunflower);
+}
+
+.academic {
+	@extend .category;
+
+	background: var(--color-clover);
 }
 
 .createdAt {

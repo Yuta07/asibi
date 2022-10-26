@@ -36,12 +36,6 @@
 	text-decoration: none;
 }
 
-.date {
-	color: var(--color-gray);
-	font-size: var(--font-size-sm);
-	letter-spacing: 0;
-}
-
 .tech {
 	@extend .category;
 
@@ -52,6 +46,18 @@
 	@extend .category;
 
 	background: var(--color-sunflower);
+}
+
+.academic {
+	@extend .category;
+
+	background: var(--color-clover);
+}
+
+.createdAt {
+	color: var(--color-gray);
+	font-size: var(--font-size-sm);
+	letter-spacing: 0;
 }
 
 @media screen and (max-width: 480px) {
@@ -65,6 +71,6 @@
 	}
 
 	.imageContainer {
-		background: var(--color-dark-secondary);
+		background: hsla(220deg, 11%, 21%, 0.4);
 	}
 }
