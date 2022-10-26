@@ -16,9 +16,10 @@ export const Header = () => {
 			<div className={styles.inner}>
 				<Link href="/">
 					<a className={styles.logo}>
-						<Image src="/logo/logo.svg" alt="yutawo_logo" width={48} height={48} priority />
+						<Image src="/logo/logo.svg" alt="yutawo_logo" width={48} height={40} priority />
 					</a>
 				</Link>
+				<h1 className={styles.title}>{router.pathname.split('/').at(1)?.toUpperCase() || 'HOME'}</h1>
 				<Nav />
 			</div>
 		</header>

@@ -22,7 +22,7 @@ export const Accounts = () => {
 
 				return (
 					<a key={account.name} href={account.link} className={styles.link} target="_blank" rel="noopener noreferrer">
-						<IconComponent color="#D3DBDE" size={24} className={styles.social} />
+						<IconComponent color="#D3DBDE" size={20} className={styles.social} />
 						<span className={styles.target}>{account.name}</span>
 					</a>
 				)

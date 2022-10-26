@@ -22,7 +22,6 @@ type Props = {
 	readonly post: {
 		title: string
 		preface: string
-		attention: string
 		createdAt: string
 		category: string
 		tags: string[]

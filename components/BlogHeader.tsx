@@ -7,7 +7,6 @@ type Props = {
 	post: {
 		title: string
 		preface: string
-		attention: string
 		createdAt: string
 		eyecatch: string
 		category: string

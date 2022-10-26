@@ -25,7 +25,6 @@ export const getAllPostsData = () => {
 			...(matterResult.data as {
 				title: string
 				preface: string
-				attention: string
 				createdAt: string
 				eyecatch: string
 				category: string
@@ -96,7 +95,6 @@ export async function getPostData(slug: string) {
 		...(data as {
 			title: string
 			preface: string
-			attention: string
 			createdAt: string
 			eyecatch: string
 			category: string

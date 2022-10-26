@@ -18,7 +18,6 @@
 .intro {
 	margin-top: 20px;
 	font-size: var(--font-size-md);
-	font-weight: var(--font-weight-medium);
 }
 
 .linkContainer {
@@ -37,6 +36,7 @@
 	justify-content: center;
 	gap: 10px;
 	border-radius: var(--line-radius-base);
+	font-weight: var(--font-weight-medium);
 	text-decoration: none;
 
 	&:hover {
@@ -51,8 +51,9 @@
 	background: linear-gradient(
 		to right,
 		rgba(233, 88, 135, 0.6) 0%,
-		rgba(233, 88, 135, 0.8) 30%,
-		rgba(233, 88, 135, 0.9) 50%,
+		rgba(233, 88, 135, 0.7) 30%,
+		rgba(233, 88, 135, 0.8) 50%,
+		rgba(233, 88, 135, 0.9) 75%,
 		rgba(233, 88, 135, 1) 100%
 	);
 	color: var(--color-text);
@@ -64,8 +65,9 @@
 	background: linear-gradient(
 		to right,
 		rgba(247, 179, 0, 0.6) 0%,
-		rgba(247, 179, 0, 0.8) 30%,
-		rgba(247, 179, 0, 0.9) 50%,
+		rgba(247, 179, 0, 0.7) 30%,
+		rgba(247, 179, 0, 0.8) 50%,
+		rgba(247, 179, 0, 0.9) 75%,
 		rgba(247, 179, 0, 1) 100%
 	);
 	color: var(--color-dark-primary);

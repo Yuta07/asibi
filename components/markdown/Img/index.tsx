@@ -3,14 +3,11 @@ import Image from 'next/future/image'
 type Props = {
 	alt: string
 	src: string
-	layout?: 'fill' | 'fixed' | 'intrinsic' | 'responsive' | 'raw' | undefined
 }
 
 const regExp = /jpg|jpeg|png|svg|gif/g
 
-export const Img = ({ alt, src, layout = 'raw' }: Props) => {
-	const baseStyle = { maxWidth: '100%', height: 'auto', borderRadius: '8px' }
-
+export const Img = ({ alt, src }: Props) => {
 	return (
 		<>
 			<p className="container">
@@ -18,10 +15,15 @@ export const Img = ({ alt, src, layout = 'raw' }: Props) => {
 					src={src}
 					alt={alt}
 					width={560}
-					height={layout === 'raw' ? 0 : 240}
-					quality={85}
-					style={layout === 'raw' ? { ...baseStyle, objectFit: 'contain' } : { borderRadius: '8px' }}
+					height={240}
 					priority
+					style={{
+						maxWidth: '100%',
+						height: 'auto',
+						maxHeight: '320px',
+						borderRadius: 'var(--line-radius-base)',
+						objectFit: 'contain',
+					}}
 				/>
 			</p>
 			{!regExp.test(alt) && (
