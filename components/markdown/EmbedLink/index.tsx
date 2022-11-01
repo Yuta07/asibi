@@ -80,8 +80,8 @@ export const EmbedLink = ({ href }: Props) => {
 		<>
 			<a className="container" href={href} target="_blank" rel="noopener noreferrer" data-testid="markdown-embed-link">
 				<div className="ogInfo">
-					<h1 className="ogTitle">{title}</h1>
-					{description && <p className="ogDescription">{description}</p>}
+					<div className="ogTitle">{title}</div>
+					{description && <span className="ogDescription">{description}</span>}
 					<span className="anchor">{href}</span>
 				</div>
 				<div className="thumbnail">
