@@ -4,13 +4,13 @@
   "description": "yutawo's website.",
   "openGraph": {
     "type": "website",
-    "url": "https://yutaaaaa.dev",
+    "url": "https://yutawo.com",
     "site_name": "YUTAWO",
     "title": "YUTAWO",
     "description": "yutawo's website.",
     "images": [
       {
-        "url": "https://yutaaaaa.dev/og.png",
+        "url": "https://yutawo.com/og.png",
         "width": 800,
         "height": 600,
         "alt": "yutawo og image"
