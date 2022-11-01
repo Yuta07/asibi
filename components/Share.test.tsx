@@ -6,7 +6,7 @@ describe('Share component test', () => {
 	test('Share button href test', () => {
 		render(<Share slug="test-blog" title="テストです" />)
 
-		const pageUrl = 'https://yutaaaaa.dev/blog/test-blog'
+		const pageUrl = 'https://yutawo.com/blog/test-blog'
 		const encodeTitle = encodeURIComponent('テストです')
 
 		const element = screen.getByTestId('blog-share-button')

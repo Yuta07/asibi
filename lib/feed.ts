@@ -14,14 +14,14 @@ export const generatedRssFeed = () => {
 		return
 	}
 
-	const baseUrl = 'https://yutaaaaa.dev'
+	const baseUrl = 'https://yutawo.com'
 
 	const date = new Date()
 
 	const author = {
 		name: 'koppa',
 		email: 'mono.12dev@gmail.com',
-		link: 'https://yutaaaaa.dev',
+		link: 'https://yutawo.com',
 	}
 
 	const feed = new Feed({

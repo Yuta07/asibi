@@ -124,7 +124,7 @@ return (
         type: 'article',
         title: ブログタイトル,
         description: ブログの説明,
-        url: `https://yutaaaaa.dev/${ブログのURL}`,
+        url: `https://yutawo.com/${ブログのURL}`,
         images: [
           {
             url: CLOUDINARY_URL,
@@ -141,12 +141,12 @@ return (
       }}
     />
     <BlogJsonLd
-      url={`https://yutaaaaa.dev/${ブログのURL}`}
+      url={`https://yutawo.com/${ブログのURL}`}
       title={postData.data.title}
       images={[CLOUDINARY_URL]}
       datePublished={`${ブログ公開日}T09:00:00+08:00`}
       dateModified={`${ブログ更新日}T09:00:00+08:00`}
-      authorName="yutaaaaa"
+      authorName="yutawo"
       description={ブログの説明}
     />
     <!-- ~~~ -->
@@ -158,4 +158,4 @@ return (
 
 以上で Next.js + Cloudinary で動的に OGP 画像の生成して配信まで完了となります！
 
-ソースコードは[こちらから](https://github.com/Yuta07/yutaaaaa/blob/master/pages/%5Bid%5D.tsx)から確認できます。
+ソースコードは[こちらから](https://github.com/Yuta07/yutawo/blob/master/pages/%5Bid%5D.tsx)から確認できます。
