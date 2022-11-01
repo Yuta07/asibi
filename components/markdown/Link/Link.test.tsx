@@ -10,7 +10,7 @@ describe('markdown link test', () => {
 
 		const element = screen.getByTestId('markdown-link')
 		expect(element).toHaveTextContent('yutawo')
-		expect(element).toHaveAttribute('href', 'https:///yutawo.com')
+		expect(element).toHaveAttribute('href', 'https://yutawo.com')
 	})
 
 	test('not link but embed link test', async () => {
