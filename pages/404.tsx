@@ -9,8 +9,8 @@ export default function Custom404() {
 		<div className="container">
 			<h1 className="hero">404</h1>
 			<p className="lost-txt">Let's go back. There's nothing here.</p>
-			<Link href="/">
-				<a className="return-link">Return to TOP</a>
+			<Link href="/" className="return-link">
+				Return to TOP
 			</Link>
 			<style>{`
 				.container {

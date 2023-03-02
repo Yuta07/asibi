@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -14,10 +14,8 @@ export const Header = () => {
 		<header className={styles.container}>
 			{!NON_BLUR_PATHS.includes(router.pathname) && <div className={styles.bgBlur} />}
 			<div className={styles.inner}>
-				<Link href="/">
-					<a className={styles.logo}>
-						<Image src="/logo/logo_sign.svg" alt="yutawo_logo" width={32} height={32} priority />
-					</a>
+				<Link href="/" className={styles.logo}>
+					<Image src="/logo/logo_sign.svg" alt="yutawo_logo" width={32} height={32} priority />
 				</Link>
 				<p className={styles.title}>{router.pathname.split('/').at(1)?.toUpperCase() || 'HOME'}</p>
 				<Nav />

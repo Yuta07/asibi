@@ -16,7 +16,7 @@ export const mockOgpRequest: ResponseResolver<MockedRequest, typeof restContext>
 				description: "yutaka's website test.",
 				site_name: 'koppa',
 				url: 'https://example.dev/',
-				image: '/og.png',
+				image: '/og.jpg',
 			})
 		)
 	}

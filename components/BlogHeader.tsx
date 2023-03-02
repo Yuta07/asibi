@@ -1,5 +1,5 @@
 import dayjs from 'dayjs'
-import Image from 'next/future/image'
+import Image from 'next/image'
 
 import styles from './BlogHeader.module.scss'
 

@@ -38,24 +38,26 @@ export const Nav = () => {
 			{isOpen && (
 				<ul className={styles.listContainer} ref={ref}>
 					<li>
-						<Link href="/">
-							<a className={pathname === '/' ? styles.activeLink : styles.navLink} onClick={handleDropdown}>
-								Home
-							</a>
+						<Link href="/" className={pathname === '/' ? styles.activeLink : styles.navLink} onClick={handleDropdown}>
+							Home
 						</Link>
 					</li>
 					<li>
-						<Link href="/about">
-							<a className={pathname === '/about' ? styles.activeLink : styles.navLink} onClick={handleDropdown}>
-								About
-							</a>
+						<Link
+							href="/about"
+							className={pathname === '/about' ? styles.activeLink : styles.navLink}
+							onClick={handleDropdown}
+						>
+							About
 						</Link>
 					</li>
 					<li>
-						<Link href="/blog">
-							<a className={pathname === '/blog' ? styles.activeLink : styles.navLink} onClick={handleDropdown}>
-								Blog
-							</a>
+						<Link
+							href="/blog"
+							className={pathname === '/blog' ? styles.activeLink : styles.navLink}
+							onClick={handleDropdown}
+						>
+							Blog
 						</Link>
 					</li>
 				</ul>

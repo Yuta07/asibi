@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import { SlEmotsmile, SlNotebook } from 'react-icons/sl'
 
@@ -25,17 +25,13 @@ export default function Home() {
 				<p className={styles.intro}>Hi, YUTAWO is a web frontend engineer.</p>
 				<Accounts />
 				<div className={styles.linkContainer}>
-					<Link href="/about">
-						<a className={styles.aboutmore}>
-							<SlEmotsmile color="#D3DBDE" size={20} />
-							About
-						</a>
+					<Link href="/about" className={styles.aboutmore}>
+						<SlEmotsmile color="#D3DBDE" size={20} />
+						About
 					</Link>
-					<Link href="/blog">
-						<a className={styles.blogmore}>
-							<SlNotebook color="#191b1f" size={20} />
-							Blog
-						</a>
+					<Link href="/blog" className={styles.blogmore}>
+						<SlNotebook color="#191b1f" size={20} />
+						Blog
 					</Link>
 				</div>
 			</div>

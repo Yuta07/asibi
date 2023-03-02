@@ -1,6 +1,6 @@
 import dayjs from 'dayjs'
 import { InferGetStaticPropsType } from 'next'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { ReactElement, useMemo } from 'react'
@@ -62,29 +62,27 @@ export default function BlogPage({ posts }: InferGetStaticPropsType<typeof getSt
 					{renderPosts.map((post) => {
 						return (
 							<section key={post.slug} data-testid="entry-section">
-								<Link href={`/blog/${post.slug}`}>
-									<a className={styles.anchor} data-testid="entry-slug-link">
-										<div className={styles.eyecatchContainer}>
-											<Image
-												src={post.eyecatch}
-												alt={post.title}
-												width={60}
-												height={60}
-												className={styles.eyecatch}
-												priority
-											/>
+								<Link href={`/blog/${post.slug}`} className={styles.anchor} data-testid="entry-slug-link">
+									<div className={styles.eyecatchContainer}>
+										<Image
+											src={post.eyecatch}
+											alt={post.title}
+											width={60}
+											height={60}
+											className={styles.eyecatch}
+											priority
+										/>
+									</div>
+									<div className={styles.info}>
+										<h2 className={styles.title}>{post.title}</h2>
+										<p className={styles.preface}>{post.preface}</p>
+										<div className={styles.bottom}>
+											<p className={styles[post.category]}>{post.category}</p>
+											<time className={styles.createdAt} dateTime={post.createdAt} itemProp="datePublished">
+												{dayjs(post.createdAt).format('MMM D, YYYY')}
+											</time>
 										</div>
-										<div className={styles.info}>
-											<h2 className={styles.title}>{post.title}</h2>
-											<p className={styles.preface}>{post.preface}</p>
-											<div className={styles.bottom}>
-												<p className={styles[post.category]}>{post.category}</p>
-												<time className={styles.createdAt} dateTime={post.createdAt} itemProp="datePublished">
-													{dayjs(post.createdAt).format('MMM D, YYYY')}
-												</time>
-											</div>
-										</div>
-									</a>
+									</div>
 								</Link>
 							</section>
 						)

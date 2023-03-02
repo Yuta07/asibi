@@ -21,15 +21,16 @@ export const CategoryTab = () => {
 				const Icon = category.image
 
 				return (
-					<Link key={category.title} href={{ pathname: '/blog', query: category.query ? { tab: category.query } : {} }}>
-						<a className={styles.category} data-testid="blog-category-link">
-							<div
-								className={query.tab === category.query ? styles.activeIconContainer : styles.nonActiveIconContainer}
-							>
-								<Icon size={24} className={styles.icon} />
-							</div>
-							<p className={styles.title}>{category.title}</p>
-						</a>
+					<Link
+						key={category.title}
+						href={{ pathname: '/blog', query: category.query ? { tab: category.query } : {} }}
+						className={styles.category}
+						data-testid="blog-category-link"
+					>
+						<div className={query.tab === category.query ? styles.activeIconContainer : styles.nonActiveIconContainer}>
+							<Icon size={24} className={styles.icon} />
+						</div>
+						<p className={styles.title}>{category.title}</p>
 					</Link>
 				)
 			})}
