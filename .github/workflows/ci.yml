@@ -16,32 +16,32 @@ jobs:
     # if: github.event.deployment_status.state == 'success'
     steps:
       - uses: actions/checkout@v3
-      # - name: Get yarn cache directory path
-      #   id: yarn-cache-dir-path
-      #   run: echo "::set-output name=dir::$(yarn cache dir)"
+      # - name: Get papm cache directory path
+      #   id: papm-cache-dir-path
+      #   run: echo "::set-output name=dir::$(papm cache dir)"
       # - uses: actions/cache@v3
-      #   id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+      #   id: papm-cache # use this to check for `cache-hit` (`steps.papm-cache.outputs.cache-hit != 'true'`)
       #   with:
-      #     path: ${{ steps.yarn-cache-dir-path.outputs.dir }} # キャッシュ先のパス
-      #     key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }} # 既存のキャッシュとキーが一致すればキャッシュ使用
+      #     path: ${{ steps.papm-cache-dir-path.outputs.dir }} # キャッシュ先のパス
+      #     key: ${{ runner.os }}-papm-${{ hashFiles('**/papm-lock.yaml') }} # 既存のキャッシュとキーが一致すればキャッシュ使用
       #     restore-keys: | # keyで一致しなければ前方一致
-      #       ${{ runner.os }}-yarn-
+      #       ${{ runner.os }}-papm-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: yarn install
-      - run: yarn build
+        run: papm install
+      - run: papm build
       - name: Get number of CPU cores
         id: cpu-cores
         uses: SimenB/github-actions-cpu-cores@v1
       - name: test
-        run: yarn jest --max-workers ${{ steps.cpu-cores.outputs.count }}
+        run: papm test --max-workers ${{ steps.cpu-cores.outputs.count }}
       # - name: Install Playwright
       #   run: npx playwright install --with-deps chromium
       # - name: test e2e
-      #   run: xvfb-run yarn test:e2e --project=chromium
+      #   run: xvfb-run papm test:e2e --project=chromium
       # env:
       #   PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}s
       - name: Upload test results
@@ -51,8 +51,8 @@ jobs:
           name: playwright-report
           path: playwright-report
       - name: lint
-        run: yarn lint
+        run: papm lint
       - name: format
-        run: yarn format
+        run: papm format
       - name: check types
-        run: yarn check-types
+        run: papm check-types
