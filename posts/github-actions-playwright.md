@@ -5,6 +5,7 @@ createdAt: '2022-07-01'
 eyecatch: '/blog/github-actions-playwright/octopus_3d.png'
 category: 'tech'
 tags: ['GitHub Actions', 'Playwright']
+isDraft: false
 ---
 
 Playwright は E2E テストのためのフレームワークで、 Chromium、Firefox や webkit といったモダンブラウザでテストすることが可能です。Node.js だけでなく Python、.NET や Java でも使用することができます。

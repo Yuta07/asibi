@@ -33,7 +33,7 @@ npx create-turbo@latest
 - packages
   - eslint-config-custom // 共通のESLint設定
   - tsconfig // 共通のtsconfig
-  - ui React // コンポーネントライブラリ
+  - ui // Reactコンポーネントライブラリ
 ```
 
 それぞれの `package.json` の名前をもとに確認していくと、どのパッケージに依存しているのかわかります。
@@ -69,7 +69,7 @@ npx create-turbo@latest
 
 他のワークスペースを作成して、そこに新規プロジェクトを作成したい場合はルートの `package.json` の `workspace` 設定を変更する必要があります。
 
-```
+```json
 "workspaces": [
   "apps/*",
   "packages/*"
@@ -132,7 +132,7 @@ npm install --workspace=web_react
 },
 ```
 
-`filter` を使用することで各ワークスペースに対してのスクリプトに実行が可能になります。今回は
+`filter` を使用することで各ワークスペースに対してのスクリプトの実行が可能になります。
 
 - `"dev:web_next"` で web のワークスペース
 - `"dev:web_react"` で web_react のワークスペース
@@ -143,7 +143,8 @@ npm install --workspace=web_react
 ここまでできたら、 `npm run dev:web_react` をすることで `web_react` プロジェクトのみを立ち上げることができるはずです。
 また、 `ui` パッケージの `Button` コンポーネントの使用も可能になっているかと思います。
 
-**番外編 ~ create-react-app で作ってみる**
+### 番外編 ~ create-react-app で作ってみる
+
 `create-react-app` を利用して `web_cra` というプロジェクトを作成します。
 
 `npm init react-app web_cra --workspace=apps` だとローカルホスト立ち上げで失敗してしまうため、やむなく `apps` ワークスペースからプロジェクト作成を行いました。
@@ -170,8 +171,7 @@ npx create-react-app web_cra --template typescript // apps ワークスペース
 // /package.json
 "scripts":{
   "dev:web_next": "turbo run dev --filter=web",
-  "dev:web_react": "turbo run dev --filter=web_react",
-  "dev:web_cra": "turbo run start --filter=web_cra", // ここ
+  "dev:web_cra": "turbo run start --filter=web_cra",
 }
 ```
 
@@ -193,7 +193,7 @@ npx create-react-app web_cra --template typescript // apps ワークスペース
 ```
 
 さらに `ui` パッケージから `Button` コンポーネントを使用したいのですが、そうするとエラーが生じます。
-これは `crate-react-app` では実行時に `typescript` のトランスパイルを行っていないからだと思います。
+これは `crate-react-app` では実行時に `TypeScript` のトランスパイルを行っていないからだと思います。
 
 では、なぜ Next.js と Vite ではエラーが生じなかったかですが、Next.js では `next.config.js` に`transpilePackages: ["ui"]`を追加することでトランスパイルを実行しており、Vite では標準でトランスパイルを行っているからだと考えられます。
 
@@ -223,7 +223,7 @@ npm install tsup --workspace=ui
 
 `tsup` をインストールしたら、`ui` に `src` フォルダを作成して、そこにコンポーネントをまとめる形にします。
 
-```
+```txt
 - ui
   - src
     - Button.tsx
@@ -259,7 +259,6 @@ npm install tsup --workspace=ui
   "build:ui": "turbo run build --filter=ui", // uiのビルド
   "dev": "turbo run dev --parallel",
   "dev:web_next": "turbo run dev --filter=web",
-  "dev:web_react": "turbo run dev --filter=web_react",
   "dev:ui": "turbo run dev --filter=ui", // uiの変更を検知
   "dev:web_cra": "turbo run start --filter=web_cra",
   "lint": "turbo run lint",

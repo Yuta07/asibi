@@ -15,7 +15,7 @@ export const Share = ({ slug, title }: Props) => {
 		<div className={styles.container}>
 			<h3 className={styles.share}>SHARE</h3>
 			<a
-				href={`https://twitter.com/share?url=${pageUrl}&text=${encodeTitle}&via=_yutawo`}
+				href={`https://twitter.com/share?url=${pageUrl}&text=${encodeTitle}&via=yuta030Q`}
 				rel="nofollow"
 				className={styles.anchor}
 				data-testid="blog-share-button"

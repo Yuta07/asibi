@@ -10,6 +10,6 @@ describe('Share component test', () => {
 		const encodeTitle = encodeURIComponent('テストです')
 
 		const element = screen.getByTestId('blog-share-button')
-		expect(element).toHaveAttribute('href', `https://twitter.com/share?url=${pageUrl}&text=${encodeTitle}&via=_yutawo`)
+		expect(element).toHaveAttribute('href', `https://twitter.com/share?url=${pageUrl}&text=${encodeTitle}&via=yuta030Q`)
 	})
 })

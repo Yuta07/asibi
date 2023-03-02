@@ -29,11 +29,14 @@ export const getAllPostsData = () => {
 				eyecatch: string
 				category: string
 				tags: string[]
+				isDraft: boolean
 			}),
 		}
 	})
 
-	return allPostsData
+	return allPostsData.filter((post) => {
+		return !post.isDraft
+	})
 }
 
 export const getSortedPostsData = () => {

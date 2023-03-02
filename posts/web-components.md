@@ -6,6 +6,7 @@ updatedAt: '2022-07-18'
 eyecatch: '/blog/web-components/cupcake_3d.png'
 category: 'tech'
 tags: ['Web Components']
+isDraft: false
 ---
 
 # Web Component とは

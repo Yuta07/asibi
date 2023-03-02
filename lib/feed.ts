@@ -46,14 +46,16 @@ export const generatedRssFeed = () => {
 	posts?.forEach((post) => {
 		const url = `${baseUrl}/blog/${post.slug}`
 
-		feed.addItem({
-			title: post.title,
-			description: post.preface,
-			id: url,
-			link: url,
-			content: marked(post.content),
-			date: new Date(post.createdAt),
-		})
+		if (!post.isDraft) {
+			feed.addItem({
+				title: post.title,
+				description: post.preface,
+				id: url,
+				link: url,
+				content: marked(post.content),
+				date: new Date(post.createdAt),
+			})
+		}
 	})
 
 	fs.mkdirSync('./public/rss', { recursive: true })
