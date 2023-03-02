@@ -35,7 +35,10 @@ export const SEO = ({ title, description, robots, openGraph, twitter, children }
 	return (
 		<Head>
 			<title>{title ? `${config.titleTemplate.replace(/%s/g, title)}` : config.title}</title>
-			<link rel="canonical" href={openGraph?.url ?? config.openGraph.url} />
+			<link
+				rel="canonical"
+				href={openGraph?.url ? `${config.openGraph.url}/${openGraph?.url}` : config.openGraph.url}
+			/>
 			<meta name="description" content={description || config.description} />
 			<meta name="robots" content={robots ?? 'index,follow'} />
 			<meta name="googlebot" content={robots ?? 'index,follow'} />

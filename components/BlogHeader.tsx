@@ -26,6 +26,7 @@ export const BlogHeader = ({ post }: Props) => {
 					width={80}
 					height={80}
 					className={styles.eyecatch}
+					priority
 					data-testid="blog-eyecatch"
 				/>
 			</div>
@@ -37,7 +38,12 @@ export const BlogHeader = ({ post }: Props) => {
 					<p className={styles[post.category]} data-testid="blog-category">
 						{post.category}
 					</p>
-					<time className={styles.createdAt} data-testid="blog-createdAt">
+					<time
+						className={styles.createdAt}
+						dateTime={post.createdAt}
+						itemProp="datePublished"
+						data-testid="blog-createdAt"
+					>
 						{dayjs(post.createdAt).format('MMM D, YYYY')}
 					</time>
 				</div>

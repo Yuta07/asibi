@@ -6,6 +6,7 @@ createdAt: '2021-12-28'
 eyecatch: '/blog/ogp-embed/camera_3d.png'
 category: 'tech'
 tags: ['Next.js']
+isDraft: false
 ---
 
 日常の出来事や気になることを書く際にリンクから OGP を取得してページ情報を表示する方が面白いなと思い色々やってみたのでそこでの知見を共有します。

@@ -79,7 +79,9 @@ export default function BlogPage({ posts }: InferGetStaticPropsType<typeof getSt
 											<p className={styles.preface}>{post.preface}</p>
 											<div className={styles.bottom}>
 												<p className={styles[post.category]}>{post.category}</p>
-												<time className={styles.createdAt}>{dayjs(post.createdAt).format('MMM D, YYYY')}</time>
+												<time className={styles.createdAt} dateTime={post.createdAt} itemProp="datePublished">
+													{dayjs(post.createdAt).format('MMM D, YYYY')}
+												</time>
 											</div>
 										</div>
 									</a>

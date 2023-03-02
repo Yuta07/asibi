@@ -6,6 +6,7 @@ updatedAt: '2021-09-03'
 eyecatch: '/blog/cloudinary-dynamic/cloud_3d.png'
 category: 'tech'
 tags: ['Cloudinary']
+isDraft: false
 ---
 
 ## Cloudinary
