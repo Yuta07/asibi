@@ -89,7 +89,7 @@ const handleSubmitSlackNotification = async () => {
               emoji: true
             },
             value: 'click_link',
-            url: `https://yutawo.com`,
+            url: `https://asibi.dev`,
             action_id: 'button-action'
           }
         }

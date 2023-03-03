@@ -1,19 +1,19 @@
 {
-  "title": "yutawo",
-  "titleTemplate": "%s | yutawo",
-  "description": "yutawo's website.",
+  "title": "asibi",
+  "titleTemplate": "%s | asibi",
+  "description": "asibi3Q's website.",
   "openGraph": {
     "type": "website",
-    "url": "https://yutawo.com",
-    "site_name": "YUTAWO",
-    "title": "YUTAWO",
-    "description": "yutawo's website.",
+    "url": "https://asibi.dev",
+    "site_name": "asibi",
+    "title": "asibi",
+    "description": "asibi3Q's website.",
     "images": [
       {
-        "url": "https://yutawo.com/og.jpg",
+        "url": "https://asibi.dev/og.jpg",
         "width": 800,
         "height": 600,
-        "alt": "yutawo og image"
+        "alt": "asibi og image"
       }
     ]
   },

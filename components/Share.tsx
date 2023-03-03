@@ -8,7 +8,7 @@ type Props = {
 }
 
 export const Share = ({ slug, title }: Props) => {
-	const pageUrl = `https://yutawo.com/blog/${slug}`
+	const pageUrl = `https://asibi.dev/blog/${slug}`
 	const encodeTitle = encodeURIComponent(title)
 
 	return (

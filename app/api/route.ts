@@ -1,10 +1,11 @@
 import axios from 'axios'
 import { JSDOM } from 'jsdom'
+import { NextResponse } from 'next/server'
 
-import type { NextApiRequest, NextApiResponse } from 'next'
+export async function GET(req: Request) {
+	const { searchParams } = new URL(req.url)
+	const url = searchParams.get('query')
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
-	const { url } = req.query
 	const encodeURL = encodeURI(url as string)
 	const headers = {
 		'Content-Type': 'application/json;charset=utf-8',
@@ -38,8 +39,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 				return previous
 			}, {})
 
-		res.status(200).json(ogp)
+		NextResponse.json({ data: ogp, status: 200 })
 	} catch {
-		res.status(200).json({})
+		NextResponse.json({ status: 200 })
 	}
 }

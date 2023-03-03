@@ -6,11 +6,11 @@ import { Link } from '.'
 
 describe('markdown link test', () => {
 	test('link with children test', () => {
-		render(<Link href="https://yutawo.com">yutawo</Link>)
+		render(<Link href="https://asibi.dev">asibi</Link>)
 
 		const element = screen.getByTestId('markdown-link')
-		expect(element).toHaveTextContent('yutawo')
-		expect(element).toHaveAttribute('href', 'https://yutawo.com')
+		expect(element).toHaveTextContent('asibi')
+		expect(element).toHaveAttribute('href', 'https://asibi.dev')
 	})
 
 	test('not link but embed link test', async () => {

@@ -1,5 +1,5 @@
 module.exports = {
-	siteUrl: 'https://yutawo.com',
+	siteUrl: 'https://asibi.dev',
 	changefreq: 'daily',
 	generateRobotsTxt: true,
 	sitemapSize: 7000,

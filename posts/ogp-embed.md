@@ -15,7 +15,7 @@ isDraft: false
 
 「Open Graph Protcol」のことで Web サイトの内容をシェアするためのものです。
 
-https://yutawo.com/
+https://asibi.dev/
 
 上記のように Web サイトのタイトルやサムネイル画像のような情報を設定することができます。
 
@@ -140,13 +140,13 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 `queySelectorAll` で meta タグに一致するもの全てを配列で取得していますが、さらにその中の `<meta property=og:title content="" />` のように property タグを指定してフィルターをかけます。
 
 すると最終的に json の形で返すことになっているかと思います。
-例えば、 `/api/getOgp?url=https://yutawo.com/cloudinary-dynamic` の場合は下記のような結果になります。
+例えば、 `/api/getOgp?url=https://asibi.dev/cloudinary-dynamic` の場合は下記のような結果になります。
 
 ```json
 {
   "title": "Next.js製ブログ用のOGP画像をCloudinaryで動的に生成する",
   "description": "Next.jsで作成されている本サイトの記事のタイトルをCloudinaryを使用して動的に生成します。",
-  "url": "https://yutawo.com/cloudinary-dynamic",
+  "url": "https://asibi.dev/cloudinary-dynamic",
   "type": "website",
   "image": "https://res.cloudinary.com/https-yutaaaaa-vercel-app/image/upload/l_text:TakaoGothic_50_bold:Next.js製ブログ用のOGP画像をCloudinaryで動的に生成する,co_rgb:000000,w_760,c_fit/v1640180870/cloudinary_fzk9qg.png",
   "image:alt": "yutanote image",

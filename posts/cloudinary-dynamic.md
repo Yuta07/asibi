@@ -125,7 +125,7 @@ return (
         type: 'article',
         title: ブログタイトル,
         description: ブログの説明,
-        url: `https://yutawo.com/${ブログのURL}`,
+        url: `https://asibi.dev/${ブログのURL}`,
         images: [
           {
             url: CLOUDINARY_URL,
@@ -136,18 +136,18 @@ return (
         ],
       }}
       twitter={{
-        handle: '@yutaaaaa___',
-        site: '@yutaaaaa___',
+        handle: '@asibi3Q',
+        site: '@asibi3Q',
         cardType: 'summary_large_image',
       }}
     />
     <BlogJsonLd
-      url={`https://yutawo.com/${ブログのURL}`}
+      url={`https://asibi.dev/blog/${ブログのURL}`}
       title={postData.data.title}
       images={[CLOUDINARY_URL]}
       datePublished={`${ブログ公開日}T09:00:00+08:00`}
       dateModified={`${ブログ更新日}T09:00:00+08:00`}
-      authorName="yutawo"
+      authorName="asibi"
       description={ブログの説明}
     />
     <!-- ~~~ -->
@@ -158,5 +158,3 @@ return (
 書き込んだ後は Twitter の [Card validator](https://cards-dev.twitter.com/validator) で確認をしてみるといいと思います。
 
 以上で Next.js + Cloudinary で動的に OGP 画像の生成して配信まで完了となります！
-
-ソースコードは[こちらから](https://github.com/Yuta07/yutawo/blob/master/pages/%5Bid%5D.tsx)から確認できます。
