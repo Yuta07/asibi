@@ -1,0 +1,124 @@
+@font-face {
+	font-family: 'M PLUS Rounded 1c';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;900&display=swap');
+	unicode-range: U+000-5FF;
+}
+
+* {
+	/* brand foundation */
+	--brand-hue: 191;
+	--brand-hue-orange: 18;
+	--brand-hue-yellow: 47;
+	--brand-saturation: 36%;
+	--brand-saturation-orange: 53%;
+	--brand-saturation-yellow: 99%;
+	--brand-lightness: 55%;
+	--brand-lightness-orange: 65%;
+	--brand-lightness-yellow: 68%;
+
+	/* light */
+	--brand-light: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
+	--brand-orange-light: hsl(var(--brand-hue-orange) var(--brand-saturation-orange) var(--brand-lightness-orange));
+	--brand-yellow-light: hsl(var(--brand-hue-yellow) var(--brand-saturation-yellow) var(--brand-lightness-yellow));
+	--text-light: hsl(var(--brand-hue) var(--brand-saturation) 10%);
+	--bg-light: hsl(var(--brand-hue) var(--brand-saturation) 97%);
+	--gray-light: hsl(var(--brand-hue) 2% 29%);
+
+	/* dark */
+	--brand-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) * 1.2) calc(var(--brand-lightness) * 1.2));
+	--brand-orange-dark: hsl(
+		var(--brand-hue-orange) calc(var(--brand-saturation-orange) * 1.6) calc(var(--brand-lightness-orange) * 1.1)
+	);
+	--brand-yellow-dark: hsl(
+		var(--brand-hue-yellow) calc(var(--brand-saturation-yellow)) calc(var(--brand-lightness-yellow) * 1.1)
+	);
+	--text-dark: hsl(var(--brand-hue) 15% 95%);
+	--bg-dark: hsl(var(--brand-hue) 10% 10%);
+	--gray-dark: hsl(var(--brand-hue) 10% 77%);
+
+	/* font */
+	--font-size-xs: 12px;
+	--font-size-sm: 14px;
+	--font-size-md: 16px;
+	--font-size-lg: 18px;
+	--font-size-2xl: 24px;
+	--font-size-4xl: 32px;
+
+	/* reset */
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	color-scheme: light;
+
+	/* set defaults */
+	--brand: var(--brand-light);
+	--brand-orange: var(--brand-orange-light);
+	--brand-yellow: var(--brand-yellow-light);
+	--text: var(--text-light);
+	--bg: var(--bg-light);
+	--gray: var(--gray-light);
+	--font-rem-xs: 0.75rem;
+	--font-rem-sm: 0.875rem;
+	--font-rem-md: 1rem;
+	--font-rem-lg: 1.125rem;
+	--font-rem-2xl: 1.5rem;
+	--font-rem-4xl: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		color-scheme: dark;
+
+		/* set dark color */
+		--brand: var(--brand-dark);
+		--brand-orange: var(--brand-orange-dark);
+		--brand-yellow: var(--brand-yellow-dark);
+		--text: var(--text-dark);
+		--bg: var(--bg-dark);
+		--gray: var(--gray-dark);
+	}
+}
+
+body {
+	height: 100%;
+	min-height: 100vh;
+	font-family: 'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Open Sans', 'Helvetica Neue', sans-serif;
+	color: var(--text);
+	background: var(--bg);
+	font-size: var(--font-rem-md);
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: 0.5px;
+	word-wrap: break-word;
+	font-kerning: normal;
+}
+
+/* twitter card style */
+.twitter-tweet,
+.twitter-tweet-rendered {
+	margin: 0 auto;
+}
+
+@media (width < 768px) {
+	:root {
+		--font-rem-xs: 0.625rem;
+		--font-rem-sm: 0.75rem;
+		--font-rem-md: 0.875rem;
+		--font-rem-lg: 1rem;
+		--font-rem-2xl: 1.25rem;
+		--font-rem-4xl: 1.5rem;
+	}
+
+	.twitter-tweet,
+	.twitter-tweet-rendered {
+		width: 100% !important;
+		max-width: 320px;
+	}
+}

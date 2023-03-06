@@ -1,4 +1,4 @@
-import '@/styles/global.scss'
+import '@/styles/root.css'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
