@@ -1,3 +1,4 @@
+import { captureException } from '@sentry/nextjs'
 import axios from 'axios'
 import { JSDOM } from 'jsdom'
 import { NextResponse } from 'next/server'
@@ -41,6 +42,14 @@ export async function GET(req: Request) {
 
 		NextResponse.json({ data: ogp, status: 200 })
 	} catch {
+		captureException(new Error('cannot get og image'), {
+			tags: {
+				section: 'blog',
+				url,
+			},
+			level: 'error',
+		})
+
 		NextResponse.json({ status: 200 })
 	}
 }

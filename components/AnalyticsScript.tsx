@@ -5,9 +5,10 @@ import { GA_TRACKING_ID } from '@/lib/gtag'
 export const AnalyticsScript = () => {
 	return (
 		<>
-			<Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+			<Script async strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
 			<Script
 				id="gtag-init"
+				async
 				strategy="afterInteractive"
 				dangerouslySetInnerHTML={{
 					__html: `

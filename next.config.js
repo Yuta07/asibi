@@ -1,6 +1,9 @@
-const path = require('path')
+// This file sets a custom webpack configuration to use your Next.js app
+// with Sentry.
+// https://nextjs.org/docs/api-reference/next.config.js/introduction
+// https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
 
-module.exports = {
+const nextConfig = {
 	images: {
 		disableStaticImages: true,
 	},
@@ -13,12 +16,21 @@ module.exports = {
 
 		return config
 	},
-	sassOptions: {
-		includePaths: [path.join(__dirname, 'styles')],
-	},
 	swcMinify: true,
 	experimental: {
 		appDir: true,
 		// fontLoaders: [{ loader: 'next/font/google', options: { subsets: ['latin'] } }],
 	},
 }
+
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+	enabled: process.env.ANALYZE === 'true',
+})
+
+const withSentryConfig = (config) => {
+	return require('@sentry/nextjs').withSentryConfig(config, { silent: true }, { hideSourceMaps: true })
+}
+
+const withPlugins = require('next-compose-plugins')
+
+module.exports = withPlugins([withSentryConfig, withBundleAnalyzer], nextConfig)

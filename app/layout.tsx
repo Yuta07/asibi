@@ -1,3 +1,6 @@
+import { AnalyticsScript } from '@/components/AnalyticsScript'
+import { Footer } from '@/components/Footer'
+import { Header } from '@/components/Header'
 import '@/styles/root.css'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -16,8 +19,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					rel="preload"
 					media="all"
 				/>
+				<AnalyticsScript />
 			</head>
-			<body>{children}</body>
+			<body>
+				<Header />
+				{children}
+				<Footer />
+			</body>
 		</html>
 	)
 }
