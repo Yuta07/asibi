@@ -5,7 +5,7 @@ createdAt: '2021-09-01'
 updatedAt: '2021-09-03'
 eyecatch: '/blog/cloudinary-dynamic/cloud_3d.png'
 category: 'tech'
-tags: ['Cloudinary']
+tags: ['Next.js, 'Cloudinary']
 isDraft: false
 ---
 

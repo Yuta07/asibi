@@ -5,7 +5,7 @@ attention: '！node-slack-sdkではなくPOSTメソッドのみで実装して�
 createdAt: '2022-05-27'
 eyecatch: '/blog/slack-notification/envelope_3d.png'
 category: 'tech'
-tags: ['slack']
+tags: ['Slack']
 isDraft: false
 ---
 
@@ -111,7 +111,7 @@ const handleSubmitSlackNotification = async () => {
 
 また、有料プランのみではありますがワークフロービルダーを使用することで通知だけではなく、タスクの簡易化・自動化を図ることもできますので業務効率化にも繋がりそうです。
 
-### 参考サイト
+### 参考にしたサイト
 
 - [Slack での Incoming Webhook の利用](https://slack.com/intl/ja-jp/help/articles/115005265063-Slack-%E3%81%A7%E3%81%AE-Incoming-Webhook-%E3%81%AE%E5%88%A9%E7%94%A8)
 - [Sending messages using Incoming Webhooks](https://api.slack.com/messaging/webhooks#posting_with_webhooks)

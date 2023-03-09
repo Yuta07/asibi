@@ -8,13 +8,15 @@ updates:
       time: '21:00'
       timezone: 'Asia/Tokyo'
     allow:
-      - dependency-type: 'all'
+      - dependency-type: 'development'
     commit-message:
       prefix: '[npm]'
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 10
     pull-request-branch-name:
       separator: '-'
     target-branch: 'develop'
     labels:
-      - 'npm dependencies'
+      - 'dependabot'
+      - 'npm'
+      - 'dependencies'
     versioning-strategy: 'increase-if-necessary'

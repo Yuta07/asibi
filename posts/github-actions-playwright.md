@@ -198,7 +198,7 @@ test.describe.configure({ mode: 'parallel' })
 
 ここまでで Playwright のテストを GitHub Actions 上で実行することができたかと思います。
 
-## 参考サイト
+### 参考にしたサイト
 
 - [Playwright](https://playwright.dev/)
 - [Playwright - GitHub Actions](https://playwright.dev/docs/next/ci#github-actions)

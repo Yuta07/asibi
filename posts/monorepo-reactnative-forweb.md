@@ -127,7 +127,7 @@ web でも `a` タグとして描画できる上に SPA の場合は React-Route
 
 最後までありがとうございました 👏
 
-### 参考まとめ
+### 参考にしたサイト
 
 - [Working with Monorepos](https://docs.expo.dev/guides/monorepos/)
 - [Turborepo react-native starter](https://github.com/vercel/turbo/tree/main/examples/with-react-native-web)
