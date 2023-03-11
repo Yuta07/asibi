@@ -45,7 +45,9 @@ export async function GET(req: Request) {
 		captureException(new Error('cannot get og image'), {
 			tags: {
 				section: 'blog',
-				url,
+			},
+			extra: {
+				ogUrl: url,
 			},
 			level: 'error',
 		})

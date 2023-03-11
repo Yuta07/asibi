@@ -125,7 +125,7 @@ export const CommonComponent = ({ onNavigation }: { onNavigation: () => void }) 
 
 web でも `a` タグとして描画できる上に SPA の場合は React-Router も使用できて、Native ではイベントでルーティングできるという一例でした。
 
-最後までありがとうございました 👏
+最後まで読んでいただきありがとうございました 👏
 
 ### 参考にしたサイト
 

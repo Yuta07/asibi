@@ -1,14 +1,12 @@
 ---
-title: 'Dependenciesとpnpm'
-preface: 'Dependenciesの簡易的説明とpnpmでの管理について'
-createdAt: '2023-03-09'
+title: 'DependenciesとDependabotでのアップデート'
+preface: 'Dependenciesの簡易的説明となぜDependabotでアップデートをするのか'
+createdAt: '2023-03-10'
 eyecatch: '/blog/monorepo-reactnative-forweb/duck_3d.png'
 category: 'tech'
-tags: ['pnpm']
+tags: ['dependabot']
 isDraft: true
 ---
-
-pnpm に乗り換えた際の依存関係まわりと dependabot のオプション allow で指定する依存関係を整理します。
 
 ## よく見る 3 つの Dependencies
 
@@ -43,11 +41,15 @@ npm で指定できるのは 4 つ。
 
 dependabot ではパッケージがアップデートされた場合、プルリクを作成したり GitHub Actions で自動的にマージさせることができます。
 
-## pnpm での依存管理
+日々継続的なアップデートを自動で実施することで、重要なセキュリティホールもアップデートすることが重要となります。
+
+個人的にやっているのは dependabot.yml で週毎にアップデートを PR として出して、GitHub Actions で PR を承認 => 自動マージといったことです。
+お手軽に Dependabot のドキュメントに書いてあることをそのまま使用して始めることもできますので、まずは試してみるといいかもしれません。
+
+最後まで読んでいただきありがとうございました 👏
 
 ### 参考にしたサイト
 
 - [Configure dependabot.yml](https://docs.github.com/ja/enterprise-cloud@latest/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file)
 - [npm package.json](https://docs.npmjs.com/cli/v9/configuring-npm/package-json)
 - [Difference between dependencies, devDependencies and peerDependencies](https://www.geeksforgeeks.org/difference-between-dependencies-devdependencies-and-peerdependencies/)
-- [Fast, disk space efficient package manager | pnpm](https://pnpm.io/ja/)
