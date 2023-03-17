@@ -18,6 +18,7 @@ module.exports = {
 	extends: [
 		'eslint:recommended',
 		'plugin:react/recommended',
+		'plugin:react-hooks/recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:@typescript-eslint/eslint-recommended',
 		'plugin:import/recommended',
@@ -55,8 +56,20 @@ module.exports = {
 		],
 		'react/react-in-jsx-scope': 'off',
 		'react/prop-types': 'off',
+		'react/jsx-sort-props': [
+			'warn',
+			{
+				callbacksLast: true,
+				shorthandFirst: false,
+				shorthandLast: false,
+				ignoreCase: true,
+				noSortAlphabetically: false,
+				reservedFirst: true,
+			},
+		],
 		'react/no-unescaped-entities': 'off',
 		'@typescript-eslint/explicit-module-boundary-types': 'off',
+		'@typescript-eslint/no-empty-function': 'off',
 		'@typescript-eslint/no-explicit-any': 'off',
 		'@typescript-eslint/no-redeclare': 'off',
 		'@typescript-eslint/no-namespace': 'error',

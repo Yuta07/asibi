@@ -82,7 +82,7 @@ node_modules
            ├── postcss  // postcssのシンボリックリンク
            ├── react  // reactのシンボリックリンク
            ├── react-dom  // react-domのシンボリックリンク
-           └── styled-jsx -> styled-jsxのシンボリックリンク
+           └── styled-jsx // styled-jsxのシンボリックリンク
 ```
 
 さらに next 自体の package.json を見てみます。
@@ -119,7 +119,7 @@ node_modules
   },
 ```
 
-2 つを比べてみると dependencies と optional でない peerDependencies(teact と react-dom)をシンボリックリンクとして参照できるようになっているのがわかります。
+2 つを比べてみると dependencies と optional でない peerDependencies(react と react-dom)をシンボリックリンクとして参照できるようになっているのがわかります。
 
 ### おわりに
 

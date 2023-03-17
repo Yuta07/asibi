@@ -1,0 +1,34 @@
+.theme-check {
+	position: absolute;
+	opacity: 0;
+}
+
+.theme-label {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 44px;
+	height: 24px;
+	padding: 4px;
+	cursor: pointer;
+	background: transparent;
+	border: 1px solid var(--gray);
+	border-radius: 50px;
+	transform: scale(1.5);
+}
+
+.theme-ball {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 16px;
+	height: 16px;
+	background: var(--gray);
+	border-radius: 9999px;
+	transition: transform 0.2s linear;
+}
+
+.theme-check:checked + .theme-label .theme-ball {
+	transform: translateX(20px);
+}
