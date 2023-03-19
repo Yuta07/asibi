@@ -2,10 +2,10 @@
 title: 'DependenciesとDependabotでのアップデート'
 preface: 'Dependenciesの簡易的説明となぜDependabotでアップデートをするのか'
 createdAt: '2023-03-10'
-eyecatch: '/blog/monorepo-reactnative-forweb/duck_3d.png'
+eyecatch: '/blog/what-is-dependencies/railway_car_3d.png'
 category: 'tech'
 tags: ['dependabot']
-isDraft: true
+isDraft: false
 ---
 
 ## よく見る 3 つの Dependencies

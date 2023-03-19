@@ -2,10 +2,10 @@
 title: 'pnpmはなにが違うのか'
 preface: 'yarnからpnpmに移行したのでまとめてみる'
 createdAt: '2023-03-11'
-eyecatch: '/blog/monorepo-reactnative-forweb/duck_3d.png'
+eyecatch: '/blog/why-use-pnpm/pear_3d.png'
 category: 'tech'
 tags: ['pnpm']
-isDraft: true
+isDraft: false
 ---
 
 ## pnpm での管理

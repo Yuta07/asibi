@@ -5,7 +5,7 @@ import matter from 'gray-matter'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-export const getAllPostsData = () => {
+export const getAllPostsData = async () => {
 	const fileNames = fs.readdirSync(postsDirectory)
 	const allPostsData = fileNames.map((fileName) => {
 		// Remove ".md" from file name to get slug
@@ -39,8 +39,8 @@ export const getAllPostsData = () => {
 	})
 }
 
-export const getSortedPostsData = () => {
-	const allPostsData = getAllPostsData()
+export const getSortedPostsData = async () => {
+	const allPostsData = await getAllPostsData()
 
 	// Sort posts by date
 	return allPostsData.sort((a, b) => {
@@ -52,26 +52,22 @@ export const getSortedPostsData = () => {
 	})
 }
 
-export const getSortedPostsDataWithCategory = (category: string) => {
-	const allPostsData = getAllPostsData()
+export const getLatestPostsData = async () => {
+	const allPostsData = await getAllPostsData()
 
-	const filterPostsData = allPostsData.filter((post) => {
-		if (post.category === category) {
-			return post
-		}
-	})
-
-	return filterPostsData.sort((a, b) => {
+	// Sort posts by date
+	const a = allPostsData.sort((a, b) => {
 		if (a.createdAt < b.createdAt) {
 			return 1
 		} else {
 			return -1
 		}
 	})
+	return a.slice(0, 5)
 }
 
-export const getSortedPostsDataWithTag = (tag: string) => {
-	const allPostsData = getAllPostsData()
+export const getSortedPostsDataWithTag = async (tag: string) => {
+	const allPostsData = await getAllPostsData()
 
 	const filterPostsData = allPostsData.filter((post) => {
 		if (post.tags.indexOf(tag) !== -1) {

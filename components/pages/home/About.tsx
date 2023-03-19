@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import s from './About.module.css'
 import { LinkList } from './LinkList'
 
@@ -25,6 +27,9 @@ export const About = () => {
 			<h1 className={s.hero}>Hi, I'm asibi3Q.</h1>
 			<p className={s.intro}>Web Frontend Engineer, born in Nagoya, lives in Kawasaki.</p>
 			<p>Fish rather than meat.</p>
+			<Link className={s.more} href="/about">
+				Read more
+			</Link>
 			<nav className={s.nav}>
 				<div>
 					<p className={s.title}>・Page Links</p>

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { ThemeSwitch } from '../ThemeSwitch'
+import { ThemeSwitch } from '@/components/common/ThemeSwitch'
 
 import s from './Header.module.css'
 

@@ -1,9 +1,7 @@
-'use client'
-
 import { About } from './About'
 import s from './Home.module.css'
 import { HomeHeader } from './HomeHeader'
-import { Posts } from './Posts'
+import Posts from './Posts'
 
 export const Home = () => {
 	return (
@@ -11,6 +9,7 @@ export const Home = () => {
 			<HomeHeader />
 			<div className={s.inner}>
 				<About />
+				{/* @ts-expect-error Async Server Component */}
 				<Posts />
 			</div>
 		</main>
