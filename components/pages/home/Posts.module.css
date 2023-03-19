@@ -1,0 +1,7 @@
+.container {
+	margin-top: 32px;
+}
+
+.hero {
+	font-size: var(--font-rem-2xl);
+}

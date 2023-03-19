@@ -1,0 +1,26 @@
+.hero {
+	font-size: var(--font-rem-4xl);
+}
+
+.intro {
+	margin-top: 20px;
+}
+
+.nav {
+	display: grid;
+	grid-template-columns: repeat(2, max-content);
+	column-gap: 120px;
+	margin-top: 16px;
+}
+
+.title {
+	font-weight: 550;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 10px;
+	list-style: none;
+}

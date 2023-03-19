@@ -1,9 +1,9 @@
-.theme-check {
+.themeCheck {
 	position: absolute;
 	opacity: 0;
 }
 
-.theme-label {
+.themeLabel {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -13,22 +13,22 @@
 	padding: 4px;
 	cursor: pointer;
 	background: transparent;
-	border: 1px solid var(--gray);
+	border: 1px solid var(--text);
 	border-radius: 50px;
-	transform: scale(1.5);
+	transform: scale(1.1);
 }
 
-.theme-ball {
+.themeBall {
 	position: absolute;
 	top: 3px;
-	left: 3px;
+	right: 3px;
 	width: 16px;
 	height: 16px;
-	background: var(--gray);
+	background: var(--text);
 	border-radius: 9999px;
 	transition: transform 0.2s linear;
 }
 
-.theme-check:checked + .theme-label .theme-ball {
-	transform: translateX(20px);
+.themeCheck:checked + .themeLabel .themeBall {
+	transform: translateX(-20px);
 }

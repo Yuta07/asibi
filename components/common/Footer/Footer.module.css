@@ -1,0 +1,14 @@
+.footer {
+	position: sticky;
+	top: 100dvh;
+	display: grid;
+	place-items: center;
+	width: 100%;
+	padding-block: 20px;
+	padding-inline: 40px;
+	margin: 0 auto;
+}
+
+.copyRight {
+	font-weight: 500;
+}

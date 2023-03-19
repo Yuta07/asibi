@@ -1,0 +1,18 @@
+.listItem {
+	margin-left: 16px;
+}
+
+.link {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+	width: max-content;
+	font-size: var(--font-rem-md);
+	color: var(--text);
+	text-decoration-color: var(--gray);
+}
+
+.link:hover {
+	filter: contrast(30%);
+	transition: 0.2s;
+}
