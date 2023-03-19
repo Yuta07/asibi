@@ -14,6 +14,14 @@ const nextConfig = {
 			use: ['@svgr/webpack'],
 		})
 
+		config.plugins = [
+			...config.plugins,
+			new webpack.IgnorePlugin({
+				resourceRegExp: /canvas/,
+				contextRegExp: /jsdom$/,
+			}),
+		]
+
 		return config
 	},
 	swcMinify: true,
