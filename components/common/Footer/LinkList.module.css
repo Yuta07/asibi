@@ -1,15 +1,11 @@
-.listItem {
-	margin-left: 16px;
-}
-
 .link {
 	display: flex;
-	gap: 4px;
+	gap: 8px;
 	align-items: center;
 	width: max-content;
 	font-size: var(--font-rem-md);
 	color: var(--text);
-	text-decoration-color: var(--gray);
+	text-decoration: none;
 }
 
 .link:hover {

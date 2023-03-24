@@ -1,29 +1,50 @@
-@font-face {
+/* @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;900&display=swap'); */
+
+/* @font-face {
 	font-family: 'M PLUS Rounded 1c';
 	font-style: normal;
 	font-weight: 400;
-	src: url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;900&display=swap');
+	src: url('/font/MPLUSRounded1c-Regular.ttf') format('ttf');
 	font-display: swap;
 	unicode-range: U+000-5FF;
-}
+} */
 
 * {
 	/* brand foundation */
-	--brand-hue: 208;
-	--brand-saturation: 55%;
-	--brand-lightness: 45%;
+	--brand-hue: 172;
+	--brand-saturation: 34%;
+	--brand-lightness: 37%;
+	--brand-sub-hue: 9;
+	--brand-sub-saturation: 77%;
+	--brand-sub-lightness: 48%;
 
 	/* light */
 	--brand-light: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
+	--brand-sub-light: hsl(var(--brand-sub-hue) var(--brand-sub-saturation) var(--brand-sub-lightness));
 	--text-light: hsl(var(--brand-hue) 36% 10%);
 	--bg-light: hsl(var(--brand-hue) 12% 99%);
-	--gray-light: hsl(var(--brand-hue) 7% 49%);
+	--gray-light: hsl(var(--brand-hue) 2% 40%);
+	--home-bg-light: linear-gradient(0deg, hsl(var(--brand-hue) 34% 37% / 10%), hsl(var(--brand-hue) 34% 37% / 0%));
+	--footer-bg-light: linear-gradient(0deg, hsl(var(--brand-hue) 34% 37% / 0%), hsl(var(--brand-hue) 34% 37% / 10%));
 
 	/* dark */
-	--brand-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) * 1.5) calc(var(--brand-lightness) * 1.2));
+	--brand-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) * 1.7) calc(var(--brand-lightness) * 1.5));
+	--brand-sub-dark: hsl(
+		calc(var(--brand-sub-hue) * -1) calc(var(--brand-sub-saturation)) calc(var(--brand-sub-lightness) * 1.5)
+	);
 	--text-dark: hsl(var(--brand-hue) 15% 95%);
 	--bg-dark: hsl(var(--brand-hue) 10% 10%);
-	--gray-dark: hsl(var(--brand-hue) 10% 77%);
+	--gray-dark: hsl(var(--brand-hue) 6% 77%);
+	--home-bg-dark: linear-gradient(
+		0deg,
+		hsl(var(--brand-hue) calc(var(--brand-saturation)) calc(var(--brand-lightness)) / 10%),
+		hsl(var(--brand-hue) calc(var(--brand-saturation)) calc(var(--brand-lightness)) / 0%)
+	);
+	--footer-bg-dark: linear-gradient(
+		0deg,
+		hsl(var(--brand-hue) calc(var(--brand-saturation)) calc(var(--brand-lightness)) / 0%),
+		hsl(var(--brand-hue) calc(var(--brand-saturation)) calc(var(--brand-lightness)) / 10%)
+	);
 
 	box-sizing: border-box;
 
@@ -38,15 +59,17 @@
 
 	/* set defaults */
 	--brand: var(--brand-light);
+	--brand-sub: var(--brand-sub-light);
 	--text: var(--text-light);
 	--bg: var(--bg-light);
 	--gray: var(--gray-light);
+	--home-bg: var(--home-bg-light);
+	--footer-bg: var(--footer-bg-light);
 	--font-rem-xs: 0.75rem;
 	--font-rem-sm: 0.875rem;
 	--font-rem-md: 1rem;
 	--font-rem-lg: 1.125rem;
 	--font-rem-2xl: 1.5rem;
-	--font-rem-4xl: 2rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -55,9 +78,12 @@
 
 		/* set dark color */
 		--brand: var(--brand-dark);
+		--brand-sub: var(--brand-sub-dark);
 		--text: var(--text-dark);
 		--bg: var(--bg-dark);
 		--gray: var(--gray-dark);
+		--home-bg: var(--home-bg-dark);
+		--footer-bg: var(--footer-bg-dark);
 	}
 }
 
@@ -66,9 +92,12 @@
 
 	/* set dark color */
 	--brand: var(--brand-dark);
+	--brand-sub: var(--brand-sub-dark);
 	--text: var(--text-dark);
 	--bg: var(--bg-dark);
 	--gray: var(--gray-dark);
+	--home-bg: var(--home-bg-dark);
+	--footer-bg: var(--footer-bg-dark);
 }
 
 html {
@@ -78,8 +107,8 @@ html {
 body {
 	height: 100%;
 	min-height: 100vh;
-	font-family: 'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-		'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: YakuHanJP, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-size: var(--font-rem-md);
 	font-weight: 400;
 	font-kerning: normal;

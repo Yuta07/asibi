@@ -1,5 +1,5 @@
 .container {
-	margin-top: 40px;
+	margin-top: 60px;
 }
 
 .header {
@@ -9,11 +9,11 @@
 }
 
 .hero {
-	font-size: var(--font-rem-2xl);
+	font-size: var(--font-rem-lg);
 }
 
 .more {
-	color: var(--gray);
+	color: var(--text);
 }
 
 .more:hover {
@@ -27,60 +27,9 @@
 	align-items: stretch;
 	width: 100%;
 	padding-bottom: 10px;
-	margin-top: 10px;
+	margin-top: 20px;
 	overflow-x: scroll;
 	scroll-padding-block: 10px;
 	scroll-snap-type: x proximity;
 	-webkit-overflow-scrolling: touch;
-}
-
-.postLink {
-	scroll-snap-align: start;
-	color: var(--text);
-	text-decoration: none;
-}
-
-.imageContainer {
-	display: grid;
-	place-items: center;
-	width: 168px;
-	height: 168px;
-	padding: 40px;
-	background: hsl(208deg 5% 90%);
-	border-radius: 12px;
-}
-
-.postImage {
-	transition: 0.2s;
-	transform: scale(1);
-}
-
-.postLink:hover > .imageContainer > .postImage {
-	transition: 0.2s;
-	transform: scale(1.2);
-}
-
-.tags {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 8px;
-	margin-top: 20px;
-}
-
-.tag {
-	padding: 0 10px;
-	font-size: var(--font-rem-xs);
-	border: 1px solid var(--gray);
-	border-radius: 20px;
-}
-
-.title {
-	margin-top: 12px;
-	font-size: var(--font-rem-lg);
-}
-
-.createdAt {
-	margin-top: 12px;
-	font-size: var(--font-rem-xs);
-	color: var(--gray);
 }

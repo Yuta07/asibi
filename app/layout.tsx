@@ -14,12 +14,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<link href="/favicon.ico" rel="icon" sizes="any" />
 				<link href="/icon/icon.svg" rel="icon" type="image/svg+xml" />
 				<link href="/icon/apple-touch-icon.png" rel="apple-touch-icon" />
-				<link href="https://fonts.googleapis.com" rel="preconnect" />
-				<link href="https://fonts.gstatic.com" rel="preconnect" />
 				<link
-					href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;900&display=swap"
+					as="font"
+					href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp.min.css"
 					media="all"
-					rel="preload"
+					rel="stylesheet"
 				/>
 				<AnalyticsScript />
 			</head>

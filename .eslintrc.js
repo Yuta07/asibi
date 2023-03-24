@@ -8,6 +8,7 @@ module.exports = {
 	},
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
+		project: './tsconfig.json',
 		ecmaVersion: 7,
 		sourceType: 'module',
 		ecmaFeatures: {
@@ -21,6 +22,7 @@ module.exports = {
 		'plugin:react-hooks/recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:@typescript-eslint/eslint-recommended',
+		'plugin:@typescript-eslint/recommended-requiring-type-checking',
 		'plugin:import/recommended',
 		'plugin:import/errors',
 		'plugin:import/warnings',

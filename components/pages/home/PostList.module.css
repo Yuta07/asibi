@@ -1,0 +1,50 @@
+.postLink {
+	scroll-snap-align: start;
+	color: var(--text);
+	text-decoration: none;
+}
+
+.imageContainer {
+	display: grid;
+	place-items: center;
+	width: 180px;
+	height: 180px;
+	padding: 40px;
+	background: hsl(208deg 5% 90%);
+	border-radius: 12px;
+}
+
+.postImage {
+	transition: 0.2s;
+	transform: scale(1);
+}
+
+.postLink:hover > .imageContainer > .postImage {
+	transition: 0.2s;
+	transform: scale(1.2);
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 20px;
+}
+
+.tag {
+	padding: 0 10px;
+	font-size: var(--font-rem-xs);
+	border: 1px solid var(--gray);
+	border-radius: 20px;
+}
+
+.title {
+	margin-top: 12px;
+	font-size: var(--font-rem-md);
+}
+
+.createdAt {
+	margin-top: 12px;
+	font-size: var(--font-rem-xs);
+	color: var(--gray);
+}

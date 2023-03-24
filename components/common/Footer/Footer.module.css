@@ -1,14 +1,48 @@
 .footer {
 	position: sticky;
 	top: 100dvh;
-	display: grid;
-	place-items: center;
 	width: 100%;
-	padding-block: 20px;
-	padding-inline: 40px;
+	background: var(--footer-bg);
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 960px;
+	padding-block: 32px;
+	padding-inline: 20px;
 	margin: 0 auto;
 }
 
-.copyRight {
+.author {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	justify-content: space-between;
+}
+
+.scolding {
+	margin-top: 10px;
+	font-size: var(--font-rem-sm);
 	font-weight: 500;
+}
+
+.linkContainer {
+	display: flex;
+	gap: 40px;
+}
+
+.title {
+	font-size: var(--font-rem-sm);
+	font-weight: 550;
+	color: var(--gray);
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-top: 20px;
+	list-style: none;
 }
