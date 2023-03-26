@@ -1,19 +1,9 @@
 .container {
-	margin-top: 60px;
-}
-
-.header {
-	display: flex;
-	align-items: flex-end;
-	justify-content: space-between;
+	width: 100%;
 }
 
 .hero {
 	font-size: var(--font-rem-lg);
-}
-
-.more {
-	color: var(--text);
 }
 
 .more:hover {
@@ -21,15 +11,7 @@
 	transition: 0.2s;
 }
 
-.scrollContainer {
-	display: flex;
-	gap: 24px;
-	align-items: stretch;
+.postsContainer {
 	width: 100%;
-	padding-bottom: 10px;
-	margin-top: 20px;
-	overflow-x: scroll;
-	scroll-padding-block: 10px;
-	scroll-snap-type: x proximity;
-	-webkit-overflow-scrolling: touch;
+	margin-top: 40px;
 }

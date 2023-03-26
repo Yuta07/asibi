@@ -4,7 +4,7 @@ import s from './About.module.css'
 
 export const About = () => {
 	return (
-		<div className={s.container}>
+		<section className={s.container}>
 			<div className={s.inner}>
 				<div className={s.meteor}>
 					<img alt="" className={s.meteorImage} height="auto" src="/assets/meteor.webp" width="320px" />
@@ -19,6 +19,6 @@ export const About = () => {
 					</p>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }

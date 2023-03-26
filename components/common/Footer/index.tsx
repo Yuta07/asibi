@@ -6,7 +6,7 @@ import { LinkList } from './LinkList'
 const NAV = [
 	{ name: 'About Me', link: '/about', image: '/link/about.svg' },
 	{ name: 'Blog', link: '/blog', image: '/link/blog.svg' },
-	{ name: 'Tsurezure', link: '/tsurezure', image: '/link/tsurezure.svg' },
+	{ name: 'Tsuredure', link: '/tsuredure', image: '/link/tsuredure.svg' },
 	{ name: 'Works', link: '/works', image: '/link/works.svg' },
 ] as const
 

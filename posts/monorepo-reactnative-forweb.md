@@ -1,6 +1,6 @@
 ---
 title: 'React Native for Webによるリンクコンポーネントの共通化'
-preface: 'モノレポ環境下のReact / React NativeプロジェクトでReact Native for webによるリンクコンポーネントの共通利用'
+preface: 'モノレポ環境下のReact / React NativeプロジェクトでReact Native for webによるリンクコンポーネントの共通利用を行う'
 createdAt: '2023-03-02'
 eyecatch: '/blog/monorepo-reactnative-forweb/duck_3d.png'
 category: 'tech'

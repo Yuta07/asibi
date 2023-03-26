@@ -2,8 +2,12 @@
 	width: 100%;
 }
 
-.inner {
+.content {
+	display: grid;
+	grid-template-columns: calc(100% - 340px) 280px;
+	column-gap: 60px;
+	width: 100%;
 	max-width: 960px;
 	padding-inline: 20px;
-	margin: 40px auto;
+	margin: 60px auto;
 }

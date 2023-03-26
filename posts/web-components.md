@@ -1,6 +1,6 @@
 ---
 title: 'Web Components の基本とそれっぽいコンポーネント作成'
-preface: 'Web Componentsの基本をまとめて、それっぽいコンポーネントを作成してみる'
+preface: 'Web Componentsの基本をまとめて、それっぽいコンポーネントを作成する'
 createdAt: '2022-07-18'
 eyecatch: '/blog/web-components/cupcake_3d.png'
 category: 'tech'

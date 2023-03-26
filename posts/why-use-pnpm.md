@@ -1,6 +1,6 @@
 ---
 title: 'pnpmはなにが違うのか'
-preface: 'yarnからpnpmに移行したのでまとめてみる'
+preface: 'yarnからpnpmに移行して気づいたpnpmの利点'
 createdAt: '2023-03-11'
 eyecatch: '/blog/why-use-pnpm/pear_3d.png'
 category: 'tech'

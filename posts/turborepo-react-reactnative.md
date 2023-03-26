@@ -1,6 +1,6 @@
 ---
 title: 'TurborepoではじめるReact開発'
-preface: 'Turborepoを使用したmonorepoでReactプロジェクトを動かしてuiコンポーネントを呼び出すまで'
+preface: 'Turborepoを使用したmonorepoでReactプロジェクトを動かしてuiコンポーネントを呼び出す'
 createdAt: '2022-11-01'
 eyecatch: '/blog/turborepo-react-reactnative/yo-yo_3d.png'
 category: 'tech'
