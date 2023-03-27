@@ -6,11 +6,6 @@
 	font-size: var(--font-rem-lg);
 }
 
-.more:hover {
-	opacity: 0.7;
-	transition: 0.2s;
-}
-
 .postsContainer {
 	width: 100%;
 	margin-top: 40px;

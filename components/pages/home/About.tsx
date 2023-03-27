@@ -14,7 +14,7 @@ export const About = () => {
 					<p className={s.intro}>
 						Web Frontend Engineer, born in Nagoya, lives in Kawasaki.
 						<Link className={s.more} href="/about">
-							Read more<span>-&gt;</span>
+							Read more<span>→</span>
 						</Link>
 					</p>
 				</div>

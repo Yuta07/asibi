@@ -1,7 +1,8 @@
 import Link from 'next/link'
 
+import { LinkList } from '@/components/ui/LinkList'
+
 import s from './Footer.module.css'
-import { LinkList } from './LinkList'
 
 const NAV = [
 	{ name: 'About Me', link: '/about', image: '/link/about.svg' },
@@ -51,7 +52,7 @@ export const Footer = () => {
 									<LinkList
 										key={account.name}
 										image={account.image}
-										isExternal={false}
+										isExternal={true}
 										link={account.link}
 										name={account.name}
 									/>

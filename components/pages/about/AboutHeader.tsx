@@ -19,7 +19,6 @@ export const AboutHeader = () => {
 
 	return (
 		<div className={s.header}>
-			<div className={s.blank} />
 			<div className={s.backgroundContainer}>
 				<img alt="my-memory" className={s.background} height={240} src="/assets/background_me.webp" width="auto" />
 			</div>

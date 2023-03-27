@@ -12,7 +12,7 @@ type Props = {
 export const LinkList = ({ name, link, image, isExternal }: Props) => {
 	return (
 		<li itemProp="link">
-			{isExternal ? (
+			{!isExternal ? (
 				<Link className={s.link} href={link}>
 					<img alt={`link to ${name}`} height={20} src={image} width={20} />
 					<span>{name}</span>
