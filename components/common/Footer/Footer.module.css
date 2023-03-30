@@ -10,7 +10,7 @@
 	justify-content: space-between;
 	width: 100%;
 	max-width: 960px;
-	padding-block: 32px;
+	padding-block: 40px 32px;
 	padding-inline: 20px;
 	margin: 0 auto;
 }
@@ -30,19 +30,19 @@
 
 .linkContainer {
 	display: flex;
-	gap: 60px;
+	gap: 80px;
 }
 
 .title {
 	font-size: var(--font-rem-sm);
-	font-weight: 550;
+	font-weight: 700;
 	color: var(--gray);
 }
 
 .list {
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
+	gap: 10px;
 	margin-top: 20px;
 	list-style: none;
 }

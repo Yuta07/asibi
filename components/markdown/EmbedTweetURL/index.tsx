@@ -1,3 +1,5 @@
+'use client'
+
 import Script from 'next/script'
 import { useEffect, useRef } from 'react'
 
@@ -16,8 +18,10 @@ export const EmbedTweetURL = ({ href }: Props) => {
 
 	useEffect(() => {
 		if (!window.twttr) return
+		/* eslint-disable */
 		if (!window.twttr.widgets) return
 		window.twttr.widgets.load(containerRef.current)
+		/* eslint-disable */
 	}, [])
 
 	return (

@@ -1,0 +1,70 @@
+.heading {
+	position: relative;
+	padding-left: 20px;
+}
+
+.heading::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	background: var(--brand);
+}
+
+.first {
+	margin-top: 40px;
+	font-size: var(--font-rem-4xl);
+}
+
+.first::before {
+	width: 6px;
+	height: 100%;
+	border-radius: 8px;
+}
+
+.second {
+	margin-top: 32px;
+	font-size: var(--font-rem-2xl);
+}
+
+.second::before {
+	width: 6px;
+	height: 100%;
+	border-radius: 8px;
+}
+
+.third {
+	margin-top: 24px;
+	font-size: var(--font-rem-xl);
+}
+
+.third::before {
+	width: 5px;
+	height: 100%;
+	border-radius: 8px;
+}
+
+.fourth {
+	margin-top: 20px;
+	font-size: var(--font-rem-lg);
+}
+
+.fourth::before {
+	top: calc(50% - 4px);
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+}
+
+.fifth {
+	margin-top: 20px;
+	font-size: var(--font-rem-md);
+}
+
+.fifth::before {
+	top: calc(50% - 2px);
+	left: 2px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+}

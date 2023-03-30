@@ -1,13 +1,20 @@
-import classnames from 'classnames'
 import { createElement, ReactNode, FC } from 'react'
 
-import styles from './Heading.module.scss'
+import styles from './Heading.module.css'
 
-type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5'
 
 interface Props extends React.HTMLAttributes<HTMLHeadingElement> {
 	children: ReactNode
 	headingLevel: HeadingLevel
+}
+
+const HeadingClassName = {
+	h1: 'first',
+	h2: 'second',
+	h3: 'third',
+	h4: 'fourth',
+	h5: 'fifth',
 }
 
 export const Heading: FC<Props> = ({ children, headingLevel }) => {
@@ -15,7 +22,10 @@ export const Heading: FC<Props> = ({ children, headingLevel }) => {
 		createElement(headingLevel, props, children)
 
 	return (
-		<Tag className={classnames(styles.heading, styles[headingLevel])} data-testid={`markdown-heading-${headingLevel}`}>
+		<Tag
+			className={`${styles.heading} ${styles[HeadingClassName[headingLevel]]}`}
+			data-testid={`markdown-heading-${headingLevel}`}
+		>
 			{children}
 		</Tag>
 	)

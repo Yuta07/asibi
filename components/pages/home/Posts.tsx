@@ -1,16 +1,18 @@
 import { PostList } from '@/components/ui/PostList'
+import { generatedRssFeed } from '@/lib/feed'
 import { getLatestPostsData } from '@/lib/posts'
 
 import s from './Posts.module.css'
 
-async function getData() {
-	const res = await getLatestPostsData()
+function getLatestPosts() {
+	const res = getLatestPostsData()
+	generatedRssFeed()
 
 	return res
 }
 
-export default async function Posts() {
-	const data = await getData()
+export default function Posts() {
+	const data = getLatestPosts()
 
 	return (
 		<section className={s.container}>

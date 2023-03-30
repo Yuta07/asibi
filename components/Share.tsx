@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import styles from './Share.module.scss'
+import styles from './Share.module.css'
 
 type Props = {
 	slug: string
@@ -15,12 +15,12 @@ export const Share = ({ slug, title }: Props) => {
 		<div className={styles.container}>
 			<h3 className={styles.share}>SHARE</h3>
 			<a
-				href={`https://twitter.com/share?url=${pageUrl}&text=${encodeTitle}&via=yuta030Q`}
-				rel="nofollow"
 				className={styles.anchor}
 				data-testid="blog-share-button"
+				href={`https://twitter.com/share?url=${pageUrl}&text=${encodeTitle}&via=yuta030Q`}
+				rel="nofollow"
 			>
-				<Image src="/assets/twitter_share.svg" alt="twitter_share" width={40} height={40} />
+				<Image alt="twitter_share" height={40} src="/assets/twitter_share.svg" width={40} />
 			</a>
 		</div>
 	)

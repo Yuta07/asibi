@@ -1,3 +1,5 @@
+'use client'
+
 import React, { ReactNode, FC } from 'react'
 
 export const Paragraph: FC<{ children: ReactNode }> = ({ children }) => {
@@ -7,7 +9,7 @@ export const Paragraph: FC<{ children: ReactNode }> = ({ children }) => {
 			<style jsx>{`
 				.container {
 					margin-top: 20px;
-					font-size: var(--font-size-md);
+					font-size: var(--font-rem-md);
 					line-height: 1.6;
 				}
 
@@ -26,7 +28,7 @@ export const ElParagraph: FC<{ children: ReactNode }> = ({ children }) => {
 			<style jsx>{`
 				.container {
 					margin-top: 20px;
-					font-size: var(--font-size-md);
+					font-size: var(--font-rem-md);
 					line-height: 1.8;
 				}
 

@@ -4,8 +4,8 @@
 
 .content {
 	display: grid;
-	grid-template-columns: calc(100% - 340px) 280px;
-	column-gap: 60px;
+	grid-template-columns: calc(100% - 360px) 280px;
+	column-gap: 80px;
 	width: 100%;
 	max-width: 960px;
 	padding-inline: 20px;

@@ -20,6 +20,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					media="all"
 					rel="stylesheet"
 				/>
+				<link href="https://fonts.googleapis.com" rel="preconnect" />
+				<link crossOrigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+				<link
+					as="font"
+					href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap"
+					media="all"
+					rel="stylesheet"
+				/>
 				<AnalyticsScript />
 			</head>
 			<body>

@@ -3,9 +3,14 @@ import axios from 'axios'
 import { JSDOM } from 'jsdom'
 import { NextResponse } from 'next/server'
 
-export async function GET(req: Request) {
+type OgName = 'title' | 'site_name' | 'description' | 'image' | 'image:alt'
+type OgpState = {
+	[key in OgName]: string
+}
+
+export async function POST(req: Request) {
 	const { searchParams } = new URL(req.url)
-	const url = searchParams.get('query')
+	const url = searchParams.get('url')
 
 	const encodeURL = encodeURI(url as string)
 	const headers = {
@@ -14,7 +19,7 @@ export async function GET(req: Request) {
 	}
 
 	try {
-		const response = await axios.get(encodeURL, {
+		const response = await axios.get<string>(encodeURL, {
 			method: 'get',
 			withCredentials: true,
 			responseType: 'arraybuffer',
@@ -27,7 +32,8 @@ export async function GET(req: Request) {
 
 		const dom = new JSDOM(data)
 		const meta = dom.window.document.head.querySelectorAll('meta')
-		const ogp = Array.from(meta)
+		/* eslint-disable */
+		const ogp: OgpState[] = Array.from(meta)
 			.filter((element: Element) => element.hasAttribute('property'))
 			.reduce((previous: any, current: Element) => {
 				const property = current.getAttribute('property')?.trim().replace('og:', '')
@@ -39,8 +45,9 @@ export async function GET(req: Request) {
 
 				return previous
 			}, {})
+		/* eslint-disable */
 
-		NextResponse.json({ data: ogp, status: 200 })
+		return NextResponse.json({ data: ogp, status: 200 })
 	} catch {
 		captureException(new Error('cannot get og image'), {
 			tags: {
@@ -52,6 +59,6 @@ export async function GET(req: Request) {
 			level: 'error',
 		})
 
-		NextResponse.json({ status: 200 })
+		return NextResponse.json({ status: 200 })
 	}
 }

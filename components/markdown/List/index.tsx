@@ -1,3 +1,5 @@
+'use client'
+
 import { ReactNode, FC } from 'react'
 
 type Props = {
@@ -9,7 +11,7 @@ type Props = {
 export const List: FC<Props> = ({ children, ordered, depth }) => {
 	return ordered ? (
 		<>
-			<ol style={{ margin: depth > 0 ? `10px 0 0` : `15px 0` }} className="ordered" data-testid="markdown-ordered-list">
+			<ol className="ordered" data-testid="markdown-ordered-list" style={{ margin: depth > 0 ? `10px 0 0` : `15px 0` }}>
 				{children}
 			</ol>
 			<style jsx>{`
@@ -23,9 +25,9 @@ export const List: FC<Props> = ({ children, ordered, depth }) => {
 	) : (
 		<>
 			<ul
-				style={{ margin: depth > 0 ? `10px 0 0` : `15px 0` }}
 				className="unOrdered"
 				data-testid="markdown-unOrdered-list"
+				style={{ margin: depth > 0 ? `10px 0 0` : `15px 0` }}
 			>
 				{children}
 			</ul>

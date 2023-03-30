@@ -78,6 +78,12 @@ module.exports = {
 		'@typescript-eslint/no-require-imports': 'warn',
 		'@typescript-eslint/no-unused-vars': 'off',
 		'@typescript-eslint/prefer-for-of': 'warn',
+		'@typescript-eslint/no-floating-promises': [
+			'warn',
+			{
+				ignoreIIFE: true,
+			},
+		],
 	},
 	settings: {
 		react: {

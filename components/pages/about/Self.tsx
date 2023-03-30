@@ -8,7 +8,12 @@ export const Self = () => {
 			<p className={s.intro}>
 				After working as an SIer in research, maintenance, and customized development, I am working as a freelance
 				frontend engineer. Mainly focused on React and Next.js.
-				<a className={s.link} href="" rel="noopener noreferrer" target="_blank">
+				<a
+					className={s.link}
+					href="https://shorthaired-seaplane-f56.notion.site/Curriculum-vitae-fecdfaa602c54dbf8da36e5533467bc7"
+					rel="noopener noreferrer"
+					target="_blank"
+				>
 					View my CV<span>→</span>
 				</a>
 			</p>

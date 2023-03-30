@@ -1,10 +1,9 @@
 ---
 title: 'DependenciesとDependabotでのアップデート'
-preface: 'Dependenciesの簡易的説明となぜDependabotでアップデートをするのか'
+preface: 'Dependencies とは、なぜ Dependabot でアップデートをするのか'
 createdAt: '2023-03-10'
 eyecatch: '/blog/what-is-dependencies/railway_car_3d.png'
-category: 'tech'
-tags: ['dependabot']
+tags: ['Dependabot']
 isDraft: false
 ---
 

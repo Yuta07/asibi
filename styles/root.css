@@ -24,6 +24,7 @@
 	--text-light: hsl(var(--brand-hue) 36% 10%);
 	--bg-light: hsl(var(--brand-hue) 12% 99%);
 	--gray-light: hsl(var(--brand-hue) 4% 42%);
+	--decorate-light: hsl(var(--brand-hue) 34% 37% / 10%);
 	--home-bg-light: linear-gradient(0deg, hsl(var(--brand-hue) 34% 37% / 10%), hsl(var(--brand-hue) 34% 37% / 0%));
 	--footer-bg-light: linear-gradient(0deg, hsl(var(--brand-hue) 34% 37% / 0%), hsl(var(--brand-hue) 34% 37% / 10%));
 
@@ -71,6 +72,8 @@
 	--font-rem-lg: 1.125rem;
 	--font-rem-xl: 1.25rem;
 	--font-rem-2xl: 1.5rem;
+	--font-rem-3xl: 1.75rem;
+	--font-rem-4xl: 2rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -108,8 +111,8 @@ html {
 body {
 	height: 100%;
 	min-height: 100vh;
-	font-family: YakuHanJP, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-		'Helvetica Neue', sans-serif;
+	font-family: YakuHanJP, Mukta, -apple-system, BlinkMacSystem, 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+		'Hiragino Sans', Meiryo, sans-serif;
 	font-size: var(--font-rem-md);
 	font-weight: 400;
 	font-kerning: normal;

@@ -1,37 +1,55 @@
+'use client'
+
 import axios from 'axios'
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 type Props = {
 	href: string
 }
 
+type OgName = 'title' | 'site_name' | 'description' | 'image' | 'image:alt'
 type OgpState = {
-	[key in string]: string
+	[key in OgName]: string
 }
 
+let title = ''
+let description = ''
+let imageURL = ''
+let imageAlt = ''
+
 export const EmbedLink = ({ href }: Props) => {
-	const [ogState, setOgState] = useState<OgpState[] | null>(null)
-
-	const fetchOgpData = useCallback(async () => {
-		await axios.post(`/api/getOgp?url=${href}`).then((res) => {
-			const { data, status } = res as { data: OgpState[]; status: number }
-
-			if (status === 200) {
-				setOgState(data)
-			}
-		})
-	}, [href])
+	const [ogState, setOgState] = useState<OgpState | null>(null)
 
 	useEffect(() => {
-		fetchOgpData()
-	}, [fetchOgpData])
+		const getOgp = async () => {
+			const data = await axios
+				.post(`/api/ogp?url=${href}`)
+				.then((res) => {
+					const { data, status } = res.data as { data: OgpState; status: number }
+
+					if (status === 200) {
+						return data
+					} else {
+						return null
+					}
+				})
+				.catch(() => {
+					return null
+				})
+
+			setOgState(data)
+		}
+
+		if (href) {
+			;(async () => {
+				await getOgp()
+			})()
+		}
+	}, [href])
 
 	if (ogState === null) return null
 
-	let title = ''
-	let description = ''
-	let imageURL = ''
-	let imageAlt = ''
+	// console.log(ogState)
 
 	if ('title' in ogState) {
 		title = ogState['title']
@@ -56,11 +74,11 @@ export const EmbedLink = ({ href }: Props) => {
 	if (!Object.keys(ogState).length) {
 		return (
 			<a
-				href={href}
 				className="normalLink"
-				target="_blank"
-				rel="noopener noreferrer"
 				data-testid="markdown-embed-only-link"
+				href={href}
+				rel="noopener noreferrer"
+				target="_blank"
 			>
 				{href}
 				<style jsx>{`
@@ -78,17 +96,17 @@ export const EmbedLink = ({ href }: Props) => {
 
 	return (
 		<>
-			<a className="container" href={href} target="_blank" rel="noopener noreferrer" data-testid="markdown-embed-link">
+			<a className="container" data-testid="markdown-embed-link" href={href} rel="noopener noreferrer" target="_blank">
 				<div className="ogInfo">
 					<div className="ogTitle">{title}</div>
 					{description && <span className="ogDescription">{description}</span>}
 					<span className="anchor">{href}</span>
 				</div>
 				<div className="thumbnail">
-					<img src={imageURL} alt={imageAlt} className="ogImage" />
+					<img alt={imageAlt} className="ogImage" src={imageURL} />
 				</div>
 			</a>
-			<a href={href} className="dummyHref" target="_blank" rel="noopener noreferrer">
+			<a className="dummyHref" href={href} rel="noopener noreferrer" target="_blank">
 				<span>{href}</span>
 			</a>
 			<style jsx>{`

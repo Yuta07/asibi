@@ -1,13 +1,18 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 import { ThemeSwitch } from '@/components/common/ThemeSwitch'
 
 import s from './Header.module.css'
 
 export const Header = () => {
+	const pathname = usePathname()
+
 	return (
 		<>
-			<div className={s.blank} />
+			{pathname === '/' && <div className={s.blank} />}
 			<header className={s.header}>
 				<div className={s.inner}>
 					<Link href="/">

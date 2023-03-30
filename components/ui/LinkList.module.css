@@ -3,7 +3,7 @@
 	gap: 8px;
 	align-items: center;
 	width: max-content;
-	font-size: var(--font-rem-md);
+	font-size: var(--font-rem-sm);
 	color: var(--text);
 	text-decoration: none;
 }

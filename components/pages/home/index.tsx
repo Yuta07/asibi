@@ -9,7 +9,6 @@ export const Home = () => {
 		<main className={s.container}>
 			<About />
 			<div className={s.content}>
-				{/* @ts-expect-error Async Server Component */}
 				<Posts />
 				<TsuredureSidebar />
 			</div>

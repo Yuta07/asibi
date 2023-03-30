@@ -1,14 +1,14 @@
 ---
 title: 'Web Components の基本とそれっぽいコンポーネント作成'
-preface: 'Web Componentsの基本をまとめて、それっぽいコンポーネントを作成する'
+preface: 'Web Components でそれっぽいコンポーネントを作成する'
 createdAt: '2022-07-18'
 eyecatch: '/blog/web-components/cupcake_3d.png'
 category: 'tech'
-tags: ['Web Components']
+tags: ['Web-Components']
 isDraft: false
 ---
 
-# Web Component とは
+## Web Component とは
 
 再利用可能な要素を作成して、様々なウェブアプリ上で再利用できるもので、カプセル化された機能を使用することで、コードの重複なく再利用可能となります。
 ブラウザ対応状況は現時点（2022/08/20）では、Firefox (バージョン 63)、Chrome、Opera、Edge (バージョン 79)のブラウザで対応しているみたいです。ただ、Safari では限定的な対応のようです。

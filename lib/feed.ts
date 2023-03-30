@@ -3,7 +3,7 @@ import fs from 'fs'
 import { Feed } from 'feed'
 import { marked } from 'marked'
 
-import { getSortedPostsDataWithCategory } from './posts'
+import { getSortedPostsData } from './posts'
 
 // ref: https://zenn.dev/catnose99/articles/c7754ba6e4adac
 // ref: https://fwywd.com/tech/next-feed-rss-atom
@@ -19,14 +19,14 @@ export const generatedRssFeed = () => {
 	const date = new Date()
 
 	const author = {
-		name: 'koppa',
+		name: 'asibi3Q',
 		email: 'mono.12dev@gmail.com',
 		link: 'https://asibi.dev',
 	}
 
 	const feed = new Feed({
-		title: 'koppa',
-		description: "yutaka's website.",
+		title: 'asibi',
+		description: "asibi3Q's website.",
 		id: baseUrl,
 		link: baseUrl,
 		language: 'ja',
@@ -41,9 +41,9 @@ export const generatedRssFeed = () => {
 		author: author,
 	})
 
-	const posts = getSortedPostsDataWithCategory('tech')
+	const posts = getSortedPostsData()
 
-	posts?.forEach((post) => {
+	posts.forEach((post) => {
 		const url = `${baseUrl}/blog/${post.slug}`
 
 		if (!post.isDraft) {

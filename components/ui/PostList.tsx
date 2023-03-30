@@ -1,19 +1,11 @@
 import Link from 'next/link'
 
+import { Post } from '@/lib/posts'
+
 import s from './PostList.module.css'
 
 type Props = {
-	data: {
-		slug: string
-		content: string
-		title: string
-		preface: string
-		createdAt: string
-		eyecatch: string
-		category: string
-		tags: string[]
-		isDraft: boolean
-	}
+	data: Omit<Post, 'content'>
 }
 
 export const PostList = ({ data }: Props) => {
@@ -21,7 +13,7 @@ export const PostList = ({ data }: Props) => {
 		<article className={s.article}>
 			<Link className={s.postLink} href={`/blog/${data.slug}`}>
 				<div className={s.imageContainer}>
-					<img alt={`${data.title} eyecatch`} className={s.postImage} height={60} src={data.eyecatch} width={60} />
+					<img alt={`${data.title} eyecatch`} className={s.postImage} height={56} src={data.eyecatch} width={56} />
 				</div>
 				<div className={s.content}>
 					<h3 className={s.title}>{data.title}</h3>

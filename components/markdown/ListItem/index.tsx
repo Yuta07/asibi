@@ -1,6 +1,6 @@
 import { ReactNode, FC } from 'react'
 
-import styles from './ListItem.module.scss'
+import styles from './ListItem.module.css'
 
 type Props = {
 	children: ReactNode

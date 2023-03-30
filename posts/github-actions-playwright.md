@@ -1,10 +1,9 @@
 ---
 title: 'GitHub ActionsでPlaywrightを動かす'
-preface: 'PlaywrightをGitHub Actionsで動かせるようになるまで'
+preface: 'Playwright を GitHub Actions で動かせるようになるまで'
 createdAt: '2022-07-01'
 eyecatch: '/blog/github-actions-playwright/octopus_3d.png'
-category: 'tech'
-tags: ['GitHub Actions', 'Playwright']
+tags: ['Playwright']
 isDraft: false
 ---
 

@@ -1,3 +1,5 @@
+'use client'
+
 import { ReactNode, FC } from 'react'
 
 export const Delete: FC<{ children: ReactNode }> = ({ children }) => {
@@ -6,11 +8,11 @@ export const Delete: FC<{ children: ReactNode }> = ({ children }) => {
 			{children}
 			<style jsx>{`
 				.container {
-					background-image: linear-gradient(var(--color-gray), var(--color-gray));
+					background-image: linear-gradient(var(--gray), var(--gray));
 					background-position: 0 50%;
 					background-size: 100% 2px;
 					background-repeat: repeat-x;
-					color: var(--color-gray);
+					color: var(--gray);
 					text-decoration: none;
 				}
 			`}</style>
