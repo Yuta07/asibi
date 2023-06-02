@@ -1,6 +1,9 @@
 'use client'
 
-export default function GlobalError({ error, reset }: { error: Error; reset: () => void }) {
+type Props = { error: Error; reset: () => void }
+
+export default function GlobalError({ error, reset }: Props) {
+	console.log(error)
 	return (
 		<html>
 			<head></head>

@@ -1,45 +1,23 @@
 .container {
+	display: flex;
+	gap: 32px;
+	align-items: flex-start;
 	width: 100%;
-	max-width: 960px;
-	padding-inline: 20px;
-	margin: 40px auto 0;
 }
 
-.inner {
-	position: relative;
-	width: 100%;
-	padding: 40px;
-	border: 2px solid var(--gray);
-	border-radius: 20px;
-}
-
-.meteor {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
-}
-
-.meteorImage {
-	height: 100%;
-	filter: grayscale(0.4);
-	border-radius: 80px 16px 16px 0;
-}
-
-.hero {
+.heading {
 	font-size: var(--font-rem-2xl);
 }
 
 .intro {
-	margin-top: 20px;
+	margin-top: 4px;
 }
 
 .more {
 	display: flex;
 	gap: 4px;
 	width: max-content;
-	margin-top: 12px;
+	margin-top: 10px;
 	color: var(--gray);
 	text-decoration: none;
 }

@@ -1,0 +1,30 @@
+.wrapper {
+	position: relative;
+	width: 100%;
+}
+
+.wrapper::after {
+	position: absolute;
+	top: -80px;
+	left: -80px;
+	z-index: -1;
+	width: 420px;
+	height: 420px;
+	content: '';
+	background: radial-gradient(ellipse at center, var(--gray), var(--brand));
+	filter: blur(300px);
+	opacity: 0.4;
+}
+
+.container {
+	width: 100%;
+	max-width: 760px;
+	padding-block: 60px;
+	padding-inline: 20px;
+	margin: 0 auto;
+}
+
+.content {
+	width: 100%;
+	margin-top: 60px;
+}

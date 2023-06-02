@@ -2,3 +2,4 @@ node_module/
 build/
 .yarn/
 .eslintrc.js
+**/*.test.*

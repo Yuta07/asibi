@@ -85,11 +85,11 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
+      "eslint --fix '**/*.{ts,tsx}'",
+      "prettier --write '**/*.{js,jsx,ts,tsx}'"
     ],
     "*.css": [
-      "stylelint"
+      "stylelint --fix"
     ]
   }
 }

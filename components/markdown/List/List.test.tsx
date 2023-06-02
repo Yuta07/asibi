@@ -15,7 +15,7 @@ const MockListChildren = () => {
 describe('markdwon list test', () => {
 	test('unOrdered list test', () => {
 		render(
-			<List ordered={false} depth={3}>
+			<List depth={3} ordered={false}>
 				<MockListChildren />
 			</List>
 		)
@@ -32,7 +32,7 @@ describe('markdwon list test', () => {
 
 	test('ordered list test', () => {
 		render(
-			<List ordered={true} depth={3}>
+			<List depth={3} ordered={true}>
 				<MockListChildren />
 			</List>
 		)

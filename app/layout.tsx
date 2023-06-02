@@ -1,6 +1,5 @@
 import { AnalyticsScript } from '@/components/AnalyticsScript'
 import { Footer } from '@/components/common/Footer'
-import { Header } from '@/components/common/Header'
 import { ThemeProvider } from 'contexts/ThemeProvider'
 
 import '@/styles/root.css'
@@ -16,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<link href="/icon/apple-touch-icon.png" rel="apple-touch-icon" />
 				<link
 					as="font"
+					crossOrigin=""
 					href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp.min.css"
 					media="all"
 					rel="stylesheet"
@@ -24,7 +24,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<link crossOrigin="" href="https://fonts.gstatic.com" rel="preconnect" />
 				<link
 					as="font"
-					href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap"
+					crossOrigin=""
+					href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700&display=swap"
 					media="all"
 					rel="stylesheet"
 				/>
@@ -32,7 +33,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			</head>
 			<body>
 				<ThemeProvider>
-					<Header />
 					{children}
 					<Footer />
 				</ThemeProvider>
