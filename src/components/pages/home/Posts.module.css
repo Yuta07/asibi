@@ -1,12 +1,8 @@
-.container {
-	width: 100%;
-}
-
 .hero {
 	font-size: var(--font-rem-2xl);
 }
 
 .postsContainer {
 	width: 100%;
-	margin-top: 40px;
+	margin-top: 20px;
 }

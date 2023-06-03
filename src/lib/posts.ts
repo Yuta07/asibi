@@ -80,7 +80,7 @@ export const getLatestPostsData = () => {
 				return -1
 			}
 		})
-		.slice(0, 5)
+		.slice(0, 3)
 }
 
 export const getSortedPostsData = (tag?: string) => {

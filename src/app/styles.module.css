@@ -18,7 +18,7 @@
 
 .container {
 	width: 100%;
-	max-width: 760px;
+	max-width: 720px;
 	padding-block: 60px;
 	padding-inline: 20px;
 	margin: 0 auto;
@@ -26,5 +26,9 @@
 
 .content {
 	width: 100%;
-	margin-top: 60px;
+}
+
+.postSection {
+	width: 100%;
+	margin-top: 40px;
 }

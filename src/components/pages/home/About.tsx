@@ -6,7 +6,7 @@ import s from './About.module.css'
 export const About = () => {
 	return (
 		<section className={s.container}>
-			<div>
+			<div className={s.imageContainer}>
 				<Image alt="asibi's internet image" height={60} src="/icon/icon.svg" width={60} />
 			</div>
 			<div>

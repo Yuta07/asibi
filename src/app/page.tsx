@@ -9,7 +9,9 @@ export default function Page() {
 			<div className={s.container}>
 				<About />
 				<div className={s.content}>
-					<Posts />
+					<section className={s.postSection}>
+						<Posts />
+					</section>
 				</div>
 			</div>
 		</main>

@@ -1,6 +1,6 @@
 import { AnalyticsScript } from '@/components/AnalyticsScript'
 import { Footer } from '@/components/common/Footer'
-import { ThemeProvider } from 'contexts/ThemeProvider'
+import { ThemeProvider } from '@/contexts/ThemeProvider'
 
 import '@/styles/root.css'
 
