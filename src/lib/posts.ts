@@ -14,7 +14,7 @@ export type Post = {
 	isDraft: boolean
 }
 
-const postsDirectory = path.join(process.cwd(), 'posts')
+const postsDirectory = path.join(process.cwd(), 'src/posts')
 
 export const getAllPostsData = () => {
 	const fileNames = fs.readdirSync(postsDirectory)

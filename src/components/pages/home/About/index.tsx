@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import s from './About.module.css'
+import s from './styles.module.css'
 
 export const About = () => {
 	return (
@@ -15,7 +15,7 @@ export const About = () => {
 					Web Frontend Engineer, born in Nagoya, lives in Kawasaki.
 					<br />
 					Mainly Focused on React and arround frontend.
-					<Link className={s.more} href="/about">
+					<Link className={s.moreLink} href="/about">
 						Read more<span>→</span>
 					</Link>
 				</p>

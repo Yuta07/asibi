@@ -128,9 +128,9 @@ body {
 
 @media (width < 768px) {
 	:root {
-		--font-rem-xs: 0.625rem;
-		--font-rem-sm: 0.75rem;
-		--font-rem-md: 0.875rem;
+		--font-rem-xs: 0.75rem;
+		--font-rem-sm: 0.875rem;
+		--font-rem-md: 15px;
 		--font-rem-lg: 1rem;
 		--font-rem-2xl: 1.25rem;
 		--font-rem-4xl: 1.5rem;

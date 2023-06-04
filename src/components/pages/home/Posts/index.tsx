@@ -1,8 +1,10 @@
-import { PostList } from '@/components/ui/PostList'
+import Link from 'next/link'
+
+import { PostListItem } from '@/components/ui/PostListItem'
 import { generatedRssFeed } from '@/lib/feed'
 import { getLatestPostsData } from '@/lib/posts'
 
-import s from './Posts.module.css'
+import s from './styles.module.css'
 
 function getLatestPosts() {
 	const res = getLatestPostsData()
@@ -16,10 +18,15 @@ export default function Posts() {
 
 	return (
 		<div>
-			<h2 className={s.hero}>Latest Posts</h2>
+			<div className={s.postsHeader}>
+				<h2 className={s.hero}>Latest Posts</h2>
+				<Link className={s.moreLink} href="/blog">
+					View more posts<span>→</span>
+				</Link>
+			</div>
 			<div className={s.postsContainer}>
 				{data.map((data) => {
-					return <PostList key={data.slug} data={data} />
+					return <PostListItem key={data.slug} data={data} />
 				})}
 			</div>
 		</div>

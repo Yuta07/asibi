@@ -1,4 +1,4 @@
-import { AnalyticsScript } from '@/components/AnalyticsScript'
+import { AnalyticsScript } from '@/components/common/Analytics/GoogleAnalytics/index'
 import { Footer } from '@/components/common/Footer'
 import { ThemeProvider } from '@/contexts/ThemeProvider'
 

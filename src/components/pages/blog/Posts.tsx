@@ -1,4 +1,4 @@
-import { PostList } from '@/components/ui/PostList'
+import { PostListItem } from '@/components/ui/PostListItem'
 import { getSortedPostsData } from '@/lib/posts'
 
 import s from './Posts.module.css'
@@ -26,7 +26,7 @@ export const Posts = ({ tag }: Props) => {
 			</div>
 			<div className={s.list}>
 				{data.map((data) => {
-					return <PostList key={data.slug} data={data} />
+					return <PostListItem key={data.slug} data={data} />
 				})}
 			</div>
 		</section>

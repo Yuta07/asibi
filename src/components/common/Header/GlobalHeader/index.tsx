@@ -1,16 +1,11 @@
-'use client'
-
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 
 import { GlobalNav } from '@/components/common/Nav/GlobalNav'
-import { ThemeSwitch } from '@/components/common/ThemeSwitch'
+import { ThemeSwitch } from '@/components/ui/ThemeSwitch'
 
-import s from './Header.module.css'
+import s from './styles.module.css'
 
 export const Header = () => {
-	const pathname = usePathname()
-
 	return (
 		<>
 			<header className={s.header}>

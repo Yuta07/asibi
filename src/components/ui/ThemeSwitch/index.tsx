@@ -2,7 +2,7 @@
 
 import { useThemeDispatch, useThemeState } from '@/contexts/ThemeProvider'
 
-import s from './ThemeSwitch.module.css'
+import s from './styles.module.css'
 
 export const ThemeSwitch = () => {
 	const { state } = useThemeState()

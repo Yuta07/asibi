@@ -3,13 +3,15 @@
 }
 
 .article:not(:first-of-type) {
-	margin-top: 40px;
+	margin-top: 32px;
 }
 
 .postLink {
 	display: flex;
 	gap: 40px;
 	align-items: flex-start;
+	width: max-content;
+	max-width: 100%;
 	color: var(--text);
 	text-decoration: none;
 }
@@ -17,9 +19,7 @@
 .imageContainer {
 	display: grid;
 	place-items: center;
-	width: 108px;
-	height: 108px;
-	padding: 26px;
+	padding: 20px;
 	background: hsl(208deg 5% 90%);
 	border-radius: 12px;
 }
@@ -35,7 +35,10 @@
 }
 
 .title {
+	display: -webkit-box;
+	overflow: hidden;
 	font-size: var(--font-rem-lg);
+	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 2;
 	line-clamp: 2;
 }
@@ -46,7 +49,7 @@
 }
 
 .preface {
-	margin-top: 12px;
+	margin-top: 8px;
 	font-size: var(--font-rem-sm);
 }
 
@@ -73,4 +76,23 @@
 .createdAt {
 	font-size: var(--font-rem-xs);
 	color: var(--gray);
+}
+
+@media (width < 768px) {
+	.postLink {
+		gap: 20px;
+	}
+
+	.imageContainer {
+		padding: 16px;
+	}
+
+	.postImage {
+		width: 32px;
+		height: 32px;
+	}
+
+	.subMeta {
+		justify-content: space-between;
+	}
 }
