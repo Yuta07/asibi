@@ -1,9 +1,8 @@
 .nav {
 	height: 100%;
 	padding: 12px;
-	background: var(--bg);
+	background: var(--card-bg);
 	border-radius: 20px;
-	box-shadow: var(--header-shadow);
 }
 
 .navList {

@@ -1,0 +1,31 @@
+.heading {
+	font-size: var(--font-rem-2xl);
+}
+
+.content {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.experienceList {
+	list-style: none;
+}
+
+.experienceListItem:not(:first-of-type) {
+	margin-top: 32px;
+}
+
+.experienceRole {
+	font-size: var(--font-rem-lg);
+	font-weight: 700;
+}
+
+.experienceDate {
+	margin-top: 4px;
+	font-size: var(--font-rem-sm);
+	color: var(--gray);
+}
+
+.experienceDetail {
+	margin-top: 8px;
+}

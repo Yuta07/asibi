@@ -22,11 +22,16 @@
 	--brand-light: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
 	--brand-sub-light: hsl(var(--brand-sub-hue) var(--brand-sub-saturation) var(--brand-sub-lightness));
 	--text-light: hsl(var(--brand-hue) 36% 10%);
-	--bg-light: hsl(var(--brand-hue) 12% 99%);
-	--gray-light: hsl(var(--brand-hue) 4% 42%);
-	--decorate-light: hsl(var(--brand-hue) 34% 37% / 10%);
-	--footer-bg-light: linear-gradient(0deg, hsl(var(--brand-hue) 34% 37% / 0%), hsl(var(--brand-hue) 34% 37% / 10%));
-	--header-shadow-light: 0px 1px 3px -2px rgb(0 0 0 / 80%);
+	--bg-light: hsl(var(--brand-hue) 6% 95%);
+	--gray-light: hsl(var(--brand-hue) 3% 35%);
+	--card-bg-light: hsl(var(--brand-hue) var(--brand-saturation) 99%);
+	--image-bg-light: hsl(var(--brand-hue) 5% 83%);
+	--toggle-ball-light: hsl(var(--brand-hue) 3% 73%);
+	--footer-bg-light: linear-gradient(
+		0deg,
+		hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness) / 0%),
+		hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness) / 5%)
+	);
 
 	/* dark */
 	--brand-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) * 1.7) calc(var(--brand-lightness) * 1.5));
@@ -36,12 +41,16 @@
 	--text-dark: hsl(var(--brand-hue) 15% 95%);
 	--bg-dark: hsl(var(--brand-hue) 10% 10%);
 	--gray-dark: hsl(var(--brand-hue) 6% 77%);
+	--card-bg-dark: hsl(
+		calc(var(--brand-hue) * 1.2) calc(var(--brand-saturation) * 0.8) calc(var(--brand-saturation) * 0.5)
+	);
+	--image-bg-dark: hsl(var(--brand-hue) 5% 83%);
+	--toggle-ball-dark: hsl(var(--brand-hue) 3% 73%);
 	--footer-bg-dark: linear-gradient(
 		0deg,
 		hsl(var(--brand-hue) calc(var(--brand-saturation)) calc(var(--brand-lightness)) / 0%),
-		hsl(var(--brand-hue) calc(var(--brand-saturation)) calc(var(--brand-lightness)) / 10%)
+		hsl(var(--brand-hue) calc(var(--brand-saturation)) calc(var(--brand-lightness)) / 5%)
 	);
-	--header-shadow-dark: 0px 1px 4px -2px rgb(36 76 163 / 80%);
 
 	box-sizing: border-box;
 
@@ -60,8 +69,10 @@
 	--text: var(--text-light);
 	--bg: var(--bg-light);
 	--gray: var(--gray-light);
+	--card-bg: var(--card-bg-light);
+	--image-bg: var(--image-bg-light);
+	--toggle-ball: var(--toggle-ball-light);
 	--footer-bg: var(--footer-bg-light);
-	--header-shadow: var(--header-shadow-light);
 	--font-rem-xs: 0.75rem;
 	--font-rem-sm: 0.875rem;
 	--font-rem-md: 1rem;
@@ -82,8 +93,10 @@
 		--text: var(--text-dark);
 		--bg: var(--bg-dark);
 		--gray: var(--gray-dark);
+		--card-bg: var(--card-bg-dark);
+		--image-bg: var(--image-bg-dark);
+		--toggle-ball: var(--toggle-ball-dark);
 		--footer-bg: var(--footer-bg-dark);
-		--header-shadow: var(--header-shadow-dark);
 	}
 }
 
@@ -96,8 +109,10 @@
 	--text: var(--text-dark);
 	--bg: var(--bg-dark);
 	--gray: var(--gray-dark);
+	--card-bg: var(--card-bg-dark);
+	--image-bg: var(--image-bg-dark);
+	--toggle-ball: var(--toggle-ball-dark);
 	--footer-bg: var(--footer-bg-dark);
-	--header-shadow: var(--header-shadow-dark);
 }
 
 html {

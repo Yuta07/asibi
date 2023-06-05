@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import styles from './Share.module.css'
+import styles from './styles.module.css'
 
 type Props = {
 	slug: string

@@ -1,6 +1,6 @@
 import { LinkList } from '@/components/ui/LinkList'
 
-import s from './AboutSidebar.module.css'
+import s from './styles.module.css'
 
 const ACCOUNTS = [
 	{ name: 'Github', link: 'https://github.com/Yuta07', image: '/link/github.svg' },
@@ -13,10 +13,10 @@ const ACCOUNTS = [
 	},
 ] as const
 
-export const AboutSidebar = () => {
+export const QuickLinks = () => {
 	return (
-		<section className={s.container}>
-			<h2 className={s.hero}>Quick Links</h2>
+		<div>
+			<h2 className={s.heading}>Quick Links</h2>
 			<ul className={s.list}>
 				{ACCOUNTS.map((account) => {
 					return (
@@ -30,6 +30,6 @@ export const AboutSidebar = () => {
 					)
 				})}
 			</ul>
-		</section>
+		</div>
 	)
 }

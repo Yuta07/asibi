@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import s from './LinkList.module.css'
+import s from './styles.module.css'
 
 type Props = {
 	name: string

@@ -1,0 +1,29 @@
+.container {
+	width: 100%;
+}
+
+.aboutMeSection {
+	width: 100%;
+	margin-top: 40px;
+}
+
+.experienceSection {
+	width: 100%;
+	padding-top: 40px;
+	margin-top: 40px;
+	border-top: 1px solid var(--gray);
+}
+
+.exploreSection {
+	width: 100%;
+	padding-top: 40px;
+	margin-top: 40px;
+	border-top: 1px solid var(--gray);
+}
+
+.quickLinksSection {
+	width: 100%;
+	padding-top: 40px;
+	margin-top: 40px;
+	border-top: 1px solid var(--gray);
+}

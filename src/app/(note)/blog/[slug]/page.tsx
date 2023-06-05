@@ -1,6 +1,6 @@
-import { Share } from '@/components/Share'
 import { PostBody } from '@/components/pages/blog/PostBody'
 import { PostHeader } from '@/components/pages/blog/PostHeader'
+import { Share } from '@/components/ui/Share'
 import { getPostData } from '@/lib/posts'
 
 import s from './Page.module.css'
