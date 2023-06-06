@@ -9,7 +9,7 @@ isDraft: false
 
 ## pnpm での管理
 
-npm や yarn のような node_modules 直下でフラットにパッケージとその依存を全て管理しています。
+npm や yarn は node_modules 直下でフラットにパッケージとその依存を全て管理しています。
 一方で、pnpm は シンボリックリンクを利用して node_modules に配置して、 **.pnpm** の中に以下の命名規則で配置されているすべての依存パッケージをフラットに保存しています。
 
 ```txt

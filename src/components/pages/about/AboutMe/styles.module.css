@@ -7,7 +7,7 @@
 }
 
 .avatarLight {
-	border: 1px solid var(--gray);
+	border: 1px solid var(--border);
 }
 
 .avatarDark {

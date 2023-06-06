@@ -7,7 +7,7 @@ export const ThematicBreak = () => {
 				jsx
 				{`
 				.container {
-					border-top: 1px solid var(--gray);
+					border-top: 1px solid var(--border);
 					margin: 40px 0;
 				}
 			`}

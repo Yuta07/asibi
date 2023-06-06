@@ -26,7 +26,7 @@
 	background: var(--brand);
 }
 
-@media (width < 600px) {
+@media (width < 768px) {
 	.nav {
 		display: none;
 	}

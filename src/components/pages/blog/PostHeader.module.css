@@ -32,7 +32,7 @@
 .tag {
 	padding: 2px 10px;
 	font-size: var(--font-rem-sm);
-	border: 1px solid var(--gray);
+	border: 1px solid var(--border);
 	border-radius: 8px;
 }
 

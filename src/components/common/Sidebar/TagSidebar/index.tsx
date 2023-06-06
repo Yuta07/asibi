@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import { getAllPostsTags } from '@/lib/posts'
 
-import s from './TagsSidebar.module.css'
+import s from './styles.module.css'
 
 function getTags() {
 	const res = getAllPostsTags()

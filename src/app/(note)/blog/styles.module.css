@@ -5,5 +5,13 @@
 	width: 100%;
 	max-width: 960px;
 	padding-inline: 20px;
-	margin: 60px auto;
+	margin: 0 auto;
+}
+
+@media (width < 768px) {
+	.container {
+		grid-template-columns: 100%;
+		row-gap: 40px;
+		column-gap: 0;
+	}
 }

@@ -13,7 +13,7 @@
 	padding: 4px;
 	cursor: pointer;
 	background: transparent;
-	border: 1px solid var(--gray);
+	border: 1px solid var(--border);
 	border-radius: 50px;
 	transform: scale(1.1);
 }

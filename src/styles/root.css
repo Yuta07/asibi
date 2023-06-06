@@ -12,8 +12,8 @@
 * {
 	/* brand foundation */
 	--brand-hue: 172;
-	--brand-saturation: 34%;
-	--brand-lightness: 37%;
+	--brand-saturation: 26%;
+	--brand-lightness: 32%;
 	--brand-sub-hue: 9;
 	--brand-sub-saturation: 77%;
 	--brand-sub-lightness: 48%;
@@ -22,10 +22,10 @@
 	--brand-light: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
 	--brand-sub-light: hsl(var(--brand-sub-hue) var(--brand-sub-saturation) var(--brand-sub-lightness));
 	--text-light: hsl(var(--brand-hue) 36% 10%);
-	--bg-light: hsl(var(--brand-hue) 6% 95%);
-	--gray-light: hsl(var(--brand-hue) 3% 35%);
+	--bg-light: hsl(var(--brand-hue) 5% 92%);
+	--gray-light: hsl(var(--brand-hue) 5% 28%);
+	--border-light: hsl(var(--brand-hue) 5% 65%);
 	--card-bg-light: hsl(var(--brand-hue) var(--brand-saturation) 99%);
-	--image-bg-light: hsl(var(--brand-hue) 5% 83%);
 	--toggle-ball-light: hsl(var(--brand-hue) 3% 73%);
 	--footer-bg-light: linear-gradient(
 		0deg,
@@ -34,17 +34,15 @@
 	);
 
 	/* dark */
-	--brand-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) * 1.7) calc(var(--brand-lightness) * 1.5));
+	--brand-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) * 2) calc(var(--brand-lightness) * 1.75));
 	--brand-sub-dark: hsl(
-		calc(var(--brand-sub-hue) * -1) calc(var(--brand-sub-saturation)) calc(var(--brand-sub-lightness) * 1.5)
+		calc(var(--brand-sub-hue) * -1) calc(var(--brand-sub-saturation)) calc(var(--brand-sub-lightness) * 1.75)
 	);
 	--text-dark: hsl(var(--brand-hue) 15% 95%);
 	--bg-dark: hsl(var(--brand-hue) 10% 10%);
-	--gray-dark: hsl(var(--brand-hue) 6% 77%);
-	--card-bg-dark: hsl(
-		calc(var(--brand-hue) * 1.2) calc(var(--brand-saturation) * 0.8) calc(var(--brand-saturation) * 0.5)
-	);
-	--image-bg-dark: hsl(var(--brand-hue) 5% 83%);
+	--gray-dark: hsl(var(--brand-hue) 6% 70%);
+	--border-dark: hsl(var(--brand-hue) 5% 55%);
+	--card-bg-dark: hsl(calc(var(--brand-hue) * 1.2) var(--brand-saturation) calc(var(--brand-saturation) * 0.7));
 	--toggle-ball-dark: hsl(var(--brand-hue) 3% 73%);
 	--footer-bg-dark: linear-gradient(
 		0deg,
@@ -69,8 +67,8 @@
 	--text: var(--text-light);
 	--bg: var(--bg-light);
 	--gray: var(--gray-light);
+	--border: var(--border-light);
 	--card-bg: var(--card-bg-light);
-	--image-bg: var(--image-bg-light);
 	--toggle-ball: var(--toggle-ball-light);
 	--footer-bg: var(--footer-bg-light);
 	--font-rem-xs: 0.75rem;
@@ -93,8 +91,8 @@
 		--text: var(--text-dark);
 		--bg: var(--bg-dark);
 		--gray: var(--gray-dark);
+		--border: var(--border-dark);
 		--card-bg: var(--card-bg-dark);
-		--image-bg: var(--image-bg-dark);
 		--toggle-ball: var(--toggle-ball-dark);
 		--footer-bg: var(--footer-bg-dark);
 	}
@@ -109,8 +107,8 @@
 	--text: var(--text-dark);
 	--bg: var(--bg-dark);
 	--gray: var(--gray-dark);
+	--border: var(--border-dark);
 	--card-bg: var(--card-bg-dark);
-	--image-bg: var(--image-bg-dark);
 	--toggle-ball: var(--toggle-ball-dark);
 	--footer-bg: var(--footer-bg-dark);
 }
