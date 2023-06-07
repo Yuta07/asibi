@@ -1,3 +1,4 @@
+import { AuthorAside } from '@/components/common/Aside/AuthorAside'
 import { PostBody } from '@/components/pages/blog/PostBody'
 import { PostHeader } from '@/components/pages/blog/PostHeader'
 import { Share } from '@/components/ui/Share'
@@ -20,8 +21,11 @@ export default function Page({ params: { slug } }: { params: { slug: string } })
 			<div className={s.contents}>
 				<main>
 					<PostBody post={data} />
-					<Share slug={slug} title={data.title} />
 				</main>
+				<AuthorAside />
+			</div>
+			<div className={s.shareField}>
+				<Share slug={slug} title={data.title} />
 			</div>
 		</article>
 	)

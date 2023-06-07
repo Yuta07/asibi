@@ -1,4 +1,4 @@
-import { TagsSidebar } from '@/components/common/Sidebar/TagSidebar'
+import { TagsAside } from '@/components/common/Aside/TagsAside'
 import { Posts } from '@/components/pages/blog/Posts'
 
 import s from './styles.module.css'
@@ -7,7 +7,7 @@ export default function Page({ params: { tag } }: { params: { tag: string | unde
 	return (
 		<main className={s.container}>
 			<Posts tag={tag} />
-			<TagsSidebar />
+			<TagsAside />
 		</main>
 	)
 }

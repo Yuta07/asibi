@@ -1,0 +1,10 @@
+.container {
+	width: 100%;
+	padding: 20px;
+	background: var(--card-bg);
+	border-radius: 8px;
+}
+
+.container > *:first-child {
+	margin-top: 0;
+}

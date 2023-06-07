@@ -1,6 +1,6 @@
 .container {
 	position: sticky;
-	top: 80px;
+	top: 40px;
 	z-index: 1;
 	width: 100%;
 	height: min-content;

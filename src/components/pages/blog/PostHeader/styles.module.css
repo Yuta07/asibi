@@ -1,5 +1,9 @@
 .header {
 	width: 100%;
+	max-width: 960px;
+	padding-block: 60px;
+	padding-inline: 20px;
+	margin: 0 auto;
 }
 
 .eyecatch {
@@ -39,4 +43,11 @@
 .createdAt {
 	font-size: var(--font-rem-sm);
 	color: var(--gray);
+}
+
+@media (width < 768px) {
+	.title {
+		margin: 20px auto 0;
+		font-size: var(--font-rem-2xl);
+	}
 }

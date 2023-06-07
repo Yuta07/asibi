@@ -1,4 +1,4 @@
-import s from './PostHeader.module.css'
+import s from './styles.module.css'
 
 import type { Post } from '@/lib/posts'
 

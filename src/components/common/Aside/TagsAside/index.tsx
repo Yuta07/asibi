@@ -10,7 +10,7 @@ function getTags() {
 	return res
 }
 
-export const TagsSidebar = () => {
+export const TagsAside = () => {
 	const data = getTags()
 
 	return (

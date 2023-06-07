@@ -2,7 +2,7 @@ import { PageTitle } from '@/components/ui/PageTitle'
 import { PostListItem } from '@/components/ui/PostListItem'
 import { getSortedPostsData } from '@/lib/posts'
 
-import s from './Posts.module.css'
+import s from './styles.module.css'
 
 type Props = {
 	tag: string | undefined

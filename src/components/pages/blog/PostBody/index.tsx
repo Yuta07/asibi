@@ -16,7 +16,7 @@ import { ElParagraph, Paragraph } from '@/components/markdown/Paragraph'
 import { Strong } from '@/components/markdown/Strong'
 import { ThematicBreak } from '@/components/markdown/ThematicBreak'
 
-import s from './PostBody.module.css'
+import s from './styles.module.css'
 
 import type { Post } from '@/lib/posts'
 

@@ -42,7 +42,7 @@
 	--bg-dark: hsl(var(--brand-hue) 10% 10%);
 	--gray-dark: hsl(var(--brand-hue) 6% 70%);
 	--border-dark: hsl(var(--brand-hue) 5% 55%);
-	--card-bg-dark: hsl(calc(var(--brand-hue) * 1.2) var(--brand-saturation) calc(var(--brand-saturation) * 0.7));
+	--card-bg-dark: hsl(calc(var(--brand-hue) * 1.2) var(--brand-saturation) calc(var(--brand-saturation) * 0.5));
 	--toggle-ball-dark: hsl(var(--brand-hue) 3% 73%);
 	--footer-bg-dark: linear-gradient(
 		0deg,
