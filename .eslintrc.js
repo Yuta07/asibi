@@ -28,6 +28,7 @@ module.exports = {
 		'plugin:import/warnings',
 		'plugin:import/typescript',
 		'prettier',
+		'plugin:storybook/recommended',
 	],
 	ignorePatterns: ['*.config.js'],
 	plugins: ['@typescript-eslint', 'react', 'import', 'unused-imports'],
@@ -89,6 +90,7 @@ module.exports = {
 		react: {
 			version: 'detect', // detect the version of React to use
 		},
+
 		'import/resolver': {
 			node: {
 				extensions: ['.js', '.jsx', '.ts', '.tsx'],

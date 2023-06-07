@@ -17,7 +17,7 @@ export const Share = ({ slug, title }: Props) => {
 			<a
 				className={styles.anchor}
 				data-testid="blog-share-button"
-				href={`https://twitter.com/share?url=${pageUrl}&text=${encodeTitle}&via=yuta030Q`}
+				href={`https://twitter.com/share?url=${pageUrl}&text=${encodeTitle}&via=asibi3Q`}
 				rel="nofollow"
 			>
 				<Image alt="twitter_share" height={40} src="/assets/twitter_share.svg" width={40} />

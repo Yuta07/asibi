@@ -14,7 +14,7 @@ export const TagsSidebar = () => {
 	const data = getTags()
 
 	return (
-		<section className={s.container}>
+		<aside className={s.container}>
 			<h2 className={s.title}>Tags</h2>
 			<div className={s.tags}>
 				{data.map((data) => {
@@ -25,6 +25,6 @@ export const TagsSidebar = () => {
 					)
 				})}
 			</div>
-		</section>
+		</aside>
 	)
 }

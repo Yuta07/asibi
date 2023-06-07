@@ -4,12 +4,8 @@
 
 .header {
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
 	justify-content: space-between;
-}
-
-.title {
-	font-size: var(--font-rem-2xl);
 }
 
 .count {

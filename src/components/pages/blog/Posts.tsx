@@ -1,3 +1,4 @@
+import { PageTitle } from '@/components/ui/PageTitle'
 import { PostListItem } from '@/components/ui/PostListItem'
 import { getSortedPostsData } from '@/lib/posts'
 
@@ -19,7 +20,7 @@ export const Posts = ({ tag }: Props) => {
 	return (
 		<section className={s.container}>
 			<div className={s.header}>
-				<h2 className={s.title}>{tag ? tag : 'Posts'}</h2>
+				<PageTitle>{tag ? tag : 'Posts'}</PageTitle>
 				<p>
 					<strong className={s.count}>{data.length}</strong>Article{data.length > 1 && 's'}
 				</p>

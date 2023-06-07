@@ -35,7 +35,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
       - name: pnpm install
         run: |
-          pnpm install
+          pnpm install --no-frozen-lockfile
       - name: run Lighthouse CI
         run: |
           pnpm install -g @lhci/cli@0.11.x

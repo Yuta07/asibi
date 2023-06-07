@@ -6,7 +6,7 @@ type Props = { post: Omit<Post, 'preface'> }
 
 export const PostHeader = ({ post }: Props) => {
 	return (
-		<div className={s.header}>
+		<header className={s.header}>
 			<img alt={`${post.title}'s eyecatch`} className={s.eyecatch} height={60} src={post.eyecatch} width={60} />
 			<h1 className={s.title}>{post.title}</h1>
 			<div className={s.sub}>
@@ -21,6 +21,6 @@ export const PostHeader = ({ post }: Props) => {
 				</div>
 				<small className={s.createdAt}>{post.createdAt.replace(/-/g, '.')}</small>
 			</div>
-		</div>
+		</header>
 	)
 }

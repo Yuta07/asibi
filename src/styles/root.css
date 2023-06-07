@@ -12,8 +12,8 @@
 * {
 	/* brand foundation */
 	--brand-hue: 172;
-	--brand-saturation: 26%;
-	--brand-lightness: 32%;
+	--brand-saturation: 31%;
+	--brand-lightness: 31%;
 	--brand-sub-hue: 9;
 	--brand-sub-saturation: 77%;
 	--brand-sub-lightness: 48%;
@@ -34,7 +34,7 @@
 	);
 
 	/* dark */
-	--brand-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) * 2) calc(var(--brand-lightness) * 1.75));
+	--brand-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) * 2) calc(var(--brand-lightness) * 2));
 	--brand-sub-dark: hsl(
 		calc(var(--brand-sub-hue) * -1) calc(var(--brand-sub-saturation)) calc(var(--brand-sub-lightness) * 1.75)
 	);
