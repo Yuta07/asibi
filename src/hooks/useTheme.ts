@@ -15,7 +15,7 @@ export const useTheme = () => {
 
 	const handleChangeTheme = useCallback(() => {
 		const storageTheme = window.localStorage.getItem('theme') as 'light' | 'dark' | null
-		const newTheme = storageTheme === 'dark' ? 'light' : 'dark'
+		const newTheme = storageTheme === 'dark' || storageTheme === null ? 'light' : 'dark'
 		const root = window.document.documentElement
 
 		root.setAttribute('data-theme', newTheme)
