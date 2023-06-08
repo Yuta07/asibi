@@ -34,5 +34,5 @@ export const metadata: Metadata = {
 		minimumScale: 1,
 		maximumScale: 5,
 	},
-	twitter: { site: '@asibi3Q', card: 'summary' },
+	twitter: { site: '@asibi3Q', card: 'summary', images: ['https://asibi.dev/ogp.jpg'] },
 }
