@@ -45,7 +45,7 @@ jobs:
         id: cpu-cores
         uses: SimenB/github-actions-cpu-cores@v1
       - name: test
-        run: pnpm test --max-workers ${{ steps.cpu-cores.outputs.count }}
+        run: pnpm test ${{ steps.cpu-cores.outputs.count }}
       # - name: Install Playwright
       #   run: npx playwright install --with-deps chromium
       # - name: test e2e
