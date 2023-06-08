@@ -11,7 +11,7 @@ export const InlineCode: FC<{ children: ReactNode }> = ({ children }) => {
 					padding: 2px 8px;
 					border-radius: 8px;
 					color: var(--text);
-					background: #053959;
+					background: var(--bg);
 					line-height: 2;
 				}
 			`}</style>

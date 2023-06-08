@@ -1,6 +1,6 @@
 ---
-title: 'pnpmとはどういうものなのか'
-preface: 'yarn から pnpm に移行して気づいた pnpm の利点'
+title: 'pnpmにdive'
+preface: 'yarn から pnpm に移行した記録'
 createdAt: '2023-03-11'
 eyecatch: '/blog/why-use-pnpm/pear_3d.png'
 tags: ['pnpm']

@@ -2,6 +2,8 @@ import { AnalyticsScript } from '@/components/common/Analytics/GoogleAnalytics/i
 import { Footer } from '@/components/common/Footer'
 import { ThemeProvider } from '@/contexts/ThemeProvider'
 
+export { metadata } from '@/lib/metadata'
+
 import '@/styles/root.css'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

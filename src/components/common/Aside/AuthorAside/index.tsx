@@ -1,7 +1,8 @@
 'use client'
 
-import { useThemeState } from '@/contexts/ThemeProvider'
 import Image from 'next/image'
+
+import { useThemeState } from '@/contexts/ThemeProvider'
 
 import s from './styles.module.css'
 
@@ -23,7 +24,6 @@ export const AuthorAside = () => {
 
 	return (
 		<aside className={s.container}>
-			<h2 className={s.title}>Author</h2>
 			<div className={s.authorInfo}>
 				<div className={s.authorMeta}>
 					<Image alt="asibi3Q" className={s[avatarClassName]} height={48} src="/icon/icon.svg" width={48} />
@@ -32,7 +32,13 @@ export const AuthorAside = () => {
 						<div className={s.iconField}>
 							{ACCOUNTS.map((account) => {
 								return (
-									<a className={s.link} href={account.link} rel="noopener noreferrer" target="_blank">
+									<a
+										key={account.name}
+										className={s.link}
+										href={account.link}
+										rel="noopener noreferrer"
+										target="_blank"
+									>
 										<Image alt={`link to ${account.name}`} height={20} src={account.image} width={20} />
 									</a>
 								)

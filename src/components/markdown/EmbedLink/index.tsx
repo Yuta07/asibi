@@ -49,8 +49,6 @@ export const EmbedLink = ({ href }: Props) => {
 
 	if (ogState === null) return null
 
-	// console.log(ogState)
-
 	if ('title' in ogState) {
 		title = ogState['title']
 	} else if ('site_name' in ogState) {

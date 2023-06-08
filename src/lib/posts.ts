@@ -119,6 +119,7 @@ export const getPostData = (slug: string) => {
 		content,
 		...(data as {
 			title: string
+			preface: string
 			createdAt: string
 			eyecatch: string
 			tags: string[]

@@ -3,7 +3,8 @@
 	"short_name": "asibi",
 	"start_url": ".",
 	"display": "standalone",
-	"background_color": "#241B25",
+	"theme_color": "#62daca",
+	"background_color": "#171c1b",
 	"description": "asibi3Q's website.",
 	"icons": [
 		{ "src": "/icon/icon-192.png", "type": "image/png", "sizes": "192x192" },
