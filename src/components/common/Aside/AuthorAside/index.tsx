@@ -47,7 +47,8 @@ export const AuthorAside = () => {
 					</div>
 				</div>
 				<p className={s.about}>
-					Hi there 👋 I'm asibi3Q, Web Frontend engineer living in Kawasaki from 🏯 Nagoya, Japan. Thanks!!
+					Hi there 👋 I'm asibi3Q, Web Frontend engineer living in Kawasaki from 🏯 Nagoya, Japan. I like fish rather
+					than meat. Thanks!!
 				</p>
 			</div>
 		</aside>

@@ -1,7 +1,8 @@
 'use client'
 
-import { useThemeState } from '@/contexts/ThemeProvider'
 import Image from 'next/image'
+
+import { useThemeState } from '@/contexts/ThemeProvider'
 
 import s from './styles.module.css'
 
@@ -20,7 +21,7 @@ export const AboutMe = () => {
 				frontend engineer. Currently working as a web application engineer.
 			</p>
 			<p className={s.intro}>Mainly focused on React and Next.js, but I'm also interested in many things.</p>
-			<p className={s.intro}>I love football and favorite team is Man United. Thanks!!</p>
+			<p className={s.intro}>I love football and favorite team is Man United. I like fish rather than meat. Thanks!!</p>
 			<a
 				className={s.link}
 				href="https://shorthaired-seaplane-f56.notion.site/Curriculum-vitae-fecdfaa602c54dbf8da36e5533467bc7"
