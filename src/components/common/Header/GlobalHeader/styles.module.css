@@ -1,0 +1,32 @@
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	padding-block: 16px;
+	backdrop-filter: blur(8px);
+}
+
+.inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 960px;
+	min-height: 48px;
+	padding-inline: 20px;
+	margin: 0 auto;
+}
+
+.rootLink {
+	display: inline-flex;
+}
+
+@media (width < 768px) {
+	.header {
+		padding-block: 10px;
+	}
+
+	.inner {
+		min-height: 28px;
+	}
+}

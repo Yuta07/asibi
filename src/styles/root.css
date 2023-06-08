@@ -1,0 +1,157 @@
+/* @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;900&display=swap'); */
+
+/* @font-face {
+	font-family: 'M PLUS Rounded 1c';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/font/MPLUSRounded1c-Regular.ttf') format('ttf');
+	font-display: swap;
+	unicode-range: U+000-5FF;
+} */
+
+* {
+	/* brand foundation */
+	--brand-hue: 172;
+	--brand-saturation: 31%;
+	--brand-lightness: 31%;
+	--brand-sub-hue: 9;
+	--brand-sub-saturation: 77%;
+	--brand-sub-lightness: 48%;
+
+	/* light */
+	--brand-light: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
+	--brand-sub-light: hsl(var(--brand-sub-hue) var(--brand-sub-saturation) var(--brand-sub-lightness));
+	--text-light: hsl(var(--brand-hue) 36% 10%);
+	--bg-light: hsl(var(--brand-hue) 5% 92%);
+	--gray-light: hsl(var(--brand-hue) 5% 28%);
+	--border-light: hsl(var(--brand-hue) 5% 65%);
+	--card-bg-light: hsl(var(--brand-hue) var(--brand-saturation) 99%);
+	--toggle-ball-light: hsl(var(--brand-hue) 3% 73%);
+	--footer-bg-light: linear-gradient(
+		0deg,
+		hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness) / 0%),
+		hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness) / 5%)
+	);
+
+	/* dark */
+	--brand-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) * 2) calc(var(--brand-lightness) * 2));
+	--brand-sub-dark: hsl(
+		calc(var(--brand-sub-hue) * -1) calc(var(--brand-sub-saturation)) calc(var(--brand-sub-lightness) * 1.75)
+	);
+	--text-dark: hsl(var(--brand-hue) 15% 95%);
+	--bg-dark: hsl(var(--brand-hue) 10% 10%);
+	--gray-dark: hsl(var(--brand-hue) 6% 70%);
+	--border-dark: hsl(var(--brand-hue) 5% 55%);
+	--card-bg-dark: hsl(calc(var(--brand-hue) * 1.2) var(--brand-saturation) calc(var(--brand-saturation) * 0.5));
+	--toggle-ball-dark: hsl(var(--brand-hue) 3% 73%);
+	--footer-bg-dark: linear-gradient(
+		0deg,
+		hsl(var(--brand-hue) calc(var(--brand-saturation)) calc(var(--brand-lightness)) / 0%),
+		hsl(var(--brand-hue) calc(var(--brand-saturation)) calc(var(--brand-lightness)) / 5%)
+	);
+
+	box-sizing: border-box;
+
+	/* reset */
+	padding: 0;
+	margin: 0;
+}
+
+:root,
+:root[data-theme='light'] {
+	color-scheme: light;
+
+	/* set defaults */
+	--brand: var(--brand-light);
+	--brand-sub: var(--brand-sub-light);
+	--text: var(--text-light);
+	--bg: var(--bg-light);
+	--gray: var(--gray-light);
+	--border: var(--border-light);
+	--card-bg: var(--card-bg-light);
+	--toggle-ball: var(--toggle-ball-light);
+	--footer-bg: var(--footer-bg-light);
+	--font-rem-xs: 0.75rem;
+	--font-rem-sm: 0.875rem;
+	--font-rem-md: 1rem;
+	--font-rem-lg: 1.125rem;
+	--font-rem-xl: 1.25rem;
+	--font-rem-2xl: 1.5rem;
+	--font-rem-3xl: 1.75rem;
+	--font-rem-4xl: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		color-scheme: dark;
+
+		/* set dark color */
+		--brand: var(--brand-dark);
+		--brand-sub: var(--brand-sub-dark);
+		--text: var(--text-dark);
+		--bg: var(--bg-dark);
+		--gray: var(--gray-dark);
+		--border: var(--border-dark);
+		--card-bg: var(--card-bg-dark);
+		--toggle-ball: var(--toggle-ball-dark);
+		--footer-bg: var(--footer-bg-dark);
+	}
+}
+
+:root[data-theme='dark'] {
+	color-scheme: dark;
+
+	/* set dark color */
+	--brand: var(--brand-dark);
+	--brand-sub: var(--brand-sub-dark);
+	--text: var(--text-dark);
+	--bg: var(--bg-dark);
+	--gray: var(--gray-dark);
+	--border: var(--border-dark);
+	--card-bg: var(--card-bg-dark);
+	--toggle-ball: var(--toggle-ball-dark);
+	--footer-bg: var(--footer-bg-dark);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	height: 100%;
+	min-height: 100vh;
+	font-family: YakuHanJP, Mukta, -apple-system, BlinkMacSystem, 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+		'Hiragino Sans', Meiryo, sans-serif;
+	font-size: var(--font-rem-md);
+	font-weight: 400;
+	font-kerning: normal;
+	line-height: 1.5;
+	color: var(--text);
+	letter-spacing: 0.5px;
+	word-wrap: break-word;
+	background: var(--bg);
+	transition: background 0.2s ease-out;
+}
+
+/* twitter card style */
+.twitter-tweet,
+.twitter-tweet-rendered {
+	margin: 0 auto;
+}
+
+@media (width < 768px) {
+	:root {
+		--font-rem-xs: 0.75rem;
+		--font-rem-sm: 0.875rem;
+		--font-rem-md: 15px;
+		--font-rem-lg: 1rem;
+		--font-rem-2xl: 1.25rem;
+		--font-rem-4xl: 1.5rem;
+	}
+
+	.twitter-tweet,
+	.twitter-tweet-rendered {
+		width: 100% !important;
+		max-width: 320px;
+	}
+}

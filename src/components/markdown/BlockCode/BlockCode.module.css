@@ -1,0 +1,10 @@
+.container {
+	margin: 30px 0;
+	font-size: var(--font-size-sm);
+}
+
+.container pre {
+	padding: 20px !important;
+	font-size: var(--font-rem-sm);
+	border-radius: 8px;
+}

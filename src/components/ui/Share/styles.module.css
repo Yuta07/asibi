@@ -1,0 +1,38 @@
+.container {
+	position: relative;
+	text-align: center;
+}
+
+.share {
+	font-size: var(--font-size-2xl);
+	color: var(--color-text);
+}
+
+.anchor {
+	display: inline-flex;
+	margin-top: 8px;
+	border-radius: 50%;
+	transition: 0.3s ease-in-out;
+}
+
+.anchor::before {
+	position: absolute;
+	top: 100%;
+	left: 5%;
+	z-index: -1;
+	width: 90%;
+	height: 10px;
+	content: '';
+	background: radial-gradient(ellipse at center, rgb(119 114 114 / 30%) 0%, rgb(113 110 110 / 0%) 80%);
+	opacity: 0;
+	transition: 0.3s;
+}
+
+.anchor:hover {
+	transform: translateY(-5px);
+}
+
+.anchor:hover::before {
+	opacity: 1;
+	transform: translateY(5px);
+}

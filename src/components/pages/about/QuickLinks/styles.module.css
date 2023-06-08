@@ -1,0 +1,11 @@
+.heading {
+	font-size: var(--font-rem-2xl);
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-top: 20px;
+	list-style: none;
+}

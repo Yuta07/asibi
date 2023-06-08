@@ -1,6 +1,4 @@
-const path = require('path')
-
-module.exports = {
+const nextConfig = {
 	images: {
 		disableStaticImages: true,
 	},
@@ -11,9 +9,25 @@ module.exports = {
 			use: ['@svgr/webpack'],
 		})
 
+		config.externals = [...config.externals, 'canvas', 'jsdom']
+
 		return config
 	},
-	sassOptions: {
-		includePaths: [path.join(__dirname, 'styles')],
+	swcMinify: true,
+	experimental: {
+		typedRoutes: true,
+		// fontLoaders: [{ loader: 'next/font/google', options: { subsets: ['latin'] } }],
 	},
 }
+
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+	enabled: process.env.ANALYZE === 'true',
+})
+
+const withSentryConfig = (config) => {
+	return require('@sentry/nextjs').withSentryConfig(config, { silent: true }, { hideSourceMaps: true })
+}
+
+const withPlugins = require('next-compose-plugins')
+
+module.exports = withPlugins([withSentryConfig, withBundleAnalyzer], nextConfig)

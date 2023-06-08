@@ -1,0 +1,33 @@
+.worksHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.hero {
+	font-size: var(--font-rem-2xl);
+}
+
+.moreLink {
+	display: flex;
+	gap: 4px;
+	padding-block: 2px;
+	color: var(--gray);
+	text-decoration: none;
+}
+
+.moreLink:hover {
+	color: var(--text);
+	transition: 0.2s;
+}
+
+.worksContainer {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.waitTxt {
+	margin-top: 20px;
+	font-size: var(--font-rem-sm);
+	font-weight: 550;
+}

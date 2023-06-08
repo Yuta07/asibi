@@ -3,14 +3,20 @@ updates:
   - package-ecosystem: npm
     directory: '/'
     schedule:
-      interval: daily
+      interval: weekly
+      day: 'sunday'
       time: '21:00'
+      timezone: 'Asia/Tokyo'
     allow:
-      - dependency-type: 'all'
+      - dependency-type: 'development'
     commit-message:
-      prefix: 'npm'
+      prefix: '[npm]'
     open-pull-requests-limit: 10
+    pull-request-branch-name:
+      separator: '-'
     target-branch: 'develop'
     labels:
-      - 'npm dependencies'
+      - 'dependabot'
+      - 'npm'
+      - 'dependencies'
     versioning-strategy: 'increase-if-necessary'

@@ -1,0 +1,19 @@
+.container {
+	width: 100%;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.count {
+	margin-right: 4px;
+	font-size: var(--font-rem-lg);
+}
+
+.list {
+	width: 100%;
+	margin-top: 20px;
+}

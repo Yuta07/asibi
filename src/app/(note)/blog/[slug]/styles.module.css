@@ -1,0 +1,34 @@
+.articleContainer {
+	width: 100%;
+	padding-bottom: 80px;
+}
+
+.contents {
+	display: grid;
+	grid-template-columns: calc(100% - 280px) 240px;
+	column-gap: 40px;
+	width: 100%;
+	max-width: 960px;
+	padding-inline: 20px;
+	margin: 0 auto;
+}
+
+.shareField {
+	width: 100%;
+	max-width: 960px;
+	padding-inline: 20px;
+	padding-top: 40px;
+	margin: 0 auto;
+}
+
+@media (width < 768px) {
+	.container {
+		padding-bottom: 60px;
+	}
+
+	.contents {
+		grid-template-columns: 100%;
+		row-gap: 40px;
+		column-gap: 0;
+	}
+}

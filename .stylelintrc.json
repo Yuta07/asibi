@@ -1,10 +1,9 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": ["stylelint-config-standard", "stylelint-config-recess-order"],
   "ignoreFiles": ["**/*.{js, ts}"],
   "rules": {
     "at-rule-no-unknown": [true],
     "block-no-empty": true,
-    "color-hex-case": "lower",
     "color-hex-length": "long",
     "color-named": "never",
     "color-no-invalid-hex": true,
@@ -16,22 +15,11 @@
       }
     ],
     "comment-no-empty": true,
-    "declaration-colon-space-after": "always",
-    "declaration-colon-space-before": "never",
     "function-url-quotes": null,
-    "indentation": "tab",
-    "linebreaks": "unix",
-    "max-empty-lines": 1,
     "max-nesting-depth": 2,
-    "no-empty-first-line": true,
     "no-empty-source": true,
-    "number-max-precision": 2,
-    "number-leading-zero": "always",
-    "number-no-trailing-zeros": true,
-    "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$",
-    "time-min-milliseconds": 100,
-    "value-list-comma-newline-after": "always-multi-line",
-    "value-list-comma-space-after": "always",
-    "value-list-comma-space-before": "never"
+    "number-max-precision": 3,
+    "selector-class-pattern": "^[a-z][[-]?[a-z]]*",
+    "time-min-milliseconds": 100
   }
 }

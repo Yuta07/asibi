@@ -1,0 +1,37 @@
+.orderedList {
+	position: relative;
+	padding: 5px 0 5px 28px;
+}
+
+.orderedList::before {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	display: inline-block;
+	font-weight: bold;
+	color: var(--text);
+	text-align: center;
+	content: counters(order, '-') '.';
+	counter-increment: order;
+}
+
+.orderedList p {
+	margin-top: 0 !important;
+}
+
+.orderedList ol li {
+	padding: 5px 0 5px 48px;
+}
+
+.orderedList ol li::before {
+	top: 5px;
+}
+
+.unOrderedList {
+	position: relative;
+	padding: 5px 0;
+}
+
+.unOrderedList p {
+	margin-top: 0 !important;
+}

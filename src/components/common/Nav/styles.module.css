@@ -1,0 +1,33 @@
+.nav {
+	height: 100%;
+	padding: 12px;
+	background: var(--card-bg);
+	border-radius: 20px;
+}
+
+.navList {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+.navListItemAnchor {
+	padding: 4px 16px;
+	color: var(--text);
+	text-decoration: none;
+	background: inherit;
+	border: 1px solid transparent;
+	border-radius: 20px;
+	transition: 0.2s all;
+}
+
+.navListItemAnchor:hover {
+	color: var(--bg);
+	background: var(--brand);
+}
+
+@media (width < 768px) {
+	.nav {
+		display: none;
+	}
+}

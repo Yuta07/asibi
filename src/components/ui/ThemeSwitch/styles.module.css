@@ -1,0 +1,35 @@
+.themeCheck {
+	position: absolute;
+	opacity: 0;
+}
+
+.themeLabel {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 44px;
+	height: 24px;
+	padding: 4px;
+	cursor: pointer;
+	background: transparent;
+	border: 1px solid var(--border);
+	border-radius: 50px;
+	transform: scale(1.1);
+}
+
+.themeBall {
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	width: 16px;
+	height: 16px;
+	background: var(--toggle-ball);
+	border-radius: 9999px;
+	transition: transform 0.2s linear;
+	transform: translateX(-20px);
+}
+
+.themeCheck:checked + .themeLabel .themeBall {
+	transform: translateX(0);
+}

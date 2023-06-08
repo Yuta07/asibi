@@ -1,0 +1,57 @@
+.container {
+	position: sticky;
+	top: 80px;
+	z-index: 1;
+	width: 100%;
+	height: min-content;
+}
+
+.authorInfo {
+	width: 100%;
+	padding: 20px 16px;
+	background: var(--card-bg);
+	border-radius: 8px;
+}
+
+.authorMeta {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+}
+
+.avatarLight,
+.avatarDark {
+	padding: 2px;
+	background: #ffffff;
+	border-radius: 9999px;
+	object-fit: cover;
+}
+
+.avatarLight {
+	border: 1px solid var(--border);
+}
+
+.avatarDark {
+	border: 1px solid transparent;
+}
+
+.author {
+	font-size: var(--font-rem-lg);
+	font-weight: 700;
+}
+
+.iconField {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+	margin-top: 8px;
+}
+
+.link:hover {
+	filter: contrast(30%);
+	transition: 0.2s;
+}
+
+.about {
+	margin-top: 20px;
+}
