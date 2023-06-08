@@ -58,7 +58,7 @@
     "@storybook/nextjs": "^7.0.20",
     "@storybook/react": "^7.0.20",
     "@storybook/testing-library": "^0.0.14-next.2",
-    "@svgr/webpack": "^6.1.2",
+    "@svgr/webpack": "^8.0.1",
     "@testing-library/dom": "^9.0.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^14.0.0",
