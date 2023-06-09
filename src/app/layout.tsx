@@ -1,7 +1,9 @@
+import { Suspense } from 'react'
+
 import { AnalyticsScript } from '@/components/common/Analytics/GoogleAnalytics/index'
 import { Footer } from '@/components/common/Footer'
+import { NavigationProgress } from '@/components/ui/NavigationProgress'
 import { ThemeProvider } from '@/contexts/ThemeProvider'
-
 export { metadata } from '@/lib/metadata'
 
 import '@/styles/root.css'
@@ -36,6 +38,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<body>
 				<ThemeProvider>
 					{children}
+					<Suspense fallback={null}>
+						<NavigationProgress />
+					</Suspense>
 					<Footer />
 				</ThemeProvider>
 			</body>
