@@ -26,9 +26,11 @@ export const metadata: Metadata = {
 
 export default function Page({ params: { tag } }: { params: { tag: string | undefined } }) {
 	return (
-		<main className={s.container}>
-			<Posts tag={tag} />
-			<TagsAside />
-		</main>
+		<>
+			<main className={s.container}>
+				<Posts tag={tag} />
+				<TagsAside />
+			</main>
+		</>
 	)
 }
