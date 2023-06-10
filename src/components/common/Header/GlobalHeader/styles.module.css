@@ -23,10 +23,14 @@
 
 @media (width < 768px) {
 	.header {
-		padding-block: 10px;
+		padding-block: 0;
 	}
 
 	.inner {
-		min-height: 28px;
+		padding-inline: 20px 0;
+	}
+
+	.themeButton {
+		display: none;
 	}
 }

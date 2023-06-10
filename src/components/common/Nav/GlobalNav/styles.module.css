@@ -1,7 +1,7 @@
 .nav {
 	height: 100%;
 	padding: 12px;
-	background: var(--card-bg);
+	background: var(--brand);
 	border-radius: 20px;
 }
 
@@ -13,7 +13,8 @@
 
 .navListItemAnchor {
 	padding: 4px 16px;
-	color: var(--text);
+	font-weight: 550;
+	color: var(--bg);
 	text-decoration: none;
 	background: inherit;
 	border: 1px solid transparent;
@@ -22,8 +23,8 @@
 }
 
 .navListItemAnchor:hover {
-	color: var(--bg);
-	background: var(--brand);
+	color: var(--text);
+	background: var(--hover-bg);
 }
 
 @media (width < 768px) {

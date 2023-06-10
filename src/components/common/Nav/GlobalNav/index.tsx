@@ -9,7 +9,7 @@ const NAV_LIST = [
 	{ name: 'Works', link: '/works' },
 ] as const
 
-export const Nav = () => {
+export const GlobalNav = () => {
 	return (
 		<nav className={s.nav}>
 			<ul className={s.navList}>

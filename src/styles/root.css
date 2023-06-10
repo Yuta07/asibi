@@ -26,7 +26,9 @@
 	--gray-light: hsl(var(--brand-hue) 5% 28%);
 	--border-light: hsl(var(--brand-hue) 5% 65%);
 	--card-bg-light: hsl(var(--brand-hue) var(--brand-saturation) 99%);
+	--hover-bg-light: hsl(var(--brand-hue) calc(var(--brand-saturation) * 1.75) calc(var(--brand-lightness) * 1.75));
 	--toggle-ball-light: hsl(var(--brand-hue) 3% 73%);
+	--overlay-light: rgb(15 15 15);
 	--footer-bg-light: linear-gradient(
 		0deg,
 		hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness) / 0%),
@@ -43,7 +45,9 @@
 	--gray-dark: hsl(var(--brand-hue) 6% 70%);
 	--border-dark: hsl(var(--brand-hue) 5% 55%);
 	--card-bg-dark: hsl(calc(var(--brand-hue) * 1.2) var(--brand-saturation) calc(var(--brand-saturation) * 0.5));
+	--hover-bg-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) * 0.7) calc(var(--brand-lightness) * 0.7));
 	--toggle-ball-dark: hsl(var(--brand-hue) 3% 73%);
+	--overlay-dark: rgb(192 192 192);
 	--footer-bg-dark: linear-gradient(
 		0deg,
 		hsl(var(--brand-hue) calc(var(--brand-saturation)) calc(var(--brand-lightness)) / 0%),
@@ -69,7 +73,9 @@
 	--gray: var(--gray-light);
 	--border: var(--border-light);
 	--card-bg: var(--card-bg-light);
+	--hover-bg: var(--hover-bg-light);
 	--toggle-ball: var(--toggle-ball-light);
+	--overlay: var(--overlay-light);
 	--footer-bg: var(--footer-bg-light);
 	--font-rem-xs: 0.75rem;
 	--font-rem-sm: 0.875rem;
@@ -93,7 +99,9 @@
 		--gray: var(--gray-dark);
 		--border: var(--border-dark);
 		--card-bg: var(--card-bg-dark);
+		--hover-bg: var(--hover-bg-dark);
 		--toggle-ball: var(--toggle-ball-dark);
+		--overlay: var(--overlay-dark);
 		--footer-bg: var(--footer-bg-dark);
 	}
 }
@@ -109,7 +117,9 @@
 	--gray: var(--gray-dark);
 	--border: var(--border-dark);
 	--card-bg: var(--card-bg-dark);
+	--hover-bg: var(--hover-bg-dark);
 	--toggle-ball: var(--toggle-ball-dark);
+	--overlay: var(--overlay-dark);
 	--footer-bg: var(--footer-bg-dark);
 }
 
