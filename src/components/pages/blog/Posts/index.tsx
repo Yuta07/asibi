@@ -1,6 +1,5 @@
 import { PageTitle } from '@/components/ui/PageTitle'
 import { PostListItem } from '@/components/ui/PostListItem'
-import { generatedRssFeed } from '@/lib/feed'
 import { getSortedPostsData } from '@/lib/posts'
 
 import s from './styles.module.css'
@@ -11,8 +10,6 @@ type Props = {
 
 function getPosts(tag: string | undefined) {
 	const res = getSortedPostsData(tag)
-
-	generatedRssFeed()
 
 	return res
 }

@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 
 import { TagsAside } from '@/components/common/Aside/TagsAside'
+import { Feed } from '@/components/pages/blog/Feed'
 import { Posts } from '@/components/pages/blog/Posts'
 
 import s from './styles.module.css'
@@ -31,6 +32,7 @@ export default function Page({ params: { tag } }: { params: { tag: string | unde
 				<Posts tag={tag} />
 				<TagsAside />
 			</main>
+			<Feed />
 		</>
 	)
 }

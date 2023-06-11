@@ -3,7 +3,7 @@
 	z-index: 7;
 	background: var(--card-bg);
 	border-radius: 12px;
-	animation: tapping-in 0.8s linear 0s 1 normal both;
+	animation: fade-in-center 0.5s linear 0s 1 normal both;
 }
 
 .closeContainer {
@@ -12,7 +12,7 @@
 	height: 0;
 }
 
-@keyframes tapping-in {
+@keyframes fade-in-center {
 	0% {
 		top: 0%;
 		right: 0%;
@@ -151,19 +151,19 @@
 }
 
 .navListItemAnchor[data-row='0'] {
-	animation: slide-in 0.3s ease-out 450ms 1 normal both;
+	animation: slide-in 0.25s ease-out 450ms 1 normal both;
 }
 
 .navListItemAnchor[data-row='1'] {
-	animation: slide-in 0.3s ease-out 600ms 1 normal both;
+	animation: slide-in 0.25s ease-out 550ms 1 normal both;
 }
 
 .navListItemAnchor[data-row='2'] {
-	animation: slide-in 0.3s ease-out 750ms 1 normal both;
+	animation: slide-in 0.25s ease-out 650ms 1 normal both;
 }
 
 .navListItemAnchor[data-row='3'] {
-	animation: slide-in 0.3s ease-out 900ms 1 normal both;
+	animation: slide-in 0.25s ease-out 750ms 1 normal both;
 }
 
 @keyframes slide-in {
