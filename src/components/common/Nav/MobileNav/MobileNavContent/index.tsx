@@ -1,5 +1,11 @@
-import Image from 'next/image'
 import Link from 'next/link'
+
+import AboutSVG from '/public/link/about.svg'
+import BlogSVG from '/public/link/blog.svg'
+import TsuredureSVG from '/public/link/tsuredure.svg'
+import WorksSVG from '/public/link/works.svg'
+
+import { ThemeSwitch } from '@/components/ui/ThemeSwitch'
 
 import s from './styles.module.css'
 
@@ -9,35 +15,45 @@ type Props = {
 }
 
 const NAV_LIST = [
-	{ name: 'About', link: '/about' },
-	{ name: 'Blog', link: '/blog' },
-	{ name: 'Tsuredure', link: '/tsuredure' },
-	{ name: 'Works', link: '/works' },
+	{ name: 'About', link: '/about', image: AboutSVG },
+	{ name: 'Blog', link: '/blog', image: BlogSVG },
+	{ name: 'Tsuredure', link: '/tsuredure', image: TsuredureSVG },
+	{ name: 'Works', link: '/works', image: WorksSVG },
 ] as const
 
 export const MobileNavContent = ({ isOpen, onClose }: Props) => {
 	return (
-		<div className={s.container}>
-			<div className={s.navContentHeader}>
-				<Image alt="site logo" height={32} src="/icon/icon.svg" width={32} />
-				<button className={s.closeButton}>
-					<span className={s.topBottomBorder} />
-					<span className={s.bottomTopBorder} />
+		<div className={isOpen ? s.openContainer : s.closeContainer}>
+			<div className={s.header}>
+				<p className={s.headerTitle}>Menu</p>
+				<button className={s.closeButton} onClick={onClose}>
+					<span className={s.buttonTxt}>Close</span>
+					<div className={s.buttonIcon}>
+						<span className={s.topBottomBorder} />
+						<span className={s.bottomTopBorder} />
+					</div>
 				</button>
 			</div>
 			<nav className={s.nav}>
 				<ul className={s.navList}>
-					{NAV_LIST.map((nav) => {
+					{NAV_LIST.map((nav, i) => {
+						const Image = nav.image
 						return (
 							<li key={nav.name} className={s.navListItem}>
-								<Link className={s.navListItemAnchor} href={nav.link}>
-									{nav.name}
+								<Link className={s.navListItemAnchor} data-row={i} href={nav.link}>
+									<Image className={s.navListItemSVG} />
+									<span className={s.navListItemAnchorTxt}>{nav.name}</span>
 								</Link>
 							</li>
 						)
 					})}
 				</ul>
 			</nav>
+			<div className={s.footer}>
+				<div className={s.themeButton}>
+					<ThemeSwitch />
+				</div>
+			</div>
 		</div>
 	)
 }

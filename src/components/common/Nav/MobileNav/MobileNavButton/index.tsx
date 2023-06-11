@@ -6,7 +6,6 @@ type MobileNavButtonProps = {
 }
 
 export const MobileNavButton = ({ isMenuOpen, handleChangeMenuOpen }: MobileNavButtonProps) => {
-	console.log(isMenuOpen)
 	return (
 		<button className={isMenuOpen ? s.closeButton : s.openButton} type="button" onClick={handleChangeMenuOpen}>
 			<div className={s.navButtonIcon}>

@@ -41,11 +41,11 @@
 	}
 
 	.openButton {
-		animation: fade-in 0.15s linear 0s 1 normal both;
+		animation: fade-in 0.1s linear 0s 1 normal both;
 	}
 
 	.closeButton {
-		animation: fade-out 0.15s linear 0s 1 normal both;
+		animation: fade-out 0.1s linear 0s 1 normal both;
 	}
 
 	.navButtonIcon {
@@ -57,15 +57,15 @@
 	.aboveBorder,
 	.centerBorder,
 	.belowBorder {
-		border: 1px solid var(--bg);
+		border: 0.5px solid var(--bg);
 	}
 
 	.aboveBorder {
-		width: 28px;
+		width: 24px;
 	}
 
 	.centerBorder {
-		width: 22px;
+		width: 20px;
 	}
 
 	.belowBorder {

@@ -19,7 +19,9 @@
 	--brand-sub-lightness: 48%;
 
 	/* light */
-	--brand-light: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
+	--brand-light: hsl(
+		calc(var(--brand-hue) * 0.8) calc(var(--brand-saturation) * 0.85) calc(var(--brand-lightness) * 0.85)
+	);
 	--brand-sub-light: hsl(var(--brand-sub-hue) var(--brand-sub-saturation) var(--brand-sub-lightness));
 	--text-light: hsl(var(--brand-hue) 36% 10%);
 	--bg-light: hsl(var(--brand-hue) 5% 92%);
@@ -28,7 +30,7 @@
 	--card-bg-light: hsl(var(--brand-hue) var(--brand-saturation) 99%);
 	--hover-bg-light: hsl(var(--brand-hue) calc(var(--brand-saturation) * 1.75) calc(var(--brand-lightness) * 1.75));
 	--toggle-ball-light: hsl(var(--brand-hue) 3% 73%);
-	--overlay-light: rgb(15 15 15);
+	--overlay-light: rgb(10 10 10);
 	--footer-bg-light: linear-gradient(
 		0deg,
 		hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness) / 0%),
@@ -47,7 +49,7 @@
 	--card-bg-dark: hsl(calc(var(--brand-hue) * 1.2) var(--brand-saturation) calc(var(--brand-saturation) * 0.5));
 	--hover-bg-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) * 0.7) calc(var(--brand-lightness) * 0.7));
 	--toggle-ball-dark: hsl(var(--brand-hue) 3% 73%);
-	--overlay-dark: rgb(192 192 192);
+	--overlay-dark: rgb(212 212 212);
 	--footer-bg-dark: linear-gradient(
 		0deg,
 		hsl(var(--brand-hue) calc(var(--brand-saturation)) calc(var(--brand-lightness)) / 0%),

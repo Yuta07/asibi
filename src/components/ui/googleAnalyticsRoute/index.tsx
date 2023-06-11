@@ -10,7 +10,6 @@ export const GoogleAnalyticsRoute = () => {
 	const searchParams = useSearchParams()
 
 	useEffect(() => {
-		console.log(pathname)
 		pageview(pathname)
 	}, [pathname, searchParams])
 

@@ -1,10 +1,12 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useMemo, useRef, useState } from 'react'
 
 import { GlobalNav } from '@/components/common/Nav/GlobalNav'
 import { ThemeSwitch } from '@/components/ui/ThemeSwitch'
+import { useThemeState } from '@/contexts/ThemeProvider'
 import { useScrollOffsetTop } from '@/hooks/useScrollOffsetTop'
 
 import { MobileNav } from '../../Nav/MobileNav'
@@ -17,6 +19,8 @@ const BASE_HEIGHT = 80
 export const GlobalHeader = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	const ref = useRef(null)
+
+	const { state } = useThemeState()
 
 	const { pageYOffsetTop, isScrollUp } = useScrollOffsetTop(ref)
 	const isScrollingUp = BASE_HEIGHT > pageYOffsetTop || isScrollUp
@@ -45,7 +49,7 @@ export const GlobalHeader = () => {
 		<header ref={ref} className={s.header} style={headerTranslateStyle}>
 			<div className={s.inner}>
 				<Link className={s.rootLink} href="/">
-					<img alt="asibi" height={20} src="/logo.svg" width={64} />
+					<Image alt="asibi" height={20} src={state === 'light' ? '/logo.svg' : '/logo_light.svg'} width={60} />
 				</Link>
 				<GlobalNav />
 				<div>

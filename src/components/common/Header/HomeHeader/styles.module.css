@@ -20,3 +20,9 @@
 .rootLink {
 	display: inline-flex;
 }
+
+@media (width < 768px) {
+	.header {
+		padding-block: 8px;
+	}
+}
