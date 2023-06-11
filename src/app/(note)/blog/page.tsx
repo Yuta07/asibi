@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 
 import { TagsAside } from '@/components/common/Aside/TagsAside'
+import { Feed } from '@/components/pages/blog/Feed'
 import { Posts } from '@/components/pages/blog/Posts'
 
 import s from './styles.module.css'
@@ -26,9 +27,12 @@ export const metadata: Metadata = {
 
 export default function Page({ params: { tag } }: { params: { tag: string | undefined } }) {
 	return (
-		<main className={s.container}>
-			<Posts tag={tag} />
-			<TagsAside />
-		</main>
+		<>
+			<main className={s.container}>
+				<Posts tag={tag} />
+				<TagsAside />
+			</main>
+			<Feed />
+		</>
 	)
 }

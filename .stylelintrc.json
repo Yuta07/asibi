@@ -20,6 +20,6 @@
     "no-empty-source": true,
     "number-max-precision": 3,
     "selector-class-pattern": "^[a-z][[-]?[a-z]]*",
-    "time-min-milliseconds": 100
+    "time-min-milliseconds": 50
   }
 }

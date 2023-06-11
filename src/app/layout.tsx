@@ -3,6 +3,7 @@ import { Suspense } from 'react'
 import { AnalyticsScript } from '@/components/common/Analytics/GoogleAnalytics/index'
 import { Footer } from '@/components/common/Footer'
 import { NavigationProgress } from '@/components/ui/NavigationProgress'
+import { GoogleAnalyticsRoute } from '@/components/ui/googleAnalyticsRoute'
 import { ThemeProvider } from '@/contexts/ThemeProvider'
 export { metadata } from '@/lib/metadata'
 
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					{children}
 					<Suspense fallback={null}>
 						<NavigationProgress />
+						<GoogleAnalyticsRoute />
 					</Suspense>
 					<Footer />
 				</ThemeProvider>

@@ -62,6 +62,17 @@
 	--progress-width: 0%;
 }
 
+.initProgress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 95%;
+	height: 2px;
+
+	--progress-width: 0%;
+}
+
 .progress {
 	position: fixed;
 	top: 0;
@@ -78,5 +89,5 @@
 	left: 0;
 	z-index: 2;
 	background: var(--brand);
-	animation: fin-progress 0.5s ease-in 0s 1 normal both;
+	animation: fin-progress 0.4s ease-in 0s 1 normal both;
 }

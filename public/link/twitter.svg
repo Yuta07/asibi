@@ -2,10 +2,7 @@
 <svg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
   <style>
     .twitter-line {
-        fill: #10151a;
-    }
-    @media (prefers-color-scheme: dark) {
-        .twitter-line { fill: #fdfcfc; }
+      fill: var(--text);
     }
   </style>
   <title>twitter_line</title>

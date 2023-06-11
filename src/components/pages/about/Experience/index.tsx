@@ -4,20 +4,20 @@ const EXPERIENCES = [
 	{
 		role: 'Webアプリケーションエンジニア',
 		isRegular: true,
-		detail: '予約システムのフロントエンド・バックエンドの開発に従事。',
+		detail: '予約システムのフロントエンド・バックエンドの開発に従事しています。',
 		date: '2023/05~',
 	},
 	{
 		role: 'Webフロントエンドエンジニア',
 		isRegular: false,
 		detail:
-			'フリーランスのWebフロントエンドエンジニアとして0->1の開発を多く経験。Next.jsをメインにAmplifyやReact Nativeも少し嗜む。',
+			'フリーランスのWebフロントエンドエンジニアとして0->1の開発を多く経験して、Next.jsをメインにAmplifyやReact Nativeも少し担当しました。',
 		date: '2020/06~2023/04',
 	},
 	{
 		role: '機能開発エンジニア',
 		isRegular: true,
-		detail: 'クラウドERPの導入支援・カスタマイズ開発を担当。そのほかGASによる社内評価システムの開発を経験。',
+		detail: 'クラウドERPの導入支援・カスタマイズ開発を担当し、そのほかGASによる社内評価システムの開発を経験しました。',
 		date: '2019/04~2020/05',
 	},
 ]

@@ -1,0 +1,79 @@
+.openButton,
+.closeButton {
+	display: none;
+}
+
+@keyframes fade-in {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	100% {
+		display: flex;
+		opacity: 1;
+	}
+}
+
+@keyframes fade-out {
+	0% {
+		display: flex;
+		opacity: 1;
+	}
+
+	100% {
+		display: none;
+		opacity: 0;
+	}
+}
+
+@media (width < 768px) {
+	.openButton,
+	.closeButton {
+		display: flex;
+		gap: 12px;
+		align-items: center;
+		height: 48px;
+		padding: 10px;
+		background: var(--brand);
+		border: none;
+		border-bottom-left-radius: 10px;
+	}
+
+	.openButton {
+		animation: fade-in 0.2s linear 0s 1 normal both;
+	}
+
+	.closeButton {
+		animation: fade-out 0.2s linear 0s 1 normal both;
+	}
+
+	.navButtonIcon {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	.aboveBorder,
+	.centerBorder,
+	.belowBorder {
+		border: 0.5px solid var(--bg);
+	}
+
+	.aboveBorder {
+		width: 24px;
+	}
+
+	.centerBorder {
+		width: 20px;
+	}
+
+	.belowBorder {
+		width: 16px;
+	}
+
+	.navButtonTxt {
+		font-weight: 550;
+		color: var(--bg);
+	}
+}

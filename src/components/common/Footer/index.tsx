@@ -1,13 +1,20 @@
+'use client'
+
+import Image from 'next/image'
 import Link from 'next/link'
+
+import { useThemeState } from '@/contexts/ThemeProvider'
 
 import s from './styles.module.css'
 
 export const Footer = () => {
+	const { state } = useThemeState()
+
 	return (
 		<footer className={s.footer}>
 			<div className={s.container}>
 				<Link href="/">
-					<img alt="asibi" height={20} src="/logo.svg" width={60} />
+					<Image alt="asibi" height={20} src={state === 'light' ? '/logo.svg' : '/logo_light.svg'} width={60} />
 				</Link>
 				<p className={s.scolding}>Fish rather than meat.</p>
 				<div className={s.copyRightContainer}>
