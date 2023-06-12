@@ -5,6 +5,8 @@ import BlogSVG from '/public/link/blog.svg'
 import TsuredureSVG from '/public/link/tsuredure.svg'
 import WorksSVG from '/public/link/works.svg'
 
+import { useEffect, useState } from 'react'
+
 import { ThemeSwitch } from '@/components/ui/ThemeSwitch'
 
 import s from './styles.module.css'
@@ -22,8 +24,17 @@ const NAV_LIST = [
 ] as const
 
 export const MobileNavContent = ({ isOpen, onClose }: Props) => {
+	const [isInit, setIsInit] = useState(false)
+
+	useEffect(() => {
+		if (isInit) return
+		if (!isInit && !isOpen) return
+
+		setIsInit(true)
+	}, [isOpen, isInit])
+
 	return (
-		<div className={isOpen ? s.openContainer : s.closeContainer}>
+		<div className={!isInit && !isOpen ? s.initContainer : isOpen ? s.openContainer : s.closeContainer}>
 			<div className={s.header}>
 				<p className={s.headerTitle}>Menu</p>
 				<button className={s.closeButton} onClick={onClose}>

@@ -1,24 +1,37 @@
-.openContainer {
-	position: fixed;
-	z-index: 7;
-	background: var(--card-bg);
-	border-radius: 12px;
-	animation: fade-in-center 0.5s linear 0s 1 normal both;
-}
-
-.closeContainer {
+.initContainer {
 	display: none;
 	width: 0;
 	height: 0;
 }
 
-@keyframes fade-in-center {
+.openContainer {
+	animation: fade-in-modal 0.8s linear 0s 1 normal both;
+}
+
+.closeContainer {
+	animation: fade-out-modal 0.4s linear 0.2s 1 normal both;
+}
+
+.openContainer,
+.closeContainer {
+	position: fixed;
+	z-index: 7;
+	background: var(--card-bg);
+	border-radius: 12px;
+}
+
+.nullContainer {
+	display: none;
+}
+
+@keyframes fade-in-modal {
 	0% {
-		top: 0%;
-		right: 0%;
-		width: 0;
-		height: 0;
-		clip-path: inset(0 0 0 100%);
+		top: 0;
+		right: 0;
+		width: 88px;
+		height: 40px;
+		clip-path: inset(0 0 100% 100%);
+		transform: translate(0%, 0%);
 	}
 
 	50% {
@@ -40,6 +53,28 @@
 	}
 }
 
+@keyframes fade-out-modal {
+	0% {
+		top: 50%;
+		right: 50%;
+		display: block;
+		width: 80%;
+		height: max-content;
+		clip-path: inset(0 0 0 0);
+		transform: translate(50%, -50%);
+	}
+
+	100% {
+		top: 0;
+		right: 0;
+		display: none;
+		width: 0;
+		height: 0;
+		clip-path: inset(0 0 100% 100%);
+		transform: translate(0%, 0%);
+	}
+}
+
 .header {
 	display: flex;
 	align-items: center;
@@ -53,7 +88,7 @@
 	font-weight: 550;
 	color: var(--text);
 	opacity: 0;
-	animation: fade-in 0.2s ease-in 400ms 1 normal both;
+	animation: fade-in 0.2s ease-in 550ms 1 normal both;
 }
 
 @keyframes fade-in {
@@ -83,6 +118,7 @@
 	font-size: var(--font-rem-md);
 	font-weight: 500;
 	color: var(--text);
+	animation: fade-in 0.2s ease-in 550ms 1 normal both;
 }
 
 .buttonIcon {
@@ -97,11 +133,11 @@
 }
 
 .topBottomBorder {
-	animation: rotate-bottom-right 0.2s ease-in 400ms 1 normal both;
+	animation: rotate-bottom-right 0.2s ease-in 550ms 1 normal both;
 }
 
 .bottomTopBorder {
-	animation: rotate-top-right 0.2s ease-in 400ms 1 normal both;
+	animation: rotate-top-right 0.2s ease-in 550ms 1 normal both;
 }
 
 @keyframes rotate-bottom-right {
@@ -151,19 +187,19 @@
 }
 
 .navListItemAnchor[data-row='0'] {
-	animation: slide-in 0.25s ease-out 450ms 1 normal both;
+	animation: slide-in 0.2s ease-out 600ms 1 normal both;
 }
 
 .navListItemAnchor[data-row='1'] {
-	animation: slide-in 0.25s ease-out 550ms 1 normal both;
+	animation: slide-in 0.2s ease-out 700ms 1 normal both;
 }
 
 .navListItemAnchor[data-row='2'] {
-	animation: slide-in 0.25s ease-out 650ms 1 normal both;
+	animation: slide-in 0.2s ease-out 800ms 1 normal both;
 }
 
 .navListItemAnchor[data-row='3'] {
-	animation: slide-in 0.25s ease-out 750ms 1 normal both;
+	animation: slide-in 0.2s ease-out 900ms 1 normal both;
 }
 
 @keyframes slide-in {
@@ -197,6 +233,24 @@
 	width: 100%;
 	padding: 20px 0 40px;
 	margin: 0 auto;
+}
+
+.closeContainer > .header,
+.closeContainer > .nav,
+.closeContainer > .footer {
+	animation: fade-out-content 0.2s linear 0s 1 normal both;
+}
+
+@keyframes fade-out-content {
+	0% {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	100% {
+		visibility: hidden;
+		opacity: 0;
+	}
 }
 
 .themeButton {

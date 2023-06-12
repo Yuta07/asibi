@@ -1,24 +1,21 @@
-import { Overlay } from '@/components/ui/Overlay'
-import { usePortal } from '@/hooks/usePortal'
+'use client'
 
-import { MobileNavContent } from './MobileNavContent'
-import s from './styles.module.css'
+import { useState } from 'react'
 
-type Props = {
-	isOpen: boolean
-	onClose: () => void
-}
+import { MobileNavButton } from './MobileNavButton'
+import { MobileNavPortal } from './MobileNavPortal'
 
-export const MobileNav = ({ isOpen, onClose }: Props) => {
-	const portal = usePortal({
-		isOpen,
-		children: (
-			<div className={isOpen ? s.modalOpen : s.modalClose}>
-				<Overlay isOpen={isOpen} onClose={onClose} />
-				<MobileNavContent isOpen={isOpen} onClose={onClose} />
-			</div>
-		),
-	})
+export const MobileNav = () => {
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-	return portal
+	const handleChangeMenuOpen = () => {
+		setIsMenuOpen((prev) => !prev)
+	}
+
+	return (
+		<>
+			<MobileNavButton handleChangeMenuOpen={handleChangeMenuOpen} isMenuOpen={isMenuOpen} />
+			<MobileNavPortal isOpen={isMenuOpen} onClose={handleChangeMenuOpen} />
+		</>
+	)
 }
