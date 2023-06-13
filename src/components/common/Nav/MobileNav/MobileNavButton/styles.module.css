@@ -41,7 +41,7 @@
 	}
 
 	.openButton {
-		animation: fade-in 0.2s linear 0s 1 normal both;
+		animation: fade-in 0.35s linear 0.15s 1 normal both;
 	}
 
 	.closeButton {

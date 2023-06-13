@@ -1,24 +1,43 @@
-.openContainer {
-	position: fixed;
-	z-index: 7;
-	background: var(--card-bg);
-	border-radius: 12px;
-	animation: fade-in-center 0.5s linear 0s 1 normal both;
-}
-
-.closeContainer {
+.initContainer {
 	display: none;
 	width: 0;
 	height: 0;
 }
 
-@keyframes fade-in-center {
+.openContainer {
+	animation: fade-in-modal 0.7s linear 0s 1 normal both;
+}
+
+.closeContainer {
+	animation: fade-out-modal 0.4s linear 0.2s 1 normal both;
+}
+
+.openContainer,
+.closeContainer {
+	position: fixed;
+	z-index: 7;
+	background: var(--card-bg);
+	border-radius: 12px;
+}
+
+.nullContainer {
+	display: none;
+}
+
+@keyframes fade-in-modal {
 	0% {
-		top: 0%;
-		right: 0%;
-		width: 0;
-		height: 0;
-		clip-path: inset(0 0 0 100%);
+		top: 0;
+		right: 0;
+		width: 88px;
+		height: 40px;
+		clip-path: inset(0 0 100% 100%);
+		border-radius: 50% 12px;
+		transform: skew(10deg, 20deg) translate(0%, 0%);
+	}
+
+	25% {
+		border-radius: 100% 12px;
+		transform: skew(20deg, 25deg) translate(25%, -25%);
 	}
 
 	50% {
@@ -27,7 +46,8 @@
 		width: 80%;
 		height: max-content;
 		clip-path: inset(0 0 0 0);
-		transform: translate(50%, -50%);
+		border-radius: 50% 12px;
+		transform: skew(10deg, 15deg) translate(50%, -50%);
 	}
 
 	100% {
@@ -36,7 +56,42 @@
 		width: 80%;
 		height: max-content;
 		clip-path: inset(0 0 0 0);
-		transform: translate(50%, -50%);
+		border-radius: 12px;
+		transform: skew(0deg, 0deg) translate(50%, -50%);
+	}
+}
+
+@keyframes fade-out-modal {
+	0% {
+		top: 50%;
+		right: 50%;
+		display: block;
+		width: 80%;
+		height: max-content;
+		clip-path: inset(0 0 0 0);
+		border-radius: 12px;
+		transform: skew(0deg, 0deg) translate(50%, -50%);
+	}
+
+	50% {
+		border-radius: 50% 12px;
+		transform: skew(-10deg, -15deg) translate(50%, -50%);
+	}
+
+	75% {
+		border-radius: 100% 12px;
+		transform: skew(-20deg, -25deg) translate(25%, -25%);
+	}
+
+	100% {
+		top: 0;
+		right: 0;
+		display: none;
+		width: 0;
+		height: 0;
+		clip-path: inset(0 0 100% 100%);
+		border-radius: 50% 12px;
+		transform: skew(-10deg, -20deg) translate(0%, 0%);
 	}
 }
 
@@ -46,6 +101,8 @@
 	justify-content: space-between;
 	width: 100%;
 	padding-left: 20px;
+	border-bottom: 1px solid var(--text);
+	animation: fade-in 0.2s ease-in 500ms 1 normal both;
 }
 
 .headerTitle {
@@ -53,7 +110,7 @@
 	font-weight: 550;
 	color: var(--text);
 	opacity: 0;
-	animation: fade-in 0.2s ease-in 400ms 1 normal both;
+	animation: fade-in 0.2s ease-in 600ms 1 normal both;
 }
 
 @keyframes fade-in {
@@ -83,6 +140,7 @@
 	font-size: var(--font-rem-md);
 	font-weight: 500;
 	color: var(--text);
+	animation: fade-in 0.2s ease-in 600ms 1 normal both;
 }
 
 .buttonIcon {
@@ -97,11 +155,11 @@
 }
 
 .topBottomBorder {
-	animation: rotate-bottom-right 0.2s ease-in 400ms 1 normal both;
+	animation: rotate-bottom-right 0.2s ease-in 600ms 1 normal both;
 }
 
 .bottomTopBorder {
-	animation: rotate-top-right 0.2s ease-in 400ms 1 normal both;
+	animation: rotate-top-right 0.2s ease-in 600ms 1 normal both;
 }
 
 @keyframes rotate-bottom-right {
@@ -130,16 +188,11 @@
 
 .nav {
 	width: 100%;
-	border-top: 1px solid var(--text);
 }
 
 .navList {
 	width: 100%;
 	list-style: none;
-}
-
-.navListItem {
-	border-bottom: 1px solid var(--text);
 }
 
 .navListItemAnchor {
@@ -148,22 +201,23 @@
 	align-items: center;
 	padding: 20px;
 	text-decoration: none;
+	border-bottom: 1px solid var(--text);
 }
 
 .navListItemAnchor[data-row='0'] {
-	animation: slide-in 0.25s ease-out 450ms 1 normal both;
+	animation: slide-in 0.2s ease-out 650ms 1 normal both;
 }
 
 .navListItemAnchor[data-row='1'] {
-	animation: slide-in 0.25s ease-out 550ms 1 normal both;
+	animation: slide-in 0.2s ease-out 750ms 1 normal both;
 }
 
 .navListItemAnchor[data-row='2'] {
-	animation: slide-in 0.25s ease-out 650ms 1 normal both;
+	animation: slide-in 0.2s ease-out 850ms 1 normal both;
 }
 
 .navListItemAnchor[data-row='3'] {
-	animation: slide-in 0.25s ease-out 750ms 1 normal both;
+	animation: slide-in 0.2s ease-out 950ms 1 normal both;
 }
 
 @keyframes slide-in {
@@ -199,7 +253,25 @@
 	margin: 0 auto;
 }
 
+.closeContainer > .header,
+.closeContainer > .nav,
+.closeContainer > .footer {
+	animation: fade-out-content 0.2s linear 0s 1 normal both;
+}
+
+@keyframes fade-out-content {
+	0% {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	100% {
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
 .themeButton {
 	padding: 2px;
-	animation: slide-in 0.2s ease-out 450ms 1 normal both;
+	animation: slide-in 0.2s ease-out 750ms 1 normal both;
 }

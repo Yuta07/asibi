@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useMemo, useRef, useState } from 'react'
+import { useMemo, useRef } from 'react'
 
 import { GlobalNav } from '@/components/common/Nav/GlobalNav'
 import { ThemeSwitch } from '@/components/ui/ThemeSwitch'
@@ -10,24 +10,18 @@ import { useThemeState } from '@/contexts/ThemeProvider'
 import { useScrollOffsetTop } from '@/hooks/useScrollOffsetTop'
 
 import { MobileNav } from '../../Nav/MobileNav'
-import { MobileNavButton } from '../../Nav/MobileNav/MobileNavButton'
 
 import s from './styles.module.css'
 
 const BASE_HEIGHT = 80
 
 export const GlobalHeader = () => {
-	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	const ref = useRef(null)
 
 	const { state } = useThemeState()
 
 	const { pageYOffsetTop, isScrollUp } = useScrollOffsetTop(ref)
 	const isScrollingUp = BASE_HEIGHT > pageYOffsetTop || isScrollUp
-
-	const handleChangeMenuOpen = () => {
-		setIsMenuOpen((prev) => !prev)
-	}
 
 	const headerTranslateStyle = useMemo(() => {
 		if (isScrollUp === undefined) {
@@ -56,8 +50,7 @@ export const GlobalHeader = () => {
 					<div className={s.themeButton}>
 						<ThemeSwitch />
 					</div>
-					<MobileNavButton handleChangeMenuOpen={handleChangeMenuOpen} isMenuOpen={isMenuOpen} />
-					<MobileNav isOpen={isMenuOpen} onClose={handleChangeMenuOpen} />
+					<MobileNav />
 				</div>
 			</div>
 		</header>
