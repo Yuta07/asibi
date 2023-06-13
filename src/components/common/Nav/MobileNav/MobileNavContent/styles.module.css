@@ -5,7 +5,7 @@
 }
 
 .openContainer {
-	animation: fade-in-modal 0.8s linear 0s 1 normal both;
+	animation: fade-in-modal 0.7s linear 0s 1 normal both;
 }
 
 .closeContainer {
@@ -31,7 +31,13 @@
 		width: 88px;
 		height: 40px;
 		clip-path: inset(0 0 100% 100%);
-		transform: translate(0%, 0%);
+		border-radius: 50% 12px;
+		transform: skew(10deg, 20deg) translate(0%, 0%);
+	}
+
+	25% {
+		border-radius: 100% 12px;
+		transform: skew(20deg, 25deg) translate(25%, -25%);
 	}
 
 	50% {
@@ -40,7 +46,8 @@
 		width: 80%;
 		height: max-content;
 		clip-path: inset(0 0 0 0);
-		transform: translate(50%, -50%);
+		border-radius: 50% 12px;
+		transform: skew(10deg, 15deg) translate(50%, -50%);
 	}
 
 	100% {
@@ -49,7 +56,8 @@
 		width: 80%;
 		height: max-content;
 		clip-path: inset(0 0 0 0);
-		transform: translate(50%, -50%);
+		border-radius: 12px;
+		transform: skew(0deg, 0deg) translate(50%, -50%);
 	}
 }
 
@@ -75,12 +83,36 @@
 	}
 }
 
+@keyframes scale-out-modal {
+	0% {
+		display: block;
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	25% {
+		transform: scale(1.25);
+	}
+
+	50% {
+		transform: scale(1);
+	}
+
+	100% {
+		display: none;
+		opacity: 0;
+		transform: scale(0);
+	}
+}
+
 .header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
 	padding-left: 20px;
+	border-bottom: 1px solid var(--text);
+	animation: fade-in 0.2s ease-in 500ms 1 normal both;
 }
 
 .headerTitle {
@@ -88,7 +120,7 @@
 	font-weight: 550;
 	color: var(--text);
 	opacity: 0;
-	animation: fade-in 0.2s ease-in 550ms 1 normal both;
+	animation: fade-in 0.2s ease-in 600ms 1 normal both;
 }
 
 @keyframes fade-in {
@@ -118,7 +150,7 @@
 	font-size: var(--font-rem-md);
 	font-weight: 500;
 	color: var(--text);
-	animation: fade-in 0.2s ease-in 550ms 1 normal both;
+	animation: fade-in 0.2s ease-in 600ms 1 normal both;
 }
 
 .buttonIcon {
@@ -133,11 +165,11 @@
 }
 
 .topBottomBorder {
-	animation: rotate-bottom-right 0.2s ease-in 550ms 1 normal both;
+	animation: rotate-bottom-right 0.2s ease-in 600ms 1 normal both;
 }
 
 .bottomTopBorder {
-	animation: rotate-top-right 0.2s ease-in 550ms 1 normal both;
+	animation: rotate-top-right 0.2s ease-in 600ms 1 normal both;
 }
 
 @keyframes rotate-bottom-right {
@@ -166,16 +198,11 @@
 
 .nav {
 	width: 100%;
-	border-top: 1px solid var(--text);
 }
 
 .navList {
 	width: 100%;
 	list-style: none;
-}
-
-.navListItem {
-	border-bottom: 1px solid var(--text);
 }
 
 .navListItemAnchor {
@@ -184,22 +211,23 @@
 	align-items: center;
 	padding: 20px;
 	text-decoration: none;
+	border-bottom: 1px solid var(--text);
 }
 
 .navListItemAnchor[data-row='0'] {
-	animation: slide-in 0.2s ease-out 600ms 1 normal both;
+	animation: slide-in 0.2s ease-out 650ms 1 normal both;
 }
 
 .navListItemAnchor[data-row='1'] {
-	animation: slide-in 0.2s ease-out 700ms 1 normal both;
+	animation: slide-in 0.2s ease-out 750ms 1 normal both;
 }
 
 .navListItemAnchor[data-row='2'] {
-	animation: slide-in 0.2s ease-out 800ms 1 normal both;
+	animation: slide-in 0.2s ease-out 850ms 1 normal both;
 }
 
 .navListItemAnchor[data-row='3'] {
-	animation: slide-in 0.2s ease-out 900ms 1 normal both;
+	animation: slide-in 0.2s ease-out 950ms 1 normal both;
 }
 
 @keyframes slide-in {
@@ -255,5 +283,5 @@
 
 .themeButton {
 	padding: 2px;
-	animation: slide-in 0.2s ease-out 450ms 1 normal both;
+	animation: slide-in 0.2s ease-out 750ms 1 normal both;
 }
