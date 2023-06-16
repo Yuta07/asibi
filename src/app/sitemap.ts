@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	const postMap = posts.map((post) => {
 		return {
 			url: `https://asibi.dev/blog/${post.slug}`,
-			lastModified: new Date(),
+			lastModified: new Date(post.createdAt),
 		}
 	})
 	const tagMap = tags.map((tag) => {
