@@ -31,14 +31,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			url: 'https://asibi.dev/blog',
 			lastModified: new Date(),
 		},
-		{
-			url: 'https://asibi.dev/works',
-			lastModified: new Date(),
-		},
-		{
-			url: 'https://asibi.dev/tsuredure',
-			lastModified: new Date(),
-		},
+		// {
+		// 	url: 'https://asibi.dev/works',
+		// 	lastModified: new Date(),
+		// },
+		// {
+		// 	url: 'https://asibi.dev/tsuredure',
+		// 	lastModified: new Date(),
+		// },
 		...postMap,
 		...tagMap,
 	]
