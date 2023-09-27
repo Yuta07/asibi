@@ -16,7 +16,7 @@ export default function Page() {
 	return (
 		<>
 			<HomeHeader />
-			<main className={s.wrapper}>
+			<main className={s.main}>
 				<div className={s.container}>
 					<About />
 					<div className={s.content}>

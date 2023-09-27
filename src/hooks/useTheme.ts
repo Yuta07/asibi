@@ -1,17 +1,17 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useState } from 'react'
 
 export const useTheme = () => {
 	const [theme, setTheme] = useState<'light' | 'dark' | null>(null)
 
-	useEffect(() => {
-		const storageTheme = window.localStorage.getItem('theme') as 'light' | 'dark' | null
-		const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-		const initTheme = storageTheme ? storageTheme : isDark ? 'dark' : 'light'
-		const root = window.document.documentElement
+	// useEffect(() => {
+	// 	const storageTheme = window.localStorage.getItem('theme') as 'light' | 'dark' | null
+	// 	const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+	// 	const initTheme = storageTheme ? storageTheme : isDark ? 'dark' : 'light'
+	// 	const root = window.document.documentElement
 
-		root.setAttribute('data-theme', initTheme)
-		setTheme(initTheme)
-	}, []) // eslint-disable-line
+	// 	root.setAttribute('data-theme', initTheme)
+	// 	setTheme(initTheme)
+	// }, []) // eslint-disable-line
 
 	const handleChangeTheme = useCallback(() => {
 		const storageTheme = window.localStorage.getItem('theme') as 'light' | 'dark' | null

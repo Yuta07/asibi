@@ -1,7 +1,5 @@
 import { AnalyticsScript } from '@/components/common/Analytics/GoogleAnalytics/index'
-import { Footer } from '@/components/common/Footer'
 import { GoogleAnalyticsRoute } from '@/components/ui/googleAnalyticsRoute'
-import { ThemeProvider } from '@/contexts/ThemeProvider'
 export { metadata } from '@/lib/metadata'
 
 import '@/styles/root.css'
@@ -34,11 +32,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<AnalyticsScript />
 			</head>
 			<body>
-				<ThemeProvider>
-					{children}
-					<Footer />
-					<GoogleAnalyticsRoute />
-				</ThemeProvider>
+				{children}
+				<GoogleAnalyticsRoute />
 			</body>
 		</html>
 	)

@@ -1,19 +1,5 @@
-.wrapper {
-	position: relative;
+.main {
 	width: 100%;
-}
-
-.wrapper::after {
-	position: absolute;
-	top: -120px;
-	left: -120px;
-	z-index: -1;
-	width: 420px;
-	height: 420px;
-	content: '';
-	background: radial-gradient(ellipse at center, var(--gray), var(--brand));
-	filter: blur(300px);
-	opacity: 0.4;
 }
 
 .container {
