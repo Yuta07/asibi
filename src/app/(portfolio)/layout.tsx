@@ -1,4 +1,4 @@
-import { GlobalHeader } from '@/components/common/Header/GlobalHeader'
+import { GlobalHeader } from '@/components/common/Header'
 
 import s from './styles.module.css'
 

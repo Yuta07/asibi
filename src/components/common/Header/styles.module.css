@@ -1,9 +1,9 @@
 .header {
 	position: sticky;
 	top: 0;
-	z-index: 1;
+	z-index: 2;
 	width: 100%;
-	padding-block: 12px;
+	height: 56px;
 	backdrop-filter: blur(8px);
 }
 
@@ -11,9 +11,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	max-width: 720px;
-	min-height: 32px;
-	padding-inline: 20px;
+	height: 100%;
 	margin: 0 auto;
 }
 
@@ -21,8 +19,20 @@
 	display: inline-flex;
 }
 
-@media (width < 768px) {
+.mobileNav {
+	display: none;
+}
+
+@media (width < 600px) {
 	.header {
-		padding-block: 8px;
+		height: 48px;
+	}
+
+	.inner {
+		padding-inline-start: 20px;
+	}
+
+	.mobileNav {
+		display: block;
 	}
 }

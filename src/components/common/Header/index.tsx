@@ -5,17 +5,16 @@ import Link from 'next/link'
 import { useMemo, useRef } from 'react'
 
 import { GlobalNav } from '@/components/common/Nav/GlobalNav'
-import { ThemeSwitch } from '@/components/ui/ThemeSwitch'
 import { useThemeState } from '@/contexts/ThemeProvider'
 import { useScrollOffsetTop } from '@/hooks/useScrollOffsetTop'
 
-import { MobileNav } from '../../Nav/MobileNav'
+import { MobileNav } from '../Nav/MobileNav'
 
 import s from './styles.module.css'
 
 const BASE_HEIGHT = 80
 
-export const GlobalHeader = () => {
+export const Header = () => {
 	const ref = useRef(null)
 
 	const { state } = useThemeState()
@@ -43,13 +42,15 @@ export const GlobalHeader = () => {
 		<header ref={ref} className={s.header} style={headerTranslateStyle}>
 			<div className={s.inner}>
 				<Link className={s.rootLink} href="/">
-					<Image alt="asibi" height={20} src={state === 'light' ? '/logo.svg' : '/logo_light.svg'} width={60} />
+					<Image
+						alt="asibi"
+						height={20}
+						src={state === 'light' ? '/logo/logo.svg' : '/logo/logo_light.svg'}
+						width={60}
+					/>
 				</Link>
 				<GlobalNav />
-				<div>
-					<div className={s.themeButton}>
-						<ThemeSwitch />
-					</div>
+				<div className={s.mobileNav}>
 					<MobileNav />
 				</div>
 			</div>

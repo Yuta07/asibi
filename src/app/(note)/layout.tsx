@@ -1,4 +1,4 @@
-import { GlobalHeader } from '@/components/common/Header/GlobalHeader'
+import { GlobalHeader } from '@/components/common/Header'
 
 import type { ReactNode } from 'react'
 

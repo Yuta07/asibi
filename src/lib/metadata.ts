@@ -21,8 +21,8 @@ export const metadata: Metadata = {
 	},
 	manifest: 'https://asibi.dev/app.webmanifest',
 	themeColor: [
-		{ color: '#62daca', media: '(prefers-color-scheme: dark)' },
-		{ color: '#376861', media: '(prefers-color-scheme: light)' },
+		{ color: '#25191f', media: '(prefers-color-scheme: dark)' },
+		{ color: '#f4f5f5', media: '(prefers-color-scheme: light)' },
 	],
 	colorScheme: 'dark light',
 	alternates: {

@@ -1,10 +1,4 @@
 import Link from 'next/link'
-
-import AboutSVG from '/public/link/about.svg'
-import BlogSVG from '/public/link/blog.svg'
-import TsuredureSVG from '/public/link/tsuredure.svg'
-import WorksSVG from '/public/link/works.svg'
-
 import { useEffect, useState } from 'react'
 
 import { ThemeSwitch } from '@/components/ui/ThemeSwitch'
@@ -17,10 +11,10 @@ type Props = {
 }
 
 const NAV_LIST = [
-	{ name: 'About', link: '/about', image: AboutSVG },
-	{ name: 'Blog', link: '/blog', image: BlogSVG },
-	{ name: 'Tsuredure', link: '/tsuredure', image: TsuredureSVG },
-	{ name: 'Works', link: '/works', image: WorksSVG },
+	{ name: 'About', link: '/about', image: null },
+	{ name: 'Blog', link: '/blog', image: null },
+	{ name: 'Tsuredure', link: '/tsuredure', image: null },
+	{ name: 'Works', link: '/works', image: null },
 ] as const
 
 export const MobileNavContent = ({ isOpen, onClose }: Props) => {
@@ -48,11 +42,9 @@ export const MobileNavContent = ({ isOpen, onClose }: Props) => {
 			<nav className={s.nav}>
 				<ul className={s.navList}>
 					{NAV_LIST.map((nav, i) => {
-						const Image = nav.image
 						return (
 							<li key={nav.name} className={s.navListItem}>
 								<Link className={s.navListItemAnchor} data-row={i} href={nav.link}>
-									<Image className={s.navListItemSVG} />
 									<span className={s.navListItemAnchorTxt}>{nav.name}</span>
 								</Link>
 							</li>
