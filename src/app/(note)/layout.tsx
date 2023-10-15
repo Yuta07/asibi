@@ -1,4 +1,4 @@
-import { GlobalHeader } from '@/components/common/Header'
+import { Header } from '@/components/common/Header'
 
 import type { ReactNode } from 'react'
 
@@ -9,7 +9,7 @@ type PortfolioLayoutProps = {
 export default function PortfolioLayout({ children }: PortfolioLayoutProps) {
 	return (
 		<>
-			<GlobalHeader />
+			<Header />
 			{children}
 		</>
 	)

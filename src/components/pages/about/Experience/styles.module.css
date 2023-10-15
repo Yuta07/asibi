@@ -1,5 +1,5 @@
 .heading {
-	font-size: var(--font-rem-2xl);
+	font-size: var(--font-2xl);
 }
 
 .content {
@@ -11,18 +11,62 @@
 	list-style: none;
 }
 
-.experienceListItem:not(:first-of-type) {
-	margin-top: 32px;
+.experienceListItem {
+	position: relative;
+	padding-block-end: 32px;
+	padding-inline-start: 32px;
+}
+
+.experienceListItem::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 8px;
+	height: 8px;
+	margin: 10px 2px 2px;
+	content: '';
+	background: var(--brand-dark);
+	border-radius: var(--rounded-full);
+}
+
+.experienceListItem::after {
+	position: absolute;
+	top: 20px;
+	left: 5.5px;
+	z-index: 1;
+	width: 1px;
+	height: calc(100% - 14px);
+	content: '';
+	background: var(--gray-dark);
+}
+
+.experienceListItem:first-of-type::after {
+	border-radius: var(--rounded-full) var(--rounded-full) 0 0;
+}
+
+.experienceListItem:last-of-type::after {
+	height: 0;
 }
 
 .experienceRole {
-	font-size: var(--font-rem-lg);
+	font-size: var(--font-lg);
 	font-weight: 700;
 }
 
+.experienceSub {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	margin-top: 8px;
+}
+
+.experienceWorking {
+	font-size: var(--font-sm);
+}
+
 .experienceDate {
-	margin-top: 4px;
-	font-size: var(--font-rem-sm);
+	font-size: var(--font-sm);
 	color: var(--gray);
 }
 

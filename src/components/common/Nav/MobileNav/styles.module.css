@@ -1,0 +1,94 @@
+.detailsContainer {
+	width: 120px;
+	background: var(--text);
+	border-radius: 20px;
+	box-shadow: 0 1px 8px 2px rgb(0 0 0 / 30%);
+}
+
+.navSummary {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	justify-content: center;
+	padding: 16px 20px;
+}
+
+.navButtonIcon {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	width: 22px;
+}
+
+.aboveBorder,
+.centerBorder,
+.belowBorder {
+	border: 1px solid var(--surface);
+}
+
+.aboveBorder {
+	width: 22px;
+	transition: all 0.2s;
+	rotate: 0deg;
+}
+
+.centerBorder {
+	width: 16px;
+	transition: all 0.2s;
+}
+
+.belowBorder {
+	width: 12px;
+	transition: all 0.2s;
+	rotate: 0deg;
+}
+
+.detailsContainer[open] > .navSummary > .navButtonIcon > .aboveBorder {
+	position: absolute;
+	top: -1px;
+	width: 18px;
+	transition: all 0.2s;
+	rotate: 45deg;
+}
+
+.detailsContainer[open] > .navSummary > .navButtonIcon > .centerBorder {
+	display: none;
+	transition: display 0.2s;
+}
+
+.detailsContainer[open] > .navSummary > .navButtonIcon > .belowBorder {
+	position: absolute;
+	bottom: -1px;
+	width: 18px;
+	transition: all 0.2s;
+	rotate: -45deg;
+}
+
+.navSummaryTitle {
+	font-weight: 550;
+	color: var(--surface);
+}
+
+.nav {
+	overflow: hidden;
+}
+
+.navList {
+	list-style: none;
+}
+
+.navListItem {
+	padding: 12px 20px;
+	text-align: center;
+}
+
+.navListItemAnchor {
+	color: var(--surface);
+	text-decoration: none;
+}
+
+.navListItemAnchorTxt {
+	font-size: var(--font-md);
+	font-weight: 550;
+}

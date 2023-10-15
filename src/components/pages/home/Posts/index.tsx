@@ -18,7 +18,12 @@ export default function Posts() {
 
 	return (
 		<section className={s.container}>
-			<h2 className={s.title}>Latest Posts</h2>
+			<div className={s.upper}>
+				<h2 className={s.title}>Latest Posts</h2>
+				<p className={s.postsImageSp}>
+					<Image alt="asibi's posts image" height={100} src="/assets/top/post-growth.webp" width={80} />
+				</p>
+			</div>
 			<div className={s.content}>
 				<ul className={s.postList}>
 					{data.map((post) => {

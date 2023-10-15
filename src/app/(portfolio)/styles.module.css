@@ -1,7 +1,14 @@
+.header {
+	width: 100%;
+	max-width: 760px;
+	padding-inline: 20px;
+	margin: 0 auto;
+}
+
 .container {
 	width: 100%;
-	max-width: 720px;
-	padding-block: 40px 80px;
+	max-width: 760px;
+	padding-block: 60px 80px;
 	padding-inline: 20px;
 	margin: 0 auto;
 }

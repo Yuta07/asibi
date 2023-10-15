@@ -11,11 +11,12 @@
 .title {
 	font-size: var(--font-sm);
 	font-weight: 550;
-	color: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
+	color: var(--brand-light);
 }
 
 @media (width < 600px) {
 	.container {
 		grid-column: 1;
+		order: 3;
 	}
 }

@@ -25,14 +25,18 @@
 
 @media (width < 600px) {
 	.header {
-		height: 48px;
+		height: 80px;
 	}
 
 	.inner {
+		position: relative;
 		padding-inline-start: 20px;
 	}
 
 	.mobileNav {
+		position: absolute;
+		top: 12px;
+		right: 20px;
 		display: block;
 	}
 }

@@ -94,7 +94,7 @@ body {
 	color: var(--text);
 	letter-spacing: 0.5px;
 	word-wrap: break-word;
-	background: var(--surface);
+	background: var(--surface-dark);
 	transition: background 0.2s ease-out;
 }
 

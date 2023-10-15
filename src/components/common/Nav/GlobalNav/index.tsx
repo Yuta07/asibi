@@ -5,7 +5,7 @@ import s from './styles.module.css'
 const NAV_LIST = [
 	{ name: 'About', link: '/about' },
 	{ name: 'Blog', link: '/blog' },
-	{ name: 'Tsuredure', link: '/tsuredure' },
+	{ name: 'Ordinary', link: '/ordinary' },
 	{ name: 'Works', link: '/works' },
 ] as const
 

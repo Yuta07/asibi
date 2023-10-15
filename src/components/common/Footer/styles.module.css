@@ -5,22 +5,14 @@
 	background: var(--footer-bg);
 }
 
-.container {
+.copyRightContainer {
 	width: 100%;
-	padding: 20px;
-	margin: 0 auto;
+	padding: 40px 20px;
+	margin: 60px auto 0;
 	text-align: center;
 }
 
-.scolding {
-	margin-top: 4px;
-	font-size: var(--font-rem-sm);
-}
-
-.copyRightContainer {
-	margin-top: 8px;
-}
-
 .copyRight {
-	font-size: var(--font-rem-xs);
+	font-size: var(--font-xs);
+	color: var(--gray);
 }

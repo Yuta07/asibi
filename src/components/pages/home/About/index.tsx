@@ -6,7 +6,12 @@ import s from './styles.module.css'
 export const About = () => {
 	return (
 		<section className={s.container}>
-			<h2 className={s.title}>About me</h2>
+			<div className={s.upper}>
+				<h2 className={s.title}>About me</h2>
+				<p className={s.aboutImageSp}>
+					<Image alt="asibi's about image" height={100} src="/assets/top/about-rogue.webp" width={80} />
+				</p>
+			</div>
 			<div className={s.content}>
 				<div className={s.inner}>
 					<div className={s.intro}>
