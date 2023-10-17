@@ -1,5 +1,7 @@
 import { Header } from '@/components/common/Header'
 
+import s from './styles.module.css'
+
 import type { ReactNode } from 'react'
 
 type PortfolioLayoutProps = {
@@ -9,8 +11,10 @@ type PortfolioLayoutProps = {
 export default function PortfolioLayout({ children }: PortfolioLayoutProps) {
 	return (
 		<>
-			<Header />
-			{children}
+			<div className={s.header}>
+				<Header />
+			</div>
+			<main className={s.main}>{children}</main>
 		</>
 	)
 }

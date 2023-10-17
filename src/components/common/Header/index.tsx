@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useMemo, useRef } from 'react'
 
 import { GlobalNav } from '@/components/common/Nav/GlobalNav'
+import { ThemeSelect } from '@/components/ui/ThemeSelect'
 import { useThemeState } from '@/contexts/ThemeProvider'
 import { useScrollOffsetTop } from '@/hooks/useScrollOffsetTop'
 
@@ -49,7 +50,10 @@ export const Header = () => {
 						width={60}
 					/>
 				</Link>
-				<GlobalNav />
+				<div className={s.globalNav}>
+					<GlobalNav />
+					<ThemeSelect />
+				</div>
 				<div className={s.mobileNav}>
 					<MobileNav />
 				</div>

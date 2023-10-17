@@ -21,7 +21,7 @@
 	margin: 0 auto;
 }
 
-@media (width < 768px) {
+@media (width < 600px) {
 	.container {
 		padding-bottom: 60px;
 	}

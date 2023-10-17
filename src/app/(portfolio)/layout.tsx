@@ -1,5 +1,4 @@
 import { Header } from '@/components/common/Header'
-
 import s from './styles.module.css'
 
 import type { ReactNode } from 'react'

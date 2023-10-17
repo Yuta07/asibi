@@ -78,6 +78,20 @@
 	--crimson: var(--crimson-light);
 }
 
+@media (prefers-color-scheme: light) {
+	:root {
+		color-scheme: light;
+
+		/* set light color */
+		--brand: var(--brand-light);
+		--surface: var(--surface-light);
+		--text: var(--text-light);
+		--gray: var(--gray-light);
+		--golden-yellow: var(--golden-yellow-light);
+		--crimson: var(--crimson-light);
+	}
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -94,7 +108,7 @@ body {
 	color: var(--text);
 	letter-spacing: 0.5px;
 	word-wrap: break-word;
-	background: var(--surface-dark);
+	background: var(--surface);
 	transition: background 0.2s ease-out;
 }
 
@@ -104,7 +118,7 @@ body {
 	margin: 0 auto;
 }
 
-@media (width < 768px) {
+@media (width < 600px) {
 	.twitter-tweet,
 	.twitter-tweet-rendered {
 		width: 100% !important;

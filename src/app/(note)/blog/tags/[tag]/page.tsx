@@ -1,9 +1,6 @@
 import { Metadata } from 'next'
 
-import { TagsAside } from '@/components/common/Aside/TagsAside'
 import { Posts } from '@/components/pages/blog/Posts'
-
-import s from './styles.module.css'
 
 type MetaProps = {
 	params: { tag: string }
@@ -27,9 +24,8 @@ export function generateMetadata({ params }: MetaProps): Metadata {
 
 export default function Page({ params: { tag } }: { params: { tag: string | undefined } }) {
 	return (
-		<main className={s.container}>
+		<main>
 			<Posts tag={tag} />
-			<TagsAside />
 		</main>
 	)
 }

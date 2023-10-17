@@ -36,9 +36,3 @@
 .navListItemAnchor:hover {
 	color: var(--brand);
 }
-
-@media (width < 600px) {
-	.nav {
-		display: none;
-	}
-}

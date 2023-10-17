@@ -1,14 +1,13 @@
 .header {
 	width: 100%;
 	max-width: 760px;
-	padding-inline: 20px;
 	margin: 0 auto;
 }
 
 .container {
 	width: 100%;
 	max-width: 760px;
-	padding-block: 60px 80px;
+	padding-block-start: 60px;
 	padding-inline: 20px;
 	margin: 0 auto;
 }

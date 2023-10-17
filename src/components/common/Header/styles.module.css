@@ -3,7 +3,7 @@
 	top: 0;
 	z-index: 2;
 	width: 100%;
-	height: 56px;
+	height: 60px;
 	backdrop-filter: blur(8px);
 }
 
@@ -19,6 +19,12 @@
 	display: inline-flex;
 }
 
+.globalNav {
+	display: flex;
+	gap: 40px;
+	align-items: center;
+}
+
 .mobileNav {
 	display: none;
 }
@@ -31,6 +37,10 @@
 	.inner {
 		position: relative;
 		padding-inline-start: 20px;
+	}
+
+	.globalNav {
+		display: none;
 	}
 
 	.mobileNav {
