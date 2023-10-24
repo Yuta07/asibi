@@ -2,7 +2,6 @@
 	position: sticky;
 	top: 100dvh;
 	width: 100%;
-	background: var(--footer-bg);
 }
 
 .copyRightContainer {

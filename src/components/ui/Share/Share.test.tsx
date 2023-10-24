@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { Share } from './Share'
+import { Share } from './'
 
 describe('Share component test', () => {
 	test('Share button href test', () => {

@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 
-import { AuthorAside } from '@/components/common/Aside/AuthorAside'
 import { PostBody } from '@/components/pages/blog/PostBody'
 import { PostHeader } from '@/components/pages/blog/PostHeader'
 import { Share } from '@/components/ui/Share'
@@ -25,7 +24,7 @@ export function generateMetadata({ params }: MetaProps): Metadata {
 		title: `${params.slug}`,
 		description: data.preface,
 		keywords: data.tags,
-		category: 'engineer',
+		category: 'tech',
 		openGraph: {
 			type: 'article',
 			url: `https://asibi.dev/blog/${params.slug}`,
@@ -48,7 +47,6 @@ export default function Page({ params: { slug } }: { params: { slug: string } })
 				<main>
 					<PostBody post={data} />
 				</main>
-				<AuthorAside />
 			</div>
 			<div className={s.shareField}>
 				<Share slug={slug} title={data.title} />

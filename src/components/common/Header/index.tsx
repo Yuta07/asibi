@@ -13,9 +13,13 @@ import { MobileNav } from '../Nav/MobileNav'
 
 import s from './styles.module.css'
 
-const BASE_HEIGHT = 80
+const BASE_HEIGHT = 60
 
-export const Header = () => {
+type HeaderProps = {
+	maxWidth?: number
+}
+
+export const Header = ({ maxWidth = 900 }: HeaderProps) => {
 	const ref = useRef(null)
 
 	const { state } = useThemeState()
@@ -29,19 +33,20 @@ export const Header = () => {
 		} else if (isScrollingUp) {
 			return {
 				transform: 'translateY(0px)',
-				transition: '0.5s',
+				transition: '0.4s',
 			}
 		} else {
+			const translateYNum = window.screen.width < 600 ? 460 : 160
 			return {
-				transform: 'translateY(-100px)',
-				transition: '0.5s',
+				transform: `translateY(-${translateYNum}px)`,
+				transition: '0.4s',
 			}
 		}
 	}, [isScrollUp, isScrollingUp])
 
 	return (
 		<header ref={ref} className={s.header} style={headerTranslateStyle}>
-			<div className={s.inner}>
+			<div className={s.inner} style={{ maxWidth }}>
 				<Link className={s.rootLink} href="/">
 					<Image
 						alt="asibi"

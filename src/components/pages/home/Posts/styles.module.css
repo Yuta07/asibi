@@ -1,6 +1,7 @@
 .container {
 	grid-column: 5 / 13;
 	background: var(--surface-light);
+	border: 1px solid var(--text);
 }
 
 .upper {

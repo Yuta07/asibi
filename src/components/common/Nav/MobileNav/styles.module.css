@@ -1,7 +1,7 @@
 .detailsContainer {
 	width: 120px;
 	background: var(--text);
-	border-radius: 20px;
+	border-radius: var(--rounded-base);
 	box-shadow: 0 1px 8px 2px rgb(0 0 0 / 30%);
 }
 
@@ -70,7 +70,7 @@
 	color: var(--surface);
 }
 
-.nav {
+.navContainer {
 	overflow: hidden;
 }
 
@@ -90,5 +90,43 @@
 
 .navListItemAnchorTxt {
 	font-size: var(--font-md);
-	font-weight: 550;
+	font-weight: 500;
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	color: var(--surface);
+	border: none;
+}
+
+.themeLegend {
+	width: 80%;
+	padding-block: 16px 8px;
+	margin: 0 auto;
+	font-weight: 700;
+	text-align: center;
+	border-top: 1px solid var(--surface);
+}
+
+.themeLabel {
+	display: inline-flex;
+	gap: 8px;
+	align-items: center;
+	width: 100%;
+	padding-block: 12px;
+	padding-inline: 20px;
+	font-size: var(--font-md);
+	cursor: pointer;
+}
+
+.themeLabel:last-of-type {
+	border-radius: 0 0 var(--rounded-base) var(--rounded-base);
+}
+
+.themeLabel:has(.selectedTheme) {
+	color: var(--surface);
+	background: var(--gray);
+	transition: 0.2s;
 }

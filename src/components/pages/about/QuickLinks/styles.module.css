@@ -11,17 +11,15 @@
 }
 
 .quickLinkListItem {
-	background: var(--surface-dark);
 	border-radius: var(--rounded-base);
-	box-shadow: 4px 4px 10px hsl(calc(var(--brand-hue) * 1.2) 33% 6%),
-		-4px -4px 10px hsl(calc(var(--brand-hue) * 1.25) 24% 14%);
+	box-shadow: var(--card-shadow);
 }
 
 .quickLinkListItemLink {
 	display: grid;
 	place-content: center;
 	padding: 40px 40px 0;
-	color: var(--text-dark);
+	color: var(--text);
 	text-align: center;
 	text-decoration: none;
 }
@@ -32,8 +30,7 @@
 }
 
 .quickLinkListItem:has(.quickLinkListItemLink:hover) {
-	box-shadow: inset 4px 4px 10px hsl(calc(var(--brand-hue) * 1.2) 33% 8%),
-		inset -4px -4px 10px hsl(calc(var(--brand-hue) * 1.25) 24% 11%);
+	box-shadow: var(--card-shadow-inset);
 }
 
 .quickLinkListItemImageContainer {
@@ -43,6 +40,14 @@
 
 .quickLinkListItemImage {
 	object-fit: cover;
+}
+
+.quickLinkListItemFillImage {
+	object-fit: contain;
+}
+
+.quickLinkListItemFillImage > path {
+	fill: var(--text);
 }
 
 .quickLinkListItemText {

@@ -13,6 +13,10 @@
 	--gray-dark: hsl(calc(var(--brand-hue) * 0.58) 5% 65%);
 	--golden-yellow-dark: var(--golden-yellow);
 	--crimson-dark: var(--crimson);
+	--card-shadow-dark: 4px 4px 10px hsl(calc(var(--brand-hue) * 1.2) 33% 6%),
+		-4px -4px 10px hsl(calc(var(--brand-hue) * 1.25) 24% 14%);
+	--card-shadow-inset-dark: inset 4px 4px 10px hsl(calc(var(--brand-hue) * 1.2) 33% 8%),
+		inset -4px -4px 10px hsl(calc(var(--brand-hue) * 1.25) 24% 11%);
 
 	/* light */
 	--brand-light: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
@@ -21,6 +25,12 @@
 	--gray-light: hsl(calc(var(--brand-hue) * 1.13) 2% 33%);
 	--golden-yellow-light: var(--golden-yellow);
 	--crimson-light: var(--crimson);
+	--card-shadow-light: 4px 4px 10px
+			hsl(calc(var(--brand-hue) * 0.9) calc(var(--brand-saturation) * 0.2) calc(var(--brand-lightness) * 2)),
+		-4px -4px 10px hsl(calc(var(--brand-hue) * 0.6) 5% 96%);
+	--card-shadow-inset-light: inset 3px 3px 10px
+			hsl(calc(var(--brand-hue) * 0.9) calc(var(--brand-saturation) * 0.2) calc(var(--brand-lightness) * 2)),
+		inset -3px -3px 10px hsl(calc(var(--brand-hue) * 0.6) 5% 96%);
 
 	box-sizing: border-box;
 
@@ -40,6 +50,8 @@
 	--gray: var(--gray-dark);
 	--golden-yellow: var(--golden-yellow-dark);
 	--crimson: var(--crimson-dark);
+	--card-shadow: var(--card-shadow-dark);
+	--card-shadow-inset: var(--card-shadow-inset-dark);
 	--font-xs: 0.75rem;
 	--font-sm: 0.875rem;
 	--font-md: 1rem;
@@ -63,6 +75,8 @@
 		--gray: var(--gray-dark);
 		--golden-yellow: var(--golden-yellow-dark);
 		--crimson: var(--crimson-dark);
+		--card-shadow: var(--card-shadow-dark);
+		--card-shadow-inset: var(--card-shadow-inset-dark);
 	}
 }
 
@@ -76,6 +90,8 @@
 	--gray: var(--gray-light);
 	--golden-yellow: var(--golden-yellow-light);
 	--crimson: var(--crimson-light);
+	--card-shadow: var(--card-shadow-light);
+	--card-shadow-inset: var(--card-shadow-inset-light);
 }
 
 @media (prefers-color-scheme: light) {
@@ -89,6 +105,8 @@
 		--gray: var(--gray-light);
 		--golden-yellow: var(--golden-yellow-light);
 		--crimson: var(--crimson-light);
+		--card-shadow: var(--card-shadow-light);
+		--card-shadow-inset: var(--card-shadow-inset-light);
 	}
 }
 

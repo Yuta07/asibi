@@ -1,4 +1,9 @@
-import Image from 'next/image'
+'use client'
+
+import GitHubIcon from '/public/assets/social/github-mark.svg'
+import XIcon from '/public/assets/social/x-logo.svg'
+import BookmeterIcon from '/public/assets/quicklink/bookmeter.svg'
+import ResumeIcon from '/public/assets/quicklink/resume.svg'
 
 import s from './styles.module.css'
 
@@ -6,20 +11,50 @@ const ACCOUNTS = [
 	{
 		name: 'Github',
 		link: 'https://github.com/Yuta07',
-		image: '/assets/social/github-mark-white.svg',
+		image: (
+			<GitHubIcon
+				width={24}
+				height={24}
+				className={s.quickLinkListItemFillImage}
+				color="var(--text)"
+				viewBox="0 0 96 96"
+			/>
+		),
 	},
-	{ name: 'X', link: 'https://twitter.com/asibi3Q', image: '/assets/social/x-logo.svg', color: '#0f1419' },
+	{
+		name: 'X',
+		link: 'https://twitter.com/asibi3Q',
+		image: (
+			<XIcon
+				width={24}
+				height={24}
+				className={s.quickLinkListItemFillImage}
+				color="var(--text)"
+				viewBox="0 0 1200 1200"
+			/>
+		),
+	},
 	{
 		name: 'Bookmeter',
 		link: 'https://bookmeter.com/users/1373649',
-		image: '/assets/quicklink/book.png',
+		image: (
+			<BookmeterIcon
+				width={24}
+				height={24}
+				className={s.quickLinkListItemImage}
+				color="var(--text)"
+				viewBox="0 0 24 24"
+			/>
+		),
 	},
 	{
 		name: 'Resume',
 		link: 'https://shorthaired-seaplane-f56.notion.site/Curriculum-vitae-fecdfaa602c54dbf8da36e5533467bc7',
-		image: '/assets/quicklink/resume.png',
+		image: (
+			<ResumeIcon width={24} height={24} className={s.quickLinkListItemImage} color="var(--text)" viewBox="0 0 24 24" />
+		),
 	},
-] as const
+]
 
 export const QuickLinks = () => {
 	return (
@@ -30,15 +65,7 @@ export const QuickLinks = () => {
 					return (
 						<li className={s.quickLinkListItem}>
 							<a href={account.link} rel="noopener noreferrer" target="_blank" className={s.quickLinkListItemLink}>
-								<p className={s.quickLinkListItemImageContainer}>
-									<Image
-										src={account.image}
-										alt={`${account.name}'s link`}
-										width={40}
-										height={40}
-										className={s.quickLinkListItemImage}
-									/>
-								</p>
+								<p className={s.quickLinkListItemImageContainer}>{account.image}</p>
 								<span className={s.quickLinkListItemText}>{account.name}</span>
 							</a>
 						</li>

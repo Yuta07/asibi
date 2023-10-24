@@ -10,9 +10,7 @@ export default function Page() {
 	return (
 		<>
 			<div className={s.blank} />
-			<div className={s.header}>
-				<Header />
-			</div>
+			<Header />
 			<main className={s.main}>
 				<div className={s.grid}>
 					<About />
