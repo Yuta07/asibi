@@ -1,4 +1,4 @@
-import { GlobalHeader } from '@/components/common/Header/GlobalHeader'
+import { Header } from '@/components/common/Header'
 
 import s from './styles.module.css'
 
@@ -11,7 +11,7 @@ type PortfolioLayoutProps = {
 export default function PortfolioLayout({ children }: PortfolioLayoutProps) {
 	return (
 		<>
-			<GlobalHeader />
+			<Header maxWidth={760} />
 			<main className={s.container}>{children}</main>
 		</>
 	)

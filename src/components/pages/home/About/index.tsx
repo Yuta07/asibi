@@ -6,18 +6,28 @@ import s from './styles.module.css'
 export const About = () => {
 	return (
 		<section className={s.container}>
-			<div className={s.imageContainer}>
-				<Image alt="asibi's internet image" height={60} src="/icon/icon.svg" width={60} />
+			<div className={s.upper}>
+				<h2 className={s.title}>About me</h2>
+				<p className={s.aboutImageSp}>
+					<Image alt="asibi's about image" height={100} src="/assets/top/about-rogue.webp" width={80} />
+				</p>
 			</div>
-			<div>
-				<h1 className={s.heading}>Hi there, I'm asibi3Q.</h1>
-				<p className={s.intro}>
-					Web Frontend Engineer, born in Nagoya, lives in Kawasaki.
-					<br />
-					Mainly Focused on React and arround frontend.
-					<Link className={s.moreLink} href="/about">
-						Read more<span>→</span>
-					</Link>
+			<div className={s.content}>
+				<div className={s.inner}>
+					<div className={s.intro}>
+						<h3 className={s.me}>Hi there. I'm asibi a.k.a Yuta07.</h3>
+						<p className={s.description}>
+							Web Frontend Engineer, born in Nagoya, lives in Kawasaki.Mainly Focused on React and arround frontend.
+						</p>
+					</div>
+					<div className={s.more}>
+						<Link className={s.moreLink} href="/about">
+							Read more →
+						</Link>
+					</div>
+				</div>
+				<p className={s.aboutImage}>
+					<Image alt="asibi's about image" height={140} src="/assets/top/about-rogue.webp" width={120} />
 				</p>
 			</div>
 		</section>

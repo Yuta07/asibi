@@ -13,7 +13,7 @@
 
 .first {
 	margin-top: 40px;
-	font-size: var(--font-rem-4xl);
+	font-size: var(--font-4xl);
 }
 
 .first::before {
@@ -24,7 +24,7 @@
 
 .second {
 	margin-top: 32px;
-	font-size: var(--font-rem-2xl);
+	font-size: var(--font-2xl);
 }
 
 .second::before {
@@ -35,7 +35,7 @@
 
 .third {
 	margin-top: 24px;
-	font-size: var(--font-rem-xl);
+	font-size: var(--font-xl);
 }
 
 .third::before {
@@ -46,7 +46,7 @@
 
 .fourth {
 	margin-top: 20px;
-	font-size: var(--font-rem-lg);
+	font-size: var(--font-lg);
 }
 
 .fourth::before {
@@ -58,7 +58,7 @@
 
 .fifth {
 	margin-top: 20px;
-	font-size: var(--font-rem-md);
+	font-size: var(--font-md);
 }
 
 .fifth::before {

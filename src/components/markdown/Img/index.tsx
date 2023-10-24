@@ -43,7 +43,7 @@ export const Img = ({ alt, src }: Props) => {
 				.alt-caption {
 					margin-bottom: 40px;
 					color: var(--gray);
-					font-size: var(--font-rem-sm);
+					font-size: var(--font-sm);
 					text-align: center;
 				}
 			`}</style>

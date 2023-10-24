@@ -1,8 +1,7 @@
 .header {
 	width: 100%;
 	max-width: 960px;
-	padding-block: 60px;
-	padding-inline: 20px;
+	padding-block: 40px;
 	margin: 0 auto;
 }
 
@@ -15,7 +14,7 @@
 .title {
 	display: table;
 	margin: 32px auto 0;
-	font-size: var(--font-rem-3xl);
+	font-size: var(--font-3xl);
 	text-align: left;
 }
 
@@ -25,7 +24,7 @@
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	margin: 12px 0 0 auto;
+	margin-top: 12px;
 }
 
 .tags {
@@ -36,19 +35,19 @@
 
 .tag {
 	padding: 2px 10px;
-	font-size: var(--font-rem-sm);
-	border: 1px solid var(--border);
+	font-size: var(--font-sm);
+	border: 1px solid var(--gray);
 	border-radius: 8px;
 }
 
 .createdAt {
-	font-size: var(--font-rem-sm);
+	font-size: var(--font-sm);
 	color: var(--gray);
 }
 
-@media (width < 768px) {
+@media (width < 600px) {
 	.title {
 		margin: 20px auto 0;
-		font-size: var(--font-rem-2xl);
+		font-size: var(--font-2xl);
 	}
 }

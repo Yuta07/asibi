@@ -1,34 +1,22 @@
-import { HomeHeader } from '@/components/common/Header/HomeHeader'
+import { Header } from '@/components/common/Header'
 import { About } from '@/components/pages/home/About'
+import { Ordinary } from '@/components/pages/home/Ordinary'
 import Posts from '@/components/pages/home/Posts'
-import { Tsuredure } from '@/components/pages/home/Tsuredure'
 import { Works } from '@/components/pages/home/Works'
 
 import s from './styles.module.css'
 
-const sectionComponents = [
-	{ key: 'posts', component: Posts },
-	{ key: 'works', component: Works },
-	{ key: 'tsuredure', component: Tsuredure },
-]
-
 export default function Page() {
 	return (
 		<>
-			<HomeHeader />
-			<main className={s.wrapper}>
-				<div className={s.container}>
+			<div className={s.blank} />
+			<Header />
+			<main className={s.main}>
+				<div className={s.grid}>
 					<About />
-					<div className={s.content}>
-						{sectionComponents.map((compo) => {
-							const Component = compo.component
-							return (
-								<section key={compo.key} className={s.homeSection}>
-									<Component />
-								</section>
-							)
-						})}
-					</div>
+					<Ordinary />
+					<Works />
+					<Posts />
 				</div>
 			</main>
 		</>

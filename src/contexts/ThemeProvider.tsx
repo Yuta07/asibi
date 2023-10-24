@@ -5,10 +5,10 @@ import { createContext, ReactNode, useContext } from 'react'
 import { useTheme } from '../hooks/useTheme'
 
 type DispatchType = {
-	handleChangeTheme: () => void
+	handleChangeTheme: (theme: 'light' | 'dark' | 'system') => void
 }
 
-export const ThemeStateContext = createContext<{ state: 'light' | 'dark' }>({ state: 'dark' })
+export const ThemeStateContext = createContext<{ state: 'light' | 'dark' | 'system' }>({ state: 'system' })
 export const ThemeDispatchContext = createContext<DispatchType>({ handleChangeTheme: () => {} })
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {

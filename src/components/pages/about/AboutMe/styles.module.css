@@ -1,22 +1,5 @@
-.avatarLight,
-.avatarDark {
-	padding: 10px;
-	background: #ffffff;
-	border-radius: 9999px;
-	object-fit: cover;
-}
-
-.avatarLight {
-	border: 1px solid var(--border);
-}
-
-.avatarDark {
-	border: 1px solid transparent;
-}
-
 .hello {
-	margin-top: 16px;
-	font-size: var(--font-rem-2xl);
+	font-size: var(--font-2xl);
 }
 
 .intro {
@@ -28,11 +11,11 @@
 	gap: 4px;
 	width: max-content;
 	margin-top: 12px;
-	color: var(--gray);
+	color: var(--gray-dark);
 	text-decoration: none;
 }
 
 .link:hover {
-	color: var(--text);
+	color: var(--text-dark);
 	transition: 0.2s;
 }

@@ -1,6 +1,6 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
-import { PostListItem } from '@/components/ui/PostListItem'
 import { generatedRssFeed } from '@/lib/feed'
 import { getLatestPostsData } from '@/lib/posts'
 
@@ -17,18 +17,41 @@ export default function Posts() {
 	const data = getLatestPosts()
 
 	return (
-		<div>
-			<div className={s.postsHeader}>
-				<h2 className={s.hero}>Latest Posts</h2>
-				<Link className={s.moreLink} href="/blog">
-					View more posts<span>→</span>
-				</Link>
+		<section className={s.container}>
+			<div className={s.upper}>
+				<h2 className={s.title}>Latest Posts</h2>
+				<p className={s.postsImageSp}>
+					<Image alt="asibi's posts image" height={100} src="/assets/top/post-growth.webp" width={80} />
+				</p>
 			</div>
-			<div className={s.postsContainer}>
-				{data.map((data) => {
-					return <PostListItem key={data.slug} data={data} />
-				})}
+			<div className={s.content}>
+				<ul className={s.postList}>
+					{data.map((post) => {
+						return (
+							<li key={post.slug} className={s.postListItem}>
+								<Link className={s.postListItemTitleAnchor} href={`/blog/${post.slug}`}>
+									<h3 className={s.postListItemTitle}>{post.title}</h3>
+								</Link>
+								<div className={s.postListItemSub}>
+									<div className={s.postListItemTagList}>
+										{post.tags.map((tag) => {
+											return (
+												<span key={tag} className={s.postListItemTag}>
+													{tag}
+												</span>
+											)
+										})}
+									</div>
+									<time className={s.postListItemTime}>{post.createdAt}</time>
+								</div>
+							</li>
+						)
+					})}
+				</ul>
+				<p className={s.postsImage}>
+					<Image alt="asibi's posts image" height={140} src="/assets/top/post-growth.webp" width={120} />
+				</p>
 			</div>
-		</div>
+		</section>
 	)
 }

@@ -1,4 +1,4 @@
-import s from './Works.module.css'
+import s from './styles.module.css'
 
 export default function Works() {
 	return (

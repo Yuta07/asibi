@@ -5,7 +5,7 @@ import { getSortedPostsData } from '@/lib/posts'
 import s from './styles.module.css'
 
 type Props = {
-	tag: string | undefined
+	tag?: string | undefined
 }
 
 function getPosts(tag: string | undefined) {
@@ -25,7 +25,7 @@ export const Posts = ({ tag }: Props) => {
 					<strong className={s.count}>{data.length}</strong>Article{data.length > 1 && 's'}
 				</p>
 			</div>
-			<div className={s.list}>
+			<div className={s.articleList}>
 				{data.map((data) => {
 					return <PostListItem key={data.slug} data={data} />
 				})}

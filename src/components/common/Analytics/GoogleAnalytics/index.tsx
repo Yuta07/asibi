@@ -1,8 +1,19 @@
-import Script from 'next/script'
+'use client'
 
-import { GA_TRACKING_ID } from '@/lib/gtag'
+import { usePathname, useSearchParams } from 'next/navigation'
+import Script from 'next/script'
+import { useEffect } from 'react'
+
+import { pageview, GA_TRACKING_ID } from '@/lib/gtag'
 
 export const AnalyticsScript = () => {
+	const pathname = usePathname()
+	const searchParams = useSearchParams()
+
+	useEffect(() => {
+		pageview(pathname)
+	}, [pathname, searchParams])
+
 	return (
 		<>
 			<Script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} strategy="afterInteractive" />

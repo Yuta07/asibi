@@ -1,20 +1,21 @@
-import Link from 'next/link'
+import Image from 'next/image'
 
 import s from './styles.module.css'
 
 export const Works = () => {
 	return (
-		<div>
-			<div className={s.worksHeader}>
-				<h2 className={s.hero}>Recently Works</h2>
-				<Link className={s.moreLink} href="/works">
-					View more works<span>→</span>
-				</Link>
+		<section className={s.container}>
+			<div className={s.upper}>
+				<h2 className={s.title}>Works</h2>
+				<p className={s.worksImageSp}>
+					<Image alt="asibi's works image" height={100} src="/assets/top/works-runner.webp" width={64} />
+				</p>
 			</div>
-			<div className={s.worksContainer}>
-				<img height={40} src="/link/tsuredure.svg" width={40} />
-				<p className={s.waitTxt}>Please wait a little longer.</p>
+			<div>
+				<p className={s.worksImage}>
+					<Image alt="asibi's works image" height={140} src="/assets/top/works-runner.webp" width={96} />
+				</p>
 			</div>
-		</div>
+		</section>
 	)
 }

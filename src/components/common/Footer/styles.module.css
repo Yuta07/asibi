@@ -2,25 +2,16 @@
 	position: sticky;
 	top: 100dvh;
 	width: 100%;
-	background: var(--footer-bg);
-}
-
-.container {
-	width: 100%;
-	padding: 20px;
-	margin: 0 auto;
-	text-align: center;
-}
-
-.scolding {
-	margin-top: 4px;
-	font-size: var(--font-rem-sm);
 }
 
 .copyRightContainer {
-	margin-top: 8px;
+	width: 100%;
+	padding: 40px 20px;
+	margin: 60px auto 0;
+	text-align: center;
 }
 
 .copyRight {
-	font-size: var(--font-rem-xs);
+	font-size: var(--font-xs);
+	color: var(--gray);
 }

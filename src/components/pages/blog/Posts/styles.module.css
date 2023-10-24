@@ -10,10 +10,19 @@
 
 .count {
 	margin-right: 4px;
-	font-size: var(--font-rem-lg);
+	font-size: var(--font-lg);
 }
 
-.list {
+.articleList {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 40px;
 	width: 100%;
 	margin-top: 20px;
+}
+
+@media (width < 600px) {
+	.articleList {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }

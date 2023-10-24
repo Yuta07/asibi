@@ -1,11 +1,62 @@
 .heading {
-	font-size: var(--font-rem-2xl);
+	font-size: var(--font-2xl);
 }
 
-.list {
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
+.quickLinkList {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 20px;
 	margin-top: 20px;
 	list-style: none;
+}
+
+.quickLinkListItem {
+	border-radius: var(--rounded-base);
+	box-shadow: var(--card-shadow);
+}
+
+.quickLinkListItemLink {
+	display: grid;
+	place-content: center;
+	padding: 40px 40px 0;
+	color: var(--text);
+	text-align: center;
+	text-decoration: none;
+}
+
+.quickLinkListItemLink:hover {
+	opacity: 0.7;
+	transition: 0.2s;
+}
+
+.quickLinkListItem:has(.quickLinkListItemLink:hover) {
+	box-shadow: var(--card-shadow-inset);
+}
+
+.quickLinkListItemImageContainer {
+	width: 100%;
+	text-align: center;
+}
+
+.quickLinkListItemImage {
+	object-fit: cover;
+}
+
+.quickLinkListItemFillImage {
+	object-fit: contain;
+}
+
+.quickLinkListItemFillImage > path {
+	fill: var(--text);
+}
+
+.quickLinkListItemText {
+	padding: 20px 0;
+}
+
+@media (width < 600px) {
+	.quickLinkList {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 20px;
+	}
 }

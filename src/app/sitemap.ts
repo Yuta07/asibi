@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	const postMap = posts.map((post) => {
 		return {
 			url: `https://asibi.dev/blog/${post.slug}`,
-			lastModified: new Date(),
+			lastModified: new Date(post.createdAt),
 		}
 	})
 	const tagMap = tags.map((tag) => {
@@ -31,14 +31,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			url: 'https://asibi.dev/blog',
 			lastModified: new Date(),
 		},
-		{
-			url: 'https://asibi.dev/works',
-			lastModified: new Date(),
-		},
-		{
-			url: 'https://asibi.dev/tsuredure',
-			lastModified: new Date(),
-		},
+		// {
+		// 	url: 'https://asibi.dev/works',
+		// 	lastModified: new Date(),
+		// },
+		// {
+		// 	url: 'https://asibi.dev/tsuredure',
+		// 	lastModified: new Date(),
+		// },
 		...postMap,
 		...tagMap,
 	]

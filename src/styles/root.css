@@ -1,60 +1,36 @@
-/* @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;900&display=swap'); */
-
-/* @font-face {
-	font-family: 'M PLUS Rounded 1c';
-	font-style: normal;
-	font-weight: 400;
-	src: url('/font/MPLUSRounded1c-Regular.ttf') format('ttf');
-	font-display: swap;
-	unicode-range: U+000-5FF;
-} */
-
 * {
-	/* brand foundation */
-	--brand-hue: 172;
-	--brand-saturation: 31%;
-	--brand-lightness: 31%;
-	--brand-sub-hue: 9;
-	--brand-sub-saturation: 77%;
-	--brand-sub-lightness: 48%;
-
-	/* light */
-	--brand-light: hsl(
-		calc(var(--brand-hue) * 0.8) calc(var(--brand-saturation) * 0.85) calc(var(--brand-lightness) * 0.85)
-	);
-	--brand-sub-light: hsl(var(--brand-sub-hue) var(--brand-sub-saturation) var(--brand-sub-lightness));
-	--text-light: hsl(var(--brand-hue) 36% 10%);
-	--bg-light: hsl(var(--brand-hue) 5% 92%);
-	--gray-light: hsl(var(--brand-hue) 5% 28%);
-	--border-light: hsl(var(--brand-hue) 5% 65%);
-	--card-bg-light: hsl(var(--brand-hue) var(--brand-saturation) 99%);
-	--hover-bg-light: hsl(var(--brand-hue) calc(var(--brand-saturation) * 1.75) calc(var(--brand-lightness) * 1.75));
-	--toggle-ball-light: hsl(var(--brand-hue) 3% 73%);
-	--overlay-light: rgb(10 10 10);
-	--footer-bg-light: linear-gradient(
-		0deg,
-		hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness) / 0%),
-		hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness) / 5%)
-	);
+	/* color scheme */
+	--brand-hue: 265;
+	--brand-saturation: 23%;
+	--brand-lightness: 38%;
+	--golden-yellow: #f8b500;
+	--crimson: #e95464;
 
 	/* dark */
-	--brand-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) * 2) calc(var(--brand-lightness) * 2));
-	--brand-sub-dark: hsl(
-		calc(var(--brand-sub-hue) * -1) calc(var(--brand-sub-saturation)) calc(var(--brand-sub-lightness) * 1.75)
-	);
-	--text-dark: hsl(var(--brand-hue) 15% 95%);
-	--bg-dark: hsl(var(--brand-hue) 10% 10%);
-	--gray-dark: hsl(var(--brand-hue) 6% 70%);
-	--border-dark: hsl(var(--brand-hue) 5% 55%);
-	--card-bg-dark: hsl(calc(var(--brand-hue) * 1.2) var(--brand-saturation) calc(var(--brand-saturation) * 0.5));
-	--hover-bg-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) * 0.7) calc(var(--brand-lightness) * 0.7));
-	--toggle-ball-dark: hsl(var(--brand-hue) 3% 73%);
-	--overlay-dark: rgb(212 212 212);
-	--footer-bg-dark: linear-gradient(
-		0deg,
-		hsl(var(--brand-hue) calc(var(--brand-saturation)) calc(var(--brand-lightness)) / 0%),
-		hsl(var(--brand-hue) calc(var(--brand-saturation)) calc(var(--brand-lightness)) / 5%)
-	);
+	--brand-dark: hsl(calc(var(--brand-hue) * 0.97) var(--brand-saturation) calc(var(--brand-lightness) * 1.87));
+	--surface-dark: hsl(calc(var(--brand-hue) * 1.24) 19% 12%);
+	--text-dark: hsl(calc(var(--brand-hue) * 0.57) 6% 93%);
+	--gray-dark: hsl(calc(var(--brand-hue) * 0.58) 5% 65%);
+	--golden-yellow-dark: var(--golden-yellow);
+	--crimson-dark: var(--crimson);
+	--card-shadow-dark: 4px 4px 10px hsl(calc(var(--brand-hue) * 1.2) 33% 6%),
+		-4px -4px 10px hsl(calc(var(--brand-hue) * 1.25) 24% 14%);
+	--card-shadow-inset-dark: inset 4px 4px 10px hsl(calc(var(--brand-hue) * 1.2) 33% 8%),
+		inset -4px -4px 10px hsl(calc(var(--brand-hue) * 1.25) 24% 11%);
+
+	/* light */
+	--brand-light: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
+	--surface-light: hsl(calc(var(--brand-hue) * 0.68) 5% 96%);
+	--text-light: hsl(calc(var(--brand-hue) * 1.24) 19% 12%);
+	--gray-light: hsl(calc(var(--brand-hue) * 1.13) 2% 33%);
+	--golden-yellow-light: var(--golden-yellow);
+	--crimson-light: var(--crimson);
+	--card-shadow-light: 4px 4px 10px
+			hsl(calc(var(--brand-hue) * 0.9) calc(var(--brand-saturation) * 0.2) calc(var(--brand-lightness) * 2)),
+		-4px -4px 10px hsl(calc(var(--brand-hue) * 0.6) 5% 96%);
+	--card-shadow-inset-light: inset 3px 3px 10px
+			hsl(calc(var(--brand-hue) * 0.9) calc(var(--brand-saturation) * 0.2) calc(var(--brand-lightness) * 2)),
+		inset -3px -3px 10px hsl(calc(var(--brand-hue) * 0.6) 5% 96%);
 
 	box-sizing: border-box;
 
@@ -64,29 +40,28 @@
 }
 
 :root,
-:root[data-theme='light'] {
-	color-scheme: light;
+:root[data-theme='dark'] {
+	color-scheme: dark;
 
-	/* set defaults */
-	--brand: var(--brand-light);
-	--brand-sub: var(--brand-sub-light);
-	--text: var(--text-light);
-	--bg: var(--bg-light);
-	--gray: var(--gray-light);
-	--border: var(--border-light);
-	--card-bg: var(--card-bg-light);
-	--hover-bg: var(--hover-bg-light);
-	--toggle-ball: var(--toggle-ball-light);
-	--overlay: var(--overlay-light);
-	--footer-bg: var(--footer-bg-light);
-	--font-rem-xs: 0.75rem;
-	--font-rem-sm: 0.875rem;
-	--font-rem-md: 1rem;
-	--font-rem-lg: 1.125rem;
-	--font-rem-xl: 1.25rem;
-	--font-rem-2xl: 1.5rem;
-	--font-rem-3xl: 1.75rem;
-	--font-rem-4xl: 2rem;
+	/* set default and dark color */
+	--brand: var(--brand-dark);
+	--surface: var(--surface-dark);
+	--text: var(--text-dark);
+	--gray: var(--gray-dark);
+	--golden-yellow: var(--golden-yellow-dark);
+	--crimson: var(--crimson-dark);
+	--card-shadow: var(--card-shadow-dark);
+	--card-shadow-inset: var(--card-shadow-inset-dark);
+	--font-xs: 0.75rem;
+	--font-sm: 0.875rem;
+	--font-md: 1rem;
+	--font-lg: 1.125rem;
+	--font-xl: 1.25rem;
+	--font-2xl: 1.5rem;
+	--font-3xl: 1.75rem;
+	--font-4xl: 2rem;
+	--rounded-base: 6px;
+	--rounded-full: 9999px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -95,34 +70,44 @@
 
 		/* set dark color */
 		--brand: var(--brand-dark);
-		--brand-sub: var(--brand-sub-dark);
+		--surface: var(--surface-dark);
 		--text: var(--text-dark);
-		--bg: var(--bg-dark);
 		--gray: var(--gray-dark);
-		--border: var(--border-dark);
-		--card-bg: var(--card-bg-dark);
-		--hover-bg: var(--hover-bg-dark);
-		--toggle-ball: var(--toggle-ball-dark);
-		--overlay: var(--overlay-dark);
-		--footer-bg: var(--footer-bg-dark);
+		--golden-yellow: var(--golden-yellow-dark);
+		--crimson: var(--crimson-dark);
+		--card-shadow: var(--card-shadow-dark);
+		--card-shadow-inset: var(--card-shadow-inset-dark);
 	}
 }
 
-:root[data-theme='dark'] {
-	color-scheme: dark;
+:root[data-theme='light'] {
+	color-scheme: light;
 
-	/* set dark color */
-	--brand: var(--brand-dark);
-	--brand-sub: var(--brand-sub-dark);
-	--text: var(--text-dark);
-	--bg: var(--bg-dark);
-	--gray: var(--gray-dark);
-	--border: var(--border-dark);
-	--card-bg: var(--card-bg-dark);
-	--hover-bg: var(--hover-bg-dark);
-	--toggle-ball: var(--toggle-ball-dark);
-	--overlay: var(--overlay-dark);
-	--footer-bg: var(--footer-bg-dark);
+	/* set light color */
+	--brand: var(--brand-light);
+	--surface: var(--surface-light);
+	--text: var(--text-light);
+	--gray: var(--gray-light);
+	--golden-yellow: var(--golden-yellow-light);
+	--crimson: var(--crimson-light);
+	--card-shadow: var(--card-shadow-light);
+	--card-shadow-inset: var(--card-shadow-inset-light);
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		color-scheme: light;
+
+		/* set light color */
+		--brand: var(--brand-light);
+		--surface: var(--surface-light);
+		--text: var(--text-light);
+		--gray: var(--gray-light);
+		--golden-yellow: var(--golden-yellow-light);
+		--crimson: var(--crimson-light);
+		--card-shadow: var(--card-shadow-light);
+		--card-shadow-inset: var(--card-shadow-inset-light);
+	}
 }
 
 html {
@@ -134,14 +119,14 @@ body {
 	min-height: 100vh;
 	font-family: YakuHanJP, Mukta, -apple-system, BlinkMacSystem, 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
 		'Hiragino Sans', Meiryo, sans-serif;
-	font-size: var(--font-rem-md);
+	font-size: var(--font-md);
 	font-weight: 400;
 	font-kerning: normal;
 	line-height: 1.5;
 	color: var(--text);
 	letter-spacing: 0.5px;
 	word-wrap: break-word;
-	background: var(--bg);
+	background: var(--surface);
 	transition: background 0.2s ease-out;
 }
 
@@ -151,16 +136,7 @@ body {
 	margin: 0 auto;
 }
 
-@media (width < 768px) {
-	:root {
-		--font-rem-xs: 0.75rem;
-		--font-rem-sm: 0.875rem;
-		--font-rem-md: 15px;
-		--font-rem-lg: 1rem;
-		--font-rem-2xl: 1.25rem;
-		--font-rem-4xl: 1.5rem;
-	}
-
+@media (width < 600px) {
 	.twitter-tweet,
 	.twitter-tweet-rendered {
 		width: 100% !important;

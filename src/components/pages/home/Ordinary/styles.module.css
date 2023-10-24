@@ -1,0 +1,22 @@
+.container {
+	grid-column: 9 / 13;
+	background: linear-gradient(to bottom, rgb(240 201 205 / 100%), 33%, hsl(calc(var(--brand-hue) * 0.57) 6% 93%));
+}
+
+.upper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.title {
+	font-size: var(--font-sm);
+	font-weight: 550;
+	color: var(--brand-light);
+}
+
+@media (width < 600px) {
+	.container {
+		grid-column: 1;
+		order: 3;
+	}
+}

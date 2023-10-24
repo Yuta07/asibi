@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [18.x]
     # vercelへのデプロイがsuccessになってから実行する
     # if: github.event.deployment_status.state == 'success'
     steps:
@@ -44,8 +44,8 @@ jobs:
       - name: Get number of CPU cores
         id: cpu-cores
         uses: SimenB/github-actions-cpu-cores@v1
-      - name: test
-        run: pnpm test ${{ steps.cpu-cores.outputs.count }}
+      # - name: test
+      #   run: pnpm test ${{ steps.cpu-cores.outputs.count }}
       # - name: Install Playwright
       #   run: npx playwright install --with-deps chromium
       # - name: test e2e

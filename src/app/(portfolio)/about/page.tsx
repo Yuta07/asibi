@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 
 import { AboutMe } from '@/components/pages/about/AboutMe'
 import { Experience } from '@/components/pages/about/Experience'
-import { Explore } from '@/components/pages/about/Explore'
 import { QuickLinks } from '@/components/pages/about/QuickLinks'
 import { PageTitle } from '@/components/ui/PageTitle'
 
@@ -26,16 +25,13 @@ export default function Page() {
 	return (
 		<div className={s.container}>
 			<PageTitle>About Me</PageTitle>
-			<section className={s.aboutMeSection}>
+			<section className={s.aboutSection}>
 				<AboutMe />
 			</section>
-			<section className={s.experienceSection}>
+			<section className={s.aboutSection}>
 				<Experience />
 			</section>
-			<section className={s.exploreSection}>
-				<Explore />
-			</section>
-			<section className={s.quickLinksSection}>
+			<section className={s.aboutSection}>
 				<QuickLinks />
 			</section>
 		</div>

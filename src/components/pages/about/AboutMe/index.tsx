@@ -1,19 +1,8 @@
-'use client'
-
-import Image from 'next/image'
-
-import { useThemeState } from '@/contexts/ThemeProvider'
-
 import s from './styles.module.css'
 
 export const AboutMe = () => {
-	const { state } = useThemeState()
-
-	const avatarClassName = state === 'light' ? 'avatarLight' : 'avatarDark'
-
 	return (
 		<div>
-			<Image alt="asibi3Q" className={s[avatarClassName]} height={88} src="/icon/icon.svg" width={88} />
 			<h2 className={s.hello}>Hi there 👋</h2>
 			<p className={s.intro}>I'm asibi3Q, Web Frontend engineer living in Kawasaki from 🏯 Nagoya, Japan.</p>
 			<p className={s.intro}>

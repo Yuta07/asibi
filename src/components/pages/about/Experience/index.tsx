@@ -2,22 +2,18 @@ import s from './styles.module.css'
 
 const EXPERIENCES = [
 	{
-		role: 'Webアプリケーションエンジニア',
+		role: 'Web Application Engineer',
 		isRegular: true,
-		detail: '予約システムのフロントエンド・バックエンドの開発に従事しています。',
 		date: '2023/05~',
 	},
 	{
-		role: 'Webフロントエンドエンジニア',
+		role: 'Web Frontend Engineer',
 		isRegular: false,
-		detail:
-			'フリーランスのWebフロントエンドエンジニアとして0->1の開発を多く経験して、Next.jsをメインにAmplifyやReact Nativeも少し担当しました。',
 		date: '2020/06~2023/04',
 	},
 	{
-		role: '機能開発エンジニア',
+		role: 'ERP Engineer',
 		isRegular: true,
-		detail: 'クラウドERPの導入支援・カスタマイズ開発を担当し、そのほかGASによる社内評価システムの開発を経験しました。',
 		date: '2019/04~2020/05',
 	},
 ]
@@ -28,12 +24,14 @@ export const Experience = () => {
 			<h2 className={s.heading}>Experience</h2>
 			<div className={s.content}>
 				<ul className={s.experienceList}>
-					{EXPERIENCES.map((experience) => {
+					{EXPERIENCES.map(({ role, isRegular, date }) => {
 						return (
-							<li key={experience.date} className={s.experienceListItem}>
-								<p className={s.experienceRole}>{experience.role}</p>
-								<small className={s.experienceDate}>{experience.date}</small>
-								<p className={s.experienceDetail}>{experience.detail}</p>
+							<li key={date} className={s.experienceListItem}>
+								<p className={s.experienceRole}>{role}</p>
+								<div className={s.experienceSub}>
+									<span className={s.experienceWorking}>as {isRegular ? 'full-time' : 'freelance'}</span>
+									<time className={s.experienceDate}>{date}</time>
+								</div>
 							</li>
 						)
 					})}
