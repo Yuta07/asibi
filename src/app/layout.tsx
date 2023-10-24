@@ -1,14 +1,11 @@
 import { AnalyticsScript } from '@/components/common/Analytics/GoogleAnalytics/index'
 import { Footer } from '@/components/common/Footer'
 import { ThemeProvider } from '@/contexts/ThemeProvider'
-import { useGoogleAnalyticsRoute } from '@/hooks/useGoogleAnalyticsRoute'
 export { metadata } from '@/lib/metadata'
 
 import '@/styles/root.css'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-	useGoogleAnalyticsRoute()
-
 	return (
 		<html lang="ja-JP">
 			<head>
