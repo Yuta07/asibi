@@ -5,13 +5,11 @@ import { useEffect } from 'react'
 
 import { pageview } from '@/lib/gtag'
 
-export const GoogleAnalyticsRoute = () => {
+export const useGoogleAnalyticsRoute = () => {
 	const pathname = usePathname()
 	const searchParams = useSearchParams()
 
 	useEffect(() => {
 		pageview(pathname)
 	}, [pathname, searchParams])
-
-	return null
 }
