@@ -1,7 +1,7 @@
 import { AnalyticsScript } from '@/components/common/Analytics/GoogleAnalytics/index'
 import { Footer } from '@/components/common/Footer'
-import { useGoogleAnalyticsRoute } from '@/hooks/useGoogleAnalyticsRoute'
 import { ThemeProvider } from '@/contexts/ThemeProvider'
+import { useGoogleAnalyticsRoute } from '@/hooks/useGoogleAnalyticsRoute'
 export { metadata } from '@/lib/metadata'
 
 import '@/styles/root.css'

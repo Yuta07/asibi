@@ -22,7 +22,7 @@ export const Share = ({ slug, title }: Props) => {
 				href={`https://twitter.com/share?url=${pageUrl}&text=${encodeTitle}&via=asibi3Q`}
 				rel="nofollow"
 			>
-				<XIcon height={40} width={40} className={s.shareIcon} viewBox="0 0 1200 1200" />
+				<XIcon className={s.shareIcon} height={40} viewBox="0 0 1200 1200" width={40} />
 			</a>
 		</div>
 	)

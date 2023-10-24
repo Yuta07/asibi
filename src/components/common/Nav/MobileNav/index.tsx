@@ -86,38 +86,38 @@ export const MobileNav = () => {
 					<form>
 						<fieldset className={s.field}>
 							<legend className={s.themeLegend}>Appearance</legend>
-							<label htmlFor="system" className={s.themeLabel}>
+							<label className={s.themeLabel} htmlFor="system">
 								<input
-									type="radio"
-									id="system"
-									name="appearance"
-									value="system"
 									checked={state === 'system'}
 									className={state === 'system' ? s.selectedTheme : ''}
+									id="system"
+									name="appearance"
+									type="radio"
+									value="system"
 									onChange={onChangeTheme}
 								/>
 								<span>System</span>
 							</label>
-							<label htmlFor="light" className={s.themeLabel}>
+							<label className={s.themeLabel} htmlFor="light">
 								<input
-									type="radio"
-									id="light"
-									name="appearance"
-									value="light"
 									checked={state === 'light'}
 									className={state === 'light' ? s.selectedTheme : ''}
+									id="light"
+									name="appearance"
+									type="radio"
+									value="light"
 									onChange={onChangeTheme}
 								/>
 								<span>Light</span>
 							</label>
-							<label htmlFor="dark" className={s.themeLabel}>
+							<label className={s.themeLabel} htmlFor="dark">
 								<input
-									type="radio"
-									id="dark"
-									name="appearance"
-									value="dark"
 									checked={state === 'dark'}
 									className={state === 'dark' ? s.selectedTheme : ''}
+									id="dark"
+									name="appearance"
+									type="radio"
+									value="dark"
 									onChange={onChangeTheme}
 								/>
 								<span>Dark</span>

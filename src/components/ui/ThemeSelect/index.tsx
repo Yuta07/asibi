@@ -21,13 +21,13 @@ export const ThemeSelect = () => {
 	const themeIcon = (() => {
 		switch (state) {
 			case 'light':
-				return <LightIcon width={16} height={16} color="var(--text-light)" viewBox="0 0 24 24" />
+				return <LightIcon color="var(--text-light)" height={16} viewBox="0 0 24 24" width={16} />
 			case 'dark':
-				return <DarkIcon width={16} height={16} color="var(--text-dark)" viewBox="0 0 24 24" />
+				return <DarkIcon color="var(--text-dark)" height={16} viewBox="0 0 24 24" width={16} />
 			case 'system':
-				return <SystemIcon width={16} height={16} color="var(--text-dark)" viewBox="0 0 24 24" />
+				return <SystemIcon color="var(--text-dark)" height={16} viewBox="0 0 24 24" width={16} />
 			default:
-				return <DarkIcon width={16} height={16} color="var(--text-dark)" viewBox="0 0 24 24" />
+				return <DarkIcon color="var(--text-dark)" height={16} viewBox="0 0 24 24" width={16} />
 		}
 	})()
 
@@ -39,38 +39,38 @@ export const ThemeSelect = () => {
 			</summary>
 			<form>
 				<fieldset className={s.field}>
-					<label htmlFor="system" className={s.themeLabel}>
+					<label className={s.themeLabel} htmlFor="system">
 						<input
-							type="radio"
-							id="system"
-							name="appearance"
-							value="system"
 							checked={state === 'system'}
 							className={state === 'system' ? s.selectedTheme : ''}
+							id="system"
+							name="appearance"
+							type="radio"
+							value="system"
 							onChange={onChangeTheme}
 						/>
 						<span>System</span>
 					</label>
-					<label htmlFor="light" className={s.themeLabel}>
+					<label className={s.themeLabel} htmlFor="light">
 						<input
-							type="radio"
-							id="light"
-							name="appearance"
-							value="light"
 							checked={state === 'light'}
 							className={state === 'light' ? s.selectedTheme : ''}
+							id="light"
+							name="appearance"
+							type="radio"
+							value="light"
 							onChange={onChangeTheme}
 						/>
 						<span>Light</span>
 					</label>
-					<label htmlFor="dark" className={s.themeLabel}>
+					<label className={s.themeLabel} htmlFor="dark">
 						<input
-							type="radio"
-							id="dark"
-							name="appearance"
-							value="dark"
 							checked={state === 'dark'}
 							className={state === 'dark' ? s.selectedTheme : ''}
+							id="dark"
+							name="appearance"
+							type="radio"
+							value="dark"
 							onChange={onChangeTheme}
 						/>
 						<span>Dark</span>
