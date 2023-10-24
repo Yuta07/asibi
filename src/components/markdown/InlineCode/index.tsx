@@ -9,9 +9,9 @@ export const InlineCode: FC<{ children: ReactNode }> = ({ children }) => {
 			<style jsx>{`
 				.container {
 					padding: 2px 8px;
-					border-radius: 8px;
-					color: var(--text);
-					background: var(--bg);
+					border-radius: var(--rounded-base);
+					color: var(--surface);
+					background: var(--gray);
 					line-height: 2;
 				}
 			`}</style>

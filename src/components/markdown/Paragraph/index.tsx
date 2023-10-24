@@ -9,7 +9,7 @@ export const Paragraph: FC<{ children: ReactNode }> = ({ children }) => {
 			<style jsx>{`
 				.container {
 					margin-top: 20px;
-					font-size: var(--font-rem-md);
+					font-size: var(--font-md);
 					line-height: 1.6;
 				}
 
@@ -28,7 +28,7 @@ export const ElParagraph: FC<{ children: ReactNode }> = ({ children }) => {
 			<style jsx>{`
 				.container {
 					margin-top: 20px;
-					font-size: var(--font-rem-md);
+					font-size: var(--font-md);
 					line-height: 1.8;
 				}
 

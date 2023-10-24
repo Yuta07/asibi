@@ -1,10 +1,10 @@
 .container {
 	margin: 30px 0;
-	font-size: var(--font-size-sm);
+	font-size: var(--font-sm);
 }
 
 .container pre {
 	padding: 20px !important;
-	font-size: var(--font-rem-sm);
+	font-size: var(--font-sm);
 	border-radius: 8px;
 }

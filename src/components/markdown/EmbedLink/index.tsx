@@ -113,10 +113,10 @@ export const EmbedLink = ({ href }: Props) => {
 					display: flex;
 					align-items: center;
 					border: var(--border-normal);
-					border-radius: var(--line-radius-sm);
+					border-radius: var(--rounded-base);
 					overflow: hidden;
 					text-decoration: none;
-					transition: var(--animation-transition) ease-in;
+					transition: 0.2s ease-in;
 				}
 
 				.container:hover {
@@ -131,8 +131,8 @@ export const EmbedLink = ({ href }: Props) => {
 				}
 
 				.ogTitle {
-					color: var(--color-text);
-					font-size: var(--font-size-md);
+					color: var(--text);
+					font-size: var(--font-md);
 					word-break: break-all;
 					display: -webkit-box;
 					-webkit-line-clamp: 2;
@@ -142,8 +142,8 @@ export const EmbedLink = ({ href }: Props) => {
 
 				.ogDescription {
 					margin-top: 4px;
-					color: var(--color-gray);
-					font-size: var(--font-size-sm);
+					color: var(--gray);
+					font-size: var(--font-sm);
 					word-break: break-all;
 					display: -webkit-box;
 					-webkit-line-clamp: 1;
@@ -153,8 +153,8 @@ export const EmbedLink = ({ href }: Props) => {
 
 				.anchor {
 					margin-top: 4px;
-					color: var(--color-text);
-					font-size: var(--font-size-xs);
+					color: var(--text);
+					font-size: var(--font-xs);
 					word-break: break-all;
 					display: -webkit-box;
 					-webkit-line-clamp: 1;
@@ -180,12 +180,12 @@ export const EmbedLink = ({ href }: Props) => {
 
 				@media screen and (max-width: 640px) {
 					.ogTitle {
-						font-size: var(--font-size-sm);
+						font-size: var(--font-sm);
 						-webkit-line-clamp: 1;
 					}
 
 					.ogDescription {
-						font-size: var(--font-size-xs);
+						font-size: var(--font-xs);
 					}
 
 					.thumbnail {
