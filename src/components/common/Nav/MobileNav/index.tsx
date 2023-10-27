@@ -31,6 +31,7 @@ export const MobileNav = () => {
 
 		const handler = (e: MouseEvent) => {
 			e.preventDefault()
+			e.stopPropagation()
 
 			if (details.open) {
 				const anim = nav.animate([SHOW_STYLE, HIDE_STYLE], ANIMATION_STYLE)
@@ -45,10 +46,22 @@ export const MobileNav = () => {
 			}
 		}
 
+		const closeHandler = () => {
+			if (details.open) {
+				const anim = nav.animate([SHOW_STYLE, HIDE_STYLE], ANIMATION_STYLE)
+
+				anim.onfinish = () => {
+					details.removeAttribute('open')
+				}
+			}
+		}
+
 		summary.addEventListener('click', handler)
+		window.addEventListener('click', closeHandler)
 
 		return () => {
 			summary.removeEventListener('click', handler)
+			window.removeEventListener('click', closeHandler)
 		}
 	}, [])
 
