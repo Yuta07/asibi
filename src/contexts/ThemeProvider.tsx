@@ -20,7 +20,6 @@ const _ThemeScript = () => {
 						const storageTheme = window.localStorage.getItem('theme')
             const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
             const root = window.document.documentElement
-						console.log('js')
 
             root.setAttribute('data-theme', storageTheme === 'system' ? (isDark ? 'dark' : 'light') : storageTheme || 'dark')
 			`,
