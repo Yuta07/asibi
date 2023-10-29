@@ -109,10 +109,11 @@ export const EmbedLink = ({ href }: Props) => {
 			</a>
 			<style jsx>{`
 				.container {
+					height: 120px;
 					margin: 0 auto;
 					display: flex;
 					align-items: center;
-					border: var(--border-normal);
+					border: 1px solid var(--gray);
 					border-radius: var(--rounded-base);
 					overflow: hidden;
 					text-decoration: none;
@@ -164,7 +165,8 @@ export const EmbedLink = ({ href }: Props) => {
 
 				.thumbnail {
 					width: 200px;
-					height: 120px;
+					height: 100%;
+					border-left: 1px solid var(--gray);
 				}
 
 				.ogImage {
@@ -190,7 +192,6 @@ export const EmbedLink = ({ href }: Props) => {
 
 					.thumbnail {
 						width: 120px;
-						height: 80px;
 					}
 				}
 			`}</style>

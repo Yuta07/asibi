@@ -1,23 +1,23 @@
 import { useCallback, useEffect, useState } from 'react'
 
 export const useTheme = () => {
-	const [theme, setTheme] = useState<'light' | 'dark' | 'system' | null>(null)
+	const [theme, setTheme] = useState<'light' | 'dark' | 'system' | null>(
+		(window.localStorage.getItem('theme') as 'light' | 'dark' | 'system' | null) || 'system'
+	)
 
 	useEffect(() => {
-		let initTheme: 'dark' | 'light'
 		const storageTheme = window.localStorage.getItem('theme') as 'light' | 'dark' | 'system' | null
+		const root = window.document.documentElement
+
 		if (storageTheme === 'system') {
 			const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-			initTheme = isDark ? 'dark' : 'light'
-			setTheme('system')
+			setTheme(isDark ? 'dark' : 'light')
+			root.setAttribute('data-theme', isDark ? 'dark' : 'light')
 		} else {
-			initTheme = storageTheme || 'dark'
-			setTheme(initTheme)
+			setTheme(storageTheme || 'dark')
+			root.setAttribute('data-theme', storageTheme || 'dark')
 		}
-
-		const root = window.document.documentElement
-		root.setAttribute('data-theme', initTheme)
-	}, []) // eslint-disable-line
+	}, [])
 
 	const handleChangeTheme = useCallback((value: 'light' | 'dark' | 'system') => {
 		const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches

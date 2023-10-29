@@ -35,7 +35,7 @@ export const ThemeSelect = () => {
 		<details className={s.container}>
 			<summary className={s.summary}>
 				{themeIcon}
-				<span>{`${state.charAt(0).toUpperCase()}${state.slice(1)}`}</span>
+				<span>{state && `${state.charAt(0).toUpperCase()}${state.slice(1)}`}</span>
 			</summary>
 			<form>
 				<fieldset className={s.field}>

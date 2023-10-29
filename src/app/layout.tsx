@@ -1,9 +1,9 @@
-import { AnalyticsScript } from '@/components/common/Analytics/GoogleAnalytics/index'
+import '../styles/root.css'
+
 import { Footer } from '@/components/common/Footer'
+import { GoogleAnalyticsScript } from '@/components/common/Script/GoogleAnalyticsScript'
 import { ThemeProvider } from '@/contexts/ThemeProvider'
 export { metadata } from '@/lib/metadata'
-
-import '@/styles/root.css'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					media="all"
 					rel="stylesheet"
 				/>
-				<AnalyticsScript />
+				<GoogleAnalyticsScript />
 			</head>
 			<body>
 				<ThemeProvider>

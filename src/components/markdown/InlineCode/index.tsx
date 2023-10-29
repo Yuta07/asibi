@@ -8,6 +8,7 @@ export const InlineCode: FC<{ children: ReactNode }> = ({ children }) => {
 			{children}
 			<style jsx>{`
 				.container {
+					margin-inline: 2px;
 					padding: 2px 8px;
 					border-radius: var(--rounded-base);
 					color: var(--surface);

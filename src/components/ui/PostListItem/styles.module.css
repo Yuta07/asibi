@@ -1,7 +1,5 @@
 .article {
 	width: 100%;
-	padding-block: 20px;
-	padding-inline: 16px;
 	border-radius: var(--rounded-base);
 	box-shadow: var(--card-shadow);
 }
@@ -15,6 +13,8 @@
 	grid-template-rows: repeat(6, 20px);
 	row-gap: 12px;
 	width: 100%;
+	padding-block: 20px;
+	padding-inline: 16px;
 	color: var(--text);
 	text-decoration: none;
 }
