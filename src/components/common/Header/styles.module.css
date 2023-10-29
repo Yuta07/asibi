@@ -20,6 +20,10 @@
 	display: inline-flex;
 }
 
+.logo > path {
+	fill: var(--text);
+}
+
 .globalNav {
 	display: flex;
 	gap: 32px;

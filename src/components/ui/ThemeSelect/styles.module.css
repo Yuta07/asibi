@@ -1,3 +1,7 @@
+.empty {
+	width: 100px;
+}
+
 .container {
 	position: relative;
 	width: 100px;

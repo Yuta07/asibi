@@ -1,17 +1,16 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { useMemo, useRef } from 'react'
 
 import { GlobalNav } from '@/components/common/Nav/GlobalNav'
 import { ThemeSelect } from '@/components/ui/ThemeSelect'
-import { useThemeState } from '@/contexts/ThemeProvider'
 import { useScrollOffsetTop } from '@/hooks/useScrollOffsetTop'
 
 import { MobileNav } from '../Nav/MobileNav'
 
 import s from './styles.module.css'
+import LogoComponent from '/public/logo/logo.svg'
 
 const BASE_HEIGHT = 60
 
@@ -21,8 +20,6 @@ type HeaderProps = {
 
 export const Header = ({ maxWidth = 900 }: HeaderProps) => {
 	const ref = useRef(null)
-
-	const { state } = useThemeState()
 
 	const { pageYOffsetTop, isScrollUp } = useScrollOffsetTop(ref)
 	const isScrollingUp = BASE_HEIGHT > pageYOffsetTop || isScrollUp
@@ -48,12 +45,7 @@ export const Header = ({ maxWidth = 900 }: HeaderProps) => {
 		<header ref={ref} className={s.header} style={headerTranslateStyle}>
 			<div className={s.inner} style={{ maxWidth }}>
 				<Link className={s.rootLink} href="/">
-					<Image
-						alt="asibi"
-						height={20}
-						src={state === 'light' ? '/logo/logo.svg' : '/logo/logo_light.svg'}
-						width={60}
-					/>
+					<LogoComponent height={20} width={60} className={s.logo} viewBox="0 0 92 28" />
 				</Link>
 				<div className={s.globalNav}>
 					<GlobalNav />
