@@ -21,6 +21,9 @@ const _ThemeScript = () => {
             const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
             const root = window.document.documentElement
 
+						console.log('storageTheme', storageTheme)
+						console.log('isDark', isDark)
+
             root.setAttribute('data-theme', storageTheme === 'system' ? (isDark ? 'dark' : 'light') : storageTheme || 'dark')
 			`,
 			}}
