@@ -40,8 +40,6 @@
 }
 
 :root {
-	color-scheme: dark light;
-
 	--font-xs: 0.75rem;
 	--font-sm: 0.875rem;
 	--font-md: 1rem;
@@ -55,17 +53,19 @@
 }
 
 [data-theme='dark'] {
-	color-scheme: dark;
+	:root {
+		color-scheme: dark;
 
-	/* set default and dark color */
-	--brand: var(--brand-dark);
-	--surface: var(--surface-dark);
-	--text: var(--text-dark);
-	--gray: var(--gray-dark);
-	--golden-yellow: var(--golden-yellow-dark);
-	--crimson: var(--crimson-dark);
-	--card-shadow: var(--card-shadow-dark);
-	--card-shadow-inset: var(--card-shadow-inset-dark);
+		/* set default and dark color */
+		--brand: var(--brand-dark);
+		--surface: var(--surface-dark);
+		--text: var(--text-dark);
+		--gray: var(--gray-dark);
+		--golden-yellow: var(--golden-yellow-dark);
+		--crimson: var(--crimson-dark);
+		--card-shadow: var(--card-shadow-dark);
+		--card-shadow-inset: var(--card-shadow-inset-dark);
+	}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -85,17 +85,19 @@
 }
 
 [data-theme='light'] {
-	color-scheme: light;
+	:root {
+		color-scheme: light;
 
-	/* set light color */
-	--brand: var(--brand-light);
-	--surface: var(--surface-light);
-	--text: var(--text-light);
-	--gray: var(--gray-light);
-	--golden-yellow: var(--golden-yellow-light);
-	--crimson: var(--crimson-light);
-	--card-shadow: var(--card-shadow-light);
-	--card-shadow-inset: var(--card-shadow-inset-light);
+		/* set light color */
+		--brand: var(--brand-light);
+		--surface: var(--surface-light);
+		--text: var(--text-light);
+		--gray: var(--gray-light);
+		--golden-yellow: var(--golden-yellow-light);
+		--crimson: var(--crimson-light);
+		--card-shadow: var(--card-shadow-light);
+		--card-shadow-inset: var(--card-shadow-inset-light);
+	}
 }
 
 @media (prefers-color-scheme: light) {
