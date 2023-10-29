@@ -26,6 +26,9 @@ export const useTheme = () => {
 
 	useEffect(() => {
 		const initTheme = window.localStorage.getItem('theme') as 'light' | 'dark' | 'system' | null
+		if (!initTheme) {
+			window.localStorage.setItem('theme', 'system')
+		}
 		setTheme(initTheme || 'system')
 	}, [])
 
