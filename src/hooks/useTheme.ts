@@ -1,22 +1,32 @@
 import { useCallback, useEffect, useState } from 'react'
 
 export const useTheme = () => {
-	const [theme, setTheme] = useState<'light' | 'dark' | 'system' | null>(
-		(window.localStorage.getItem('theme') as 'light' | 'dark' | 'system' | null) || 'system'
-	)
+	const [theme, setTheme] = useState<'light' | 'dark' | 'system' | null>(null)
+
+	// ref: https://github.com/pacocoursey/next-themes/blob/main/packages/next-themes/src/index.tsx
+	// ローカルストレージのthemeがsystemの場合だけ動く
+	// OSのsystemテーマを変更したことを検知するため
+	const handleMediaQuery = useCallback((e: MediaQueryListEvent | MediaQueryList) => {
+		if (window.localStorage.theme === 'system') {
+			if (e.matches) {
+				document.documentElement.setAttribute('data-theme', 'dark')
+			} else {
+				document.documentElement.setAttribute('data-theme', 'light')
+			}
+		}
+	}, [])
 
 	useEffect(() => {
-		const storageTheme = window.localStorage.getItem('theme') as 'light' | 'dark' | 'system' | null
-		const root = window.document.documentElement
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handleMediaQuery)
 
-		if (storageTheme === 'system') {
-			const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-			setTheme(isDark ? 'dark' : 'light')
-			root.setAttribute('data-theme', isDark ? 'dark' : 'light')
-		} else {
-			setTheme(storageTheme || 'dark')
-			root.setAttribute('data-theme', storageTheme || 'dark')
+		return () => {
+			window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', handleMediaQuery)
 		}
+	}, [handleMediaQuery])
+
+	useEffect(() => {
+		const initTheme = window.localStorage.getItem('theme') as 'light' | 'dark' | 'system' | null
+		setTheme(initTheme || 'system')
 	}, [])
 
 	const handleChangeTheme = useCallback((value: 'light' | 'dark' | 'system') => {

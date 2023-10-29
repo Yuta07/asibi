@@ -12,6 +12,8 @@ export const ThemeSelect = () => {
 	const { state } = useThemeState()
 	const { handleChangeTheme } = useThemeDispatch()
 
+	if (!state) return <div className={s.empty} />
+
 	const onChangeTheme = (
 		e: React.ChangeEvent<HTMLInputElement> & { currentTarget: { value: 'light' | 'dark' | 'system' } }
 	) => {
@@ -21,13 +23,13 @@ export const ThemeSelect = () => {
 	const themeIcon = (() => {
 		switch (state) {
 			case 'light':
-				return <LightIcon color="var(--text-light)" height={16} viewBox="0 0 24 24" width={16} />
+				return <LightIcon color="var(--text)" height={16} viewBox="0 0 24 24" width={16} />
 			case 'dark':
-				return <DarkIcon color="var(--text-dark)" height={16} viewBox="0 0 24 24" width={16} />
+				return <DarkIcon color="var(--text)" height={16} viewBox="0 0 24 24" width={16} />
 			case 'system':
-				return <SystemIcon color="var(--text-dark)" height={16} viewBox="0 0 24 24" width={16} />
+				return <SystemIcon className={s.systemIcon} color="var(--text)" height={16} viewBox="0 0 24 24" width={16} />
 			default:
-				return <DarkIcon color="var(--text-dark)" height={16} viewBox="0 0 24 24" width={16} />
+				return null
 		}
 	})()
 

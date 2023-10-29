@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, Fragment, ReactNode, useContext } from 'react'
+import { createContext, memo, ReactNode, useContext } from 'react'
 
 import { useTheme } from '../hooks/useTheme'
 
@@ -11,13 +11,32 @@ type DispatchType = {
 export const ThemeStateContext = createContext<{ state: 'light' | 'dark' | 'system' | null }>({ state: null })
 export const ThemeDispatchContext = createContext<DispatchType>({ handleChangeTheme: () => {} })
 
+// テーマのちらつき防止
+const _ThemeScript = () => {
+	return (
+		<script
+			dangerouslySetInnerHTML={{
+				__html: `
+						const storageTheme = window.localStorage.getItem('theme')
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+            const root = window.document.documentElement
+						console.log('js')
+
+            root.setAttribute('data-theme', storageTheme === 'system' ? (isDark ? 'dark' : 'light') : storageTheme || 'dark')
+			`,
+			}}
+		/>
+	)
+}
+
+const ThemeScript = memo(_ThemeScript, () => true)
+
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 	const { theme, handleChangeTheme } = useTheme()
 
-	if (!theme) return <Fragment>{children}</Fragment>
-
 	return (
 		<ThemeStateContext.Provider value={{ state: theme }}>
+			<ThemeScript />
 			<ThemeDispatchContext.Provider value={{ handleChangeTheme }}>{children}</ThemeDispatchContext.Provider>
 		</ThemeStateContext.Provider>
 	)
