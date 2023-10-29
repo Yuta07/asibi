@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, ReactNode, useContext } from 'react'
+import { createContext, Fragment, ReactNode, useContext } from 'react'
 
 import { useTheme } from '../hooks/useTheme'
 
@@ -8,13 +8,13 @@ type DispatchType = {
 	handleChangeTheme: (theme: 'light' | 'dark' | 'system') => void
 }
 
-export const ThemeStateContext = createContext<{ state: 'light' | 'dark' | 'system' }>({ state: 'system' })
+export const ThemeStateContext = createContext<{ state: 'light' | 'dark' | 'system' | null }>({ state: null })
 export const ThemeDispatchContext = createContext<DispatchType>({ handleChangeTheme: () => {} })
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 	const { theme, handleChangeTheme } = useTheme()
 
-	if (!theme) return <div style={{ visibility: 'hidden' }}>{children}</div>
+	if (!theme) return <Fragment>{children}</Fragment>
 
 	return (
 		<ThemeStateContext.Provider value={{ state: theme }}>

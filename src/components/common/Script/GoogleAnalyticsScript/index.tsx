@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 
 import { pageview, GA_TRACKING_ID } from '@/lib/gtag'
 
-export const AnalyticsScript = () => {
+export const GoogleAnalyticsScript = () => {
 	const pathname = usePathname()
 	const searchParams = useSearchParams()
 
