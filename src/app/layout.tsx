@@ -31,6 +31,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					media="all"
 					rel="stylesheet"
 				/>
+				<GoogleAnalyticsScript />
+			</head>
+			<body>
 				<script
 					dangerouslySetInnerHTML={{
 						__html: `
@@ -45,9 +48,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 						`,
 					}}
 				/>
-				<GoogleAnalyticsScript />
-			</head>
-			<body>
 				<ThemeProvider>
 					{children}
 					<Footer />
