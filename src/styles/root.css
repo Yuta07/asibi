@@ -39,8 +39,22 @@
 	margin: 0;
 }
 
-:root,
-:root[data-theme='dark'] {
+:root {
+	color-scheme: dark light;
+
+	--font-xs: 0.75rem;
+	--font-sm: 0.875rem;
+	--font-md: 1rem;
+	--font-lg: 1.125rem;
+	--font-xl: 1.25rem;
+	--font-2xl: 1.5rem;
+	--font-3xl: 1.75rem;
+	--font-4xl: 2rem;
+	--rounded-base: 6px;
+	--rounded-full: 9999px;
+}
+
+[data-theme='dark'] {
 	color-scheme: dark;
 
 	/* set default and dark color */
@@ -52,16 +66,6 @@
 	--crimson: var(--crimson-dark);
 	--card-shadow: var(--card-shadow-dark);
 	--card-shadow-inset: var(--card-shadow-inset-dark);
-	--font-xs: 0.75rem;
-	--font-sm: 0.875rem;
-	--font-md: 1rem;
-	--font-lg: 1.125rem;
-	--font-xl: 1.25rem;
-	--font-2xl: 1.5rem;
-	--font-3xl: 1.75rem;
-	--font-4xl: 2rem;
-	--rounded-base: 6px;
-	--rounded-full: 9999px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -80,7 +84,7 @@
 	}
 }
 
-:root[data-theme='light'] {
+[data-theme='light'] {
 	color-scheme: light;
 
 	/* set light color */
@@ -123,16 +127,11 @@ body {
 	font-weight: 400;
 	font-kerning: normal;
 	line-height: 1.5;
-	color: hsl(calc(265 * 1.24) 19% 12%);
+	color: var(--text);
 	letter-spacing: 0.5px;
 	word-wrap: break-word;
-	background: hsl(calc(265 * 0.68) 5% 96%);
+	background: var(--surface);
 	transition: background 0.2s ease-out;
-}
-
-[data-theme='dark'] body {
-	color: hsl(calc(265 * 0.57) 6% 93%);
-	background: hsl(calc(265 * 1.24) 19% 12%);
 }
 
 /* twitter card style */

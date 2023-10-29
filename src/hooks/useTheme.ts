@@ -1,9 +1,12 @@
+'use client'
+
 import { useCallback, useEffect, useState } from 'react'
 
 export const useTheme = () => {
 	const [theme, setTheme] = useState<'light' | 'dark' | 'system' | null>(null)
 
 	// ref: https://github.com/pacocoursey/next-themes/blob/main/packages/next-themes/src/index.tsx
+	// ref: https://web.dev/patterns/theming/theme-switch#js
 	// ローカルストレージのthemeがsystemの場合だけ動く
 	// OSのsystemテーマを変更したことを検知するため
 	const handleMediaQuery = useCallback((e: MediaQueryListEvent | MediaQueryList) => {
