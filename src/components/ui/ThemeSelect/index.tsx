@@ -27,7 +27,7 @@ export const ThemeSelect = () => {
 			case 'dark':
 				return <DarkIcon color="var(--text)" height={16} viewBox="0 0 24 24" width={16} />
 			case 'system':
-				return <SystemIcon color="var(--text)" height={16} viewBox="0 0 24 24" width={16} className={s.systemIcon} />
+				return <SystemIcon className={s.systemIcon} color="var(--text)" height={16} viewBox="0 0 24 24" width={16} />
 			default:
 				return null
 		}

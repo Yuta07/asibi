@@ -11,7 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<head>
 				<meta charSet="utf-8" />
 				<meta content="IE=edge" httpEquiv="X-UA-Compatible" />
-				<meta name="color-scheme" content="light dark" />
+				<meta content="light dark" name="color-scheme" />
 				<link href="/favicon.ico" rel="icon" sizes="any" />
 				<link href="/icon/icon.svg" rel="icon" type="image/svg+xml" />
 				<link href="/icon/apple-touch-icon.png" rel="apple-touch-icon" />

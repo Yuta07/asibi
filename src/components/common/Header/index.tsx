@@ -10,6 +10,7 @@ import { useScrollOffsetTop } from '@/hooks/useScrollOffsetTop'
 import { MobileNav } from '../Nav/MobileNav'
 
 import s from './styles.module.css'
+
 import LogoComponent from '/public/logo/logo.svg'
 
 const BASE_HEIGHT = 60
@@ -45,7 +46,7 @@ export const Header = ({ maxWidth = 900 }: HeaderProps) => {
 		<header ref={ref} className={s.header} style={headerTranslateStyle}>
 			<div className={s.inner} style={{ maxWidth }}>
 				<Link className={s.rootLink} href="/">
-					<LogoComponent height={20} width={60} className={s.logo} viewBox="0 0 92 28" />
+					<LogoComponent className={s.logo} height={20} viewBox="0 0 92 28" width={60} />
 				</Link>
 				<div className={s.globalNav}>
 					<GlobalNav />
