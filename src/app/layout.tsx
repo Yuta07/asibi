@@ -1,6 +1,6 @@
 import { Footer } from '@/components/common/Footer'
 import { GoogleAnalyticsScript } from '@/components/common/Script/GoogleAnalyticsScript'
-import { ThemeProvider, ThemeScript } from '@/contexts/ThemeProvider'
+import { ThemeProvider } from '@/contexts/ThemeProvider'
 export { metadata } from '@/lib/metadata'
 
 import '../styles/root.css'
@@ -31,7 +31,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					media="all"
 					rel="stylesheet"
 				/>
-				<ThemeScript />
 				<GoogleAnalyticsScript />
 			</head>
 			<body>
