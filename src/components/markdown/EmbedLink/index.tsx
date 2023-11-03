@@ -3,6 +3,8 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
+import s from './styles.module.css'
+
 type Props = {
 	href: string
 }
@@ -72,129 +74,38 @@ export const EmbedLink = ({ href }: Props) => {
 	if (!Object.keys(ogState).length) {
 		return (
 			<a
-				className="normalLink"
+				className={s.normalLink}
 				data-testid="markdown-embed-only-link"
 				href={href}
 				rel="noopener noreferrer"
 				target="_blank"
 			>
 				{href}
-				<style jsx>{`
-					.normalLink {
-						color: var(--color-sunflower);
-					}
-
-					.normalLink:hover {
-						text-decoration: underline;
-					}
-				`}</style>
 			</a>
 		)
 	}
 
 	return (
 		<>
-			<a className="container" data-testid="markdown-embed-link" href={href} rel="noopener noreferrer" target="_blank">
-				<div className="ogInfo">
-					<div className="ogTitle">{title}</div>
-					{description && <span className="ogDescription">{description}</span>}
-					<span className="anchor">{href}</span>
+			<a
+				className={s.container}
+				data-testid="markdown-embed-link"
+				href={href}
+				rel="noopener noreferrer"
+				target="_blank"
+			>
+				<div className={s.ogInfo}>
+					<div className={s.ogTitle}>{title}</div>
+					{description && <span className={s.ogDescription}>{description}</span>}
+					<span className={s.anchor}>{href}</span>
 				</div>
-				<div className="thumbnail">
-					<img alt={imageAlt} className="ogImage" src={imageURL} />
+				<div className={s.thumbnail}>
+					<img alt={imageAlt} className={s.ogImage} src={imageURL} />
 				</div>
 			</a>
-			<a className="dummyHref" href={href} rel="noopener noreferrer" target="_blank">
+			<a className={s.dummyHref} href={href} rel="noopener noreferrer" target="_blank">
 				<span>{href}</span>
 			</a>
-			<style jsx>{`
-				.container {
-					height: 120px;
-					margin: 0 auto;
-					display: flex;
-					align-items: center;
-					border: 1px solid var(--gray);
-					border-radius: var(--rounded-base);
-					overflow: hidden;
-					text-decoration: none;
-					transition: 0.2s ease-in;
-				}
-
-				.container:hover {
-					filter: brightness(70%);
-				}
-
-				.ogInfo {
-					padding: 20px;
-					display: flex;
-					flex: 1;
-					flex-direction: column;
-				}
-
-				.ogTitle {
-					color: var(--text);
-					font-size: var(--font-md);
-					word-break: break-all;
-					display: -webkit-box;
-					-webkit-line-clamp: 2;
-					-webkit-box-orient: vertical;
-					overflow: hidden;
-				}
-
-				.ogDescription {
-					margin-top: 4px;
-					color: var(--gray);
-					font-size: var(--font-sm);
-					word-break: break-all;
-					display: -webkit-box;
-					-webkit-line-clamp: 1;
-					-webkit-box-orient: vertical;
-					overflow: hidden;
-				}
-
-				.anchor {
-					margin-top: 4px;
-					color: var(--text);
-					font-size: var(--font-xs);
-					word-break: break-all;
-					display: -webkit-box;
-					-webkit-line-clamp: 1;
-					-webkit-box-orient: vertical;
-					overflow: hidden;
-				}
-
-				.thumbnail {
-					width: 200px;
-					height: 100%;
-					border-left: 1px solid var(--gray);
-				}
-
-				.ogImage {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-					flex-shrink: 0;
-				}
-
-				.dummyHref {
-					display: none;
-				}
-
-				@media screen and (max-width: 640px) {
-					.ogTitle {
-						font-size: var(--font-sm);
-						-webkit-line-clamp: 1;
-					}
-
-					.ogDescription {
-						font-size: var(--font-xs);
-					}
-
-					.thumbnail {
-						width: 120px;
-					}
-				}
-			`}</style>
 		</>
 	)
 }

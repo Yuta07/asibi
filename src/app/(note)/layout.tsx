@@ -11,7 +11,7 @@ type PortfolioLayoutProps = {
 export default function PortfolioLayout({ children }: PortfolioLayoutProps) {
 	return (
 		<>
-			<Header />
+			<Header maxWidth={800} />
 			<main className={s.main}>{children}</main>
 		</>
 	)

@@ -3,6 +3,8 @@
 import Script from 'next/script'
 import { useEffect, useRef } from 'react'
 
+import s from './styles.module.css'
+
 type Props = {
 	href: string
 }
@@ -49,17 +51,11 @@ export const EmbedTweetURL = ({ href }: Props) => {
 						`,
 				}}
 			/>
-			<div ref={containerRef} className="container" data-testid="markdown-tweet-link">
-				<blockquote className="twitter-tweet">
+			<div ref={containerRef} className={s.container} data-testid="markdown-tweet-link">
+				<blockquote className={s.twitterTweet}>
 					<a href={href} />
 				</blockquote>
 			</div>
-			<style jsx>{`
-				.container {
-					margin-top: 60px;
-					cursor: pointer;
-				}
-			`}</style>
 		</>
 	)
 }

@@ -1,0 +1,16 @@
+.container {
+	margin-top: 20px;
+	font-size: var(--font-md);
+	line-height: 1.6;
+}
+
+.elContainer {
+	margin-top: 20px;
+	font-size: var(--font-md);
+	line-height: 1.8;
+}
+
+.container a,
+.elContainer a {
+	margin: 0 2px;
+}

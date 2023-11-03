@@ -1,0 +1,20 @@
+.container {
+	display: block;
+	margin: 40px 0;
+	text-align: center;
+}
+
+.image {
+	max-width: 100%;
+	height: auto;
+	max-height: 320px;
+	border-radius: var(--rounded-base);
+	object-fit: contain;
+}
+
+.caption {
+	margin-bottom: 40px;
+	font-size: var(--font-sm);
+	color: var(--gray);
+	text-align: center;
+}

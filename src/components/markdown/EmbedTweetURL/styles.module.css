@@ -1,0 +1,17 @@
+.container {
+	margin-top: 60px;
+	cursor: pointer;
+}
+
+.twitterTweet,
+.container > .twitter-tweet-rendered {
+	margin: 0 auto;
+}
+
+@media (width < 600px) {
+	.twitterTweet,
+	.container > .twitter-tweet-rendered {
+		width: 100% !important;
+		max-width: 320px;
+	}
+}

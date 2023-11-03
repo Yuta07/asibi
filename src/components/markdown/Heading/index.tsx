@@ -1,6 +1,6 @@
 import { createElement, ReactNode, FC } from 'react'
 
-import styles from './Heading.module.css'
+import styles from './styles.module.css'
 
 type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5'
 
