@@ -1,5 +1,6 @@
 'use client'
 
+import Script from 'next/script'
 import { createContext, memo, ReactNode, useContext } from 'react'
 
 import { useTheme } from '../hooks/useTheme'
@@ -14,7 +15,8 @@ export const ThemeDispatchContext = createContext<DispatchType>({ handleChangeTh
 // テーマのちらつき防止
 const _ThemeScript = () => {
 	return (
-		<script
+		<Script
+			strategy="beforeInteractive"
 			dangerouslySetInnerHTML={{
 				__html: `
 						const storageTheme = window.localStorage.getItem('theme')
