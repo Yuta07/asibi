@@ -1,0 +1,9 @@
+.container {
+	margin: 0 4px;
+	color: var(--brand);
+	text-decoration: none;
+}
+
+.container:hover {
+	text-decoration: underline;
+}

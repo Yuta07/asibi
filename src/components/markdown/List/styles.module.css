@@ -1,0 +1,19 @@
+.orderedContainer {
+	padding: 0 20px 0 0;
+	list-style: none;
+	counter-reset: order;
+}
+
+.unOrderedContainer {
+	padding: 0 20px;
+}
+
+.orderedContainer[data-child='false'],
+.unOrderedContainer[data-child='false'] {
+	margin: 15px 0;
+}
+
+.orderedContainer[data-child='true'],
+.unOrderedContainer[data-child='true'] {
+	margin: 10px 0 0;
+}

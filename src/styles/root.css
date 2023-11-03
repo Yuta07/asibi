@@ -131,17 +131,3 @@ body {
 	background: var(--surface);
 	transition: background 0.2s ease-out;
 }
-
-/* twitter card style */
-.twitter-tweet,
-.twitter-tweet-rendered {
-	margin: 0 auto;
-}
-
-@media (width < 600px) {
-	.twitter-tweet,
-	.twitter-tweet-rendered {
-		width: 100% !important;
-		max-width: 320px;
-	}
-}

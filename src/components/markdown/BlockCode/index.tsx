@@ -3,7 +3,7 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
-import styles from './BlockCode.module.css'
+import styles from './styles.module.css'
 
 type Props = {
 	readonly language: string

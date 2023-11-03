@@ -1,8 +1,8 @@
-'use client'
-
 import { ReactNode, FC } from 'react'
 
 import { EmbedLink } from '../EmbedLink'
+
+import s from './styles.module.css'
 
 type Props = {
 	children: ReactNode
@@ -17,18 +17,8 @@ export const Link: FC<Props> = ({ children, href }) => {
 	}
 
 	return (
-		<a className="container" data-testid="markdown-link" href={href} rel="noopener noreferrer" target="_blank">
+		<a className={s.container} data-testid="markdown-link" href={href} rel="noopener noreferrer" target="_blank">
 			{children}
-			<style jsx>{`
-				.container {
-					margin: 0 4px;
-					color: var(--text);
-				}
-
-				.container:hover {
-					text-decoration: underline;
-				}
-			`}</style>
 		</a>
 	)
 }
