@@ -1,9 +1,8 @@
 'use client'
 
-import { createContext, memo, ReactNode, useContext } from 'react'
+import { createContext, ReactNode, useContext } from 'react'
 
 import { useTheme } from '../hooks/useTheme'
-import Script from 'next/script'
 
 type DispatchType = {
 	handleChangeTheme: (theme: 'light' | 'dark' | 'system') => void
@@ -13,9 +12,9 @@ export const ThemeStateContext = createContext<{ state: 'light' | 'dark' | 'syst
 export const ThemeDispatchContext = createContext<DispatchType>({ handleChangeTheme: () => {} })
 
 // テーマのちらつき防止
-const _ThemeScript = () => {
+export const ThemeScript = () => {
 	return (
-		<Script
+		<script
 			dangerouslySetInnerHTML={{
 				__html: `
 						const storageTheme = window.localStorage.getItem('theme')
@@ -29,14 +28,11 @@ const _ThemeScript = () => {
 	)
 }
 
-const ThemeScript = memo(_ThemeScript, () => true)
-
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 	const { theme, handleChangeTheme } = useTheme()
 
 	return (
 		<ThemeStateContext.Provider value={{ state: theme }}>
-			<ThemeScript />
 			<ThemeDispatchContext.Provider value={{ handleChangeTheme }}>{children}</ThemeDispatchContext.Provider>
 		</ThemeStateContext.Provider>
 	)
