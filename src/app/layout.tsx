@@ -34,6 +34,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<GoogleAnalyticsScript />
 			</head>
 			<body>
+				<script
+					type="text/javascript"
+					dangerouslySetInnerHTML={{
+						__html: `
+							document.addEventListener('DOMContentLoaded', function () {
+								const storageTheme = window.localStorage.getItem('theme')
+								const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+								const root = window.document.documentElement
+
+								root.setAttribute('data-theme', storageTheme === 'system' ? (isDark ? 'dark' : 'light') : storageTheme || 'dark')
+							})
+						`,
+					}}
+				></script>
 				<ThemeProvider>
 					{children}
 					<Footer />
