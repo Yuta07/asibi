@@ -41,6 +41,17 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
 	return (
 		<ThemeStateContext.Provider value={{ state: theme }}>
+			<Script
+				onReady={() => {
+					console.log('onReady context')
+				}}
+				onLoad={() => {
+					console.log('onLoad context')
+				}}
+				onError={() => {
+					console.log('onError context')
+				}}
+			/>
 			<ThemeScript />
 			<ThemeDispatchContext.Provider value={{ handleChangeTheme }}>{children}</ThemeDispatchContext.Provider>
 		</ThemeStateContext.Provider>
