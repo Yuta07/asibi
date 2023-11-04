@@ -34,14 +34,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					rel="stylesheet"
 				/>
 				<Script
-					onReady={() => {
-						console.log('onReady')
-					}}
-					onLoad={() => {
-						console.log('onLoad')
-					}}
-					onError={() => {
-						console.log('onError')
+					strategy="beforeInteractive"
+					dangerouslySetInnerHTML={{
+						__html: `
+						console.log('beforeInteractive')
+					`,
 					}}
 				/>
 				<GoogleAnalyticsScript />
@@ -61,6 +58,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 								root.setAttribute('data-theme', storageTheme === 'system' ? (isDark ? 'dark' : 'light') : storageTheme || 'dark')
 							})
 						`,
+					}}
+				/>
+				<Script
+					strategy="beforeInteractive"
+					dangerouslySetInnerHTML={{
+						__html: `
+						console.log('beforeInteractive script')
+					`,
 					}}
 				/>
 				<ThemeProvider>

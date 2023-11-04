@@ -42,14 +42,11 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 	return (
 		<ThemeStateContext.Provider value={{ state: theme }}>
 			<Script
-				onReady={() => {
-					console.log('onReady context')
-				}}
-				onLoad={() => {
-					console.log('onLoad context')
-				}}
-				onError={() => {
-					console.log('onError context')
+				strategy="beforeInteractive"
+				dangerouslySetInnerHTML={{
+					__html: `
+						console.log('beforeInteractive context')
+					`,
 				}}
 			/>
 			<ThemeScript />
