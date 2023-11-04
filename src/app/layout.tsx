@@ -1,3 +1,5 @@
+import { Suspense } from 'react'
+
 import { Footer } from '@/components/common/Footer'
 import { GoogleAnalyticsScript } from '@/components/common/Script/GoogleAnalyticsScript'
 import { ThemeProvider } from '@/contexts/ThemeProvider'
@@ -7,7 +9,7 @@ import '../styles/root.css'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang="ja-JP" suppressHydrationWarning>
+		<html suppressHydrationWarning>
 			<head>
 				<meta charSet="utf-8" />
 				<meta content="IE=edge" httpEquiv="X-UA-Compatible" />
@@ -31,23 +33,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					media="all"
 					rel="stylesheet"
 				/>
-				<GoogleAnalyticsScript />
 			</head>
 			<body>
-				<script
-					type="text/javascript"
-					dangerouslySetInnerHTML={{
-						__html: `
-							document.addEventListener('DOMContentLoaded', function () {
-								const storageTheme = window.localStorage.getItem('theme')
-								const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-								const root = window.document.documentElement
-
-								root.setAttribute('data-theme', storageTheme === 'system' ? (isDark ? 'dark' : 'light') : storageTheme || 'dark')
-							})
-						`,
-					}}
-				></script>
+				<Suspense>
+					<GoogleAnalyticsScript />
+				</Suspense>
 				<ThemeProvider>
 					{children}
 					<Footer />
