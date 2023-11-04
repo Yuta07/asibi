@@ -15,7 +15,6 @@ export const ThemeDispatchContext = createContext<DispatchType>({ handleChangeTh
 const _ThemeScript = () => {
 	return (
 		<script
-			type="text/javascript"
 			dangerouslySetInnerHTML={{
 				__html: `
 					const storageTheme = window.localStorage.getItem('theme')
@@ -25,6 +24,7 @@ const _ThemeScript = () => {
 					root.setAttribute('data-theme', storageTheme === 'system' ? (isDark ? 'dark' : 'light') : storageTheme || 'dark')
 				`,
 			}}
+			type="text/javascript"
 		/>
 	)
 }
