@@ -1,5 +1,7 @@
+import { Suspense } from 'react'
+
 import { Footer } from '@/components/common/Footer'
-// import { GoogleAnalyticsScript } from '@/components/common/Script/GoogleAnalyticsScript'
+import { GoogleAnalyticsScript } from '@/components/common/Script/GoogleAnalyticsScript'
 import { ThemeProvider } from '@/contexts/ThemeProvider'
 export { metadata } from '@/lib/metadata'
 
@@ -33,7 +35,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				/>
 			</head>
 			<body>
-				{/* <GoogleAnalyticsScript /> */}
+				<Suspense>
+					<GoogleAnalyticsScript />
+				</Suspense>
 				<ThemeProvider>
 					{children}
 					<Footer />
