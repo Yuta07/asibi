@@ -33,6 +33,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					media="all"
 					rel="stylesheet"
 				/>
+				<Script
+					onReady={() => {
+						console.log('onReady')
+					}}
+					onLoad={() => {
+						console.log('onLoad')
+					}}
+					onError={() => {
+						console.log('onError')
+					}}
+				/>
 				<GoogleAnalyticsScript />
 			</head>
 			<body>
