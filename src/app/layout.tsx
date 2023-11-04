@@ -1,5 +1,3 @@
-import Script from 'next/script'
-
 import { Footer } from '@/components/common/Footer'
 import { GoogleAnalyticsScript } from '@/components/common/Script/GoogleAnalyticsScript'
 import { ThemeProvider } from '@/contexts/ThemeProvider'
@@ -33,41 +31,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					media="all"
 					rel="stylesheet"
 				/>
-				<Script
-					strategy="beforeInteractive"
-					dangerouslySetInnerHTML={{
-						__html: `
-						console.log('beforeInteractive')
-					`,
-					}}
-				/>
-				<GoogleAnalyticsScript />
 			</head>
 			<body>
-				<script
-					type="text/javascript"
-					dangerouslySetInnerHTML={{
-						__html: `
-							window.addEventListener('DOMContentLoaded', () => {
-								const storageTheme = window.localStorage.getItem('theme')
-								const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-								const root = window.document.documentElement
-
-								console.log('DOMContentLoaded script')
-
-								root.setAttribute('data-theme', storageTheme === 'system' ? (isDark ? 'dark' : 'light') : storageTheme || 'dark')
-							})
-						`,
-					}}
-				/>
-				<Script
-					strategy="beforeInteractive"
-					dangerouslySetInnerHTML={{
-						__html: `
-						console.log('beforeInteractive script')
-					`,
-					}}
-				/>
+				<GoogleAnalyticsScript />
 				<ThemeProvider>
 					{children}
 					<Footer />

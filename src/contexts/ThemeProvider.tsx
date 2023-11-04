@@ -1,6 +1,5 @@
 'use client'
 
-import Script from 'next/script'
 import { createContext, memo, ReactNode, useContext } from 'react'
 
 import { useTheme } from '../hooks/useTheme'
@@ -41,14 +40,6 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
 	return (
 		<ThemeStateContext.Provider value={{ state: theme }}>
-			<Script
-				strategy="beforeInteractive"
-				dangerouslySetInnerHTML={{
-					__html: `
-						console.log('beforeInteractive context')
-					`,
-				}}
-			/>
 			<ThemeScript />
 			<ThemeDispatchContext.Provider value={{ handleChangeTheme }}>{children}</ThemeDispatchContext.Provider>
 		</ThemeStateContext.Provider>
