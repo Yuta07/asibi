@@ -15,15 +15,19 @@ export const ThemeDispatchContext = createContext<DispatchType>({ handleChangeTh
 // テーマのちらつき防止
 const _ThemeScript = () => {
 	return (
-		<Script
-			strategy="beforeInteractive"
+		<script
+			type="text/javascript"
 			dangerouslySetInnerHTML={{
 				__html: `
+					window.addEventListener('DOMContentLoaded', () => {
 						const storageTheme = window.localStorage.getItem('theme')
-            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-            const root = window.document.documentElement
+						const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+						const root = window.document.documentElement
 
-            root.setAttribute('data-theme', storageTheme === 'system' ? (isDark ? 'dark' : 'light') : storageTheme || 'dark')
+						console.log('DOMContentLoaded context')
+
+						root.setAttribute('data-theme', storageTheme === 'system' ? (isDark ? 'dark' : 'light') : storageTheme || 'dark')
+					})
 			`,
 			}}
 		/>
